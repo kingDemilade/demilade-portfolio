@@ -1,0 +1,150 @@
+/*    .card-container { max-width: 200px !important; } */
+    .card { width: calc(50% - 13px) !important; }
+
+.row {
+    margin: 15px -2px 1px 0px;
+    padding: 10px 0px;
+    border-radius: 25px;
+    background: #016bb5;
+}
+
+.card {
+  width: calc(25% - 13px);
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+/*  background-color: #ffffff; */
+  padding: 0px;
+  border-radius: 15px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card.ynd {
+  background-image: url('/images/projects/websites/YND_BG-callout-banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px; 
+  height: 100px;
+  overflow: hidden;
+}
+
+.card.cen {
+  background-image: url('/images/projects/websites/CEN_social-callout.png');
+  background-size: cover;
+  background-position: center;
+  background-position: 
+		0 20%,
+		0 100%,
+		0 50%,
+		0 100%,
+		0 0;
+	animation: 50s email-notif infinite linear;
+	}
+
+@keyframes email-notif {
+	100% {
+		background-position: 
+			5000px 20%,
+			800px 95%,
+			500px 50%,
+			1000px 100%,
+			400px 0;
+		}
+}
+
+.cardthird {
+  width: calc(33% - 13px);
+}
+
+
+.ynd-title, .pbc-3d-isometric, .just-tap-in {
+    position: relative;
+    display: inline-block;
+    max-width: 33%;
+    flex: 1 1 33%;
+    box-sizing: border-box;
+    padding: 5px;
+    align-self: center;
+    margin: 0;
+}
+
+.ynd-title img,
+.pbc-3d-isometric img,
+.just-tap-in img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.ynd-title img:hover {
+    transform: scale(1.09) translateY(-4px);
+}
+
+.pbc-3d-isometric img:hover {
+     transform: scale(1.08) translate(3px, 4px);
+}
+
+.just-tap-in img:hover {
+    transform: scale(1.09) translateY(-2px);
+}
+
+@media (max-width: 1199px) {
+  .fa-chevron-circle-right {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .fa-chevron-circle-right {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .social-height {
+    margin-bottom: 10px;
+  }
+}
+
+.ynd-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.ynd-title,
+.pbc-3d-isometric,
+.just-tap-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.ynd-title img,
+.pbc-3d-isometric img,
+.just-tap-in img {
+  height: auto;
+  max-height: 100px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.just-tap-in img {width: 80%;}

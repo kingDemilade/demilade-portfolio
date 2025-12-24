@@ -1,0 +1,1150 @@
+/* === Org Chart Styles === */
+:root {
+  --oc-gap: 12px;
+  --oc-radius: 10px;
+  --oc-shadow: 0 6px 16px rgba(0,0,0,.08);
+  --oc-text: #1f2937; /* slate-800 */
+  --oc-text-inv: #fff;
+  --oc-yellow: #ee9b00;  /* Vacant Position */
+  --oc-light-yellow: #f4d35e; /* Color Bar - Vacant Position */
+  --oc-skyblue: #00abe2;   /* Digital Marketing & Communications */
+  --oc-purple: #7175c3;   /* Board Services */
+  --oc-green: #7aba4c;   /* Media & Public Info */
+  --oc-orange: #e36414;  /* Leadership/Directors */
+  --oc-teal: #00c2bb;  /* Channel 20 */
+  --oc-pink: #f5759e;    /* Graphics */
+  --oc-gray: #e5e7eb;    /* light borders */
+  --oc-ocean-blue: #4180aa; /* Print Button */
+}
+
+.mpi-btn {
+    --bs-btn-padding-x: 0.75rem;
+    --bs-btn-padding-y: 0.375rem;
+    --bs-btn-font-family: ;
+    --bs-btn-font-size: 1rem;
+    --bs-btn-font-weight: 400;
+    --bs-btn-line-height: 1.5;
+    --bs-btn-color: var(--oc-text-inv);
+    --bs-btn-bg: var(--oc-green);
+    --bs-btn-border-width: var(--bs-border-width);
+    --bs-btn-border-color: transparent;
+    --bs-btn-border-radius: var(--bs-border-radius);
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+    --bs-btn-disabled-opacity: 0.65;
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+    display: inline-block;
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+    font-family: var(--bs-btn-font-family);
+    font-size: var(--bs-btn-font-size);
+    font-weight: var(--bs-btn-font-weight);
+    line-height: var(--bs-btn-line-height);
+    color: var(--bs-btn-color);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+    border-radius: var(--bs-btn-border-radius);
+    background-color: var(--bs-btn-bg);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.bs-btn {
+    --bs-btn-padding-x: 0.75rem;
+    --bs-btn-padding-y: 0.375rem;
+    --bs-btn-font-family: ;
+    --bs-btn-font-size: 1rem;
+    --bs-btn-font-weight: 400;
+    --bs-btn-line-height: 1.5;
+    --bs-btn-color: var(--oc-text-inv);
+    --bs-btn-bg: var(--oc-purple);
+    --bs-btn-border-width: var(--bs-border-width);
+    --bs-btn-border-color: transparent;
+    --bs-btn-border-radius: var(--bs-border-radius);
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+    --bs-btn-disabled-opacity: 0.65;
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+    display: inline-block;
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+    font-family: var(--bs-btn-font-family);
+    font-size: var(--bs-btn-font-size);
+    font-weight: var(--bs-btn-font-weight);
+    line-height: var(--bs-btn-line-height);
+    color: var(--bs-btn-color);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+    border-radius: var(--bs-btn-border-radius);
+    background-color: var(--bs-btn-bg);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.ch20-btn {
+    --bs-btn-padding-x: 0.75rem;
+    --bs-btn-padding-y: 0.375rem;
+    --bs-btn-font-family: ;
+    --bs-btn-font-size: 1rem;
+    --bs-btn-font-weight: 400;
+    --bs-btn-line-height: 1.5;
+    --bs-btn-color: var(--oc-text-inv);
+    --bs-btn-bg: var(--oc-teal);
+    --bs-btn-border-width: var(--bs-border-width);
+    --bs-btn-border-color: transparent;
+    --bs-btn-border-radius: var(--bs-border-radius);
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+    --bs-btn-disabled-opacity: 0.65;
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+    display: inline-block;
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+    font-family: var(--bs-btn-font-family);
+    font-size: var(--bs-btn-font-size);
+    font-weight: var(--bs-btn-font-weight);
+    line-height: var(--bs-btn-line-height);
+    color: var(--bs-btn-color);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+    border-radius: var(--bs-btn-border-radius);
+    background-color: var(--bs-btn-bg);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.dmac-btn {
+    --bs-btn-padding-x: 0.75rem;
+    --bs-btn-padding-y: 0.375rem;
+    --bs-btn-font-family: ;
+    --bs-btn-font-size: 1rem;
+    --bs-btn-font-weight: 400;
+    --bs-btn-line-height: 1.5;
+    --bs-btn-color: var(--oc-text-inv);
+    --bs-btn-bg: var(--oc-skyblue);
+    --bs-btn-border-width: var(--bs-border-width);
+    --bs-btn-border-color: transparent;
+    --bs-btn-border-radius: var(--bs-border-radius);
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+    --bs-btn-disabled-opacity: 0.65;
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+    display: inline-block;
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+    font-family: var(--bs-btn-font-family);
+    font-size: var(--bs-btn-font-size);
+    font-weight: var(--bs-btn-font-weight);
+    line-height: var(--bs-btn-line-height);
+    color: var(--bs-btn-color);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+    border-radius: var(--bs-btn-border-radius);
+    background-color: var(--bs-btn-bg);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.graphics-btn {
+    --bs-btn-padding-x: 0.75rem;
+    --bs-btn-padding-y: 0.375rem;
+    --bs-btn-font-family: ;
+    --bs-btn-font-size: 1rem;
+    --bs-btn-font-weight: 400;
+    --bs-btn-line-height: 1.5;
+    --bs-btn-color: var(--oc-text-inv);
+    --bs-btn-bg: var(--oc-pink);
+    --bs-btn-border-width: var(--bs-border-width);
+    --bs-btn-border-color: transparent;
+    --bs-btn-border-radius: var(--bs-border-radius);
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+    --bs-btn-disabled-opacity: 0.65;
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+    display: inline-block;
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+    font-family: var(--bs-btn-font-family);
+    font-size: var(--bs-btn-font-size);
+    font-weight: var(--bs-btn-font-weight);
+    line-height: var(--bs-btn-line-height);
+    color: var(--bs-btn-color);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+    border-radius: var(--bs-btn-border-radius);
+    background-color: var(--bs-btn-bg);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.org-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--oc-gap);
+  align-items: start;
+}
+
+.org-tier {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--oc-gap);
+  margin-bottom: 18px;
+}
+
+.org-card {
+  border-radius: var(--oc-radius);
+  box-shadow: var(--oc-shadow);
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--oc-gray);
+  text-align: center;
+}
+/* This targets the card and band, expands the size */
+.extend-director {
+  padding: 10px 100px;
+}
+
+.extend-director::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 2px;
+  height: 190px;
+  background: var(--oc-gray);
+  z-index: -1;
+}
+
+.expand-director {
+  margin: -10px -100px 8px !important;   
+}
+
+.extend-deputy-director {
+  padding: 10px 45px;
+}
+.expand-deputy-director {
+  margin: -10px -45px 8px !important;   
+}
+
+.org-card h5 {
+  font-size: 0.95rem;
+  margin: 0 0 4px;
+  font-weight: 800;
+}
+.org-card p {
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.25rem;
+}
+
+.org-card .band {
+  height: 6px;
+  border-radius: var(--oc-radius) var(--oc-radius) 0 0;
+  margin: -10px -12px 8px;
+}
+
+.oc-green { background: var(--oc-green); color: var(--oc-text-inv);} 
+.oc-yellow { background-color: var(--oc-yellow);} /* Color Bar - Vacant Position */
+.oc-light-yellow { background: var(--oc-light-yellow); } /* Vacant Position */
+.oc-orange { background: var(--oc-orange); color: var(--oc-text-inv);} 
+.oc-blue { background: var(--oc-blue); color: var(--oc-text-inv);} 
+.oc-purple { background: var(--oc-purple); color: var(--oc-text-inv);} /* Board Services */
+.oc-skyblue { background: var(--oc-skyblue); color: var(--oc-text-inv);} /* Digital Marketing & Communications */
+.oc.green { background: var(--oc-green); color: var(--oc-text-inv);} /* Media & Public Info */
+.oc-orange { background: var(--oc-orange); color: var(--oc-text-inv);} /* Leadership/Directors */
+.oc-teal { background: var(--oc-teal); color: var(--oc-text-inv);}  /* Channel 20 */
+.oc-pink { background: var(--oc-pink); color: var(--oc-text-inv);} /* Graphics */
+
+.org-section-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+@media (min-width: 768px){
+  .org-center{ display: flex; justify-content: center; gap: var(--oc-gap);} 
+}
+
+
+/* === Hierarchical Org Chart Layout === */
+.org-hierarchy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.org-level {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  margin: 10px 0; /* spacing between tiers */
+}
+
+.org-level.pc-pd-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  margin: 10px 0; /* spacing between tiers */
+}
+
+.org-node.pc-parent::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 2px;
+    height: 85px;
+    background: var(--oc-gray);
+    z-index: -1;  
+}
+
+.org-level.master-control-section {
+display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  margin: 10px 0; /* spacing between tiers */
+}
+
+.org-level-verticle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px 0;
+  position: relative;
+}
+
+.org-node {
+  position: relative;
+  margin: 0 15px;
+}
+
+/* Vertical line down from parent */
+.org-node::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 2px;
+  height: 85px;
+  background: var(--oc-gray);
+  z-index: -1;
+}
+
+/* Horizontal connectors for siblings */
+.org-level::before {
+  content: "";
+  position: absolute;
+  top: -20px; /* aligns with .org-node::before height */
+  left: 104px;
+  right: 104px;
+  height: 2px;
+  background: var(--oc-gray);
+}
+
+/* Remove top connector for root node */
+.org-hierarchy > .org-node::before { display: none; }
+
+/* Optional: hide the horizontal connector when a level has only one node (modern browsers) */
+@supports(selector(:has(*))) {
+  .org-level:has(> .org-node:only-child)::before { content: none; }
+}
+
+/* Tweak: ensure the horizontal connector aligns with node top lines */
+.org-level::before { top: -20px; }
+
+/* Special case: extend upward connector for Department Coordinator to reach Deputy Director */
+.org-node.special-branch::before {
+  top: -300px;
+  height: 450px; 
+  left: 52.25%;
+  z-index: -1;
+}
+
+/* Special case: hide parent connector line (e.g., Deputy Director) */
+.org-node.no-parent-connector::before { content: none !important; }
+
+/* === Channel 20: two‑column rail layout with side connectors === */
+
+.rail {
+  position: relative;
+  padding: 8px 12px;      /* breathing room from side rails */
+  margin-top: 8px;        /* small gap from item above */
+}
+.rail::before,
+.rail::after {
+  content: "";
+  position: absolute;
+  top: -60px;                 /* start at container top */
+  bottom: 40px;              /* end at container bottom */
+  width: 2px;
+  background: var(--oc-gray);
+}
+.rail::before { left: 8px; }
+.rail::after  { right: 8px; }
+
+.rail-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 16px;
+  align-items: start;
+  position: relative;
+  margin: 16px 18px; /* spacing from side rails */
+}
+
+.rail-row .pd-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 16px;
+    align-items: start;
+    position: relative;
+    margin: 16px 18px;
+}
+
+.pd {
+    margin-top: 0px;
+}
+
+/* short connectors from each card to the side rail */
+.rail-row > .org-card { position: relative; }
+.rail-row > .org-card:nth-child(1)::before,
+.rail-row > .org-card:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 14px; height: 2px;
+  background: var(--oc-gray);
+  transform: translateY(-50%);
+}
+.rail-row > .org-card:nth-child(1)::before { left: -18px; }
+.rail-row > .org-card:nth-child(2)::after  { right: -18px; }
+
+/* dashed border variant for certain roles */
+.org-card.is-dashed { border: 1px dashed; }
+
+/* Responsive: stack rail rows on narrow screens */
+@media (max-width: 640px){
+  .rail-row { grid-template-columns: 1fr; }
+  .rail-row > .org-card:nth-child(1)::before,
+  .rail-row > .org-card:nth-child(2)::after { display:none; }
+  .rail::before, .rail::after { display:none; }
+  
+  .pc-parent > .pc-children.rail::before,
+  .pc-parent > .pc-children.rail::after { display: none; }
+}
+
+/* Vertical stem from the PC card down through its children block */
+.pc-parent > .pc-children:not(.rail)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0px;
+  left: -40px;
+  width: 2px;
+  background: var(--oc-gray);
+  z-index: 0;              /* behind cards */
+}
+
+/* Nudge PD row connector bars below the bridge */
+.pc-parent > .pc-children.rail > .rail-row::before,
+.pc-parent > .pc-children.rail > .rail-row::after { top: 10px; }
+
+/* Two‑column rows under PC */
+.pc-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 18px;
+  position: relative;
+  margin: 22px 18px 12px;  /* spacing between horizontal bars */
+  z-index: 1;
+}
+
+.card-solo {
+    display: block;
+}
+
+.card-solo::after {
+    content: "";
+    position: absolute;
+    top: 50% !important;
+    width: 14px;
+    height: 2px;
+    right: -21px;
+    background: var(--oc-gray);
+    transform: translateY(-50%);
+}
+
+/* Reusable narrow card helper */
+.card-narrow {
+  width: 210px;
+  max-width: 210px;
+  margin-inline: auto;  /* center */
+  box-sizing: border-box;
+}
+
+/* LEFT - Horizontal line from Station Manager */
+
+.sm-row-line::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    right: 268px;
+    left: -492px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+/* RIGHT - Horizontal line from Station Manager */
+
+.sm-row-line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    left: 268px;
+    right: -492px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+/* LEFT - Horizontal line from Production Coordinator */
+
+.pc-row-line::before {
+    content: "";
+    position: absolute;
+    top: 8%;
+    height: 2px;
+    width: 105px;
+    left: 10px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+/* RIGHT - Horizontal line from Production Coordinator */
+
+.pc-row-line::after {
+    content: "";
+    position: absolute;
+    top: 8%;
+    height: 2px;
+    width: 105px;
+    right: 10px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+/* LEFT - Horizontal line from Senior Broadcast Facility Coordinator */
+
+.sbfc-row-line::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 25px;
+    left: -30px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+/* RIGHT - Horizontal line from Broadcast Network Administrator */
+
+.bna-row-line::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 25px;
+    right: -30px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+/* Horizontal bar at the TOP of each row meeting the center stem */
+.pc-row::before,
+.pc-row::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 2px;
+  background: var(--oc-gray);
+}
+.pc-row::before {
+  left: 50%;
+  width: calc(50% - 12px);      /* center → left card */
+  transform: translateX(-100%);
+}
+.pc-row::after {
+  left: 50%;
+  width: calc(50% - 12px);      /* center → right card */
+  transform: translateX(0);
+}
+
+/* Short vertical stubs into each card */
+.pc-row > .org-card { position: relative; }
+.pc-row > .org-card::before {
+  content: "";
+  position: absolute;
+  top: -12px;                   /* up to the row’s horizontal bar */
+  left: 50%;
+  width: 2px;
+  height: 12px;
+  background: var(--oc-gray);
+  transform: translateX(-50%);
+}
+
+/* Responsive: stack and simplify lines */
+@media (max-width: 640px) {
+  .pc-row { grid-template-columns: 1fr; }
+  .pc-row::before, .pc-row::after { display: none; }
+  .pc-parent > .pc-children::before { left: 10px; } /* subtle left guide */
+  .pc-row > .org-card::before { left: 10px; transform: none; }
+
+  .pc-parent > .pc-children.rail::before,
+  .pc-parent > .pc-children.rail::after { display: none; }
+}
+
+/* Use side rails for PC subtree; hide center stem */
+/* (Removed old rule hiding the stem for rail variant) */
+
+/* === Force PD grid to use side-rail connectors (like Picture 1) === */
+/* If any old .pc-row markup remains inside the PC subtree, kill its center lines */
+.pc-parent > .pc-children.rail .pc-row::before,
+.pc-parent > .pc-children.rail .pc-row::after,
+.pc-parent > .pc-children.rail .pc-row > .org-card::before {
+  display: none !important;
+}
+
+/* Ensure the rail verticals start just below the bridge and end after last row */
+.pc-parent > .pc-children.rail { padding-top: 10px; }
+/*.pc-parent > .pc-children.rail::after { top: -40px; }  bridge */
+/*.pc-parent > .pc-children.rail::before { top: -18px; height: 18px; }  stem */
+
+/* Tighten the PD rail nubs to match look in Picture 1 */
+.pc-parent > .pc-children.rail .rail-row > .org-card:nth-child(1)::before { left: -22px; }
+.pc-parent > .pc-children.rail .rail-row > .org-card:nth-child(2)::after  { right: -22px; }
+
+/* Slightly lighten the PD rail lines for visual hierarchy (optional) */
+.pc-parent > .pc-children.rail::before,
+.pc-parent > .pc-children.rail::after,
+.pc-parent > .pc-children.rail .rail-row::before,
+.pc-parent > .pc-children.rail .rail-row::after,
+.pc-parent > .pc-children.rail .rail-row > .org-card::before,
+.pc-parent > .pc-children.rail .rail-row > .org-card::after {
+  background: var(--oc-gray);
+}
+
+/* === Station Manager subtree: two-branch layout with connectors === */
+.sm-parent { position: relative; }
+
+/* Grid for the two branches under Station Manager */
+.sm-branches {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 24px;
+  padding: 16px 18px; /* space from the bridge and edges */
+}
+
+
+/* Short vertical stubs from bridge into each branch column */
+.sm-branches .branch { position: relative; }
+
+.sm-no-stem::before {
+    content: "";
+    position: absolute;
+    top: -540px;
+    left: -1%;
+    width: 2px;
+    height: 610px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+.sm-no-stem::after {
+    content: "";
+    position: absolute;
+    top: -540px;
+    right: -1%;
+    width: 2px;
+    height: 610px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+/* Vertical chain inside a branch (parent → children stack) */
+.branch > .org-card { 
+    position: relative; 
+    margin-bottom: 16px; 
+}
+
+/* Chain container draws a center line; cards attach with short nubs */
+.branch .chain { 
+    position: relative; 
+    display: grid; 
+    gap: 12px; 
+}
+
+.branch .chain::before {
+  content: "";
+  position: absolute;
+  top: -50px; 
+  bottom: 50px;
+  left: 50%;
+  width: 2px;
+  background: var(--oc-gray);
+  transform: translateX(-50%);
+  z-index: -1;
+}
+/*
+.branch .chain > .org-card { position: relative; }
+.branch .chain > .org-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 14px; 
+  height: 2px;
+  right: -26px;
+  background: var(--oc-gray);
+  transform: translateX(-50%);
+} */
+
+/* .branch .chain > .org-card:first-child::after { display: none; } */
+
+/* First child attaches directly to the parent card with a slightly longer stub */
+.branch .chain > .org-card:first-child::before { height: 14px; top: -14px; }
+
+/* Responsive: stack the two branches and simplify long lines */
+@media (max-width: 768px) {
+  .sm-branches { grid-template-columns: 1fr; }
+  .sm-branches::after { left: 12px; right: auto; width: calc(100% - 24px); }
+  .sm-branches .branch::before { left: 12px; transform: none; }
+  .branch .chain::before { left: 12px; transform: none; }
+  .branch .chain > .org-card::before { left: 12px; transform: none; }
+}
+
+/* === Right branch (Broadcast Network Admin) uses PD-style rails === */
+.branch-rail { position: relative; }
+
+/* Small bridge under the BNA card */
+.branch-rail .rail-bridge { position: relative; height: 12px; }
+.branch-rail .rail-bridge::before { /* horizontal bridge between rails */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 128px;  /* match .rail side offsets */
+  right: 128px;
+  height: 2px;
+  background: var(--oc-gray);
+}
+.branch-rail .rail-bridge::after { /* short vertical stem from card to bridge */
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 2px;
+  height: 12px;
+  background: var(--oc-gray);
+  transform: translateX(-50%);
+}
+
+/* Ensure the BNA rail spans cleanly (no hard-coded offsets) */
+.branch-rail .rail--bna { position: relative; padding: 8px 12px; margin-top: 0; }
+.branch-rail .rail--bna::before { top: -12px; bottom: 30px; left: 27%; }
+.branch-rail .rail--bna::after { top: -12px; bottom: 30px; right: 27%; z-index: -1;}
+.branch-rail .rail--bna .rail-row { margin: 0px 18px; }
+
+/* Tighten card→rail nubs a touch for this small rail */
+.branch-rail .rail--bna .rail-row > .org-card:nth-child(1)::before { display: none; }
+.branch-rail .rail--bna .rail-row > .org-card:nth-child(2)::after  { display: none; }
+
+/* Mobile: stack and hide bridge for simplicity */
+@media (max-width: 640px) {
+  .branch-rail .rail-bridge { display: none; }
+}
+
+/* DMAC vertical chain: Director → Division Director II → Manager */
+#panel-dmac .dm-director,
+#panel-dmac .dm-divdir,
+#panel-dmac .dm-manager { position: relative; }
+
+#panel-dmac .dm-divdir::before,
+#panel-dmac .dm-manager::before {
+  content: "";
+  position: absolute;
+  top: -14px;               /* reach up to the card above */
+  left: 50%;
+  width: 2px;
+  height: 14px;
+  background: var(--oc-gray);
+  transform: translateX(-50%);
+}
+
+.extend-deputy-director::before {
+    content: "";
+    position: absolute;
+    top: 47px;
+    left: 343px;
+    right: -75px;
+    height: 2px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+/* === DMAC: Coordinator subtree layout === */
+
+.coordinator-parent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coordinator-parent::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 2px;
+    height: 96px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+.coordinator-parent::after {
+    content: "";
+    position: absolute;
+    top: 75px;
+    left: 98px;
+    right: 98px;
+    height: 2px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+
+.coordinator-children {
+    margin-top: 25px;
+}
+
+.coordinator-children::before {
+    content: "";
+    position: absolute;
+    top: -56px;
+    left: 0px;
+    right: 435px;
+    height: 2px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+.coordinator-children::after {
+    content: "";
+    position: absolute;
+    height: 306px;
+    width: 2px;
+    top: -72px;
+    background: var(--oc-gray);
+}
+
+.coordinator-children.rail {
+  position: relative;
+  padding: 8px 12px;
+  margin-top: 8px;
+}
+
+.coordinator-children-rail-row {
+  display: flex;
+  gap: 16px;
+  align-items: start;
+  position: relative;
+  margin: 5px 18px;
+}
+
+.coordinator-children-rail-row::before, .coordinator-children-rail-row::after {
+    content: "";
+    position: absolute;
+    top: -17px;
+    bottom: 30px;
+    width: 2px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+.coordinator-children-rail-row::before {left: 105px;}
+.coordinator-children-rail-row::after {right: 105px;}
+
+.dmac-card-solo {
+    display: block !important;
+}
+
+
+/* Responsive stacking for narrow screens */
+@media (max-width: 640px) {
+  .coordinator-children .rail-row {
+    grid-template-columns: 1fr;
+  }
+
+  .coordinator-children .rail-row > .org-card:nth-child(1)::before,
+  .coordinator-children .rail-row > .org-card:nth-child(2)::after,
+  .coordinator-children.rail::before,
+  .coordinator-children.rail::after {
+    display: none;
+  }
+}
+
+/* === PAS III, PAS I, Admin Asst I, FA II, Fiscal Specialist II === */
+
+
+.pas-admin-wrapper {
+    display: block;
+    position: relative;
+    margin: 10px 0;
+}
+
+.pas-admin-group::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -126px;
+    right: 85px;
+    height: 2px;
+    background: var(--oc-gray);
+}
+
+
+.pas-admin-group {
+    display: block;
+}
+
+.pas-admin-group::after {
+    content: "";
+    position: absolute;
+    height: 445px;
+    left: 390px;
+    width: 2px;
+    top: -463px;
+    background: var(--oc-gray);
+}
+
+
+/* === PAS & Finance: Two-column layout === */
+.pas-finance-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-top: 20px;
+}
+
+.pas-finance-wrapper > .org-level {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+/* === PAS Specialists, Admin, and Finance Chain Groups === */
+
+.pas-specialists-group::before {
+    content: "";
+    position: absolute;
+    top: -19px;
+    bottom: 110px;
+    left: 130px;
+    width: 2px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+.pas-specialists-group {
+  display: flex;
+  justify-content: center;
+}
+
+.pas-specialists-group::after {
+    content: "";
+    position: absolute;
+    top: -19px;
+    bottom: 120px;
+    right: 130px;
+    width: 2px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+.pas-admin-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.admin-assit-solo {
+    display: block !important;
+    margin-top: 20px;
+}
+
+.finance-chain-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pas-admin-financial-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+}
+
+.fa-parent::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 2px;
+    height: 125px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+
+.fa-parent::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 435px;
+    width: 2px;
+    height: 125px;
+    background: var(--oc-gray);
+    z-index: -1;
+}
+/* === Graphics Section Scoped Styles === */
+
+.graphics-rail-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 16px;
+    align-items: start;
+    position: relative;
+    margin: 16px 18px;
+}
+
+.graphics-children.rail::before, .graphics-children.rail::after {
+    content: "";
+    position: absolute;
+    top: -80px;
+    bottom: 40px;
+    width: 2px;
+    background: var(--oc-gray);
+}
+
+.org-level.graphics::before, .org-level.graphics::after {
+    content: "";
+    position: absolute;
+    top: -52px;
+    height: 2px;
+    background: var(--oc-gray);
+}
+
+.org-level.graphics::before {
+    left: 10px;
+    right: 450px;
+}
+
+.org-level.graphics::after {
+    right: 10px;
+    left: 450px;  
+}
+
+.org-card.graphics::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 2px;
+    background: var(--oc-gray);
+    transform: translateY(-50%);
+}
+
+.org-card.graphics::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 14px;
+    height: 2px;
+    background: var(--oc-gray);
+    transform: translateY(-50%);
+}
+
+.org-card.graphics::before {left: -20px;}
+
+.org-card.graphics::after {right: -20px;}
+.print-btn {
+  margin-left: 1rem;
+  padding: 0.4em 0.8em;
+  font-size: 13px;
+  background-color: var(--oc-ocean-blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.print-btn:hover {
+  background-color: var(--oc-gray);
+}
+
+.mpi-btn:hover { background-color: #55b510;}
+.bs-btn:hover { background-color: #a0a2cc;}
+.ch20-btn:hover { background-color: #00938e;}
+.dmac-btn:hover { background-color: #0093c4;}
+.graphics-btn:hover { background-color: #ffb5cc;}
+
+
+/* Tab styles matching each section's color theme with !important for Bootstrap override */
+.tab[data-target="#dmac-section"] {
+  background-color: #00abe2 !important; /* Digital Marketing & Communications */
+  color: white !important;
+}
+
+.tab[data-target="#board-services-section"] {
+  background-color: #a0a2cc !important; /* Board Services */
+  color: white !important;
+}
+
+.tab[data-target="#media-public-info-section"] {
+  background-color: #7aba4c !important; /* Media & Public Info */
+  color: white !important;
+}
+
+.tab[data-target="#channel20-section"] {
+  background-color: #00c2bb !important; /* Channel 20 */
+  color: white !important;
+}
+
+.tab[data-target="#graphics-section"] {
+  background-color: #ffb5cc !important; /* Graphics */
+  color: black !important;
+}

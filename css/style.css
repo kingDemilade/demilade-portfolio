@@ -1,0 +1,236 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* This pushes the footer down */
+}
+
+.section1 {
+    height: 150vh;
+    background-image: url('/images/project-banner.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* .mt-5 {
+   margin-top: 12.5rem !important; 
+}*/
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(.99);
+}
+
+/* Optional: add soft glow */
+.bg-dark {
+    background-color: #0d0d0d !important;
+}
+
+/* Animation */
+@keyframes scroll {
+	0% { transform: translateX(650px); }
+	100% { transform: translateX(-100%); } /* Scroll halfway since content is duplicated */
+}
+
+/* Styling */
+.slider {
+	/* background: white; */
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 350px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	width: 600px;
+}
+
+.slider::before,
+.slider::after {
+	content: "";
+	height: 350px;
+	position: absolute;
+	width: 600px;
+	z-index: 2;
+}
+
+.slider::after {
+	right: 0;
+	top: 0;
+	transform: rotateZ(180deg);
+}
+
+.slider::before {
+	left: 0;
+	top: 0;
+}
+
+.slide-track {
+    display: flex;
+	animation: scroll 25s linear infinite;
+	width: max-content; /* dynamically expand to fit content */
+}
+
+.slide-track:hover {
+	animation-play-state: paused;
+}
+
+.slide {
+    flex: 0 0 auto; /* Prevent flex-grow/shrink */
+	height: 350px;
+	transform: translateZ(0);
+}
+
+.slide-inner {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.slide:hover .slide-inner {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slider:hover .slide-track {
+    animation-play-state: paused;
+}
+
+
+/* Dark Mode Styling */
+
+body.dark-mode {
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+}
+
+body.dark-mode .bg-light {
+    background-color: #1a1a1a !important;    
+}
+
+body.dark-mode .navbar,
+body.dark-mode .footer {
+    background-color: #1a1a1a !important;
+}
+
+body.dark-mode .fw-bold {
+    color: #f0f0f0;
+}
+
+body.dark-mode .nav-link.active {
+    color: #fff;
+}
+
+body.dark-mode .nav-link {
+    color: #8b8b8b;
+}
+
+/* Custom Tab Styling */
+
+.tab-panel {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;    
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Lightbox overlay */
+.lightbox-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: none; align-items: center; justify-content: center; z-index: 1050; }
+.lightbox-overlay.open { display: flex; }
+.lightbox-content { position: relative; max-width: min(90vw, 1200px); max-height: 90vh; }
+.lightbox-img { max-width: 100%; max-height: 90vh; display: block; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.lightbox-caption { color: #fff; text-align: center; margin-top: .5rem; font-size: .95rem; opacity: .9; }
+
+/* Controls */
+.lightbox-close { position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,.6); color:#fff; border:0; width:40px; height:40px; border-radius:999px; cursor:pointer; font-size:22px; display:grid; place-items:center; }
+.lightbox-nav { position: absolute; inset: 0; display:flex; align-items:center; justify-content:space-between; pointer-events:none; }
+.lightbox-btn { pointer-events:auto; background: rgba(0,0,0,.4); color:#fff; border:0; width:48px; height:48px; border-radius:999px; cursor:pointer; font-size:22px; display:grid; place-items:center; margin: 0 8px; }
+.lightbox-btn:hover, .lightbox-close:hover { background: rgba(0,0,0,.6); }
+
+/* Ensure controls sit above the image */
+.lightbox-img {
+  position: relative;
+  z-index: 1;
+}
+
+.lightbox-nav {
+  z-index: 2; /* above image */
+}
+
+.lightbox-close {
+  z-index: 3; /* above everything */
+}
+
+/* Gradient background behind buttons for visibility */
+.lightbox-btn {
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(2px);
+}
+
+.lightbox-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(0,0,0,0.6) 0%, transparent 70%);
+  z-index: -1;
+}
+
+.lightbox-close {
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(2px);
+}
+
+/* Fade in/out controls on hover */
+.lightbox-overlay .lightbox-btn,
+.lightbox-overlay .lightbox-close {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay:hover .lightbox-btn,
+.lightbox-overlay:hover .lightbox-close {
+  opacity: 1;
+}
+
+/* Fade-in animation for lightbox image */
+@keyframes lightboxFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.lightbox-overlay.open .lightbox-img {
+  animation: lightboxFade 0.3s ease forwards;
+}
+
+.lightbox-overlay.open .lightbox-caption {
+  animation: lightboxFade 0.3s ease forwards;
+  animation-delay: 0.15s;
+}

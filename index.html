@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demilade Haastrup | Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Your custom stylesheet (optional for now) -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<main class="flex-grow-1">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Demilade</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+            <button id="toggleDarkMode" class="btn btn-primary" aria-label="Toggle dark mode"> Toggle Dark Mode</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="py-5 text-center bg-light">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Hey, I'm Demilade 👋</h1>
+    <p class="lead">I build modern websites and creative digital experiences.</p>
+    <a href="projects.html" class="btn btn-primary btn-lg mt-3">View My Work</a>
+  </div>
+</section>
+
+
+<section class="custom-scroll-section bg-dark text-white">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="slider">
+          <div class="slide-track">
+            <div class="slide">
+              <div class="slide-inner">
+               <!-- Original Set --> 
+                <picture>
+                  <source srcset="/images/2025-Guide-To-Services@2x.png 2x, /images/2025-Guide-To-Services.png 1x" type="image/png">
+                  <img src="/images/2025-Guide-To-Services.png" class="img-fluid rounded shadow" alt="2025 Guide To Services Cover.">
+                </picture>
+                <picture>
+                  <source srcset="/images/2025-Golden-Palm-Awards@2x.png 2x, /images/2025-Golden-Palm-Awards.png 1x" type="image/png">
+                  <img src="/images/2025-Golden-Palm-Awards.png" class="img-fluid rounded shadow" alt="2025 Golden Palm Awards.">
+                </picture>
+                <picture>
+                  <source srcset="/images/hello-kitty@2x.png 2x, /images/template-Reduced-Featured-Projects.png 1x" type="image/png">
+                  <img src="/images/hello-kitty.png" class="img-fluid rounded shadow" alt="Hello Kitty Papercraft">
+                </picture>
+               <!-- Duplicated Set --> 
+                <picture>
+                  <source srcset="/images/2025-Guide-To-Services@2x.png 2x, /images/2025-Guide-To-Services.png 1x" type="image/png">
+                  <img src="/images/2025-Guide-To-Services.png" class="img-fluid rounded shadow" alt="2025 Guide To Services Cover.">
+                </picture>
+                <picture>
+                  <source srcset="/images/2025-Golden-Palm-Awards@2x.png 2x, /images/template-Reduced-Featured-Projects.png 1x" type="image/png">
+                  <img src="/images/2025-Golden-Palm-Awards.png" class="img-fluid rounded shadow" alt="2025 Golden Palm Awards.">
+                </picture>
+               <picture>
+                  <source srcset="/images/hello-kitty@2x.png 2x, /images/template-Reduced-Featured-Projects.png 1x" type="image/png">
+                  <img src="/images/hello-kitty.png" class="img-fluid rounded shadow" alt="Hello Kitty Papercraft">
+                </picture>
+              </div> <!-- END slide-inner -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="scroll-block reveal">
+          <h2 class="display-5 fw-bold">Project Showcase</h2>
+          <p class="lead">
+            Explore a diverse collection of my creative work, from dynamic animations and print designs to intricate paper-crafted projects and responsive websites. Each piece reflects my passion for blending visual storytelling with functional design, delivering experiences that are both visually compelling and purpose-driven.</p>
+          <a href="projects.html" class="btn btn-outline-light">See All Projects</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="bg-dark text-white text-center py-4 mt-5">
+  <div class="container">
+    <p class="mb-0">&copy; <span id="year"></span> Demilade Haastrup. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

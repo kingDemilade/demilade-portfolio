@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demilade Haastrup | Projects</title>
+
+</head>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Your custom stylesheet (optional for now) -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/hero-banner.css" />
+</head>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Demilade</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item">
+            <button id="toggleDarkMode" class="btn btn-primary" alt="Toggle Dark Mode"> Toggle Dark Mode</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero-banner">
+  <div class="hero-content container text-center text-white">
+    <h1 class="display-4 fw-bold">Projects</h1>
+    <p class="lead">Explore standout designs from print to pixel.</p>
+  </div>
+</header>
+
+
+<main class="container py-5">
+  <!-- Tab Navigation -->
+  <div class="d-flex flex-wrap justify-content-center gap-2 mb-4" 
+       id="tab-buttons"
+       role="tablist"
+       aria-label="Project categories">
+    <button class="btn btn-outline-primary active" 
+            id="tab-print"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-print"
+            tabindex="0"
+            data-tab="print">Print Publications</button>
+    <button class="btn btn-outline-primary" 
+            id="tab-animations"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-animations"
+            tabindex="-1"
+            data-tab="animations">Animations</button>
+    <button class="btn btn-outline-primary" 
+            id="tab-banners"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-banners"
+            tabindex="-1"
+            data-tab="banners">Website Banners</button>
+    <button class="btn btn-outline-primary" 
+            id="tab-social"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-social"
+            tabindex="-1"
+            data-tab="social">Social Media</button>
+    <button class="btn btn-outline-primary" 
+            id="tab-websites"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-websites"
+            tabindex="-1"            
+            data-tab="websites">Website Projects</button>
+    <button class="btn btn-outline-primary" 
+            id="tab-paper"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-paper"
+            tabindex="-1"     
+            data-tab="paper">Paper Crafts</button>
+  </div>
+
+  <!-- Tab Content -->
+  <div id="tab-contents">
+    <div class="tab-panel active" 
+         id="panel-print"
+         role="tabpanel"
+         aria-labelledby="tab-print"
+         data-content="print">
+    <h3 class="h4 fw-bold mb-2 text-center">Print Publications</h3>
+    <div class="row g-4 mt-3">
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="https://via.placeholder.com/400x250?text=Print+Project+1" class="card-img-top" alt="Print Project 1">
+      <div class="card-body">
+        <h5 class="card-title">2025 Guide to Services</h5>
+        <p class="card-text">A resource-rich publication designed for Palm Beach County residents.</p>
+        <a href="#" class="btn btn-primary">View PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="https://via.placeholder.com/400x250?text=Print+Project+2" class="card-img-top" alt="Print Project 2">
+      <div class="card-body">
+        <h5 class="card-title">Golden Palm Awards</h5>
+        <p class="card-text">Elegant event booklet celebrating employee excellence across departments.</p>
+        <a href="#" class="btn btn-primary">View PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card h-100">
+      <img src="https://via.placeholder.com/400x250?text=Print+Project+3" class="card-img-top" alt="Print Project 3">
+      <div class="card-body">
+        <h5 class="card-title">Your Neighborhood Dashboard</h5>
+        <p class="card-text">Print collateral for internal government communications.</p>
+        <a href="#" class="btn btn-primary">View PDF</a>
+      </div>
+    </div>
+  </div>
+    </div> 
+    </div><!-- END Print Publication Content -->
+
+<div class="tab-panel" 
+     id="panel-animations"
+     role="tabpanel"
+     aria-labelledby="tab-animations"
+     data-content="animations"
+     hidden>
+  <h3 class="h4 fw-bold mb-2 text-center">Animations</h3>
+  <div class="row g-4 mt-3">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="https://via.placeholder.com/400x250?text=Motion+Logo+Reveal" class="card-img-top" alt="Motion Logo Reveal">
+        <div class="card-body">
+          <h5 class="card-title">Motion Logo Reveal</h5>
+          <p class="card-text">An animated logo created in After Effects for social and video intros.</p>
+          <a href="#" class="btn btn-primary">Watch</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="https://via.placeholder.com/400x250?text=Info+Animation" class="card-img-top" alt="Infographic Animation">
+        <div class="card-body">
+          <h5 class="card-title">Animated Infographic</h5>
+          <p class="card-text">Dynamic data visualization animation designed for public education campaigns.</p>
+          <a href="#" class="btn btn-primary">Watch</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="https://via.placeholder.com/400x250?text=Social+Video+Snippet" class="card-img-top" alt="Social Video Snippet">
+        <div class="card-body">
+          <h5 class="card-title">Social Snippet Animation</h5>
+          <p class="card-text">Short-form animated reel for social media event promotion.</p>
+          <a href="#" class="btn btn-primary">Watch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- END Animation Content -->
+
+    <div class="tab-panel"
+         id="panel-banners"
+         role="tabpanel"
+         aria-labelledby="tab-banners" 
+         data-content="banners"
+         hidden>
+      <h3 class="h4 fw-bold mb-2 text-center">Website Banners</h3>
+      <div class="row g-4 mt-3">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x250?text=Homepage+Banner+1" class="card-img-top" alt="Homepage Banner Design">
+            <div class="card-body">
+              <h5 class="card-title">Homepage Banner</h5>
+              <p class="card-text">A bold banner created for the Palm Beach County landing page.</p>
+              <a href="#" class="btn btn-primary">View Design</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x250?text=Department+Banner" class="card-img-top" alt="Departmental Banner">
+            <div class="card-body">
+              <h5 class="card-title">Departmental Campaign</h5>
+              <p class="card-text">Campaign banner designed to promote environmental initiatives.</p>
+              <a href="#" class="btn btn-primary">View Design</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x250?text=Promo+Banner" class="card-img-top" alt="Promotional Banner">
+            <div class="card-body">
+              <h5 class="card-title">Promotional Banner</h5>
+              <p class="card-text">Custom banner for seasonal events and public outreach.</p>
+              <a href="#" class="btn btn-primary">View Design</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- END Web Banner content -->
+
+
+    <div class="tab-panel" 
+         id="panel-social"
+         role="tabpanel"
+         aria-labelledby="tab-social"    
+         data-content="social"
+         hidden>
+      <h3 class="h4 fw-bold mb-2 text-center">Social Media</h3>
+      <div class="row g-4 mt-3">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x250?text=Instagram+Campaign" class="card-img-top" alt="Instagram Campaign">
+            <div class="card-body">
+              <h5 class="card-title">Instagram Campaign</h5>
+              <p class="card-text">A coordinated visual series highlighting community safety tips.</p>
+              <a href="#" class="btn btn-primary">View Post</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x250?text=Facebook+Story" class="card-img-top" alt="Facebook Story">
+            <div class="card-body">
+              <h5 class="card-title">Facebook Story Promo</h5>
+              <p class="card-text">Designed story slides for promoting department events and updates.</p>
+              <a href="#" class="btn btn-primary">View Story</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x250?text=Engagement+Graphics" class="card-img-top" alt="Engagement Graphics">
+            <div class="card-body">
+              <h5 class="card-title">Engagement Graphics</h5>
+              <p class="card-text">Eye-catching visuals built to encourage community interaction online.</p>
+              <a href="#" class="btn btn-primary">View Design</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- END Social Media Content -->
+
+
+    <div class="tab-panel"
+         id="panel-websites"
+         role="tabpanel"
+         aria-labelledby="tab-websites" 
+         data-content="websites"
+         hidden>
+      <h3 class="h4 fw-bold mb-2 text-center">Website Projects</h3>
+      <div class="row g-4 mt-3">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x250?text=Your+Neighborhood+Site" class="card-img-top" alt="Palm Beach County History Timeline">
+            <div class="card-body">
+              <h5 class="card-title">Palm Beach County History Timeline</h5>
+              <p class="card-text">A data-driven community site built with UX and accessibility in mind.</p>
+              <a href="/website-projects/pbc-history-timeline.html" target="_blank" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x250?text=PBC+Day+Site" class="card-img-top" alt="Public Affairs Organization Chart">
+            <div class="card-body">
+              <h5 class="card-title">PBC Public Affairs Organization Chart</h5>
+              <p class="card-text">Event branding site showcasing legislative priorities and interactive content.</p>
+              <a href="/website-projects/org-chart.html" target="_blank" class="btn btn-primary">View Site</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x250?text=Weather+Widget+App" class="card-img-top" alt="Weather Widget App">
+            <div class="card-body">
+              <h5 class="card-title">Weather Widget App</h5>
+              <p class="card-text">A responsive React-based weather app with API integration and search history.</p>
+              <a href="#" class="btn btn-primary">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- END Website Project Content -->
+
+
+    <div class="tab-panel" 
+         id="panel-paper"
+         role="tabpanel"
+         aria-labelledby="tab-paper"
+         data-content="paper"
+         hidden>
+      <h3 class="h4 fw-bold mb-2 text-center">Paper Crafts</h3>
+      <div class="row g-4 mt-3">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x250?text=Owl+Sculpture" class="card-img-top" alt="Low Poly Owl Sculpture">
+            <div class="card-body">
+              <h5 class="card-title">Owl Paper Sculpture</h5>
+              <p class="card-text">A geometric paper-crafted owl made with precision cuts and folds.</p>
+              <a href="#" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="images/projects/paper-crafts/hello-kitty.jpg" class="card-img-top" alt="Hello Kitty Paper Craft">
+            <div class="card-body">
+              <h5 class="card-title">Hello Kitty Figure</h5>
+              <p class="card-text">Fan art sculpture of Hello Kitty, crafted with colored paper layers.</p>
+              <a href="#" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/400x250?text=Custom+Sculpture" class="card-img-top" alt="Custom Paper Craft">
+            <div class="card-body">
+              <h5 class="card-title">Custom Commission</h5>
+              <p class="card-text">A commissioned low-poly character for display and gifting.</p>
+              <a href="#" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- END Papercraft Content -->
+
+  </div>
+</main>
+
+<footer class="bg-dark text-white text-center py-4 mt-5">
+  <div class="container">
+    <p class="mb-0">&copy; <span id="year"></span> Demilade Haastrup. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
