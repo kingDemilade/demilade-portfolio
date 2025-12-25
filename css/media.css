@@ -56,9 +56,10 @@ img {
   }
 
   .slide-inner {
-    width: min(92vw, 520px);
+    width: 100%;
+    max-width: none;
     height: auto;
-    max-height: 70vh;
+    max-height: none;
   }
 
   /* Lightbox: keep controls reachable on small screens */
@@ -91,9 +92,9 @@ img {
   }
 
   .slide-inner {
-    width: min(86vw, 560px);
+    width: 100%;
+    max-width: none;
     height: auto;
-    max-height: 75vh;
   }
 }
 
@@ -105,9 +106,9 @@ img {
 
   /* Slider: scale down from desktop sizes */
   .slide-inner {
-    width: min(80vw, 600px);
+    width: 100%;
+    max-width: 600px;
     height: auto;
-    max-height: 78vh;
   }
 }
 
