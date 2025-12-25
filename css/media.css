@@ -153,32 +153,6 @@ img {
   .hero-banner {
     padding: 6rem 3rem;
   }
-
-  .slide {
-    width: auto;
-    height: auto;
-  }
-
-  .slide-track {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  /* Slider: scale down from desktop sizes */
-  .slide-inner {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-  }
-}
-
-/* >= 992px: laptops and up */
-@media (min-width: 992px) {
-  /* Keep desktop behavior; only add safe guardrails */
-  .slide-inner {
-    max-width: 600px;
-  }
 }
 
 /* >= 1200px: large desktops */
