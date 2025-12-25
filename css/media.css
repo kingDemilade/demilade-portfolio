@@ -1,0 +1,135 @@
+
+
+/* =========================================================
+   media.css
+   Responsive overrides (load AFTER your other CSS files)
+   Goal: keep changes minimal + safe, and only override where
+   screens get smaller/larger.
+   ========================================================= */
+
+/* Helpful default to avoid accidental horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Make images responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------------------------------------------------------
+   Breakpoints (mobile-first)
+   - Base styles belong in your regular CSS
+   - Overrides live here
+   --------------------------------------------------------- */
+
+/* 0–575px: phones */
+@media (max-width: 575.98px) {
+  /* If your hero uses a fixed background, disable it on mobile
+     (fixed backgrounds are janky on many mobile browsers). */
+  .section1 {
+    background-attachment: scroll;
+  }
+
+  /* If you use the hero-banner component, reduce padding/height */
+  .hero-banner {
+    height: auto;
+    min-height: 70vh;
+    padding: 3rem 1.25rem;
+  }
+
+  /* Slider: avoid hard-coded desktop widths on phones */
+  .custom-scroll-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  /* These values are safe even if your slider is custom;
+     if the selectors exist, it will prevent overflow. */
+  .slide-track {
+    width: 100%;
+  }
+
+  .slide-inner {
+    width: min(92vw, 520px);
+    height: auto;
+    max-height: 70vh;
+  }
+
+  /* Lightbox: keep controls reachable on small screens */
+  .lightbox-content {
+    width: 92vw;
+    max-height: 82vh;
+  }
+
+  .lightbox-controls {
+    gap: 0.5rem;
+  }
+
+  /* Timeline: keep text readable and spacing tight */
+  .timeline-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* 576–767px: large phones / small tablets */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .section1 {
+    background-attachment: scroll;
+  }
+
+  .hero-banner {
+    height: auto;
+    min-height: 75vh;
+    padding: 4rem 2rem;
+  }
+
+  .slide-inner {
+    width: min(86vw, 560px);
+    height: auto;
+    max-height: 75vh;
+  }
+}
+
+/* 768–991px: tablets */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-banner {
+    padding: 6rem 3rem;
+  }
+
+  /* Slider: scale down from desktop sizes */
+  .slide-inner {
+    width: min(80vw, 600px);
+    height: auto;
+    max-height: 78vh;
+  }
+}
+
+/* >= 992px: laptops and up */
+@media (min-width: 992px) {
+  /* Keep desktop behavior; only add safe guardrails */
+  .slide-inner {
+    max-width: 600px;
+  }
+}
+
+/* >= 1200px: large desktops */
+@media (min-width: 1200px) {
+  /* Optional: constrain very wide layouts if needed */
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* >= 1400px: extra-large desktops */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1240px;
+  }
+}
