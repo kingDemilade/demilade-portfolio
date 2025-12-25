@@ -55,11 +55,23 @@ img {
     width: 100%;
   }
 
+  /* Slider: make each showcase item LARGE on phones */
   .slide-inner {
-    width: 100%;
-    max-width: none;
-    height: auto;
-    max-height: none;
+    width: 92vw !important;
+    max-width: 92vw !important;
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+    margin: 0 auto;
+  }
+
+  /* Ensure the media inside each slide fills the slide */
+  .slide-inner img,
+  .slide-inner picture,
+  .slide-inner video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    display: block;
   }
 
   /* Lightbox: keep controls reachable on small screens */
@@ -91,10 +103,22 @@ img {
     padding: 4rem 2rem;
   }
 
+  /* Slider: keep items big on large phones / small tablets */
   .slide-inner {
-    width: 100%;
-    max-width: none;
-    height: auto;
+    width: 86vw !important;
+    max-width: 86vw !important;
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+    margin: 0 auto;
+  }
+
+  .slide-inner img,
+  .slide-inner picture,
+  .slide-inner video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    display: block;
   }
 }
 
