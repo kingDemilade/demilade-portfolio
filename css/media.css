@@ -117,7 +117,7 @@ img {
   }
   
   .slider {
-    width: 600px;
+    margin-left: -85px;
 }
 
   .slide {
