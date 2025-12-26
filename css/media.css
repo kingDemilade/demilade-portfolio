@@ -159,8 +159,8 @@ img {
   }
 }
 
-/* >= 1200px: large desktops */
-@media (min-width: 1200px) {
+/* 1200–1399px: iPad Pro 11" landscape (1366px wide) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
   /* Optional: constrain very wide layouts if needed */
   .container {
     max-width: 1140px;
