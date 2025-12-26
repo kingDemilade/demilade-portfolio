@@ -159,6 +159,24 @@ img {
   }
 }
 
+/* 992–1199px: iPad Pro landscape + small laptops */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Fix: Project Showcase slider overlapping text */
+  .slider {
+    position: static !important;
+    z-index: auto !important;
+    height: auto !important;
+    margin-top: 1.5rem;
+    margin-left: 0 !important;
+    transform: none !important;
+  }
+
+  /* Ensure track doesn't collapse/shrink unexpectedly */
+  .slide-track {
+    height: auto !important;
+  }
+}
+
 /* >= 1200px: large desktops */
 @media (min-width: 1200px) {
   /* Optional: constrain very wide layouts if needed */
