@@ -115,6 +115,10 @@ img {
     min-height: 75vh;
     padding: 4rem 2rem;
   }
+  
+  .slider {
+    width: 600px;
+}
 
   .slide {
     width: 86vw !important;
