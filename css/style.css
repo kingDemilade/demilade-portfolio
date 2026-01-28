@@ -32,6 +32,13 @@ main {
     transition: transform 0.3s ease;
 }
 
+/* Prevent video thumbnails in cards from being cropped */
+.card video.card-img-top {
+    height: auto;          /* allow natural video height */
+    object-fit: contain;   /* fit entire frame instead of cropping */
+    background: #000;      /* subtle letterbox if aspect ratio differs */
+}
+
 .card:hover .card-img-top {
     transform: scale(.99);
 }
