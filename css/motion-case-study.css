@@ -35,6 +35,10 @@
 
 /* ===== MOTION GALLERY GRID ===== */
 
+.motion-grid {
+  justify-content: center;
+}
+
 .motion-grid video {
   width: 100%;
   border-radius: 10px;
