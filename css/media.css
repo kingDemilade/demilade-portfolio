@@ -39,8 +39,8 @@ img {
 
   /* Motion case-study hero content (mobile) */
   .hero-content {
-    padding: 0.45rem;
-    min-height: 9vh;
+    padding: 0.45rem !important;
+    min-height: 9vh !important;
   }
 
   /* Slider: avoid hard-coded desktop widths on phones */
