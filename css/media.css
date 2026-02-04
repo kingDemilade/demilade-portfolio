@@ -33,8 +33,14 @@ img {
   /* If you use the hero-banner component, reduce padding/height */
   .hero-banner {
     height: auto;
-    min-height: 70vh;
+    min-height: 20vh;
     padding: 3rem 1.25rem;
+  }
+
+  /* Motion case-study hero content (mobile) */
+  .hero-content {
+    padding: 1.5rem;
+    min-height: 13vh;
   }
 
   /* Slider: avoid hard-coded desktop widths on phones */

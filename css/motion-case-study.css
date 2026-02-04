@@ -48,12 +48,6 @@
   padding: 2rem;
 }
 
-@media (max-width: 768px) {
-  .hero-content {
-    padding: 1.5rem;
-  }
-}
-
 /* ===== HERO VIDEO ===== */
 
 .motion-hero {
