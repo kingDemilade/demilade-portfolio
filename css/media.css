@@ -33,8 +33,14 @@ img {
   /* If you use the hero-banner component, reduce padding/height */
   .hero-banner {
     height: auto;
-    min-height: 70vh;
+    min-height: 20vh !important;
     padding: 3rem 1.25rem;
+  }
+
+  /* Motion case-study hero content (mobile) */
+  .hero-content {
+    padding: 0.45rem !important;
+    min-height: 9vh !important;
   }
 
   /* Slider: avoid hard-coded desktop widths on phones */
@@ -159,11 +165,20 @@ img {
   }
 }
 
+
 /* 1200–1399px: iPad Pro 11" landscape (1366px wide) */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   /* Optional: constrain very wide layouts if needed */
   .container {
     max-width: 1140px;
+  }
+}
+
+/* 1200px+: motion case-study hero refinement (desktop only) */
+@media (min-width: 1200px) {
+  .hero-banner,
+  .hero-content {
+    min-height: 45vh;
   }
 }
 
