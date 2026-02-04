@@ -25,3 +25,7 @@
   margin-top: 1rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
+
+.hero-banner .pbcday2026 {
+  background-image: url('/videos/pbc-day/2026/pbc-day-2026-hero-web.mp4');
+}
