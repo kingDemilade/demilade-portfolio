@@ -5,12 +5,25 @@
   (hero video, motion grid, captions, spacing)
 */
 
-/* ====== HERO BANNER VIDEO ====== */
+/* ===== HERO BANNER VIDEO (PRIMARY) ===== */
 
 .hero-banner {
   position: relative;
+  width: 100%;
+  min-height: 70vh;           /* ensures video is visible */
   overflow: hidden;
-  padding: 0; /* video handles layout */
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.65)
+  );
+  z-index: 1;                 /* sits above video, below text */
 }
 
 .hero-video {
@@ -18,16 +31,27 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;          /* background‑style behavior */
   z-index: 0;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
-  padding: 12rem;
+  z-index: 2;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 1.5rem;
+  }
 }
 
 /* ===== HERO VIDEO ===== */
