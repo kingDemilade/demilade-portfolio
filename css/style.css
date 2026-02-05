@@ -296,10 +296,10 @@ body.dark-mode .theme-toggle svg {
   color: #f7f7f7 !important; /* soft off-white */
 }
 
-/* Force SVG paths to inherit color */
+/* Force SVG paths to inherit color 
 .theme-toggle svg path {
   fill: currentColor !important;
-}
+}*/
 
 /* Moon icon color (dark mode) */
 .theme-toggle .icon-light {
