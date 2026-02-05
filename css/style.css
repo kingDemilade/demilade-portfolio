@@ -270,3 +270,13 @@ body.dark-mode .nav-link {
   outline: 2px solid currentColor;
   outline-offset: 4px;
 }
+
+/* Theme toggle micro-interaction */
+.theme-toggle svg {
+  transition: transform 0.35s ease;
+  transform-origin: center;
+}
+
+body.dark-mode .theme-toggle svg {
+  transform: rotate(180deg);
+}
