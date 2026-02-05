@@ -293,7 +293,7 @@ body.dark-mode .theme-toggle svg {
 
 /* Sun icon color (light mode) */
 .theme-toggle .icon-dark {
-  color: #f7f7f7; /* soft off-white */
+  color: #f7f7f7 !important; /* soft off-white */
 }
 
 /* Theme toggle icon visibility */
