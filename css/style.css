@@ -241,3 +241,32 @@ body.dark-mode .nav-link {
   animation: lightboxFade 0.3s ease forwards;
   animation-delay: 0.15s;
 }
+
+
+/* ===== Theme Toggle (Navbar Icon Button) ===== */
+
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: inherit; /* allows SVG to use currentColor */
+}
+
+.theme-toggle svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.theme-toggle:hover {
+  opacity: 0.75;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
