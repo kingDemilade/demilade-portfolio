@@ -254,7 +254,7 @@ body.dark-mode .nav-link {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: inherit; /* allows SVG to use currentColor */
+  /* color: inherit; allows SVG to use currentColor */
 }
 
 .theme-toggle svg {
