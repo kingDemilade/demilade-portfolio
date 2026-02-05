@@ -143,7 +143,11 @@ body.dark-mode .nav-link.active {
 }
 
 body.dark-mode .nav-link {
-    color: #8b8b8b;
+    color: #f0f0f0;
+}
+
+body.dark-mode p text-muted {
+    color: #f0f0f0;
 }
 
 /* Custom Tab Styling */
