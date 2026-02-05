@@ -288,7 +288,7 @@ body.dark-mode .theme-toggle {
 }
 
 body.dark-mode .theme-toggle svg {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 
 /* Sun icon color (light mode) */
