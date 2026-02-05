@@ -4,11 +4,33 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-// Toggle Button for Dark Mode
+// Toggle Button for Dark Mode (with persistence)
 const toggleBtn = document.getElementById('toggleDarkMode');
+const THEME_KEY = 'theme-preference';
+
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleBtn?.setAttribute('aria-pressed', 'true');
+  } else {
+    document.body.classList.remove('dark-mode');
+    toggleBtn?.setAttribute('aria-pressed', 'false');
+  }
+}
+
+// Load saved theme on page load
+const savedTheme = localStorage.getItem(THEME_KEY);
+if (savedTheme) {
+  applyTheme(savedTheme);
+}
+
+// Toggle on click
 if (toggleBtn) {
-  toggleBtn.addEventListener('click', function(){
-    document.body.classList.toggle('dark-mode');
+  toggleBtn.addEventListener('click', () => {
+    const isDark = document.body.classList.toggle('dark-mode');
+    const newTheme = isDark ? 'dark' : 'light';
+    localStorage.setItem(THEME_KEY, newTheme);
+    toggleBtn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
   });
 }
 
