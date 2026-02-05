@@ -247,7 +247,8 @@ body.dark-mode .nav-link {
 
 .theme-toggle {
   background: none;
-  border: none;
+  border: 1px solid currentColor;
+  border-radius: 999px; /* circular button */
   padding: 0.5rem;
   display: flex;
   align-items: center;
@@ -262,8 +263,17 @@ body.dark-mode .nav-link {
   display: block;
 }
 
+
 .theme-toggle:hover {
   opacity: 0.75;
+}
+
+.theme-toggle:hover {
+  opacity: 0.85;
+}
+
+body.dark-mode .theme-toggle {
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .theme-toggle:focus-visible {
