@@ -291,19 +291,19 @@ body.dark-mode .theme-toggle svg {
   transform: rotate(0deg);
 }
 
-/* Sun icon color (light mode) */
+/* Dark icon (sun) — black */
 .theme-toggle .icon-dark {
-  color: #f7f7f7 !important; /* soft off-white */
+  color: #222222;
 }
 
-/* Force SVG paths to inherit color 
+/* Force SVG paths to inherit color */
 .theme-toggle svg path {
   fill: currentColor !important;
-}*/
+}
 
-/* Moon icon color (dark mode) */
+/* Light icon (moon) — white */
 .theme-toggle .icon-light {
-  color: #202020;
+  color: #ffffff;
 }
 
 /* Theme toggle icon visibility */
