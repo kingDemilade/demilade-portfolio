@@ -280,3 +280,16 @@ body.dark-mode .nav-link {
 body.dark-mode .theme-toggle svg {
   transform: rotate(180deg);
 }
+
+/* Theme toggle icon visibility */
+.theme-toggle .icon-light {
+  display: none;
+}
+
+body.dark-mode .theme-toggle .icon-dark {
+  display: none;
+}
+
+body.dark-mode .theme-toggle .icon-light {
+  display: block;
+}
