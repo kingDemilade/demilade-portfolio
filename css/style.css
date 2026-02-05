@@ -296,6 +296,11 @@ body.dark-mode .theme-toggle svg {
   color: #f7f7f7 !important; /* soft off-white */
 }
 
+/* Force sun SVG paths to inherit color */
+.theme-toggle .icon-light svg path {
+  fill: currentColor !important;
+}
+
 /* Theme toggle icon visibility */
 .theme-toggle .icon-light {
   display: none;
