@@ -146,7 +146,7 @@ body.dark-mode .nav-link {
     color: #f0f0f0;
 }
 
-body.dark-mode p text-muted {
+body.dark-mode p.text-muted {
     color: #f0f0f0;
 }
 
