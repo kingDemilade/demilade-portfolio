@@ -291,6 +291,11 @@ body.dark-mode .theme-toggle svg {
   transform: rotate(180deg);
 }
 
+/* Sun icon color (light mode) */
+.theme-toggle .icon-dark {
+  color: #f7f7f7; /* soft off-white */
+}
+
 /* Theme toggle icon visibility */
 .theme-toggle .icon-light {
   display: none;
