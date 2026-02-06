@@ -328,9 +328,3 @@ body.dark-mode .theme-toggle .icon-light {
 .navbar .theme-toggle {
   margin-left: 0.75rem;
 }
-
-@media (min-width: 992px) {
-  .navbar .theme-toggle {
-    margin-left: 1rem;
-  }
-}
