@@ -366,5 +366,5 @@ body.dark-mode .card .card-body {
 }
 
 body.dark-mode .card .card-body .h5.card-title, p.card-text  {
-  background-color: #f0f0f0 !important;
+  color: #f0f0f0 !important;
 }
