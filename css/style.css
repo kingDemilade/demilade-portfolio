@@ -361,6 +361,6 @@ body.dark-mode .col-md-6 .motion-caption {
   color: #c9ced3 !important;
 }
 
-body.dark-mode .card-img-top .card-body {
-  color: #222222 !important;
+body.dark-mode .card .card-body {
+  color: #0d0d0d !important;
 }
