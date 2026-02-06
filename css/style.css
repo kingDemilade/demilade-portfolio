@@ -323,21 +323,14 @@ body.dark-mode .theme-toggle .icon-light {
   display: block;
 }
 
-/* ===== Mobile vs Desktop Theme Toggle Visibility ===== */
 
-/* Hide mobile toggle by default (desktop-first) */
-.theme-toggle--mobile {
-  display: none;
+/* Navbar placement refinement for single theme toggle */
+.navbar .theme-toggle {
+  margin-left: 0.75rem;
 }
 
-/* Mobile / tablet: show mobile toggle, hide desktop toggle */
-@media (max-width: 991.98px) {
-  .theme-toggle--desktop {
-    display: none;
-  }
-
-  .theme-toggle--mobile {
-    display: flex;
-    margin-left: 0.75rem; /* spacing from brand */
+@media (min-width: 992px) {
+  .navbar .theme-toggle {
+    margin-left: 1rem;
   }
 }
