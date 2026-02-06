@@ -158,6 +158,7 @@ toggleButtons.forEach(btn => {
   setActiveTab(initial, { updateHash: true, save: true });
 })();
 
+/*
 // ---- Lightbox for project images ----
 (() => {
   const overlay = document.createElement('div');
@@ -240,4 +241,4 @@ toggleButtons.forEach(btn => {
     if (e.key === 'ArrowLeft') step(-1);
     if (e.key === 'ArrowRight') step(1);
   });
-})();
+})(); */
