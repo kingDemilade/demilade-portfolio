@@ -354,7 +354,7 @@ body.dark-mode .page-subtitle {
 
 /* Dark mode fix for PBC Day 2026 case study muted text */
 body.dark-mode .case-intro .text-muted {
-  color: #c9ced3;
+  color: #c9ced3 !important;
 }
 
 body.dark-mode .col-md-6 .motion-caption {
