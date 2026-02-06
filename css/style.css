@@ -248,7 +248,7 @@ body.dark-mode .nav-link {
 
 .theme-toggle {
   background: none;
-  border: 1px solid currentColor;
+  border: 1px solid #222222;
   border-radius: 999px; /* circular button */
   padding: 0.5rem;
   display: flex;
