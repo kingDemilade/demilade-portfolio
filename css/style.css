@@ -450,7 +450,11 @@ body.dark-mode .project-badge {
 
 /* ===== In-Progress Project Overlay ===== */
 
-.project-card:has(.project-badge)::after {
+.project-media {
+  position: relative;
+}
+
+.project-card:has(.project-badge) .project-media::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -460,7 +464,6 @@ body.dark-mode .project-badge {
     rgba(0, 0, 0, 0.25) 100%
   );
   pointer-events: none;
-  border-radius: inherit;
   z-index: 2;
 }
 
