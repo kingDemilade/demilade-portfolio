@@ -373,3 +373,49 @@ body.dark-mode .card .card-body .card-text {
 body.dark-mode .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23F0F0F0' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
+/* ===== Homepage Routing Buttons (Refined CodePen-style) ===== */
+
+.route-btn {
+  position: relative;
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--btn-color);
+  background: transparent;
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
+  overflow: hidden;
+  transition: color 0.2s ease;
+}
+
+/* Sliding fill */
+.route-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+  z-index: -1;
+}
+
+.route-btn:hover::before {
+  transform: scaleX(1);
+}
+
+.route-btn:hover {
+  color: #ffffff;
+}
+
+/* Dark mode */
+body.dark-mode .route-btn {
+  --btn-color: #f0f0f0;
+}
+
+body.dark-mode .route-btn:hover {
+  color: #111111;
+}

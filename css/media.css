@@ -195,3 +195,10 @@ img {
     margin-left: 1rem;
   }
 }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .route-btn::before {
+    transition: none;
+  }
+}
