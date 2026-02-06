@@ -247,7 +247,7 @@ body.dark-mode .nav-link {
 /* ===== Theme Toggle (Navbar Icon Button) ===== */
 
 .theme-toggle {
-  background: #222222;
+  background: none;
   border: 1px solid #222222;
   border-radius: 999px; /* circular button */
   padding: 0.5rem;
