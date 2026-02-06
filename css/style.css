@@ -362,5 +362,9 @@ body.dark-mode .col-md-6 .motion-caption {
 }
 
 body.dark-mode .card .card-body {
-  color: #0d0d0d !important;
+  background-color: #1a1a1a !important;
+}
+
+body.dark-mode .card .card-body .h5.card-title, p.card-text  {
+  background-color: #f0f0f0 !important;
 }
