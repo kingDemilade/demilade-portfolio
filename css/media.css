@@ -188,3 +188,10 @@ img {
     max-width: 1240px;
   }
 }
+
+/* ===== Desktop tweaks (≥ 992px) ===== */
+@media (min-width: 992px) {
+  .navbar .theme-toggle {
+    margin-left: 1rem;
+  }
+}

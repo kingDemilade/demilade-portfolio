@@ -4,13 +4,35 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-// Toggle Button for Dark Mode
-const toggleBtn = document.getElementById('toggleDarkMode');
-if (toggleBtn) {
-  toggleBtn.addEventListener('click', function(){
-    document.body.classList.toggle('dark-mode');
-  });
+// Toggle Buttons for Dark Mode (with persistence)
+const toggleButtons = document.querySelectorAll('.theme-toggle');
+const THEME_KEY = 'theme-preference';
+
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleButtons.forEach(btn => btn.setAttribute('aria-pressed', 'true'));
+  } else {
+    document.body.classList.remove('dark-mode');
+    toggleButtons.forEach(btn => btn.setAttribute('aria-pressed', 'false'));
+  }
 }
+
+// Load saved theme on page load
+const savedTheme = localStorage.getItem(THEME_KEY);
+if (savedTheme) {
+  applyTheme(savedTheme);
+}
+
+// Toggle on click (mobile + desktop buttons)
+toggleButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const isDark = document.body.classList.toggle('dark-mode');
+    const newTheme = isDark ? 'dark' : 'light';
+    localStorage.setItem(THEME_KEY, newTheme);
+    toggleButtons.forEach(b => b.setAttribute('aria-pressed', isDark ? 'true' : 'false'));
+  });
+});
 
 // ---- Tabs: deep-link + remember last tab + ARIA state sync ----
 (() => {
