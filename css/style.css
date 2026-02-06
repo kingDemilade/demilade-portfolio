@@ -146,9 +146,6 @@ body.dark-mode .nav-link {
     color: #f0f0f0;
 }
 
-body.dark-mode .text-muted {
-    color: #f0f0f0;
-}
 
 /* Custom Tab Styling */
 
@@ -362,4 +359,8 @@ body.dark-mode .case-intro .text-muted {
 
 body.dark-mode .col-md-6 .motion-caption {
   color: #c9ced3 !important;
+}
+
+body.dark-mode .card-img-top .card-body {
+  color: #222222 !important;
 }
