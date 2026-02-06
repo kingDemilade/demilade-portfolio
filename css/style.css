@@ -328,3 +328,29 @@ body.dark-mode .theme-toggle .icon-light {
 .navbar .theme-toggle {
   margin-left: 0.75rem;
 }
+
+/* ===== Standard Hub Page Header ===== */
+.page-header {
+  padding: 4rem 0 3rem;
+  background-color: transparent;
+}
+
+.page-header__content {
+  max-width: 720px;
+}
+
+.page-title {
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.page-subtitle {
+  font-size: 1.125rem;
+  color: var(--bs-secondary-color, #6c757d);
+}
+
+/* Dark mode support */
+body.dark-mode .page-subtitle {
+  color: #bfc3c7;
+}
