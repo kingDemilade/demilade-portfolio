@@ -359,3 +359,7 @@ body.dark-mode .page-subtitle {
 body.dark-mode .case-intro .text-muted {
   color: #c9ced3 !important;
 }
+
+body.dark-mode .col-md-6 .motion-caption {
+  color: #c9ced3 !important;
+}
