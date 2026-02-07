@@ -243,51 +243,43 @@ toggleButtons.forEach(btn => {
   });
 })(); */
 
-// ---- Lazy autoplay for gallery videos (PBC Day 2026) ----
-(() => {
-  const videos = document.querySelectorAll('.motion-grid video');
-  if (!videos.length) return;
 
-  const playVideo = (video) => {
-    if (video.readyState >= 2) {
-      video.play().catch(() => {});
-    } else {
-      const onCanPlay = () => {
-        video.play().catch(() => {});
-        video.removeEventListener('canplay', onCanPlay);
-      };
-      video.addEventListener('canplay', onCanPlay);
-      video.load();
-    }
-  };
+document.addEventListener("DOMContentLoaded", () => {
+  const motionVideos = document.querySelectorAll(".motion-video");
 
-  const pauseVideo = (video) => {
-    if (!video.paused) video.pause();
-  };
-
-  if (!('IntersectionObserver' in window)) {
-    // Fallback: load + play all (rare legacy browsers)
-    videos.forEach(v => playVideo(v));
+  if (!("IntersectionObserver" in window)) {
+    // Fallback: load all videos
+    motionVideos.forEach(video => {
+      const src = video.dataset.src;
+      if (src) {
+        video.src = src;
+        video.load();
+      }
+    });
     return;
   }
 
   const observer = new IntersectionObserver(
-    (entries) => {
+    (entries, obs) => {
       entries.forEach(entry => {
         const video = entry.target;
+
         if (entry.isIntersecting) {
-          playVideo(video);
+          if (!video.src) {
+            video.src = video.dataset.src;
+            video.load();
+          }
+          video.play().catch(() => {});
         } else {
-          pauseVideo(video);
+          video.pause();
         }
       });
     },
     {
-      root: null,
-      rootMargin: '200px 0px',
+      rootMargin: "0px 0px -20% 0px",
       threshold: 0.25
     }
   );
 
-  videos.forEach(video => observer.observe(video));
-})();
+  motionVideos.forEach(video => observer.observe(video));
+});
