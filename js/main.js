@@ -264,6 +264,9 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach(entry => {
         const video = entry.target;
 
+        // ⛔ Skip hero video entirely  
+        if (video.classList.contains("hero-video")) return;
+        
         if (entry.isIntersecting) {
           if (!video.src) {
             video.src = video.dataset.src;
