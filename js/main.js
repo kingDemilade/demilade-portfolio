@@ -245,7 +245,7 @@ toggleButtons.forEach(btn => {
 
 // ---- Lazy autoplay for gallery videos (PBC Day 2026) ----
 (() => {
-  const videos = document.querySelectorAll('.project-media video');
+  const videos = document.querySelectorAll('.motion-grid video');
   if (!videos.length) return;
 
   const playVideo = (video) => {
