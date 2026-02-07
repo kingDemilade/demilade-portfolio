@@ -443,6 +443,27 @@ body.dark-mode .route-btn:hover {
   z-index: 5;
 }
 
+/* In-Progress badge micro-interaction */
+@keyframes badgePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.35);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(13, 110, 253, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0);
+  }
+}
+
+.badge-progress {
+  animation: badgePulse 2.5s ease-out infinite;
+}
+
+body.dark-mode .badge-progress {
+  animation: badgePulse 2.5s ease-out infinite;
+}
+
 /* Dark mode support */
 body.dark-mode .project-badge {
   background: #2a2a2a;
