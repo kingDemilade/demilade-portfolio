@@ -158,6 +158,7 @@ toggleButtons.forEach(btn => {
   setActiveTab(initial, { updateHash: true, save: true });
 })();
 
+/*
 // ---- Lightbox for project images ----
 (() => {
   const overlay = document.createElement('div');
@@ -240,4 +241,45 @@ toggleButtons.forEach(btn => {
     if (e.key === 'ArrowLeft') step(-1);
     if (e.key === 'ArrowRight') step(1);
   });
-})();
+})(); */
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const motionVideos = document.querySelectorAll(".motion-video");
+
+  if (!("IntersectionObserver" in window)) {
+    // Fallback: load all videos
+    motionVideos.forEach(video => {
+      const src = video.dataset.src;
+      if (src) {
+        video.src = src;
+        video.load();
+      }
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach(entry => {
+        const video = entry.target;
+
+        if (entry.isIntersecting) {
+          if (!video.src) {
+            video.src = video.dataset.src;
+            video.load();
+          }
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      });
+    },
+    {
+      rootMargin: "0px 0px -20% 0px",
+      threshold: 0.25
+    }
+  );
+
+  motionVideos.forEach(video => observer.observe(video));
+});

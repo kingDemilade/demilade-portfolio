@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   margin: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -419,4 +420,54 @@ body.dark-mode .route-btn {
 
 body.dark-mode .route-btn:hover {
   color: #111111;
+}
+
+/* ===== Project Status Badge ===== */
+
+.project-card {
+  position: relative;
+}
+
+.project-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: #e9ecef;
+  color: #333;
+  z-index: 5;
+}
+
+/* Dark mode support */
+body.dark-mode .project-badge {
+  background: #2a2a2a;
+  color: #f0f0f0;
+}
+
+/* ===== In-Progress Project Overlay ===== */
+
+.project-media {
+  position: relative;
+}
+
+.project-card:has(.project-badge) .project-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.project-card .card-img-top {
+  position: relative;
+  z-index: 1;
 }
