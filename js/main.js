@@ -242,3 +242,52 @@ toggleButtons.forEach(btn => {
     if (e.key === 'ArrowRight') step(1);
   });
 })(); */
+
+// ---- Lazy autoplay for gallery videos (PBC Day 2026) ----
+(() => {
+  const videos = document.querySelectorAll('.project-media video');
+  if (!videos.length) return;
+
+  const playVideo = (video) => {
+    if (video.readyState >= 2) {
+      video.play().catch(() => {});
+    } else {
+      const onCanPlay = () => {
+        video.play().catch(() => {});
+        video.removeEventListener('canplay', onCanPlay);
+      };
+      video.addEventListener('canplay', onCanPlay);
+      video.load();
+    }
+  };
+
+  const pauseVideo = (video) => {
+    if (!video.paused) video.pause();
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    // Fallback: load + play all (rare legacy browsers)
+    videos.forEach(v => playVideo(v));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          playVideo(video);
+        } else {
+          pauseVideo(video);
+        }
+      });
+    },
+    {
+      root: null,
+      rootMargin: '200px 0px',
+      threshold: 0.25
+    }
+  );
+
+  videos.forEach(video => observer.observe(video));
+})();
