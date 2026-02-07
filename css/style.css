@@ -470,6 +470,25 @@ body.dark-mode .project-badge {
   color: #f0f0f0;
 }
 
+body.dark-mode .badge-soon {
+  background: rgba(255, 255, 255, 0.08);
+  color: #adb5bd;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Badge for Coming Soon */
+
+.badge-soon {
+  background: rgba(108, 117, 125, 0.15); /* muted gray */
+  color: #6c757d;
+  border: 1px dashed rgba(108, 117, 125, 0.4);
+  opacity: 0.9;
+}
+
+.badge-soon:hover {
+  opacity: 1;
+}
+
 /* ===== In-Progress Project Overlay ===== */
 
 .project-media {
