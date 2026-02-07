@@ -264,12 +264,27 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach(entry => {
         const video = entry.target;
 
+        // ⛔ Skip hero video entirely  
+        if (video.classList.contains("hero-video")) return;
+        
         if (entry.isIntersecting) {
-          if (!video.src) {
+          if (!video.dataset.loaded) {
             video.src = video.dataset.src;
             video.load();
+            video.dataset.loaded = "true";
+
+            // Fade in only when a real frame is ready (prevents black flash)
+            video.addEventListener(
+              "canplay",
+              () => {
+                video.classList.add("is-ready");
+                video.play().catch(() => {});
+              },
+              { once: true }
+            );
+          } else {
+            video.play().catch(() => {});
           }
-          video.play().catch(() => {});
         } else {
           video.pause();
         }

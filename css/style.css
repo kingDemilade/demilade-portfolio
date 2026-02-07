@@ -434,13 +434,34 @@ body.dark-mode .route-btn:hover {
   right: 12px;
   padding: 0.35rem 0.6rem;
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   border-radius: 999px;
-  background: #e9ecef;
-  color: #333;
+  background: #ffc107;
+  color: #2c2c2c;
   z-index: 5;
+}
+
+/* In-Progress badge micro-interaction */
+@keyframes badgePulse {
+  0% {
+    box-shadow: 0 0 0 0 #ffa800;
+  }
+  70% {
+    box-shadow: 0 0 0 4px #ffbd005e;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #ffa800;
+  }
+}
+
+.badge-progress {
+  animation: badgePulse 2.5s ease-out infinite;
+}
+
+body.dark-mode .badge-progress {
+  animation: badgePulse 2.5s ease-out infinite;
 }
 
 /* Dark mode support */

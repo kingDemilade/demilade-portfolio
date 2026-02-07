@@ -84,6 +84,8 @@
 
 .motion-grid video {
   width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
   border-radius: 10px;
   display: block;
   background: #000; /* prevents white gaps if aspect ratios vary */
