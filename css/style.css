@@ -446,13 +446,13 @@ body.dark-mode .route-btn:hover {
 /* In-Progress badge micro-interaction */
 @keyframes badgePulse {
   0% {
-    box-shadow: 0 0 0 0 #ffcc005b;
+    box-shadow: 0 0 0 0 #ffcc00;
   }
   70% {
-    box-shadow: 0 0 0 8px #ffcc00b7;
+    box-shadow: 0 0 0 4px #ffbd005e;
   }
   100% {
-    box-shadow: 0 0 0 0 #ffcc005b;
+    box-shadow: 0 0 0 0 #ffcc00;
   }
 }
 
