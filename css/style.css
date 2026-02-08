@@ -470,6 +470,21 @@ body.dark-mode .project-badge {
   color: #f0f0f0;
 }
 
+body.dark-mode .badge-soon {
+  background: rgb(221 221 221 / 75%);
+  color: #1a1a1a;
+  border-color: rgb(41 41 41);
+}
+
+/* Badge for Coming Soon */
+
+.badge-soon {
+  background: rgba(73, 80, 87, 0.75);
+  color: #f4f5f7;
+  border: 1px solid #ebebeb;
+}
+
+
 /* ===== In-Progress Project Overlay ===== */
 
 .project-media {
@@ -482,7 +497,7 @@ body.dark-mode .project-badge {
   inset: 0;
   background: linear-gradient(
     rgba(0, 0, 0, 0.35) 0%,
-    rgba(0, 0, 0, 0.85) 100%
+    rgba(0, 0, 0, 0.65) 100%
   );
   pointer-events: none;
   z-index: 2;
