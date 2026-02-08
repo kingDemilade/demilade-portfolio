@@ -471,17 +471,17 @@ body.dark-mode .project-badge {
 }
 
 body.dark-mode .badge-soon {
-  background: rgba(255, 255, 255, 0.08);
-  color: #adb5bd;
-  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  color: #cbd3da;
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Badge for Coming Soon */
 
 .badge-soon {
-  background: #ffffffb5;
-  color: #151515;
-  border: 1px dashed #2c2c2c;
+  background: rgba(73, 80, 87, 0.12);
+  color: #495057;
+  border: 1px dashed rgba(73, 80, 87, 0.5);
 }
 
 
