@@ -479,15 +479,11 @@ body.dark-mode .badge-soon {
 /* Badge for Coming Soon */
 
 .badge-soon {
-  background: rgba(108, 117, 125, 0.15); /* muted gray */
-  color: #6c757d;
-  border: 1px dashed rgba(108, 117, 125, 0.4);
-  opacity: 0.9;
+  background: #ffffffb5;
+  color: #151515;
+  border: 1px dashed #2c2c2c;
 }
 
-.badge-soon:hover {
-  opacity: 1;
-}
 
 /* ===== In-Progress Project Overlay ===== */
 
