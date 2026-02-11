@@ -526,7 +526,9 @@ body.dark-mode .badge-soon {
 .icon-grid rect {
   stroke-width: 1.8;
   fill: transparent;
-  transition: fill 0.3s ease, transform 0.3s ease;
+  transition:
+    fill 0.25s ease 0.12s,
+    transform 0.25s ease 0.12s;
   transform-origin: center;
 }
 
