@@ -410,7 +410,8 @@ body.dark-mode .navbar-toggler-icon {
 }
 
 .route-btn:hover {
-  color: #ffffff;
+  transform: translateY(-1px);
+  transition: transform 0.25s ease;
 }
 
 /* Dark mode */
@@ -419,7 +420,7 @@ body.dark-mode .route-btn {
 }
 
 body.dark-mode .route-btn:hover {
-  color: #111111;
+  color: #f0f0f0;
 }
 
 /* ===== Project Status Badge ===== */
