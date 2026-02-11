@@ -545,9 +545,9 @@ body.dark-mode .badge-soon {
     animation: gridIntro 0.5s ease-out forwards;
 }
 
-span.projects-icon:hover {
-    fill: currentColor;
-    transform: scale(1.1);
+.route-btn:hover .icon-grid rect {
+  fill: currentColor;
+  transform: scale(1.05);
 }
 
 /* == Media Sizes == */
