@@ -510,22 +510,24 @@ body.dark-mode .badge-soon {
 /* == Projects Grid Icon == */
 
 .projects-icon {
-    display: inline-grid;
-    margin-right: 0.5rem;
+  display: inline-flex;
+  margin-right: 0.5rem;
+  align-items: center;
 }
 
 .icon-grid {
-    width: 100px;
-    height: 100px;
-    stroke: currentColor;
-    fill: none;
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  animation: gridIntro 0.45s ease-out forwards;
 }
 
 .icon-grid rect {
-    stroke-width: 1.8;
-    fill: #5d5d5dc7;
-    transition: fill 0.35s ease, transform 0.35s ease;
-    transform-origin: center;
+  stroke-width: 1.8;
+  fill: transparent;
+  transition: fill 0.3s ease, transform 0.3s ease;
+  transform-origin: center;
 }
 
 @keyframes gridIntro {
