@@ -552,6 +552,11 @@ body.dark-mode .badge-soon {
   transform: scale(1.05);
 }
 
+.route-btn:hover .icon-grid {
+  transform: translateY(-1px);
+  transition: transform 0.25s ease;
+}
+
 /* == Media Sizes == */
 
 @media (min-width:601px) {
