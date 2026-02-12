@@ -387,7 +387,7 @@ body.dark-mode .navbar-toggler-icon {
   color: #222222;
   background: #f8f9fa;
   border: 2px solid #222222;
-  border-radius: 5%;
+  border-radius: 0%;
   overflow: hidden;
   transition: color 0.2s ease;
 }
