@@ -512,7 +512,7 @@ body.dark-mode .badge-soon {
 
 .projects-icon {
   display: inline-flex;
-  margin-right: 0.5rem;
+/*  margin-right: 0.5rem; */
   align-items: center;
   width: 50%;
   height: 50%;
