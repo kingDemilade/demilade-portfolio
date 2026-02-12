@@ -379,15 +379,15 @@ body.dark-mode .navbar-toggler-icon {
 
 .route-btn {
   position: relative;
-  padding: 1rem 2.5rem;
+  padding: 3rem 3rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
   color: #222222;
   background: #f8f9fa;
-  border: 1.5px solid #222222;
-  border-radius: 999px;
+  border: 2px solid #222222;
+  border-radius: 70%;
   overflow: hidden;
   transition: color 0.2s ease;
 }
