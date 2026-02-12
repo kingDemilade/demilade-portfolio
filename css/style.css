@@ -407,11 +407,16 @@ body.dark-mode .navbar-toggler-icon {
 
 .route-btn:hover::before {
   transform: scale(1);
+  color: #f8f9fa;
 }
 
 .route-btn:hover {
   transform: translateY(-1px);
   transition: transform 0.25s ease;
+}
+
+.route-label:hover {
+  color: #222222;
 }
 
 /* Dark mode */
