@@ -407,6 +407,7 @@ body.dark-mode .navbar-toggler-icon {
 
 .route-btn:hover::before {
   transform: scale(1);
+  color: #222222;
 }
 
 .route-btn:hover {
