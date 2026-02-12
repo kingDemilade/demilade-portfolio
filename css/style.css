@@ -414,6 +414,7 @@ body.dark-mode .navbar-toggler-icon {
   transform: translateY(-1px);
   transition: transform 0.25s ease;
   background-color: #f8f9fa;
+  color: #f8f9fa;
 }
 
 .route-label:hover {
