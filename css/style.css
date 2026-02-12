@@ -384,9 +384,9 @@ body.dark-mode .navbar-toggler-icon {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--btn-color);
-  background: transparent;
-  border: 1.5px solid currentColor;
+  color: #222222;
+  background: #f8f9fa;
+  border: 1.5px solid #222222;
   border-radius: 999px;
   overflow: hidden;
   transition: color 0.2s ease;
@@ -514,6 +514,8 @@ body.dark-mode .badge-soon {
   display: inline-flex;
   margin-right: 0.5rem;
   align-items: center;
+  width: 50%;
+  height: 50%;
 }
 
 .icon-grid {
