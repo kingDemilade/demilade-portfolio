@@ -379,15 +379,15 @@ body.dark-mode .navbar-toggler-icon {
 
 .route-btn {
   position: relative;
-  padding: 1rem 2.5rem;
+  padding: 2rem 3rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--btn-color);
-  background: transparent;
-  border: 1.5px solid currentColor;
-  border-radius: 999px;
+  color: #222222;
+  background: #f8f9fa;
+  border: 2px solid #222222;
+  border-radius: 0%;
   overflow: hidden;
   transition: color 0.2s ease;
 }
@@ -407,11 +407,18 @@ body.dark-mode .navbar-toggler-icon {
 
 .route-btn:hover::before {
   transform: scale(1);
+  color: #222222;
 }
 
 .route-btn:hover {
   transform: translateY(-1px);
   transition: transform 0.25s ease;
+  background-color: #f8f9fa;
+  color: #f8f9fa;
+}
+
+.route-label:hover {
+  color: #222222;
 }
 
 /* Dark mode */
@@ -514,6 +521,8 @@ body.dark-mode .badge-soon {
   display: inline-flex;
   margin-right: 0.5rem;
   align-items: center;
+  width: 50%;
+  height: 50%;
 }
 
 .icon-grid {
