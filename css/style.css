@@ -185,6 +185,7 @@ body.dark-mode .nav-pills .nav-link.active {
 
 /* ===== Custom Tab Buttons (Override Bootstrap) ===== */
 /* Override Bootstrap's .btn styles for tab buttons */
+
 .tab-btn.btn {
   color: #212529 !important;
   border: 2px solid #212529 !important;
@@ -208,6 +209,39 @@ body.dark-mode .nav-pills .nav-link.active {
   border-color: #212529;
 }
 
+/* ===== Sliding underline for tabs ===== */
+
+.tab-btn.btn {
+  position: relative;
+}
+
+.tab-btn.btn::before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+/* Hover underline */
+.tab-btn.btn:hover::before {
+  width: 60%;
+}
+
+/* Active tab underline */
+.tab-btn.btn.active::before {
+  width: 80%;
+}
+
+/* Dark mode consistency */
+body.dark-mode .tab-btn.btn::before {
+  background: currentColor;
+}
+
 /* Dark mode support */
 body.dark-mode .tab-btn.btn {
   color: #f0f0f0;
@@ -220,6 +254,42 @@ body.dark-mode .tab-btn.btn.active {
   background-color: #f0f0f0;
   color: #0d0d0d;
   border-color: #f0f0f0;
+}
+
+/* ===== Tab Micro‑interaction ===== */
+
+/* Press effect */
+.tab-btn.btn:active {
+  transform: scale(0.96);
+}
+
+/* Smooth movement */
+.tab-btn.btn {
+  transform: translateY(0);
+}
+
+/* Ripple burst effect */
+.tab-btn.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-btn.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0;
+  transform: scale(0);
+  border-radius: inherit;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: -1;
+}
+
+/* Trigger ripple on click */
+.tab-btn.btn:active::after {
+  opacity: 0.15;
+  transform: scale(1.6);
 }
 
 .tab-panel {
@@ -645,6 +715,38 @@ body.dark-mode .badge-soon {
 
 body.dark-mode .project-meta {
   color: #cfcfcf; /* or whatever fits your palette */
+}
+
+/* ===== Project CTA Buttons (Global) ===== */
+
+.card .btn {
+  color: #212529;
+  border: 2px solid #212529;
+  background: transparent;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+}
+
+.card .btn:hover,
+.card .btn:focus {
+  color: #ffffff;
+  background-color: #212529;
+  border-color: #212529;
+  transform: translateY(-1px);
+}
+
+/* Dark mode */
+body.dark-mode .card .btn {
+  color: #f0f0f0;
+  border-color: #f0f0f0;
+}
+
+body.dark-mode .card .btn:hover,
+body.dark-mode .card .btn:focus {
+  background-color: #f0f0f0;
+  color: #0d0d0d;
+  border-color: #f0f0f0;
 }
 
 /* == Media Sizes == */
