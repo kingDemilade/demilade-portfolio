@@ -209,6 +209,39 @@ body.dark-mode .nav-pills .nav-link.active {
   border-color: #212529;
 }
 
+/* ===== Sliding underline for tabs ===== */
+
+.tab-btn.btn {
+  position: relative;
+}
+
+.tab-btn.btn::before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+/* Hover underline */
+.tab-btn.btn:hover::before {
+  width: 60%;
+}
+
+/* Active tab underline */
+.tab-btn.btn.active::before {
+  width: 80%;
+}
+
+/* Dark mode consistency */
+body.dark-mode .tab-btn.btn::before {
+  background: currentColor;
+}
+
 /* Dark mode support */
 body.dark-mode .tab-btn.btn {
   color: #f0f0f0;
