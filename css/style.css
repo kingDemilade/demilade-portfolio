@@ -150,6 +150,39 @@ body.dark-mode .nav-link {
 
 /* Custom Tab Styling */
 
+/* ===== Custom Tab Button Colors ===== */
+.nav-tabs .nav-link,
+.nav-pills .nav-link {
+  color: #212529; /* match your main text color */
+}
+
+.nav-tabs .nav-link.active,
+.nav-pills .nav-link.active {
+  color: #212529;
+  background-color: transparent;
+  border-color: #212529;
+}
+
+/* Hover and focus states */
+.nav-tabs .nav-link:hover,
+.nav-pills .nav-link:hover,
+.nav-tabs .nav-link:focus,
+.nav-pills .nav-link:focus {
+  color: #212529;
+}
+
+/* Dark mode */
+body.dark-mode .nav-tabs .nav-link,
+body.dark-mode .nav-pills .nav-link {
+  color: #f0f0f0;
+}
+
+body.dark-mode .nav-tabs .nav-link.active,
+body.dark-mode .nav-pills .nav-link.active {
+  color: #f0f0f0;
+  border-color: #f0f0f0;
+}
+
 .tab-panel {
     display: none;
     animation: fadeIn 0.3s ease-in-out;    
