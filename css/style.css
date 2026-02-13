@@ -185,6 +185,7 @@ body.dark-mode .nav-pills .nav-link.active {
 
 /* ===== Custom Tab Buttons (Override Bootstrap) ===== */
 /* Override Bootstrap's .btn styles for tab buttons */
+
 .tab-btn.btn {
   color: #212529 !important;
   border: 2px solid #212529 !important;
@@ -220,6 +221,42 @@ body.dark-mode .tab-btn.btn.active {
   background-color: #f0f0f0;
   color: #0d0d0d;
   border-color: #f0f0f0;
+}
+
+/* ===== Tab Micro‑interaction ===== */
+
+/* Press effect */
+.tab-btn.btn:active {
+  transform: scale(0.96);
+}
+
+/* Smooth movement */
+.tab-btn.btn {
+  transform: translateY(0);
+}
+
+/* Ripple burst effect */
+.tab-btn.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-btn.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0;
+  transform: scale(0);
+  border-radius: inherit;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: -1;
+}
+
+/* Trigger ripple on click */
+.tab-btn.btn:active::after {
+  opacity: 0.15;
+  transform: scale(1.6);
 }
 
 .tab-panel {
