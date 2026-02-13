@@ -567,6 +567,14 @@ body.dark-mode .badge-soon {
   transition: transform 0.25s ease;
 }
 
+.project-meta {
+  color: #6c757d; /* Bootstrap muted */
+}
+
+body.dark-mode .project-meta {
+  color: #cfcfcf; /* or whatever fits your palette */
+}
+
 /* == Media Sizes == */
 
 @media (min-width:601px) {
