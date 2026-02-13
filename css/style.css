@@ -184,38 +184,39 @@ body.dark-mode .nav-pills .nav-link.active {
 }
 
 /* ===== Custom Tab Buttons (Override Bootstrap) ===== */
-.tab-btn {
-  color: #212529;
-  border: 2px solid #212529;
-  background: transparent;
+/* Override Bootstrap's .btn styles for tab buttons */
+.tab-btn.btn {
+  color: #212529 !important;
+  border: 2px solid #212529 !important;
+  background: transparent !important;
   font-weight: 600;
   letter-spacing: 0.02em;
   transition: all 0.25s ease;
 }
 
-.tab-btn:hover,
-.tab-btn:focus {
+.tab-btn.btn:hover,
+.tab-btn.btn:focus {
   color: #ffffff;
   background-color: #212529;
   border-color: #212529;
 }
 
 /* Active tab */
-.tab-btn.active {
+.tab-btn.btn.active {
   color: #ffffff;
   background-color: #212529;
   border-color: #212529;
 }
 
 /* Dark mode support */
-body.dark-mode .tab-btn {
+body.dark-mode .tab-btn.btn {
   color: #f0f0f0;
   border-color: #f0f0f0;
 }
 
-body.dark-mode .tab-btn:hover,
-body.dark-mode .tab-btn:focus,
-body.dark-mode .tab-btn.active {
+body.dark-mode .tab-btn.btn:hover,
+body.dark-mode .tab-btn.btn:focus,
+body.dark-mode .tab-btn.btn.active {
   background-color: #f0f0f0;
   color: #0d0d0d;
   border-color: #f0f0f0;
