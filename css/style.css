@@ -478,17 +478,17 @@ body.dark-mode .project-badge {
   color: #f4f5f7;}
 
 body.dark-mode .badge-soon {
-  background: rgb(221 221 221 / 75%);
-  color: #1a1a1a;
-  border-color: rgb(41 41 41);
+  background: transparent;
+  color: #f0f0f0;
+  border-color: currentColor;
 }
 
 /* Badge for Coming Soon */
 
 .badge-soon {
-  background: rgba(73, 80, 87, 0.75);
-  color: #f4f5f7;
-  border: 1px solid #ebebeb;
+  background: transparent;
+  color: #222222;
+  border: 1px dashed currentColor;
 }
 
 
