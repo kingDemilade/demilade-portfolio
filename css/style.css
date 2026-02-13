@@ -568,7 +568,7 @@ body.dark-mode .badge-soon {
 }
 
 .project-meta {
-  color: #6c757d; /* Bootstrap muted */
+  color: #212529; 
 }
 
 body.dark-mode .project-meta {
