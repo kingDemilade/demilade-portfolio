@@ -717,6 +717,38 @@ body.dark-mode .project-meta {
   color: #cfcfcf; /* or whatever fits your palette */
 }
 
+/* ===== Project CTA Buttons (Global) ===== */
+
+.card .btn {
+  color: #212529;
+  border: 2px solid #212529;
+  background: transparent;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+}
+
+.card .btn:hover,
+.card .btn:focus {
+  color: #ffffff;
+  background-color: #212529;
+  border-color: #212529;
+  transform: translateY(-1px);
+}
+
+/* Dark mode */
+body.dark-mode .card .btn {
+  color: #f0f0f0;
+  border-color: #f0f0f0;
+}
+
+body.dark-mode .card .btn:hover,
+body.dark-mode .card .btn:focus {
+  background-color: #f0f0f0;
+  color: #0d0d0d;
+  border-color: #f0f0f0;
+}
+
 /* == Media Sizes == */
 
 @media (min-width:601px) {
