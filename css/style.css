@@ -258,8 +258,8 @@ body.dark-mode .tab-btn.btn::before {
 
 /* Dark mode support */
 body.dark-mode .tab-btn.btn {
-  color: #f0f0f0;
-  border-color: #f0f0f0;
+  color: #f0f0f0 !important;
+  border-color: #f0f0f0 !important;
 }
 
 body.dark-mode .tab-btn.btn:hover,
