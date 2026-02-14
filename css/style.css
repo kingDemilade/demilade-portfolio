@@ -578,10 +578,6 @@ body.dark-mode .navbar-toggler-icon {
   color: #f8f9fa;
 }
 
-.route-label:hover {
-  color: #222222;
-}
-
 /* Dark mode */
 body.dark-mode .route-btn {
   --btn-color: #f0f0f0;
