@@ -33,6 +33,11 @@ main {
     transition: transform 0.3s ease;
 }
 
+/* ===== Card Border Radius Override (Bootstrap Variable) ===== */
+.card {
+  --bs-border-radius: 0.625rem; /* custom radius applied safely without editing Bootstrap */
+}
+
 /* Prevent video thumbnails in cards from being cropped */
 .card video.card-img-top {
     height: auto;          /* allow natural video height */
@@ -613,7 +618,7 @@ body.dark-mode .route-btn:hover {
     box-shadow: 0 0 0 0 #f1f1f1;
   }
   70% {
-    box-shadow: 0 0 0 4px #ffc001cc;
+    box-shadow: 0 0 0 4px #ffffffcc;
   }
   100% {
     box-shadow: 0 0 0 0 #f1f1f1;
