@@ -35,7 +35,7 @@ main {
 
 /* ===== Card Border Radius Override (Bootstrap Variable) ===== */
 .card {
-  --bs-border-radius: 0.625rem !important; /* custom radius applied safely without editing Bootstrap */
+  --bs-border-radius: 0rem !important; /* custom radius applied safely without editing Bootstrap */
 }
 
 /* Prevent video thumbnails in cards from being cropped */
