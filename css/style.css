@@ -799,6 +799,7 @@ body.dark-mode .card .btn:focus {
   position: relative;
   overflow: hidden;
   background: #0d0d0d;
+  min-height: 175px;
 }
 
 /* Wave container */
