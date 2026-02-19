@@ -269,19 +269,27 @@ document.addEventListener("DOMContentLoaded", () => {
         
         if (entry.isIntersecting) {
           if (!video.dataset.loaded) {
-            video.src = video.dataset.src;
-            video.load();
-            video.dataset.loaded = "true";
+            const src = video.dataset.src;
+            if (src) {
+              video.preload = "metadata"; // lightweight first load
+              video.src = src;
+              video.load();
+              video.dataset.loaded = "true";
 
-            // Fade in only when a real frame is ready (prevents black flash)
-            video.addEventListener(
-              "canplay",
-              () => {
-                video.classList.add("is-ready");
-                video.play().catch(() => {});
-              },
-              { once: true }
-            );
+              // Ensure video starts hidden behind poster
+              video.classList.remove("is-ready");
+
+              // Fade in only when the first real frame is available
+              video.addEventListener(
+                "loadeddata",
+                () => {
+                  video.classList.add("is-ready");
+                  video.currentTime = 0.01; // avoids blank frame on some devices
+                  video.play().catch(() => {});
+                },
+                { once: true }
+              );
+            }
           } else {
             video.play().catch(() => {});
           }
