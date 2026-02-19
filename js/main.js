@@ -271,41 +271,34 @@ document.addEventListener("DOMContentLoaded", () => {
           if (!video.dataset.loaded) {
             const src = video.dataset.src;
             if (src) {
-              video.preload = "metadata"; // lightweight first load
+              video.preload = "metadata";
               video.src = src;
-              video.load();
               video.dataset.loaded = "true";
 
-              // Ensure video starts hidden behind poster
+              // Hide video until ready (poster stays visible)
               video.classList.remove("is-ready");
 
-              // Fade in only when the first real frame is available
               video.addEventListener(
                 "loadeddata",
                 () => {
-                  // Ensure browser has computed intrinsic video size before reveal
-                  requestAnimationFrame(() => {
-                    video.style.objectFit = "cover";
-                    video.style.width = "100%";
-                    video.style.height = "100%";
+                  // Only reveal once, avoid forcing layout
+                  video.classList.add("is-ready");
 
-                    // Prevent ratio jump by locking rendering before fade
-                    video.classList.add("is-ready");
-
-                    // Small seek prevents blank frame on mobile
+                  // Prevent black frame on mobile
+                  if (video.currentTime === 0) {
                     video.currentTime = 0.01;
+                  }
 
-                    video.play().catch(() => {});
-                  });
+                  video.play().catch(() => {});
                 },
                 { once: true }
               );
             }
-          } else {
+          } else if (video.paused) {
             video.play().catch(() => {});
           }
         } else {
-          video.pause();
+          if (!video.paused) video.pause();
         }
       });
     },
