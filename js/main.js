@@ -283,9 +283,20 @@ document.addEventListener("DOMContentLoaded", () => {
               video.addEventListener(
                 "loadeddata",
                 () => {
-                  video.classList.add("is-ready");
-                  video.currentTime = 0.01; // avoids blank frame on some devices
-                  video.play().catch(() => {});
+                  // Ensure browser has computed intrinsic video size before reveal
+                  requestAnimationFrame(() => {
+                    video.style.objectFit = "cover";
+                    video.style.width = "100%";
+                    video.style.height = "100%";
+
+                    // Prevent ratio jump by locking rendering before fade
+                    video.classList.add("is-ready");
+
+                    // Small seek prevents blank frame on mobile
+                    video.currentTime = 0.01;
+
+                    video.play().catch(() => {});
+                  });
                 },
                 { once: true }
               );
