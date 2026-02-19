@@ -272,24 +272,28 @@ document.addEventListener("DOMContentLoaded", () => {
             const src = video.dataset.src;
             if (src) {
               video.preload = "metadata";
-              video.src = src;
-              video.dataset.loaded = "true";
 
-              // Hide video until ready (poster stays visible)
-              video.classList.remove("is-ready");
+              // Keep poster visible until video is ready
+              video.style.opacity = "0";
+
+              video.src = src;
+              video.load();
+              video.dataset.loaded = "true";
 
               video.addEventListener(
                 "loadeddata",
                 () => {
-                  // Only reveal once, avoid forcing layout
-                  video.classList.add("is-ready");
-
-                  // Prevent black frame on mobile
+                  // Prevent blank frame on mobile devices
                   if (video.currentTime === 0) {
                     video.currentTime = 0.01;
                   }
 
-                  video.play().catch(() => {});
+                  // Reveal video smoothly after first frame is ready
+                  requestAnimationFrame(() => {
+                    video.style.opacity = "1";
+                    video.classList.add("is-ready");
+                    video.play().catch(() => {});
+                  });
                 },
                 { once: true }
               );
