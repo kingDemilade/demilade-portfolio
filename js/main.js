@@ -273,8 +273,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (src) {
               video.preload = "metadata";
 
-              // Keep poster visible until video is ready
+              // Ensure poster stays visible and video is hidden initially
               video.style.opacity = "0";
+              video.style.transition = "opacity 0.35s ease";
 
               video.src = src;
               video.load();
@@ -288,11 +289,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     video.currentTime = 0.01;
                   }
 
-                  // Reveal video smoothly after first frame is ready
+                  // Wait one paint cycle to ensure first real frame
                   requestAnimationFrame(() => {
-                    video.style.opacity = "1";
-                    video.classList.add("is-ready");
-                    video.play().catch(() => {});
+                    requestAnimationFrame(() => {
+                      video.style.opacity = "1";
+                      video.classList.add("is-ready");
+                      video.play().catch(() => {});
+                    });
                   });
                 },
                 { once: true }
