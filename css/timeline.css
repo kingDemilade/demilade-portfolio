@@ -258,4 +258,10 @@ body.dark-mode .tl-name {
     font-size: 0.95rem;
     line-height: 1.5;
   }
+
+  /* Mobile: keep all cards open */
+  .tl-card[hidden] {
+    display: block;
+  }
+
 }
