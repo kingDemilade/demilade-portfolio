@@ -134,6 +134,11 @@ body.dark-mode .tl-card {
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
+/* Improve readability for muted text in dark mode */
+body.dark-mode .text-muted {
+  color: #cfcfcf !important;
+}
+
 /* Content info */
 .img-info-content {
     box-sizing: border-box;
