@@ -186,13 +186,76 @@ body.dark-mode .tl-name {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive: stack on small screens */
 @media (max-width: 768px) {
-  .tl-item { grid-template-columns: 24px 1fr; }
+
+  /* HYBRID MOBILE EXPERIENCE:
+     - Single column storytelling
+     - Accordion-friendly spacing
+     - Larger visuals
+     - Cleaner reading flow
+  */
+
+  /* Remove 3-column timeline layout */
+  .tl-item {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  /* Hide the vertical timeline line on mobile */
+  .tl-item .tl-mid::before {
+    display: none;
+  }
+
+  /* Hide center column spacing */
+  .tl-mid {
+    display: none;
+  }
+
+  /* Stack cards full width */
   .tl-col.tl-left,
-  .tl-col.tl-right { grid-column: 2; }
-  .tl-mid { grid-column: 1; }
-  .tl-item .tl-mid::before { left: calc(12px - var(--line)/2); }
-  .tl-marker { left: 12px; transform: translate(-50%, 0); }
-  .tl-toggle { left: 12px; transform: translate(-50%, 0); }
+  .tl-col.tl-right {
+    grid-column: 1;
+  }
+
+  /* Toggle moves to top of each card */
+  .tl-toggle {
+    position: relative;
+    left: 0;
+    transform: none;
+    margin-bottom: .5rem;
+  }
+
+  /* Stronger storytelling feel */
+  .tl-card {
+    border-left: none;
+    border-top: 4px solid var(--accent, #0d6efd);
+    padding: 1.2rem 1.1rem 1.3rem;
+  }
+
+  /* Improve spacing for mobile readability */
+  .img-info-content {
+    flex-direction: column;
+    text-align: center;
+    row-gap: 1rem;
+  }
+
+  /* Larger portrait for emotional impact */
+  .tl-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+  /* Stronger names on mobile */
+  .tl-name {
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+  }
+
+  /* Slightly larger body for accessibility */
+  .tl-body {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
 }
