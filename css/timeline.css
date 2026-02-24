@@ -261,7 +261,7 @@ body.dark-mode .tl-name {
 
   /* Mobile: keep all cards open */
   .tl-card[hidden] {
-    display: block;
+    display: block !important;
   }
 
 }
