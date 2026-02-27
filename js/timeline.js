@@ -99,17 +99,34 @@
     cards.forEach(card => card.classList.add('is-visible'));
   }
 
-  // Highlight active timeline leader on scroll
+  // Highlight active timeline leader + progress sync
+  const progressBar = document.querySelector('.tl-progress-bar');
+
   if ('IntersectionObserver' in window) {
     const activeObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          // Active card highlight
           cards.forEach(card => card.classList.remove('is-active'));
           entry.target.classList.add('is-active');
+
+          // Smooth focus effect (subtle)
+          entry.target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+
+          // Progress bar update (based on order)
+          if (progressBar) {
+            const index = [...cards].indexOf(entry.target);
+            const percent = ((index + 1) / cards.length) * 100;
+            progressBar.style.transform = `scaleX(${percent / 100})`;
+          }
         }
       });
     }, {
-      threshold: 0.6
+      threshold: 0.6,
+      rootMargin: '-10% 0px -30% 0px'
     });
 
     cards.forEach(card => activeObserver.observe(card));
