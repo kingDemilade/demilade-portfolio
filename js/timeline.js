@@ -110,17 +110,11 @@
           cards.forEach(card => card.classList.remove('is-active'));
           entry.target.classList.add('is-active');
 
-          // Smooth focus effect (subtle)
-          entry.target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-          });
-
           // Progress bar update (based on order)
           if (progressBar) {
             const index = [...cards].indexOf(entry.target);
             const percent = ((index + 1) / cards.length) * 100;
-            progressBar.style.transform = `scaleX(${percent / 100})`;
+            progressBar.style.transform = `scaleY(${percent / 100})`;
           }
         }
       });

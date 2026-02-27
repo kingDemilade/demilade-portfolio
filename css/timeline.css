@@ -42,8 +42,42 @@
   bottom: -1.25rem;
   width: var(--line);
   background: rgba(0,0,0,0.1);
+  z-index: 0;
 }
-body.dark-mode .tl-item .tl-mid::before { background: rgba(255,255,255,0.18); }
+
+/* Animated fill spine (Option D storytelling) */
+.tl-item .tl-mid::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - var(--line)/2);
+  top: -1.25rem;
+  width: var(--line);
+  height: 0%;
+  background: linear-gradient(
+    to bottom,
+    #f39c12,
+    color-mix(in srgb, #f39c12 70%, transparent)
+  );
+  transition: height 0.5s ease;
+  z-index: 1;
+}
+
+/* Active leader fills the spine progressively */
+.tl-item.is-active .tl-mid::after {
+  height: 100%;
+}
+
+body.dark-mode .tl-item .tl-mid::before {
+  background: rgba(255,255,255,0.18);
+}
+
+body.dark-mode .tl-item .tl-mid::after {
+  background: linear-gradient(
+    to bottom,
+    #f39c12,
+    rgba(243,156,18,0.25)
+  );
+}
 
 .tl-toggle::before {
   content: "";
@@ -231,49 +265,6 @@ body.dark-mode .tl-name {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.25s;
-}
-
-/* ===============================
-   Timeline scroll progress bar
-   =============================== */
-
-/* Wrapper (vertical track) */
-.tl-progress {
-  position: fixed;
-  top: 120px; /* adjust if needed to clear your navbar */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: calc(100vh - 160px);
-  background: rgba(0, 0, 0, 0.08);
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Dark mode track */
-body.dark-mode .tl-progress {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-/* Animated fill */
-.tl-progress-bar {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    #f39c12,
-    color-mix(in srgb, #f39c12 70%, transparent)
-  );
-  transform-origin: top;
-  transform: scaleY(0);
-  transition: transform 0.35s ease;
-}
-
-/* Hide on mobile (we may redesign later) */
-@media (max-width: 768px) {
-  .tl-progress {
-    display: none;
-  }
 }
 
 @media (max-width: 768px) {
