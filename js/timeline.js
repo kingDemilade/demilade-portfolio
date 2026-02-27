@@ -98,4 +98,21 @@
     // Fallback for older browsers
     cards.forEach(card => card.classList.add('is-visible'));
   }
+
+  // Highlight active timeline leader on scroll
+  if ('IntersectionObserver' in window) {
+    const activeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          cards.forEach(card => card.classList.remove('is-active'));
+          entry.target.classList.add('is-active');
+        }
+      });
+    }, {
+      threshold: 0.6
+    });
+
+    cards.forEach(card => activeObserver.observe(card));
+  }
+
 })();

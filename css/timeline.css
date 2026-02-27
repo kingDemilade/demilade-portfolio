@@ -311,4 +311,20 @@ body.dark-mode .tl-name {
     display: block !important;
   }
 
+/* Active leader highlight */
+.tl-card {
+  transition: all 0.35s ease;
+}
+
+.tl-card.is-active {
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent);
+}
+
+/* Dark mode polish */
+body.dark-mode .tl-card.is-active {
+  box-shadow: 0 0 0 2px var(--accent), 0 12px 30px rgba(0,0,0,0.6);
+}
+
 }
