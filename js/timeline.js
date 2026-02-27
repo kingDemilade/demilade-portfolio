@@ -76,6 +76,7 @@
   // ---- Micro‑motion reveal (Option 3) ----
   // Reveal each timeline card when it enters the viewport
   const cards = timeline.querySelectorAll('.tl-card');
+  const items = timeline.querySelectorAll('.tl-item');
 
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
@@ -100,22 +101,19 @@
   }
 
   // Highlight active timeline leader + progress sync
-  const progressBar = document.querySelector('.tl-progress-bar');
 
   if ('IntersectionObserver' in window) {
     const activeObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Active card highlight
+          // Active card + parent timeline item highlight
           cards.forEach(card => card.classList.remove('is-active'));
+          items.forEach(item => item.classList.remove('is-active'));
+
           entry.target.classList.add('is-active');
 
-          // Progress bar update (based on order)
-          if (progressBar) {
-            const index = [...cards].indexOf(entry.target);
-            const percent = ((index + 1) / cards.length) * 100;
-            progressBar.style.transform = `scaleY(${percent / 100})`;
-          }
+          const parentItem = entry.target.closest('.tl-item');
+          if (parentItem) parentItem.classList.add('is-active');
         }
       });
     }, {
