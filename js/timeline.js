@@ -125,8 +125,8 @@
         }
       });
     }, {
-      threshold: 0.6,
-      rootMargin: '-10% 0px -30% 0px'
+      threshold: 0.35,
+      rootMargin: '-20% 0px -40% 0px'
     });
 
     cards.forEach(card => activeObserver.observe(card));
