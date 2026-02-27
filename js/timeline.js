@@ -73,4 +73,29 @@
       }
     }
   }
+  // ---- Micro‑motion reveal (Option 3) ----
+  // Reveal each timeline card when it enters the viewport
+  const cards = timeline.querySelectorAll('.tl-card');
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        } else {
+          // Option B: animate every time it re-enters viewport
+          entry.target.classList.remove('is-visible');
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.2,
+      rootMargin: '0px 0px -10% 0px'
+    });
+
+    cards.forEach(card => observer.observe(card));
+  } else {
+    // Fallback for older browsers
+    cards.forEach(card => card.classList.add('is-visible'));
+  }
 })();
