@@ -380,7 +380,7 @@ body.dark-mode .tl-name {
   /* Base card styling for depth */
   .tl-card {
     position: sticky;
-    top: 18vh; /* gives a readable pause before stacking */
+    top: 30vh; /* gives a readable pause before stacking */
     transform-style: preserve-3d;
     backface-visibility: hidden;
     will-change: transform, filter, opacity;
@@ -450,7 +450,7 @@ body.dark-mode .tl-name {
 
   /* Create natural stacking overlap without huge scroll space */
   .tl-item {
-    margin-top: -40px;
+    margin-top: -80px;
   }
 
   /* First card should not overlap upward */
@@ -478,7 +478,7 @@ body.dark-mode .tl-name {
 
   /* Slight lift for current card */
   .tl-item.is-active .tl-card {
-    transform: translateY(-6px) scale(1.02);
+    transform: translateY(-12px) scale(1.04);
   }
 }
 
