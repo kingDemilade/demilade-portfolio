@@ -457,12 +457,16 @@ body.dark-mode .tl-name {
   .tl-item:first-child {
     margin-top: 0;
   }
+  /* Extra runway between first and second card for readable pause */
+  .tl-item:nth-child(2) {
+    margin-top: 60px;
+  }
 
   /* === Scroll-driven translateY effect for stacking (mobile only) === */
 
   /* Each card (except first) lifts and covers previous while scrolling */
   .tl-item:not(:first-child) .tl-card {
-    transform: translateY(18px) scale(0.98);
+    transform: translateY(28px) scale(0.98);
     transition:
       transform 0.45s cubic-bezier(.22,.8,.28,1),
       opacity 0.35s ease,
@@ -471,7 +475,7 @@ body.dark-mode .tl-name {
 
   /* Active card becomes fully engaged and moves upward */
   .tl-item.is-active:not(:first-child) .tl-card {
-    transform: translateY(-14px) scale(1.04);
+    transform: translateY(-20px) scale(1.04);
   }
 
   /* Smooth depth falloff for cards behind */
