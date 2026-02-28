@@ -458,6 +458,28 @@ body.dark-mode .tl-name {
     margin-top: 0;
   }
 
+  /* === Scroll-driven translateY effect for stacking (mobile only) === */
+
+  /* Each card (except first) lifts and covers previous while scrolling */
+  .tl-item:not(:first-child) .tl-card {
+    transform: translateY(18px) scale(0.98);
+    transition:
+      transform 0.45s cubic-bezier(.22,.8,.28,1),
+      opacity 0.35s ease,
+      filter 0.35s ease;
+  }
+
+  /* Active card becomes fully engaged and moves upward */
+  .tl-item.is-active:not(:first-child) .tl-card {
+    transform: translateY(-14px) scale(1.04);
+  }
+
+  /* Smooth depth falloff for cards behind */
+  .tl-item:not(.is-active):not(:first-child) .tl-card {
+    opacity: 0.92;
+    filter: brightness(0.9);
+  }
+
   /* Sticky stacking */
   .tl-card {
     position: sticky;
