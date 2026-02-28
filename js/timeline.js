@@ -117,6 +117,31 @@
 
   // Highlight active timeline leader + progress sync
 
+  // ---- Desktop: Sync slider when user clicks pulse dot ----
+  timeline.addEventListener('click', (e) => {
+    const btn = e.target.closest('.tl-toggle');
+    if (!btn) return;
+
+    const parentItem = btn.closest('.tl-item');
+    if (!parentItem) return;
+
+    // Update active state immediately
+    items.forEach(item => item.classList.remove('is-active'));
+    parentItem.classList.add('is-active');
+
+    const activeIndex = Array.from(items).indexOf(parentItem) + 1;
+
+    if (timelineSlider && timelineSliderCurrent && activeIndex > 0) {
+      timelineSlider.value = String(activeIndex);
+      timelineSliderCurrent.textContent = String(activeIndex);
+
+      // Micro‑feedback pulse
+      timelineSlider.classList.remove('tl-slider-pulse');
+      void timelineSlider.offsetWidth;
+      timelineSlider.classList.add('tl-slider-pulse');
+    }
+  });
+
   if ('IntersectionObserver' in window) {
     const activeObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
