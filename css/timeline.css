@@ -423,16 +423,25 @@ body.dark-mode .tl-name {
 
   /* === Flashcard stacking (mobile only) === */
 
-  /* overlap effect */
+  /* overlap effect (controlled stacking) */
   .tl-item {
-    margin-bottom: -2.5rem;
+    position: relative;
+    margin-bottom: 0;
   }
 
-  /* layered depth */
-  .tl-item:nth-child(1) { z-index: 10; }
-  .tl-item:nth-child(2) { z-index: 9; }
-  .tl-item:nth-child(3) { z-index: 8; }
-  .tl-item:nth-child(4) { z-index: 7; }
+  /* Each card slightly overlaps the previous one */
+  .tl-item + .tl-item {
+    top: -60px;
+  }
+
+  /* Progressive depth layering */
+  .tl-item {
+    z-index: 1;
+  }
+
+  .tl-item.is-active {
+    z-index: 50;
+  }
 
   /* base stacked feel */
   .tl-card {
@@ -441,7 +450,7 @@ body.dark-mode .tl-name {
 
   /* active card lifts forward */
   .tl-card.is-active {
-    transform: translateY(-4px) scale(1.015);
+    transform: translateY(-6px) scale(1.02);
     z-index: 50;
   }
 
@@ -545,3 +554,7 @@ body.dark-mode .tl-slider-track {
     font-size: 0.8rem;
   }
 }
+  /* Smooth stacking animation */
+  .tl-item {
+    transition: top 0.4s ease;
+  }
