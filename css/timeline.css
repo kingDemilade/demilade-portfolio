@@ -455,7 +455,7 @@ body.dark-mode .tl-name {
 
   /* First card should not overlap upward */
   .tl-item:first-child {
-    margin-top: 0;
+    margin-top: 110px;
   }
   /* Extra runway between first and second card for readable pause */
   .tl-item:nth-child(2) {
