@@ -454,7 +454,7 @@ body.dark-mode .tl-name {
 
   /* More readable pause before stacking */
   .tl-item {
-    padding-bottom: 85vh;
+    padding-bottom: 5vh;
   }
 
   /* Stronger vertical motion for background cards */
