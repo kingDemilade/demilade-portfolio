@@ -457,6 +457,11 @@ body.dark-mode .tl-name {
     padding-bottom: 5vh;
   }
 
+  /* Ensure the last card clears the footer on mobile */
+  .tl-item:last-child {
+    padding-bottom: calc(5vh + 120px);
+  }
+
   /* Stronger vertical motion for background cards */
   .tl-item:not(.is-active) .tl-card {
     transform: translateY(18vh) scale(0.95);
