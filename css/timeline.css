@@ -363,6 +363,48 @@ body.dark-mode .tl-name {
     display: block !important;
   }
 
+  /* ---- Soft stacking storytelling (mobile only) ---- */
+
+  /* Cards remain revealed once seen */
+  .tl-card {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Gentle vertical rhythm for scroll flow */
+  .tl-item {
+    margin-bottom: 2.75rem;
+  }
+
+  /* Subtle progressive emphasis as user scrolls */
+  .tl-card.is-active {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+  }
+
+  /* Smooth handoff between cards for a documentary feel */
+  .tl-card.is-visible + .tl-item .tl-card {
+    transition-delay: 0.05s;
+  }
+
+  /* Slight depth illusion (stacked narrative feel) */
+  .tl-item:nth-child(odd) .tl-card {
+    transform-origin: center top;
+  }
+
+  .tl-item:nth-child(even) .tl-card {
+    transform-origin: center bottom;
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .tl-card,
+    .tl-card.is-active {
+      transform: none;
+      transition: none;
+    }
+  }
+
   /* Active leader highlight */
   .tl-card {
     transition: all 0.35s ease;
