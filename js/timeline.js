@@ -77,6 +77,10 @@
   }
   // ---- Micro‑motion reveal (Option 3) ----
 
+  // Prepare references for Apple Wallet style depth section
+  const cards = timeline.querySelectorAll('.tl-card');
+  const items = timeline.querySelectorAll('.tl-item');
+
   // ---- Apple Wallet style depth (Hybrid) ----
   // Creates subtle parallax and depth based on scroll position
   function applyDepthEffect() {
@@ -127,8 +131,6 @@
   // initial run
   applyDepthEffect();
   // Reveal each timeline card when it enters the viewport
-  const cards = timeline.querySelectorAll('.tl-card');
-  const items = timeline.querySelectorAll('.tl-item');
 
   const timelineSlider = document.getElementById('timelineSlider');
   const timelineSliderCurrent = document.getElementById('timelineSliderCurrent');
