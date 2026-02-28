@@ -34,16 +34,6 @@
   position: relative;
   margin-top: 2.5rem;
 }
-.tl-item .tl-mid::before {
-  content: "";
-  position: absolute;
-  left: calc(50% - var(--line)/2);
-  top: -1.25rem;
-  bottom: -1.25rem;
-  width: var(--line);
-  background: rgba(0,0,0,0.1);
-  z-index: 0;
-}
 
 /* Animated fill spine (Option D storytelling) */
 .tl-item .tl-mid::after {
