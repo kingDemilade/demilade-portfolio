@@ -23,6 +23,7 @@
       // allow next frame to enable transition (for CSS grid reveal)
       requestAnimationFrame(() => panel.setAttribute('data-open', 'true'));
     }
+    updateOpenCardsSlider();
   });
 
   // Keyboard support for toggles (Enter/Space)
@@ -51,6 +52,7 @@
           const match = value === 'all' || tags.includes(value);
           tgl.closest('.tl-item').style.display = match ? '' : 'none';
         });
+        updateOpenCardsSlider();
       });
     });
     // default to 'all'
@@ -82,6 +84,44 @@
   const timelineSliderCurrent = document.getElementById('timelineSliderCurrent');
   const timelineSliderTotal = document.getElementById('timelineSliderTotal');
 
+  const tlSlider = document.querySelector('.tl-slider');
+  const tlSliderCount = document.querySelector('.tl-slider-count');
+  const tlSliderFill = document.querySelector('.tl-slider-fill');
+
+  function updateOpenCardsSlider() {
+    if (!tlSliderCount || !tlSliderFill) return;
+
+    // Only count items that are currently visible (filters may hide some)
+    const visibleItems = Array.from(items).filter(item => item.style.display !== 'none');
+    const total = visibleItems.length;
+
+    // A card is considered "open" when its toggle is aria-expanded="true"
+    const openCount = visibleItems.reduce((acc, item) => {
+      const btn = item.querySelector('.tl-toggle');
+
+      if (!btn) return acc;
+
+      const panelId = btn.getAttribute('aria-controls');
+      const panel = panelId ? document.getElementById(panelId) : null;
+
+      // A card is considered open if the panel is visible (no "hidden" attribute)
+      const isOpen = panel && !panel.hasAttribute('hidden');
+
+      return acc + (isOpen ? 1 : 0);
+    }, 0);
+
+    tlSliderCount.textContent = `${openCount} of ${total}`;
+    tlSliderFill.style.width = total ? `${Math.round((openCount / total) * 100)}%` : '0%';
+
+    // Pulse hook (optional)
+    if (tlSlider) {
+      tlSlider.classList.add('is-active');
+      tlSlider.classList.remove('tl-slider-pulse');
+      void tlSlider.offsetWidth;
+      tlSlider.classList.add('tl-slider-pulse');
+    }
+  }
+
   // Initialize display-only timeline slider
   const totalLeaders = items.length;
 
@@ -92,6 +132,8 @@
     timelineSliderCurrent.textContent = '1';
     timelineSliderTotal.textContent = `of ${totalLeaders}`;
   }
+  // Initialize the OPEN-cards slider UI
+  updateOpenCardsSlider();
 
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
@@ -115,33 +157,6 @@
     cards.forEach(card => card.classList.add('is-visible'));
   }
 
-  // Highlight active timeline leader + progress sync
-
-  // ---- Desktop: Sync slider when user clicks pulse dot ----
-  timeline.addEventListener('click', (e) => {
-    const btn = e.target.closest('.tl-toggle');
-    if (!btn) return;
-
-    const parentItem = btn.closest('.tl-item');
-    if (!parentItem) return;
-
-    // Update active state immediately
-    items.forEach(item => item.classList.remove('is-active'));
-    parentItem.classList.add('is-active');
-
-    const activeIndex = Array.from(items).indexOf(parentItem) + 1;
-
-    if (timelineSlider && timelineSliderCurrent && activeIndex > 0) {
-      timelineSlider.value = String(activeIndex);
-      timelineSliderCurrent.textContent = String(activeIndex);
-
-      // Micro‑feedback pulse
-      timelineSlider.classList.remove('tl-slider-pulse');
-      void timelineSlider.offsetWidth;
-      timelineSlider.classList.add('tl-slider-pulse');
-    }
-  });
-
   if ('IntersectionObserver' in window) {
     const activeObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -155,23 +170,8 @@
           const parentItem = entry.target.closest('.tl-item');
           if (parentItem) parentItem.classList.add('is-active');
 
-          // Update display-only slider (milestone-based)
-          if (timelineSlider && timelineSliderCurrent && parentItem) {
-            const activeIndex = Array.from(items).indexOf(parentItem) + 1;
-
-            if (activeIndex > 0 && timelineSlider.value !== String(activeIndex)) {
-              // Smoothly update slider value
-              timelineSlider.value = String(activeIndex);
-
-              // Update counter display
-              timelineSliderCurrent.textContent = String(activeIndex);
-
-              // Optional visual micro‑feedback (pulse effect hook)
-              timelineSlider.classList.remove('tl-slider-pulse');
-              void timelineSlider.offsetWidth; // restart animation
-              timelineSlider.classList.add('tl-slider-pulse');
-            }
-          }
+          // Keep slider synced to current OPEN cards count
+          updateOpenCardsSlider();
         }
       });
     }, {
