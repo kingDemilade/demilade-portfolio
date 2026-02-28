@@ -376,13 +376,15 @@ body.dark-mode .tl-name {
     margin-bottom: 0;
   }
 
-  /* Continuous overlap for all cards */
-  .tl-item + .tl-item {
-    margin-top: -110px;
+  /* Scroll space so each leader has a readable moment */
+  .tl-item {
+    padding-bottom: 60vh;
   }
 
   /* Base card styling for depth */
   .tl-card {
+    position: sticky;
+    top: 18vh; /* gives a readable pause before stacking */
     transform-style: preserve-3d;
     backface-visibility: hidden;
     will-change: transform, filter, opacity;
@@ -543,7 +545,3 @@ body.dark-mode .tl-slider-track {
     font-size: 0.8rem;
   }
 }
-  /* Smooth stacking animation */
-  .tl-item {
-    transition: top 0.4s ease;
-  }
