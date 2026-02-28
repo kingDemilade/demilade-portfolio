@@ -82,7 +82,7 @@
   const items = timeline.querySelectorAll('.tl-item');
 
   // ---- Apple Wallet style depth (Hybrid) ----
-  // Apply cinematic stacking only on mobile
+  /*
   const isMobile = window.matchMedia('(max-width: 768px)');
   function applyDepthEffect() {
     if (!isMobile.matches) return;
@@ -95,10 +95,8 @@
       const rect = item.getBoundingClientRect();
       const center = rect.top + rect.height / 2;
 
-      // distance from center of viewport (-1 to 1 range approx)
       const distance = (center - viewportHeight / 2) / (viewportHeight / 2);
 
-      // Hybrid intensity: stronger when scrolling faster
       const scale = 1 - Math.min(Math.abs(distance) * 0.08, 0.08);
       const translateY = distance * 18;
 
@@ -107,11 +105,9 @@
         scale(${scale})
       `;
 
-      // subtle brightness depth
       const brightness = 1 - Math.min(Math.abs(distance) * 0.15, 0.15);
       card.style.filter = `brightness(${brightness})`;
 
-      // progressive z-index so lower cards move behind
       item.style.zIndex = String(100 - index);
     });
   }
@@ -127,7 +123,6 @@
     }
   }
 
-  // Only enable cinematic depth on mobile
   function enableMobileDepth() {
     window.addEventListener('scroll', onScrollDepth, { passive: true });
     window.addEventListener('resize', applyDepthEffect);
@@ -138,7 +133,6 @@
     window.removeEventListener('scroll', onScrollDepth);
     window.removeEventListener('resize', applyDepthEffect);
 
-    // Reset styles when switching back to desktop
     items.forEach(item => {
       const card = item.querySelector('.tl-card');
       if (card) {
@@ -149,10 +143,8 @@
     });
   }
 
-  // Initial setup
   if (isMobile.matches) enableMobileDepth();
 
-  // Watch for viewport changes (responsive switch)
   isMobile.addEventListener('change', e => {
     if (e.matches) {
       enableMobileDepth();
@@ -160,6 +152,7 @@
       disableMobileDepth();
     }
   });
+  */
 
   // Reveal each timeline card when it enters the viewport
 
