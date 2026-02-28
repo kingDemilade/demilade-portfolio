@@ -258,7 +258,7 @@ body.dark-mode .tl-name {
 }
 
 /* Active leader glow (global) */
-.leader-card.is-active {
+.tl-card.is-active {
   box-shadow: 0 0 0 2px rgba(243, 156, 18, 0.4),
               0 0 20px rgba(243, 156, 18, 0.35);
   transition: box-shadow 0.4s ease;
@@ -379,4 +379,99 @@ body.dark-mode .tl-name {
     box-shadow: 0 0 0 2px var(--accent), 0 12px 30px rgba(0,0,0,0.6);
   }
 
+}
+
+/* === Timeline Leader Slider (display only) === */
+
+.tl-slider {
+  margin: 2.5rem auto 1.5rem;
+  max-width: 720px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+}
+
+.tl-slider-count {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  opacity: .65;
+}
+
+body.dark-mode .tl-slider-count {
+  opacity: .75;
+}
+
+.tl-slider-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(0,0,0,0.08);
+  border-radius: 999px;
+  position: relative;
+  overflow: hidden;
+}
+
+body.dark-mode .tl-slider-track {
+  background: rgba(255,255,255,0.12);
+}
+
+ .tl-slider-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  border-radius: inherit;
+  background: linear-gradient(
+    90deg,
+    #f39c12 0%,
+    color-mix(in srgb, #f39c12 75%, #ffffff) 40%,
+    #f39c12 100%
+  );
+  transition: width .7s cubic-bezier(.22,.8,.28,1);
+  will-change: width;
+}
+
+/* Cinematic glow when active leader updates */
+.tl-slider.is-active .tl-slider-fill {
+  box-shadow:
+    0 0 12px rgba(243,156,18,0.45),
+    0 0 24px rgba(243,156,18,0.25);
+}
+
+@keyframes sliderPulse {
+  0% {
+    transform: scaleX(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scaleX(1.015);
+    filter: brightness(1.08);
+  }
+  100% {
+    transform: scaleX(1);
+    filter: brightness(1);
+  }
+}
+
+.tl-slider.is-active .tl-slider-fill {
+  animation: sliderPulse 1.2s ease;
+}
+
+/* Mobile polish */
+@media (max-width: 768px) {
+  .tl-slider {
+    margin: 1.75rem auto 1rem;
+    padding: 0 1rem;
+  }
+
+  .tl-slider-track {
+    height: 5px;
+  }
+
+  .tl-slider-count {
+    font-size: 0.8rem;
+  }
 }

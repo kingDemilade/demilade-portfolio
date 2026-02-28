@@ -78,6 +78,21 @@
   const cards = timeline.querySelectorAll('.tl-card');
   const items = timeline.querySelectorAll('.tl-item');
 
+  const timelineSlider = document.getElementById('timelineSlider');
+  const timelineSliderCurrent = document.getElementById('timelineSliderCurrent');
+  const timelineSliderTotal = document.getElementById('timelineSliderTotal');
+
+  // Initialize display-only timeline slider
+  const totalLeaders = items.length;
+
+  if (timelineSlider && timelineSliderCurrent && timelineSliderTotal && totalLeaders) {
+    timelineSlider.min = '1';
+    timelineSlider.max = String(totalLeaders);
+    timelineSlider.value = '1';
+    timelineSliderCurrent.textContent = '1';
+    timelineSliderTotal.textContent = `of ${totalLeaders}`;
+  }
+
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -115,6 +130,14 @@
           const parentItem = entry.target.closest('.tl-item');
           if (parentItem) parentItem.classList.add('is-active');
 
+          // Update display-only slider (milestone-based)
+          if (timelineSlider && timelineSliderCurrent && parentItem) {
+            const activeIndex = Array.from(items).indexOf(parentItem) + 1;
+            if (activeIndex > 0) {
+              timelineSlider.value = String(activeIndex);
+              timelineSliderCurrent.textContent = String(activeIndex);
+            }
+          }
         }
       });
     }, {
