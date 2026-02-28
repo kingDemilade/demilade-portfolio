@@ -305,7 +305,7 @@ body.dark-mode .tl-name {
   width: 2px;
   height: 100%;
   pointer-events: none;
-  z-index: 3;
+  z-index: 0;
 }
 
 .tl-progress-bar {
@@ -317,6 +317,9 @@ body.dark-mode .tl-name {
     color-mix(in srgb, #f39c12 70%, transparent)
   );
   transition: height 0.6s cubic-bezier(.2,.65,.3,1);
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .tl-progress-percentage {
@@ -374,6 +377,9 @@ body.dark-mode .tl-progress-value {
   .tl-progress-bar {
     height: 100%;
     width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
     transition: width 0.6s cubic-bezier(.2,.65,.3,1);
   }
 
@@ -387,6 +393,9 @@ body.dark-mode .tl-progress-value {
     height: auto;
     padding: 6px 10px;
     border-radius: 999px;
+  }
+  .tl-progress {
+    z-index: 10;
   }
 }
 
