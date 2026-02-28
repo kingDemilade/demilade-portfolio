@@ -431,16 +431,21 @@ body.dark-mode .tl-name {
 
   /* Each card slightly overlaps the previous one */
   .tl-item + .tl-item {
-    top: -60px;
+    top: -120px;
   }
 
   /* Progressive depth layering */
   .tl-item {
     z-index: 1;
+    transform: scale(0.96);
+    opacity: 0.85;
+    transition: transform 0.35s ease, opacity 0.35s ease;
   }
 
   .tl-item.is-active {
-    z-index: 50;
+    z-index: 100;
+    transform: scale(1);
+    opacity: 1;
   }
 
   /* base stacked feel */
@@ -450,8 +455,14 @@ body.dark-mode .tl-name {
 
   /* active card lifts forward */
   .tl-card.is-active {
-    transform: translateY(-6px) scale(1.02);
-    z-index: 50;
+    transform: translateY(-10px) scale(1.04);
+    z-index: 100;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+  }
+
+  /* Push inactive cards further back visually */
+  .tl-item:not(.is-active) .tl-card {
+    filter: brightness(0.85);
   }
 
   /* smooth transition */
