@@ -76,6 +76,56 @@
     }
   }
   // ---- Micro‑motion reveal (Option 3) ----
+
+  // ---- Apple Wallet style depth (Hybrid) ----
+  // Creates subtle parallax and depth based on scroll position
+  function applyDepthEffect() {
+    const viewportHeight = window.innerHeight;
+
+    items.forEach((item, index) => {
+      const card = item.querySelector('.tl-card');
+      if (!card) return;
+
+      const rect = item.getBoundingClientRect();
+      const center = rect.top + rect.height / 2;
+
+      // distance from center of viewport (-1 to 1 range approx)
+      const distance = (center - viewportHeight / 2) / (viewportHeight / 2);
+
+      // Hybrid intensity: stronger when scrolling faster
+      const scale = 1 - Math.min(Math.abs(distance) * 0.08, 0.08);
+      const translateY = distance * 18;
+
+      card.style.transform = `
+        translateY(${translateY}px)
+        scale(${scale})
+      `;
+
+      // subtle brightness depth
+      const brightness = 1 - Math.min(Math.abs(distance) * 0.15, 0.15);
+      card.style.filter = `brightness(${brightness})`;
+
+      // progressive z-index so lower cards move behind
+      item.style.zIndex = String(100 - index);
+    });
+  }
+
+  let ticking = false;
+  function onScrollDepth() {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        applyDepthEffect();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScrollDepth, { passive: true });
+  window.addEventListener('resize', applyDepthEffect);
+
+  // initial run
+  applyDepthEffect();
   // Reveal each timeline card when it enters the viewport
   const cards = timeline.querySelectorAll('.tl-card');
   const items = timeline.querySelectorAll('.tl-item');
