@@ -133,9 +133,18 @@
           // Update display-only slider (milestone-based)
           if (timelineSlider && timelineSliderCurrent && parentItem) {
             const activeIndex = Array.from(items).indexOf(parentItem) + 1;
-            if (activeIndex > 0) {
+
+            if (activeIndex > 0 && timelineSlider.value !== String(activeIndex)) {
+              // Smoothly update slider value
               timelineSlider.value = String(activeIndex);
+
+              // Update counter display
               timelineSliderCurrent.textContent = String(activeIndex);
+
+              // Optional visual micro‑feedback (pulse effect hook)
+              timelineSlider.classList.remove('tl-slider-pulse');
+              void timelineSlider.offsetWidth; // restart animation
+              timelineSlider.classList.add('tl-slider-pulse');
             }
           }
         }
