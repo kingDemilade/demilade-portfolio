@@ -114,6 +114,20 @@
 
           const parentItem = entry.target.closest('.tl-item');
           if (parentItem) parentItem.classList.add('is-active');
+
+          // ---- Progress sync ----
+          const progressBar = document.querySelector('.tl-progress-bar');
+          const progressValue = document.querySelector('.tl-progress-value');
+
+          if (progressBar && progressValue) {
+            const total = cards.length;
+            const index = Array.from(cards).indexOf(entry.target) + 1;
+
+            const percent = Math.round((index / total) * 100);
+
+            progressBar.style.height = percent + '%';
+            progressValue.textContent = percent + '%';
+          }
         }
       });
     }, {
