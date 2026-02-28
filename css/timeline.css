@@ -421,6 +421,34 @@ body.dark-mode .tl-name {
     box-shadow: 0 0 0 2px var(--accent), 0 12px 30px rgba(0,0,0,0.6);
   }
 
+  /* === Flashcard stacking (mobile only) === */
+
+  /* overlap effect */
+  .tl-item {
+    margin-bottom: -2.5rem;
+  }
+
+  /* layered depth */
+  .tl-item:nth-child(1) { z-index: 10; }
+  .tl-item:nth-child(2) { z-index: 9; }
+  .tl-item:nth-child(3) { z-index: 8; }
+  .tl-item:nth-child(4) { z-index: 7; }
+
+  /* base stacked feel */
+  .tl-card {
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  }
+
+  /* active card lifts forward */
+  .tl-card.is-active {
+    transform: translateY(-4px) scale(1.015);
+    z-index: 50;
+  }
+
+  /* smooth transition */
+  .tl-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
 }
 
 /* === Timeline Leader Slider (display only) === */
