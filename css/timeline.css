@@ -423,6 +423,62 @@ body.dark-mode .tl-name {
 
   /* === Flashcard stacking (mobile only) === */
 
+  /* === Hybrid Apple Wallet depth (mobile only) === */
+
+  /* Create 3D perspective so stacking feels dimensional */
+  .tl {
+    perspective: 900px;
+  }
+
+  /* Base stacked card look */
+  .tl-card {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    will-change: transform, filter, opacity;
+  }
+
+  /* Progressive visual falloff for background cards */
+  .tl-item:not(.is-active) .tl-card {
+    filter: brightness(0.85) blur(0.5px);
+    opacity: 0.9;
+  }
+
+  /* Active card depth dominance */
+  .tl-item.is-active .tl-card {
+    filter: brightness(1) blur(0);
+    transform: translateZ(40px) scale(1.05);
+  }
+
+  /* Subtle lighting gradient to simulate depth */
+  .tl-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.18),
+      transparent 40%,
+      rgba(0,0,0,0.12)
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .tl-item.is-active .tl-card::after {
+    opacity: 1;
+  }
+
+  /* Smooth physical feel */
+  .tl-card {
+    transition:
+      transform 0.45s cubic-bezier(.22,.8,.28,1),
+      filter 0.35s ease,
+      opacity 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
   /* overlap effect (controlled stacking) */
   .tl-item {
     position: relative;
