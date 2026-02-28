@@ -449,6 +449,34 @@ body.dark-mode .tl-name {
       transition: none;
     }
   }
+
+  /* === Strong Apple Wallet stacking (mobile only refinement) === */
+
+  /* More readable pause before stacking */
+  .tl-item {
+    padding-bottom: 85vh;
+  }
+
+  /* Stronger vertical motion for background cards */
+  .tl-item:not(.is-active) .tl-card {
+    transform: translateY(18vh) scale(0.95);
+    opacity: 0.92;
+    filter: brightness(0.85);
+  }
+
+  /* Active card rises and fully overlaps */
+  .tl-item.is-active .tl-card {
+    transform: translateY(-14vh) scale(1.05);
+  }
+
+  /* Clear stacking depth */
+  .tl-item:not(.is-active) {
+    z-index: 1;
+  }
+
+  .tl-item.is-active {
+    z-index: 100;
+  }
 }
 
 /* === Timeline Leader Slider (display only) === */
