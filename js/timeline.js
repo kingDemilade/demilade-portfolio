@@ -174,8 +174,26 @@
           const parentItem = entry.target.closest('.tl-item');
           if (parentItem) parentItem.classList.add('is-active');
 
-          // Keep slider synced to current OPEN cards count
-          updateOpenCardsSlider();
+          // Mobile behavior: slider tracks scroll progress (cards passed)
+          const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+          if (isMobile) {
+            const index = Array.from(cards).indexOf(entry.target) + 1;
+            const total = cards.length;
+
+            const currentEl = document.getElementById('tl-current');
+            const totalEl = document.getElementById('tl-total');
+
+            if (currentEl) currentEl.textContent = index;
+            if (totalEl) totalEl.textContent = total;
+
+            if (tlSliderFill) {
+              tlSliderFill.style.width = `${Math.round((index / total) * 100)}%`;
+            }
+          } else {
+            // Desktop keeps original open-card logic
+            updateOpenCardsSlider();
+          }
         }
       });
     }, {
