@@ -417,7 +417,7 @@ body.dark-mode .tl-slider-track {
   will-change: width;
 }
 
-/* Cinematic glow when active leader updates 
+/* Cinematic glow when active leader updates */
 .tl-slider.is-active .tl-slider-fill {
   box-shadow:
     0 0 12px rgba(243,156,18,0.45),
@@ -441,7 +441,7 @@ body.dark-mode .tl-slider-track {
 
 .tl-slider.is-active .tl-slider-fill {
   animation: sliderPulse 1.2s ease;
-}*/
+}
 
 /* Mobile polish */
 @media (max-width: 768px) {
