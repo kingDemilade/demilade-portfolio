@@ -259,24 +259,27 @@ body.dark-mode .tl-name {
 
 /* Active leader glow (global) */
 .tl-card.is-active {
-  box-shadow: 0 0 0 2px rgba(243, 156, 18, 0.4),
-              0 0 20px rgba(243, 156, 18, 0.35);
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--accent, #f39c12) 40%, transparent),
+    0 0 20px color-mix(in srgb, var(--accent, #f39c12) 35%, transparent);
   transition: box-shadow 0.4s ease;
 }
 
-/* Soft pulse */
 @keyframes leaderPulse {
   0% {
-    box-shadow: 0 0 0 2px rgba(243, 156, 18, 0.4),
-                0 0 20px rgba(243, 156, 18, 0.35);
+    box-shadow:
+      0 0 0 2px color-mix(in srgb, var(--accent, #f39c12) 40%, transparent),
+      0 0 20px color-mix(in srgb, var(--accent, #f39c12) 35%, transparent);
   }
   50% {
-    box-shadow: 0 0 0 4px rgba(243, 156, 18, 0.25),
-                0 0 28px rgba(243, 156, 18, 0.5);
+    box-shadow:
+      0 0 0 4px color-mix(in srgb, var(--accent, #f39c12) 25%, transparent),
+      0 0 28px color-mix(in srgb, var(--accent, #f39c12) 50%, transparent);
   }
   100% {
-    box-shadow: 0 0 0 2px rgba(243, 156, 18, 0.4),
-                0 0 20px rgba(243, 156, 18, 0.35);
+    box-shadow:
+      0 0 0 2px color-mix(in srgb, var(--accent, #f39c12) 40%, transparent),
+      0 0 20px color-mix(in srgb, var(--accent, #f39c12) 35%, transparent);
   }
 }
 
