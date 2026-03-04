@@ -3,6 +3,9 @@
   const timeline = document.querySelector('#project-timeline .timeline');
   if (!timeline) return;
 
+  const items = timeline.querySelectorAll('.tl-item');
+  const cards = timeline.querySelectorAll('.tl-card');
+
   // Expand / collapse (click on the center dot button)
   timeline.addEventListener('click', (e) => {
     const btn = e.target.closest('.tl-toggle');
@@ -77,85 +80,6 @@
   }
   // ---- Micro‑motion reveal (Option 3) ----
 
-  // Prepare references for Apple Wallet style depth section
-  const cards = timeline.querySelectorAll('.tl-card');
-  const items = timeline.querySelectorAll('.tl-item');
-
-  // ---- Apple Wallet style depth (Hybrid) ----
-  /*
-  const isMobile = window.matchMedia('(max-width: 768px)');
-  function applyDepthEffect() {
-    if (!isMobile.matches) return;
-    const viewportHeight = window.innerHeight;
-
-    items.forEach((item, index) => {
-      const card = item.querySelector('.tl-card');
-      if (!card) return;
-
-      const rect = item.getBoundingClientRect();
-      const center = rect.top + rect.height / 2;
-
-      const distance = (center - viewportHeight / 2) / (viewportHeight / 2);
-
-      const scale = 1 - Math.min(Math.abs(distance) * 0.08, 0.08);
-      const translateY = distance * 18;
-
-      card.style.transform = `
-        translateY(${translateY}px)
-        scale(${scale})
-      `;
-
-      const brightness = 1 - Math.min(Math.abs(distance) * 0.15, 0.15);
-      card.style.filter = `brightness(${brightness})`;
-
-      item.style.zIndex = String(100 - index);
-    });
-  }
-
-  let ticking = false;
-  function onScrollDepth() {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        applyDepthEffect();
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }
-
-  function enableMobileDepth() {
-    window.addEventListener('scroll', onScrollDepth, { passive: true });
-    window.addEventListener('resize', applyDepthEffect);
-    applyDepthEffect();
-  }
-
-  function disableMobileDepth() {
-    window.removeEventListener('scroll', onScrollDepth);
-    window.removeEventListener('resize', applyDepthEffect);
-
-    items.forEach(item => {
-      const card = item.querySelector('.tl-card');
-      if (card) {
-        card.style.transform = '';
-        card.style.filter = '';
-      }
-      item.style.zIndex = '';
-    });
-  }
-
-  if (isMobile.matches) enableMobileDepth();
-
-  isMobile.addEventListener('change', e => {
-    if (e.matches) {
-      enableMobileDepth();
-    } else {
-      disableMobileDepth();
-    }
-  });
-  */
-
-  // Reveal each timeline card when it enters the viewport
-
   const timelineSlider = document.getElementById('timelineSlider');
   const timelineSliderCurrent = document.getElementById('timelineSliderCurrent');
   const timelineSliderTotal = document.getElementById('timelineSliderTotal');
@@ -186,7 +110,11 @@
       return acc + (isOpen ? 1 : 0);
     }, 0);
 
-    tlSliderCount.textContent = `${openCount} of ${total}`;
+    const currentEl = document.getElementById('tl-current');
+    const totalEl = document.getElementById('tl-total');
+
+    if (currentEl) currentEl.textContent = openCount;
+    if (totalEl) totalEl.textContent = total;
     tlSliderFill.style.width = total ? `${Math.round((openCount / total) * 100)}%` : '0%';
 
     // Pulse hook (optional)
