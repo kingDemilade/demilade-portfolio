@@ -437,11 +437,11 @@ body.dark-mode .tl-slider-track {
     transform: scaleX(1);
     filter: brightness(1);
   }
-}*/
+}
 
 .tl-slider.is-active .tl-slider-fill {
   animation: sliderPulse 1.2s ease;
-}
+}*/
 
 /* Mobile polish */
 @media (max-width: 768px) {
