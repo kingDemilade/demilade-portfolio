@@ -379,7 +379,7 @@ body.dark-mode .tl-name {
   gap: .4rem;
 
   position: sticky;
-  top: 72px; /* keeps slider below navbar on desktop */
+  top: 57px; /* keeps slider below navbar on desktop */
   z-index: 900;
   background: var(--bs-body-bg, #ffffff);
   box-shadow: 0 4px 10px rgba(0,0,0,0.04);
