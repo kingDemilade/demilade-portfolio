@@ -382,12 +382,11 @@ body.dark-mode .tl-name {
   top: 72px; /* keeps slider below navbar on desktop */
   z-index: 900;
   background: var(--bs-body-bg, #ffffff);
-  border-bottom: 1px solid var(--bs-border-color, rgba(0,0,0,0.08));
   box-shadow: 0 4px 10px rgba(0,0,0,0.04);
 }
 
 body.dark-mode .tl-slider {
-  background: rgb(0 0 0 / 90%);
+  background: rgb(13 13 13 / 95%);
 }
 
 .tl-slider-count {
