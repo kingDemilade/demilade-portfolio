@@ -426,7 +426,7 @@ body.dark-mode .tl-controls button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .4rem;
+  gap: .9rem;
 
   position: sticky;
   top: 57px; /* keeps slider below navbar on desktop */
