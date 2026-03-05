@@ -380,7 +380,7 @@ body.dark-mode .tl-name {
 }
 
 body.dark-mode .tl-slider {
-  background: #0d0d0deb;
+  background: rgb(0 0 0 / 85%);
 }
 
 .tl-slider-count {
