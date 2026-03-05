@@ -396,7 +396,7 @@ body.dark-mode .tl-name {
 /* Hover / focus polish */
 .tl-controls button:hover {
   transform: translateY(-1px);
-  background: rgba(34,34,34,0.1);
+  background: rgba(34,34,34,0.95);
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   border-color: rgba(0, 0, 0, 0.12);
 }
