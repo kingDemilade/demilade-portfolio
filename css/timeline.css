@@ -415,10 +415,21 @@ body.dark-mode .tl-slider-track {
   width: 0%;
   border-radius: inherit;
   background: linear-gradient(
+    90deg, 
+    #1e1e1e 0%, 
+    color-mix(in srgb, #2f2f2f 75%, #1d1d1d) 40%,
+    #1f1f1f 100%
+  );
+  transition: width .7s cubic-bezier(.22,.8,.28,1);
+  will-change: width;
+}
+
+body.dark-mode .tl-slider-fill {
+  background: linear-gradient(
     90deg,
-    #f39c12 0%,
-    color-mix(in srgb, #f39c12 75%, #ffffff) 40%,
-    #f39c12 100%
+    #ffffff 0%,
+    color-mix(in srgb, #faf3e9 75%, #ffffff) 75%,
+    #fbf5eb 100%
   );
   transition: width .7s cubic-bezier(.22,.8,.28,1);
   will-change: width;
