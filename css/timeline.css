@@ -379,6 +379,10 @@ body.dark-mode .tl-name {
   gap: .4rem;
 }
 
+body.dark-mode .tl-slider {
+  background: #f39c12;
+}
+
 .tl-slider-count {
   font-size: 0.85rem;
   font-weight: 600;
