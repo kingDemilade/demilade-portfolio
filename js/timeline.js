@@ -6,6 +6,10 @@
   const items = timeline.querySelectorAll('.tl-item');
   const cards = timeline.querySelectorAll('.tl-card');
 
+  // Desktop control buttons
+  const openAllBtn = document.getElementById('tl-open-all');
+  const closeAllBtn = document.getElementById('tl-close-all');
+
   // Expand / collapse (click on the center dot button)
   timeline.addEventListener('click', (e) => {
     const btn = e.target.closest('.tl-toggle');
@@ -202,6 +206,45 @@
     });
 
     cards.forEach(card => activeObserver.observe(card));
+  }
+  // ---- Desktop Controls: Open All / Close All ----
+  if (openAllBtn) {
+    openAllBtn.addEventListener('click', () => {
+      const toggles = timeline.querySelectorAll('.tl-toggle');
+
+      toggles.forEach(btn => {
+        const panelId = btn.getAttribute('aria-controls');
+        const panel = panelId ? document.getElementById(panelId) : null;
+
+        if (!panel) return;
+
+        btn.setAttribute('aria-expanded', 'true');
+        panel.removeAttribute('hidden');
+
+        requestAnimationFrame(() => panel.setAttribute('data-open', 'true'));
+      });
+
+      updateOpenCardsSlider();
+    });
+  }
+
+  if (closeAllBtn) {
+    closeAllBtn.addEventListener('click', () => {
+      const toggles = timeline.querySelectorAll('.tl-toggle');
+
+      toggles.forEach(btn => {
+        const panelId = btn.getAttribute('aria-controls');
+        const panel = panelId ? document.getElementById(panelId) : null;
+
+        if (!panel) return;
+
+        btn.setAttribute('aria-expanded', 'false');
+        panel.setAttribute('hidden', '');
+        panel.removeAttribute('data-open');
+      });
+
+      updateOpenCardsSlider();
+    });
   }
 
 })();
