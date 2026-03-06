@@ -491,6 +491,30 @@ body.dark-mode .tl-slider-fill {
   will-change: width;
 }
 
+/* ---------------------------------------------------
+   OPTIONAL: Slider color sync with active leader
+   (Safe to remove later if you decide you don't like it)
+   The JS can set:  slider.style.setProperty('--accent', color)
+---------------------------------------------------- */
+
+.tl-slider.use-accent .tl-slider-fill {
+  background: linear-gradient(
+    90deg,
+    var(--accent, #1e1e1e) 0%,
+    color-mix(in srgb, var(--accent, #1e1e1e) 75%, transparent) 60%,
+    color-mix(in srgb, var(--accent, #1e1e1e) 45%, transparent) 100%
+  );
+}
+
+body.dark-mode .tl-slider.use-accent .tl-slider-fill {
+  background: linear-gradient(
+    90deg,
+    var(--accent, #ffffff) 0%,
+    color-mix(in srgb, var(--accent, #ffffff) 75%, transparent) 70%,
+    color-mix(in srgb, var(--accent, #ffffff) 40%, transparent) 100%
+  );
+}
+
 /* Cinematic glow when active leader updates */
 .tl-slider.is-active .tl-slider-fill {
   box-shadow:

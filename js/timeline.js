@@ -140,6 +140,27 @@
     timelineSliderCurrent.textContent = '1';
     timelineSliderTotal.textContent = `of ${totalLeaders}`;
   }
+  // ---- Default open state (first 3 leaders on desktop) ----
+  const isDesktop = window.matchMedia('(min-width: 769px)').matches;
+
+  if (isDesktop) {
+    const firstThree = Array.from(items).slice(0, 3);
+
+    firstThree.forEach(item => {
+      const btn = item.querySelector('.tl-toggle');
+      if (!btn) return;
+
+      const panelId = btn.getAttribute('aria-controls');
+      const panel = panelId ? document.getElementById(panelId) : null;
+
+      if (!panel) return;
+
+      btn.setAttribute('aria-expanded', 'true');
+      panel.removeAttribute('hidden');
+
+      requestAnimationFrame(() => panel.setAttribute('data-open', 'true'));
+    });
+  }
   // Initialize the OPEN-cards slider UI
   updateOpenCardsSlider();
 
