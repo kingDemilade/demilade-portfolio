@@ -599,7 +599,7 @@ body.dark-mode .tl-slider.use-accent .tl-slider-fill {
     0 10px 22px rgba(0,0,0,0.28),
     0 0 0 1px rgba(255,255,255,0.08) inset;
 
-  opacity: 0;
+  opacity: 1;
   transform: translateY(16px) scale(.95);
 
   transition:
