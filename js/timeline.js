@@ -269,26 +269,33 @@
   }
 
 
-/* ---- Scroll To Top Button Logic ---- */
-const scrollBtn = document.getElementById("scrollTopBtn");
+  /* ---- Scroll To Top Button Logic ---- */
+  function initScrollTopButton() {
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    if (!scrollBtn || scrollBtn.dataset.bound === 'true') return;
 
-if (scrollBtn) {
+    scrollBtn.dataset.bound = 'true';
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollBtn.classList.add("show");
-    } else {
-      scrollBtn.classList.remove("show");
-    }
-  });
-
-  scrollBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
     });
-  });
 
-}
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollTopButton);
+  } else {
+    initScrollTopButton();
+  }
 
 })();
