@@ -284,11 +284,19 @@
       }
     });
 
-    scrollBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+    scrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const root = document.documentElement || document.body;
+
+      if ('scrollBehavior' in document.documentElement.style) {
+        root.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      } else {
+        root.scrollTop = 0;
+      }
     });
   }
 
