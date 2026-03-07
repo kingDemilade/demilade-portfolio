@@ -562,3 +562,60 @@ body.dark-mode .tl-slider.use-accent .tl-slider-fill {
     font-size: 0.8rem;
   }
 }
+
+/* Scroll To Top Button */
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+  border: none;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  /* Glass effect */
+  background: rgba(0, 119, 182, 0.85);
+  backdrop-filter: blur(8px);
+
+  color: white;
+
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  transition: all 0.3s ease;
+
+  z-index: 999;
+}
+
+/* Visible state */
+.scroll-top-btn.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover animation */
+.scroll-top-btn:hover {
+  transform: translateY(-3px);
+  background: rgba(0, 119, 182, 1);
+}
+
+/* Mobile only */
+@media (min-width: 992px) {
+  .scroll-top-btn {
+    display: none;
+  }
+}
