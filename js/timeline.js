@@ -287,16 +287,14 @@
     scrollBtn.addEventListener('click', (e) => {
       e.preventDefault();
 
-      const root = document.documentElement || document.body;
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
 
-      if ('scrollBehavior' in document.documentElement.style) {
-        root.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      } else {
-        root.scrollTop = 0;
-      }
+      // Fallback for older browsers
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
     });
   }
 
