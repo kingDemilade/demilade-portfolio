@@ -690,8 +690,8 @@ body.dark-mode .tl-slider.use-accent .tl-slider-fill {
 
 /* Dark mode adjustment */
 body.dark-mode .scroll-top-btn {
-  background: rgba(0,119,182,0.55);
-  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(37,37,37,0.75);
+  border: 2px solid rgba(255,255,255,0.75);
 
   box-shadow:
     0 10px 22px rgba(0,0,0,0.6),
