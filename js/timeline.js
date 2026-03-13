@@ -287,17 +287,14 @@
     scrollBtn.addEventListener('click', (e) => {
       e.preventDefault();
 
-      // Use native smooth scrolling when supported
-      if ('scrollBehavior' in document.documentElement.style) {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      } else {
-        // Older browser fallback
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-      }
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+
+      // Fallback for older browsers
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
     });
   }
 
