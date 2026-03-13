@@ -630,31 +630,41 @@ body.dark-mode .tl-slider.use-accent .tl-slider-fill {
 /* Arrow micro‑interaction (indicates upward scroll) */
 .scroll-top-btn .scroll-arrow {
   display: inline-block;
-  animation: scrollArrowHint 6s ease-in-out infinite;
+  animation: scrollArrowHint 2.2s cubic-bezier(.4,.0,.2,1) infinite;
 }
 
 /* 3s animation + 3s pause */
 @keyframes scrollArrowHint {
 
-  12% {
-    transform: translateY(-8px);
+  0% {
+    transform: translateY(0px);
   }
 
-/* slight drop */
-  20% {
-    transform: translateY(3px);
-  }
-/* second small bounce */
-  28% {
-    transform: translateY(-5px);
+/* strong upward cue */
+  18% {
+    transform: translateY(-12px);
   }
 
-  36% {
+  /* quick drop */
+  30% {
+    transform: translateY(4px);
+  }
+
+/* second upward bounce */
+  45% {
+    transform: translateY(-10px);
+  }
+
+/* smaller bounce */
+  60% {
+    transform: translateY(-6px);
+  }
+
+/* settle */
+  75% {
     transform: translateY(0);
   }
 
-  /* pause so it doesn't feel annoying */
-  36%,
   100% {
     transform: translateY(0);
   }
