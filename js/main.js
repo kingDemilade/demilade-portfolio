@@ -269,24 +269,33 @@ document.addEventListener("DOMContentLoaded", () => {
         
         if (entry.isIntersecting) {
           if (!video.dataset.loaded) {
-            video.src = video.dataset.src;
-            video.load();
-            video.dataset.loaded = "true";
+            const src = video.dataset.src;
+            if (src) {
+              video.preload = "metadata";
 
-            // Fade in only when a real frame is ready (prevents black flash)
-            video.addEventListener(
-              "canplay",
-              () => {
-                video.classList.add("is-ready");
-                video.play().catch(() => {});
-              },
-              { once: true }
-            );
-          } else {
+              video.src = src;
+              video.load();
+              video.dataset.loaded = "true";
+
+              video.addEventListener(
+                "loadeddata",
+                () => {
+                  // Prevent blank frame on mobile devices
+                  if (video.currentTime === 0) {
+                    video.currentTime = 0.01;
+                  }
+
+                  video.classList.add("is-ready");
+                  video.play().catch(() => {});
+                },
+                { once: true }
+              );
+            }
+          } else if (video.paused) {
             video.play().catch(() => {});
           }
         } else {
-          video.pause();
+          if (!video.paused) video.pause();
         }
       });
     },

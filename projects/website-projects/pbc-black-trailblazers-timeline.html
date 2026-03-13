@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | PBC's Black Trailblazers </title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Your custom stylesheet (optional for now) -->
+  <link rel="stylesheet" href="../../css/timeline.css" />
+  <link rel="stylesheet" href="../../css/style.css" />
+  <link rel="stylesheet" href="../../css/media.css" />
+</head>
+<body class="d-flex flex-column min-vh-100">
+<main class="flex-grow-1">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/index.html">Demilade Creatives</a>
+
+    <!-- Theme toggle -->
+    <button
+      class="theme-toggle"
+      aria-label="Toggle dark mode"
+      title="Toggle dark mode">
+
+      <span class="icon-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M20.4,19c-2,2.4-4.9,3.9-8.2,3.9-5.9,0-10.7-4.8-10.7-10.7,0-5,3.4-9.1,8-10.3-1.6,1.9-2.5,4.3-2.5,6.9,0,5.9,4.8,10.6,10.8,10.6s1.8-.1,2.7-.3Z"/>
+        </svg>
+      </span>
+
+      <span class="icon-light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M17.2,12c0,2.9-2.3,5.2-5.2,5.2s-5.2-2.3-5.2-5.2,2.3-5.2,5.2-5.2,5.2,2.3,5.2,5.2ZM13,4V1.3c0-.6-.5-1-1-1s-1,.5-1,1v2.6c0,.6.5,1,1,1s1-.5,1-1ZM13,22.7v-2.6c0-.6-.5-1-1-1s-1,.5-1,1v2.6c0,.6.5,1,1,1s1-.5,1-1ZM5,12c0-.6-.5-1-1-1H1.3c-.6,0-1,.5-1,1s.5,1,1,1h2.6c.6,0,1-.5,1-1ZM23.7,12c0-.6-.5-1-1-1h-2.6c-.6,0-1,.5-1,1s.5,1,1,1h2.6c.6,0,1-.5,1-1ZM5.2,20.3l1.8-1.8c.4-.4.4-1.1,0-1.5-.4-.4-1.1-.4-1.5,0l-1.8,1.8c-.4.4-.4,1.1,0,1.5.2.2.5.3.7.3s.5-.1.7-.3ZM18.4,7l1.8-1.8c.4-.4.4-1.1,0-1.5-.4-.4-1.1-.4-1.5,0l-1.8,1.8c-.4.4-.4,1.1,0,1.5.2.2.5.3.7.3s.5-.1.7-.3ZM20.3,20.3c.4-.4.4-1.1,0-1.5l-1.8-1.8c-.4-.4-1.1-.4-1.5,0-.4.4-.4,1.1,0,1.5l1.8,1.8c.2.2.5.3.7.3s.5-.1.7-.3ZM7,7c.4-.4.4-1.1,0-1.5l-1.8-1.8c-.4-.4-1.1-.4-1.5,0-.4.4-.4,1.1,0,1.5l1.8,1.8c.2.2.5.3.7.3s.5-.1.7-.3Z"/>
+        </svg>
+      </span>
+
+    </button>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/projects.html">Projects</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="container py-5" id="project-timeline">
+<h2 class="h3 fw-bold text-center mb-3">
+  Palm Beach County’s First Black Trailblazers: Foundations of Leadership
+</h2>
+
+<p class="text-center text-muted mb-5">
+  This interactive timeline highlights the pioneering Black leaders who shaped Palm Beach County’s history and public service. Their leadership, resilience, and vision helped build the foundation for the community we serve today.
+</p>
+<!-- Desktop timeline controls -->
+<div class="tl-controls text-center mb-4 d-none d-lg-block">
+  <button id="tl-open-all" class="btn btn-outline-primary btn-sm me-2" type="button">
+    Open All Trailblazers
+  </button>
+  <button id="tl-close-all" class="btn btn-outline-secondary btn-sm" type="button">
+    Close All Trailblazers
+  </button>
+</div>
+<div class="tl-slider sticky-top">
+  <div class="tl-slider-count">
+    <span id="tl-current">1</span>
+    <span class="tl-divider">of</span>
+    <span id="tl-total"></span>
+  </div>
+  <div class="tl-slider-track">
+    <div class="tl-slider-fill"></div>
+  </div>
+</div>
+
+  <ol class="tl timeline tl-mobile-stack" role="list">
+    <!-- Item -->
+    <li class="tl-item stack-item" data-leader="1" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-1" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/clarence-e-anthony.jpg" alt="Portrait of Clarence E. Anthony." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Clarence E. Anthony</p>
+              <p class="tl-body">Chief Executive Officer and Executive Director of the National League of Cities; former Mayor of South Bay.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-1" aria-label="Toggle details for Clarence E. Anthony." title="Toggle details for Clarence E. Anthony." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="2" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-2" aria-label="Toggle details for Verdenia C. Baker." title="Toggle details for Verdenia C. Baker." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-2" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/verdenia-c-baker.jpg" alt="Portrait of Verdenia C. Baker." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Verdenia C. Baker</p>
+              <p class="tl-body">First Black woman to hold the County Administrator position in Palm Beach County.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="3" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-3" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/joseph-bernadel.jpg" alt="Portrait of Joseph Bernadel." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Joseph Bernadel</p>
+              <p class="tl-body">First Haitian American to found a public school in the United States (in Delray Beach).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-3" aria-label="Toggle details for Joseph Bernadel." title="Toggle details for Joseph Bernadel." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="4" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-4" aria-label="Toggle details for Mack Bernard." title="Toggle details for Mack Bernard." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-4" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/mack-bernard.jpg" alt="Portrait of Mack Bernard." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Mack Bernard</p>
+              <p class="tl-body">First Black man of Haitian descent from Palm Beach County elected as State Representative, County Commissioner, and County Mayor (appointed).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="5" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-5" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/louise-e-buie.jpg" alt="Portrait of Louise E. Buie." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Louise E. Buie</p>
+              <p class="tl-body">Led efforts ensuring Black history and contributions were added to previously all‑white textbooks in the Palm Beach County School District.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-5" aria-label="Toggle details for Louise E. Buie." title="Toggle details for Louise E. Buie." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="6" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-6" aria-label="Toggle details for Edith Bush." title="Toggle details for Edith Bush." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-6" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/edith-bush.jpg" alt="Portrait of Edith Bush." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Edith Bush</p>
+              <p class="tl-body">Executive Director of the Martin Luther King Jr. Coordinating Committee.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="7" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-7" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/emanuel-perry.jpg" alt="Portrait of Emanuel Perry." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Emanuel Perry</p>
+              <p class="tl-body">First Black Palm Beach County Tourist Development Council Executive Director.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-7" aria-label="Toggle details for Emanuel Perry." title="Toggle details for Emanuel Perry." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="8" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-8" aria-label="Toggle details for Maxine Cheesman." title="Toggle details for Maxine Cheesman." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-8" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/maxine-cheesman.jpg" alt="Portrait of Maxine Cheesman." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Maxine Cheesman</p>
+              <p class="tl-body">First Black Jamaican woman elected as a Circuit Court Judge.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="9" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-9" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/f-malcolm-cunningham-sr.jpg" alt="Portrait of F. Malcolm Cunningham Sr." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">F. Malcolm Cunningham, Sr.</p>
+              <p class="tl-body">Opened the first Black law practice in West Palm Beach and founded the first minority‑owned commercial bank in Florida.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-9" aria-label="Toggle details for F. Malcolm Cunningham, Sr." title="Toggle details for F. Malcolm Cunningham, Sr." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="10" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-10" aria-label="Toggle details for Reginald Duren." title="Toggle details for Reginald Duren." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-10" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/reginald-duren.jpg" alt="Portrait of Reginald Duren." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Reginald Duren</p>
+              <p class="tl-body">First Black Palm Beach County Fire Rescue Chief.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="11" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-11" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/john-russell-dyett.jpg" alt="Portrait of John Russell Dyett." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">John Russell Dyett</p>
+              <p class="tl-body">Built the first Black maternity hospital.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-11" aria-label="Toggle details for John Russell Dyett." title="Toggle details for John Russell Dyett." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="12" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-12" aria-label="Toggle details for Vera Farrington." title="Toggle details for Vera Farrington." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-12" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/vera-farrington.jpg" alt="Portrait of Vera Farrington." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Vera Farrington</p>
+              <p class="tl-body">Founder of the Spady Cultural Heritage Museum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="13" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-13" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/dr-donald-fenney.jpg" alt="Portrait of Dr. Donald Fenney." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Dr. Donald Fenney</p>
+              <p class="tl-body">First Black Superintendent of the Palm Beach County School District.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-13" aria-label="Toggle details for Dr. Donald Fenney." title="Toggle details for Dr. Donald Fenney." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="14" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-14" aria-label="Toggle details for Clinton B. Forbes." title="Toggle details for Clinton B. Forbes." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-14" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/clinton-b-forbes.jpg" alt="Portrait of Clinton B. Forbes." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Clinton B. Forbes</p>
+              <p class="tl-body">First Black Palm Beach County Palm Tran Transportation Director.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="15" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-15" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/maude-ford-lee.jpg" alt="Portrait of Maude Ford Lee." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Maude Ford Lee</p>
+              <p class="tl-body">First Black female Palm Beach County Commissioner.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-15" aria-label="Toggle details for Maude Ford Lee." title="Toggle details for Maude Ford Lee." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="16" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-16" aria-label="Toggle details for Dr. Dennis P. Gallon." title="Toggle details for Dr. Dennis P. Gallon." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-16" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/dr-dennis-p-gallon.jpg" alt="Portrait of Dr. Dennis P. Gallon." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Dr. Dennis P. Gallon</p>
+              <p class="tl-body">First Black president of Palm Beach State College.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="17" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-17" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/mildred-w-gildersleeve.jpg" alt="Portrait of Mildred W. Gildersleeve." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Mildred W. Gildersleeve</p>
+              <p class="tl-body">First Black nurse midwife in Palm Beach County.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-17" aria-label="Toggle details for Mildred W. Gildersleeve." title="Toggle details for Mildred W. Gildersleeve." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="18" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-18" aria-label="Toggle details for Bernice Gordon Greene." title="Toggle details for Bernice Gordon Greene." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-18" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/bernice-gordon-greene.jpg" alt="Portrait of Bernice Gordon Greene." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Bernice Gordon Greene</p>
+              <p class="tl-body">First Black Supervisor for Negro Education and Schools.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="19" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-19" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/addie-l-greene.jpg" alt="Portrait of Addie L. Greene." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Addie L. Greene</p>
+              <p class="tl-body">First Black woman from Palm Beach County elected as a Florida State Representative.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-19" aria-label="Toggle details for Addie L. Greene." title="Toggle details for Addie L. Greene." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="20" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-20" aria-label="Toggle details for Bradley Harper." title="Toggle details for Bradley Harper." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-20" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/bradley-harper.jpg" alt="Portrait of Bradley Harper." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Bradley Harper</p>
+              <p class="tl-body">First Black man elected as a Circuit Court Judge.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="21" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-21" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/james-hank-harper-jr.jpg" alt="Portrait of James Hank Harper Jr." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">James “Hank” Harper, Jr.</p>
+              <p class="tl-body">First Black man from Palm Beach County elected as a Florida State Representative.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-21" aria-label="Toggle details for James Hank Harper Jr." title="Toggle details for James Hank Harper Jr." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="22" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-22" aria-label="Toggle details for Alcee Hastings." title="Toggle details for Alcee Hastings." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-22" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/alcee-hastings.jpg" alt="Portrait of Alcee Hastings." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Alcee Hastings</p>
+              <p class="tl-body">First Black man from Florida to serve in the United States Congress.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="23" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-23" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/daniel-hendrix.jpg" alt="Portrait of Daniel Hendrix." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Daniel Hendrix</p>
+              <p class="tl-body">First Black man elected to the School Board of Palm Beach County.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-23" aria-label="Toggle details for Daniel Hendrix." title="Toggle details for Daniel Hendrix." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="24" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-24" aria-label="Toggle details for William M. Holland Sr." title="Toggle details for William M. Holland Sr." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-24" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/william-m-holland-sr.jpg" alt="Portrait of William M. Holland Sr." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">William M. Holland, Sr.</p>
+              <p class="tl-body">Palm Beach County’s first Black lawyer and civil rights activist.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="25" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-25" hidden>
+          <div class="img-info-content">
+            <img class="tl-img" src="/images/bhm/images/ineria-e-hudnell.jpg" alt="Portrait of Ineria E. Hudnell." height="175" width="175">
+            <div class="info-content">
+              <p class="tl-name">Ineria E. Hudnell</p>
+              <p class="tl-body">School teacher and historian of Black history in Palm Beach County.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-25" aria-label="Toggle details for Ineria E. Hudnell." title="Toggle details for Ineria E. Hudnell." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+    <li class="tl-item stack-item" data-leader="26" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-26" aria-label="Toggle details for Dr. Thomas L. Jefferson." title="Toggle details for Dr. Thomas L. Jefferson." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-26" hidden> <!-- adding hidden after id="tl-card-#" will close the card -->
+            <div class="img-info-content">
+              <img 
+                class="tl-img" 
+                src="/images/bhm/images/dr-thomas-l-jefferson.jpg" 
+                alt="Portrait of Dr. Thomas L. Jefferson." 
+                height="175" 
+                width="175"
+              >
+              <div class="info-content">
+                <p class="tl-name">Dr. Thomas L. Jefferson</p>
+                <p class="tl-body">
+                  First Black physician in West Palm Beach.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="27" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-27" hidden> <!-- adding hidden after id="tl-card-#" will close the card -->
+            <div class="img-info-content">
+              <img 
+                class="tl-img" 
+                src="/images/bhm/images/eva-williams-mack.jpg" 
+                alt="Portrait of Eva Williams Mack." 
+                height="175" 
+                width="175"
+              >
+              <div class="info-content">
+                <p class="tl-name">Eva Williams Mack</p>
+                <p class="tl-body">
+                  First health specialist for the Palm Beach County School Board.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-27" aria-label="Toggle details for Eva Williams Mack." title="Toggle details for Eva Williams Mack." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="28" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-28" aria-label="Toggle details for Dr. Ava L. Parker." title="Toggle details for Dr. Ava L. Parker." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-28" hidden> <!-- adding hidden after id="tl-card-#" will close the card -->
+            <div class="img-info-content">
+              <img 
+                class="tl-img" 
+                src="/images/bhm/images/dr-ava-l-parker.jpg" 
+                alt="Portrait of Dr. Ava L. Parker." 
+                height="175" 
+                width="175"
+              >
+              <div class="info-content">
+                <p class="tl-name">Dr. Ava L. Parker</p>
+                <p class="tl-body">
+                  First Black woman president of Palm Beach State College.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="29" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-29" hidden> <!-- adding hidden after id="tl-card-#" will close the card -->
+            <div class="img-info-content">
+              <img 
+                class="tl-img" 
+                src="/images/bhm/images/c-spencer-pompey.jpg" 
+                alt="Portrait of C. Spencer Pompey." 
+                height="175" 
+                width="175"
+              >
+              <div class="info-content">
+                <p class="tl-name">C. Spencer Pompey</p>
+                <p class="tl-body">
+                  Teacher, principal, author, and founder of the Palm Beach County Teacher’s Association for Black Educators.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-29" aria-label="Toggle details for C. Spencer Pompey." title="Toggle details for C. Spencer Pompey." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="30" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-30" aria-label="Toggle details for Cashus W. Richardson, II." title="Toggle details for Cashus W. Richardson, II." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-30" hidden> <!-- adding hidden after id="tl-card-#" will close the card -->
+            <div class="img-info-content">
+              <img 
+                class="tl-img" 
+                src="/images/bhm/images/cashus-w-richardson-II.jpg" 
+                alt="Portrait of Cashus W. Richardson, II." 
+                height="175" 
+                width="175"
+              >
+              <div class="info-content">
+                <p class="tl-name">Cashus W. Richardson, II</p>
+                <p class="tl-body">
+                  First Black man to manage a business in the Guaranty Building in WPB for the federal government.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="31" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-31" hidden> <!-- adding hidden after id="tl-card-#" will close the card -->
+            <div class="img-info-content">
+              <img 
+                class="tl-img" 
+                src="/images/bhm/images/david-l-ricks.jpg" 
+                alt="Portrait of David L. Ricks." 
+                height="175" 
+                width="175"
+              >
+              <div class="info-content">
+                <p class="tl-name">David L. Ricks</p>
+                <p class="tl-body">
+                  First Black Palm Beach County Engineer Director.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-31" aria-label="Toggle details for David L. Ricks." title="Toggle details for David L. Ricks." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+
+<li class="tl-item stack-item" data-leader="32" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-32" aria-label="Toggle details for Debra L. Robinson, MD." title="Toggle details for Debra L. Robinson, MD." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-32" hidden> <!-- adding hidden after id="tl-card-#" will close the card -->
+            <div class="img-info-content">
+              <img 
+                class="tl-img" 
+                src="/images/bhm/images/debra-l-robinson-md.jpg" 
+                alt="Portrait of Debra L. Robinson, MD." 
+                height="175" 
+                width="175"
+              >
+              <div class="info-content">
+                <p class="tl-name">Debra L. Robinson, MD</p>
+                <p class="tl-body">
+                  Founding member and first chair of the Coalition of Black Student Achievement.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+</li>
+
+
+<li class="tl-item stack-item" data-leader="33" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-33" hidden> <!-- adding hidden after id="tl-card-#" will close the card -->
+            <div class="img-info-content">
+              <img 
+                class="tl-img" 
+                src="/images/bhm/images/edward-rodgers.jpg" 
+                alt="Portrait of Edward Rodgers." 
+                height="175" 
+                width="175"
+              >
+              <div class="info-content">
+                <p class="tl-name">Edward Rodgers</p>
+                <p class="tl-body">
+                  First Black judge in Palm Beach County.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-33" aria-label="Toggle details for Edward Rodgers." title="Toggle details for Edward Rodgers." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+</li>
+
+
+<li class="tl-item stack-item" data-leader="34" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-34" aria-label="Toggle details for Edna W. Runner." title="Toggle details for Edna W. Runner." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-34" hidden> <!-- adding hidden after id="tl-card-#" will close the card -->
+            <div class="img-info-content">
+              <img 
+                class="tl-img" 
+                src="/images/bhm/images/edna-w-runner.jpg" 
+                alt="Portrait of Edna W. Runner." 
+                height="175" 
+                width="175"
+              >
+              <div class="info-content">
+                <p class="tl-name">Edna W. Runner</p>
+                <p class="tl-body">
+                  Founder of Runner Tutorial Center for students in Limestone Creek.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+</li>
+
+
+    <!-- Item -->
+    <li class="tl-item stack-item" data-leader="35" role="listitem">
+      <div class="tl-col tl-left">
+        <div class="tl-card leader-card" id="tl-card-35" hidden>
+          <div class="img-info-content">
+            <img 
+              class="tl-img" 
+              src="/images/bhm/images/britton-g-sayles.jpg" 
+              alt="Portrait of Britton G. Sayles." 
+              height="175" 
+              width="175"
+            >
+            <div class="info-content">
+              <p class="tl-name">Britton G. Sayles</p>
+              <p class="tl-body">
+                First Black college president in Palm Beach County.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-35" aria-label="Toggle details for Britton G. Sayles." title="Toggle details for Britton G. Sayles." type="button"></button>
+      </div>
+      <div class="tl-col tl-right"></div>
+    </li>
+
+    <li class="tl-item stack-item" data-leader="36" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-36" aria-label="Toggle details for Solomon D. Spady." title="Toggle details for Solomon D. Spady." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-36" hidden> <!-- adding hidden after id="tl-card-#" will close the card -->
+            <div class="img-info-content">
+              <img 
+                class="tl-img" 
+                src="/images/bhm/images/solomon-d-spady.jpg" 
+                alt="Portrait of Solomon D. Spady." 
+                height="175" 
+                width="175"
+              >
+              <div class="info-content">
+                <p class="tl-name">Solomon D. Spady</p>
+                <p class="tl-body">
+                  Black educator and community leader in Delray Beach.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </li> 
+
+<li class="tl-item stack-item" data-leader="37" role="listitem">
+    <div class="tl-col tl-left">
+      <div class="tl-card leader-card" id="tl-card-37" hidden> <!-- adding hidden after id="tl-card-#" will close the card -->
+          <div class="img-info-content">
+            <img 
+              class="tl-img" 
+              src="/images/bhm/images/priscilla-a-taylor.jpg" 
+              alt="Portrait of Priscilla A. Taylor" 
+              height="175" 
+              width="175"
+            >
+            <div class="info-content">
+              <p class="tl-name">Priscilla A. Taylor</p>
+              <p class="tl-body">
+                First Black woman mayor of Palm Beach County.
+              </p>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="tl-mid">
+      <button class="tl-toggle" aria-expanded="true" aria-controls="tl-card-37" aria-label="Toggle details Priscilla A. Taylor." title="Toggle details Priscilla A. Taylor." type="button"></button>
+    </div>
+    <div class="tl-col tl-right"></div>
+</li>
+
+    <li class="tl-item stack-item" data-leader="38" role="listitem">
+      <div class="tl-col tl-left"></div>
+      <div class="tl-mid">
+        <button class="tl-toggle" aria-expanded="false" aria-controls="tl-card-38" aria-label="Toggle details for Daisy T. Washington." title="Toggle details for Daisy T. Washington." type="button"></button>
+      </div>
+      <div class="tl-col tl-right">
+        <div class="tl-card leader-card" id="tl-card-38" hidden> <!-- adding "hidden" after id="tl-card-#" will close the card ** Example ** <div class="tl-card" id="tl-card-13" hidden> -->
+            <div class="img-info-content">
+              <img 
+                class="tl-img" 
+                src="/images/bhm/images/daisy-washington-thomas.jpg" 
+                alt="Portrait of Daisy T. Washington." 
+                height="175" 
+                width="175"
+              >
+              <div class="info-content">
+                <p class="tl-name">Daisy T. Washington</p>
+                <p class="tl-body">
+                  First Black woman postmaster.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </li> 
+</ol>
+
+  <!-- Mobile stacking animation is controlled via CSS + timeline.js.
+       This hook enables smooth card cover transitions without affecting desktop. -->
+
+
+
+</section>
+</main>
+<footer class="bg-dark text-white text-center py-4 mt-5 footer-waves">
+  <div class="container">
+    <p class="mb-0">&copy; <span id="year"></span> Demilade Haastrup. All rights reserved.</p>
+  </div>
+
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+</footer>
+
+<!-- Scroll to Top Button (Mobile Only) -->
+<button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+  <span class="scroll-arrow">↑</span>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/timeline.js"></script>
+
+</body>
+</html>

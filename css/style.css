@@ -38,11 +38,11 @@ main {
   --bs-border-radius: 0rem !important; /* custom radius applied safely without editing Bootstrap */
 }
 
-/* Prevent video thumbnails in cards from being cropped */
+/* Ensure poster frame and video share identical dimensions (prevents jump when video loads) */
 .card video.card-img-top {
-    height: auto;          /* allow natural video height */
-    object-fit: contain;   /* fit entire frame instead of cropping */
-    background: #000;      /* subtle letterbox if aspect ratio differs */
+    height: 250px;        /* match .card-img-top height so layout stays stable */
+    object-fit: contain;    /* keeps the same visual behavior as image thumbnails */
+    background: #000;
 }
 
 .card:hover .card-img-top {
@@ -486,6 +486,108 @@ body.dark-mode .theme-toggle .icon-light {
 /* Navbar placement refinement for single theme toggle */
 .navbar .theme-toggle {
   margin-left: 0.75rem;
+}
+
+/* ===== Breadcrumb Navigation (Motion‑Aware) ===== */
+
+.breadcrumb-wrapper {
+  background: transparent;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 5;
+  padding: 0.75rem 0;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  align-items: center;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Base link */
+.breadcrumb a {
+  color: #212529;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* Motion hover: subtle lift */
+.breadcrumb a:hover {
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Motion underline reveal */
+.breadcrumb a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.28s ease;
+}
+
+.breadcrumb a:hover::after {
+  width: 100%;
+}
+
+/* Reduced contrast for previous crumbs */
+.breadcrumb-item:not(.active) a {
+  opacity: 0.85;
+}
+
+.breadcrumb-item:not(.active) a:hover {
+  opacity: 1;
+}
+
+/* Active state */
+.breadcrumb-item.active {
+  color: #6c757d;
+  font-weight: 600;
+}
+
+/* Subtle focus for accessibility */
+.breadcrumb a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* Dark mode */
+body.dark-mode .breadcrumb-wrapper {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+body.dark-mode .breadcrumb a {
+  color: #f0f0f0;
+}
+
+body.dark-mode .breadcrumb a:hover {
+  color: #ffffff;
+}
+
+body.dark-mode .breadcrumb-item.active {
+  color: #bfc3c7;
+}
+
+/* Dark mode reduced contrast */
+body.dark-mode .breadcrumb-item:not(.active) a {
+  opacity: 0.85;
+}
+
+body.dark-mode .breadcrumb-item:not(.active) a:hover {
+  opacity: 1;
 }
 
 /* ===== Standard Hub Page Header ===== */

@@ -3,6 +3,24 @@
   const timeline = document.querySelector('#project-timeline .timeline');
   if (!timeline) return;
 
+  const items = timeline.querySelectorAll('.tl-item');
+  const cards = timeline.querySelectorAll('.tl-card');
+  // Performance improvement for large timelines (50+ leaders)
+  // Precompute card indexes so IntersectionObserver doesn't
+  // repeatedly run Array.from(...).indexOf() on scroll.
+  const cardIndexMap = new Map();
+  cards.forEach((card, i) => cardIndexMap.set(card, i));
+  // Automatically set total leaders count based on number of cards in HTML
+  const totalCards = cards.length;
+  const totalDisplayEl = document.getElementById('tl-total');
+  if (totalDisplayEl && totalCards) {
+    totalDisplayEl.textContent = totalCards;
+  }
+
+  // Desktop control buttons
+  const openAllBtn = document.getElementById('tl-open-all');
+  const closeAllBtn = document.getElementById('tl-close-all');
+
   // Expand / collapse (click on the center dot button)
   timeline.addEventListener('click', (e) => {
     const btn = e.target.closest('.tl-toggle');
@@ -23,6 +41,7 @@
       // allow next frame to enable transition (for CSS grid reveal)
       requestAnimationFrame(() => panel.setAttribute('data-open', 'true'));
     }
+    updateOpenCardsSlider();
   });
 
   // Keyboard support for toggles (Enter/Space)
@@ -51,6 +70,7 @@
           const match = value === 'all' || tags.includes(value);
           tgl.closest('.tl-item').style.display = match ? '' : 'none';
         });
+        updateOpenCardsSlider();
       });
     });
     // default to 'all'
@@ -73,4 +93,238 @@
       }
     }
   }
+  // ---- Micro‑motion reveal (Option 3) ----
+
+  const timelineSlider = document.getElementById('timelineSlider');
+  const timelineSliderCurrent = document.getElementById('timelineSliderCurrent');
+  const timelineSliderTotal = document.getElementById('timelineSliderTotal');
+
+  const tlSlider = document.querySelector('.tl-slider');
+  const tlSliderCount = document.querySelector('.tl-slider-count');
+  const tlSliderFill = document.querySelector('.tl-slider-fill');
+
+  function updateOpenCardsSlider() {
+    if (!tlSliderCount || !tlSliderFill) return;
+
+    // Only count items that are currently visible (filters may hide some)
+    const visibleItems = Array.from(items).filter(item => item.style.display !== 'none');
+    const total = visibleItems.length;
+
+    // A card is considered "open" when its toggle is aria-expanded="true"
+    const openCount = visibleItems.reduce((acc, item) => {
+      const btn = item.querySelector('.tl-toggle');
+
+      if (!btn) return acc;
+
+      const panelId = btn.getAttribute('aria-controls');
+      const panel = panelId ? document.getElementById(panelId) : null;
+
+      // A card is considered open if the panel is visible (no "hidden" attribute)
+      const isOpen = panel && !panel.hasAttribute('hidden');
+
+      return acc + (isOpen ? 1 : 0);
+    }, 0);
+
+    const currentEl = document.getElementById('tl-current');
+    const totalEl = document.getElementById('tl-total');
+
+    if (currentEl) currentEl.textContent = openCount;
+    if (totalEl) totalEl.textContent = total;
+    tlSliderFill.style.width = total ? `${Math.round((openCount / total) * 100)}%` : '0%';
+
+    // Pulse hook (optional)
+    if (tlSlider) {
+      tlSlider.classList.add('is-active');
+      tlSlider.classList.remove('tl-slider-pulse');
+      void tlSlider.offsetWidth;
+      tlSlider.classList.add('tl-slider-pulse');
+    }
+  }
+
+  // Initialize display-only timeline slider
+  const totalLeaders = items.length;
+
+  if (timelineSlider && timelineSliderCurrent && timelineSliderTotal && totalLeaders) {
+    timelineSlider.min = '1';
+    timelineSlider.max = String(totalLeaders);
+    timelineSlider.value = '1';
+    timelineSliderCurrent.textContent = '1';
+    timelineSliderTotal.textContent = `of ${totalLeaders}`;
+  }
+  // ---- Default open state (first 3 leaders on desktop) ----
+  const isDesktop = window.matchMedia('(min-width: 769px)').matches;
+
+  if (isDesktop) {
+    const firstThree = Array.from(items).slice(0, 3);
+
+    firstThree.forEach(item => {
+      const btn = item.querySelector('.tl-toggle');
+      if (!btn) return;
+
+      const panelId = btn.getAttribute('aria-controls');
+      const panel = panelId ? document.getElementById(panelId) : null;
+
+      if (!panel) return;
+
+      btn.setAttribute('aria-expanded', 'true');
+      panel.removeAttribute('hidden');
+
+      requestAnimationFrame(() => panel.setAttribute('data-open', 'true'));
+    });
+  }
+  // Initialize the OPEN-cards slider UI
+  updateOpenCardsSlider();
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        } else {
+          // Option B: animate every time it re-enters viewport
+          entry.target.classList.remove('is-visible');
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.2,
+      rootMargin: '0px 0px -10% 0px'
+    });
+
+    cards.forEach(card => observer.observe(card));
+  } else {
+    // Fallback for older browsers
+    cards.forEach(card => card.classList.add('is-visible'));
+  }
+
+  if ('IntersectionObserver' in window) {
+    const activeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Active card + parent timeline item highlight
+          cards.forEach(card => card.classList.remove('is-active'));
+          items.forEach(item => item.classList.remove('is-active'));
+
+          entry.target.classList.add('is-active');
+
+          const parentItem = entry.target.closest('.tl-item');
+          if (parentItem) parentItem.classList.add('is-active');
+
+          // Mobile behavior: slider tracks scroll progress (cards passed)
+          const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+          if (isMobile) {
+            const index = (cardIndexMap.get(entry.target) ?? 0) + 1;
+            const total = cards.length;
+
+            const currentEl = document.getElementById('tl-current');
+            const totalEl = document.getElementById('tl-total');
+
+            if (currentEl) currentEl.textContent = index;
+            if (totalEl) totalEl.textContent = total;
+
+            if (tlSliderFill) {
+              tlSliderFill.style.width = `${Math.round((index / total) * 100)}%`;
+            }
+          } else {
+            // Desktop keeps original open-card logic
+            updateOpenCardsSlider();
+          }
+        }
+      });
+    }, {
+      threshold: 0.35,
+      rootMargin: '-20% 0px -40% 0px'
+    });
+
+    cards.forEach(card => activeObserver.observe(card));
+  }
+  // ---- Desktop Controls: Open All / Close All ----
+  if (openAllBtn) {
+    openAllBtn.addEventListener('click', () => {
+      const toggles = timeline.querySelectorAll('.tl-toggle');
+
+      toggles.forEach(btn => {
+        const panelId = btn.getAttribute('aria-controls');
+        const panel = panelId ? document.getElementById(panelId) : null;
+
+        if (!panel) return;
+
+        btn.setAttribute('aria-expanded', 'true');
+        panel.removeAttribute('hidden');
+
+        requestAnimationFrame(() => panel.setAttribute('data-open', 'true'));
+      });
+
+      updateOpenCardsSlider();
+    });
+  }
+
+  if (closeAllBtn) {
+    closeAllBtn.addEventListener('click', () => {
+      const toggles = timeline.querySelectorAll('.tl-toggle');
+
+      toggles.forEach(btn => {
+        const panelId = btn.getAttribute('aria-controls');
+        const panel = panelId ? document.getElementById(panelId) : null;
+
+        if (!panel) return;
+
+        btn.setAttribute('aria-expanded', 'false');
+        panel.setAttribute('hidden', '');
+        panel.removeAttribute('data-open');
+      });
+
+      updateOpenCardsSlider();
+    });
+  }
+
+
+  /* ---- Scroll To Top Button Logic ---- */
+  function initScrollTopButton() {
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    if (!scrollBtn || scrollBtn.dataset.bound === 'true') return;
+
+    scrollBtn.dataset.bound = 'true';
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    scrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+
+      // Fallback for older browsers
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+
+      // Reset timeline slider to first leader after scroll animation
+      setTimeout(() => {
+        const currentEl = document.getElementById('tl-current');
+        const totalEl = document.getElementById('tl-total');
+
+        if (currentEl) currentEl.textContent = '1';
+
+        if (tlSliderFill && cards.length) {
+          tlSliderFill.style.width = `${Math.round((1 / cards.length) * 100)}%`;
+        }
+      }, 450);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollTopButton);
+  } else {
+    initScrollTopButton();
+  }
+
 })();

@@ -82,7 +82,7 @@
             aria-controls="panel-animations"
             tabindex="-1"
             data-tab="animations">Animations</button>
-<!--    <button class="btn btn-outline-primary" 
+<!--    <button class="btn tab-btn" 
             id="tab-banners"
             role="tab"
             aria-selected="false"
@@ -90,7 +90,7 @@
             tabindex="-1"
             data-tab="banners">Website Banners</button>-->
 
- <!--   <button class="btn btn-outline-primary" 
+ <!--   <button class="btn tab-btn" 
             id="tab-social"
             role="tab"
             aria-selected="false"
@@ -98,15 +98,15 @@
             tabindex="-1"
             data-tab="social">Social Media</button> -->
 
-<!--    <button class="btn btn-outline-primary" 
+    <button class="btn tab-btn" 
             id="tab-websites"
             role="tab"
             aria-selected="false"
             aria-controls="panel-websites"
             tabindex="-1"            
-            data-tab="websites">Website Projects</button> -->
+            data-tab="websites">Website Projects</button><!-- -->
 
-<!--    <button class="btn btn-outline-primary" 
+<!--    <button class="btn tab-btn" 
             id="tab-paper"
             role="tab"
             aria-selected="false"
@@ -332,13 +332,32 @@
          hidden>
       <h3 class="h4 fw-bold mb-2 text-center">Website Projects</h3>
       <div class="row g-4 mt-3">
-        <div class="col-md-4">
-          <div class="card h-100">
-            <img src="https://via.placeholder.com/400x250?text=Your+Neighborhood+Site" class="card-img-top" alt="Palm Beach County History Timeline">
+        <!--<div class="col-md-4">
+          <div class="card h-100 project-card">
+        <span class="project-badge badge-soon">Coming Soon</span>
+            <div class="project-media">
+              <img src="https://via.placeholder.com/400x250?text=Your+Neighborhood+Site" class="card-img-top" alt="Palm Beach County History Timeline">
+            </div>
             <div class="card-body">
               <h5 class="card-title">Palm Beach County History Timeline</h5>
               <p class="card-text">A data-driven community site built with UX and accessibility in mind.</p>
-              <a href="/website-projects/pbc-history-timeline.html" target="_blank" class="btn btn-primary">View Project</a>
+              <a href="/projects/website-projects/pbc-history-timeline.html" target="_blank" class="btn btn-primary">View Project</a> 
+            </div>
+          </div>
+        </div>-->
+
+        <div class="col-md-4">
+          <div class="card h-100 project-card">
+          <!--  <span class="project-badge badge-progress">In Progress</span> -->
+            <div class="project-media">
+              <img src="/images/projects/websites/pbc-trailblazer-timeline_400x250.jpg" class="card-img-top" alt="PBC’s First Black Trailblazers">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">PBC’s First Black Trailblazers</h5>
+          <p class="card-subtitle project-meta mb-2">
+  <span class="fw-semibold">Foundations of Leadership</span></p>
+              <p class="card-text">This interactive timeline highlights the pioneering Black leaders who shaped Palm Beach County’s history and public service. Their leadership, resilience, and vision helped build the foundation for the community we serve today.</p>
+              <a href="/projects/website-projects/pbc-black-trailblazers-timeline.html" target="_blank" class="btn btn-primary">View Project</a> <!-- -->
             </div>
           </div>
         </div>
