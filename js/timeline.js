@@ -5,6 +5,11 @@
 
   const items = timeline.querySelectorAll('.tl-item');
   const cards = timeline.querySelectorAll('.tl-card');
+  // Performance improvement for large timelines (50+ leaders)
+  // Precompute card indexes so IntersectionObserver doesn't
+  // repeatedly run Array.from(...).indexOf() on scroll.
+  const cardIndexMap = new Map();
+  cards.forEach((card, i) => cardIndexMap.set(card, i));
   // Automatically set total leaders count based on number of cards in HTML
   const totalCards = cards.length;
   const totalDisplayEl = document.getElementById('tl-total');
@@ -209,7 +214,7 @@
           const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
           if (isMobile) {
-            const index = Array.from(cards).indexOf(entry.target) + 1;
+            const index = (cardIndexMap.get(entry.target) ?? 0) + 1;
             const total = cards.length;
 
             const currentEl = document.getElementById('tl-current');
