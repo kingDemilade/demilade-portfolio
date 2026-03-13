@@ -21,7 +21,7 @@
 
 /* Dark mode: replace black with grey for better contrast */
 body.dark-mode .tl-item:nth-child(4n+4) {
-  --accent: #1a1a1a;
+  --accent: #faf3e9;
 }
 
 .tl-item {
