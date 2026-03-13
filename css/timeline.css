@@ -628,44 +628,45 @@ body.dark-mode .tl-slider.use-accent .tl-slider-fill {
 }
 
 /* Arrow micro‑interaction (indicates upward scroll) */
+
 .scroll-top-btn .scroll-arrow {
-  display: inline-block;
-  animation: scrollArrowHint 2.2s ease-in-out infinite;
+  animation: scrollArrowHint 2.4s cubic-bezier(.25,.8,.25,1) infinite;
 }
 
 /* 3s animation + 3s pause */
 @keyframes scrollArrowHint {
 
   0% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
 
-/* strong upward cue */
-  18% {
-    transform: translateY(-6px);
-  }
-
-  /* quick drop */
-  30% {
-    transform: translateY(4px);
-  }
-
-/* second upward bounce */
-  45% {
+/* smooth lift */
+  15% {
     transform: translateY(-10px);
   }
 
-/* smaller bounce */
-  60% {
-    transform: translateY(-6px);
+  /* fall back slightly */
+  30% {
+    transform: translateY(2px);
   }
 
-/* settle */
+/* second soft lift */
+  45% {
+    transform: translateY(-8px);
+  }
+
+/* gentle settle */
+  60% {
+    transform: translateY(-3px);
+  }
+
+/* return to rest */
   75% {
     transform: translateY(0);
   }
 
-  100% {
+  /* Pause so it doesn't feel frantic */
+  75%, 100% {
     transform: translateY(0);
   }
 }
