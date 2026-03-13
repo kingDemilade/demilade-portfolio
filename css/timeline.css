@@ -661,7 +661,7 @@ body.dark-mode .tl-slider.use-accent .tl-slider-fill {
   }
 
 /* settle */
-  65% {
+  75% {
     transform: translateY(0);
   }
 
