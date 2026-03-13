@@ -38,11 +38,11 @@ main {
   --bs-border-radius: 0rem !important; /* custom radius applied safely without editing Bootstrap */
 }
 
-/* Prevent video thumbnails in cards from being cropped */
+/* Ensure poster frame and video share identical dimensions (prevents jump when video loads) */
 .card video.card-img-top {
-    height: auto;          /* allow natural video height */
-    object-fit: contain;   /* fit entire frame instead of cropping */
-    background: #000;      /* subtle letterbox if aspect ratio differs */
+    height: 250px;        /* match .card-img-top height so layout stays stable */
+    object-fit: cover;    /* keeps the same visual behavior as image thumbnails */
+    background: #000;
 }
 
 .card:hover .card-img-top {
