@@ -636,26 +636,27 @@ body.dark-mode .tl-slider.use-accent .tl-slider-fill {
 /* 3s animation + 3s pause */
 @keyframes scrollArrowHint {
 
-  0% {
-    transform: translateY(0);
-    opacity: 1;
+  12% {
+    transform: translateY(-8px);
   }
 
-  10% {
-    transform: translateY(-6px);
-    opacity: 0.9;
-  }
-
+/* slight drop */
   20% {
+    transform: translateY(3px);
+  }
+/* second small bounce */
+  28% {
+    transform: translateY(-5px);
+  }
+
+  36% {
     transform: translateY(0);
-    opacity: 1;
   }
 
   /* pause so it doesn't feel annoying */
-  20%,
+  36%,
   100% {
     transform: translateY(0);
-    opacity: 1;
   }
 }
 
