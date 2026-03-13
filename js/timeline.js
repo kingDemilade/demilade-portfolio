@@ -296,15 +296,17 @@
       document.documentElement.scrollTop = 0;
       document.body.scrollTop = 0;
 
-      // Reset timeline slider to first leader
-      const currentEl = document.getElementById('tl-current');
-      const totalEl = document.getElementById('tl-total');
+      // Reset timeline slider to first leader after scroll animation
+      setTimeout(() => {
+        const currentEl = document.getElementById('tl-current');
+        const totalEl = document.getElementById('tl-total');
 
-      if (currentEl) currentEl.textContent = '1';
+        if (currentEl) currentEl.textContent = '1';
 
-      if (tlSliderFill && cards.length) {
-        tlSliderFill.style.width = `${Math.round((1 / cards.length) * 100)}%`;
-      }
+        if (tlSliderFill && cards.length) {
+          tlSliderFill.style.width = `${Math.round((1 / cards.length) * 100)}%`;
+        }
+      }, 450);
     });
   }
 
