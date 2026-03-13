@@ -630,7 +630,7 @@ body.dark-mode .tl-slider.use-accent .tl-slider-fill {
 /* Arrow micro‑interaction (indicates upward scroll) */
 .scroll-top-btn .scroll-arrow {
   display: inline-block;
-  animation: scrollArrowHint 2.2s cubic-bezier(.4,.0,.2,1) infinite;
+  animation: scrollArrowHint 2.2s ease-in-out infinite;
 }
 
 /* 3s animation + 3s pause */
