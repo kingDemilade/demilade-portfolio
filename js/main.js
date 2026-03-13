@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (!video.dataset.loaded) {
             const src = video.dataset.src;
             if (src) {
-              video.preload = "auto";
+              video.preload = "metadata";
 
               video.src = src;
               video.load();
@@ -300,8 +300,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      rootMargin: "300px 0px -10% 0px",
-      threshold: 0.15
+      rootMargin: "0px 0px -20% 0px",
+      threshold: 0.25
     }
   );
 
