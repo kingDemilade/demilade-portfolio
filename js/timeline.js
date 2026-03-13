@@ -5,6 +5,12 @@
 
   const items = timeline.querySelectorAll('.tl-item');
   const cards = timeline.querySelectorAll('.tl-card');
+  // Automatically set total leaders count based on number of cards in HTML
+  const totalCards = cards.length;
+  const totalDisplayEl = document.getElementById('tl-total');
+  if (totalDisplayEl && totalCards) {
+    totalDisplayEl.textContent = totalCards;
+  }
 
   // Desktop control buttons
   const openAllBtn = document.getElementById('tl-open-all');
