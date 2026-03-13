@@ -659,8 +659,10 @@ body.dark-mode .tl-slider.use-accent .tl-slider-fill {
   40% {
     transform: translateY(-8px);
   }
-
-  50%,100% {
+  50% {
+    transform: translateY(0);
+  }
+  60%,100% {
     transform: translateY(0);
   }
 
