@@ -592,7 +592,7 @@ body.dark-mode .tl-slider.use-accent .tl-slider-fill {
   height: 52px;
 
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.25);
+  border: 2px solid rgba(255,255,255,0.25);
 
   font-size: 22px;
   font-weight: 600;
@@ -605,7 +605,7 @@ body.dark-mode .tl-slider.use-accent .tl-slider-fill {
   cursor: pointer;
 
   /* Glass UI effect */
-  background: rgba(0,119,182,0.75);
+  background: rgba(0,0,0,0.75);
   backdrop-filter: blur(10px) saturate(140%);
   -webkit-backdrop-filter: blur(10px) saturate(140%);
 
