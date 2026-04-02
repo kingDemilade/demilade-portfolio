@@ -26,7 +26,7 @@ main {
 }*/
 
 .card-img-top {
-    height: auto;
+    height: 250px;
     object-fit: cover;
     width: 100%;
     display: block;
@@ -40,7 +40,7 @@ main {
 
 /* Ensure poster frame and video share identical dimensions (prevents jump when video loads) */
 .card video.card-img-top {
-    height: 250px;        /* match .card-img-top height so layout stays stable */
+    height: auto;        /* match .card-img-top height so layout stays stable */
     object-fit: contain;    /* keeps the same visual behavior as image thumbnails */
     background: #000;
 }
