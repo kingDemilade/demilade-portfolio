@@ -38,15 +38,17 @@ main {
   --bs-border-radius: 0rem !important; /* custom radius applied safely without editing Bootstrap */
 }
 
-/* Ensure poster frame and video share identical dimensions (prevents jump when video loads) */
+/* Ensure poster frame and video share the exact same box (prevents jump when video loads) */
 .card video.card-img-top {
-    height: auto;        /* match .card-img-top height so layout stays stable */
-    object-fit: contain;    /* keeps the same visual behavior as image thumbnails */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     background: #000;
+    display: block;
 }
 
 .card:hover .card-img-top {
-    transform: scale(.99);
+    transform: none;
 }
 
 /* Optional: add soft glow */
@@ -755,6 +757,16 @@ body.dark-mode .badge-soon {
 
 .project-media {
   position: relative;
+  aspect-ratio: 600 / 250;
+  overflow: hidden;
+  background: #000;
+}
+
+.project-media .card-img-top,
+.project-media .motion-video {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .project-card:has(.project-badge) .project-media::after {
