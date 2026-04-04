@@ -258,6 +258,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const src = video.dataset.src;
     if (!src) return;
 
+    // Ensure poster is respected before loading video
+    const poster = video.getAttribute('poster');
+    if (poster) video.setAttribute('poster', poster);
+
     video.preload = "metadata";
     video.src = src;
     video.load();
@@ -266,6 +270,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function playVideo(video) {
     loadVideo(video);
+
+    video.controls = true;
 
     if (video.dataset.ready === 'true') {
       video.play().catch(() => {});
