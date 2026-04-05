@@ -247,14 +247,69 @@ toggleButtons.forEach(btn => {
 document.addEventListener("DOMContentLoaded", () => {
   const motionVideos = document.querySelectorAll(".motion-video");
 
+  function getPlayButton(video) {
+    const mediaWrap = video.closest('.project-media');
+    return mediaWrap ? mediaWrap.querySelector('.video-play-btn') : null;
+  }
+
+  function loadVideo(video) {
+    if (video.dataset.loaded) return;
+
+    const src = video.dataset.src;
+    if (!src) return;
+
+    // Ensure poster is respected before loading video
+    const poster = video.getAttribute('poster');
+    if (poster) video.setAttribute('poster', poster);
+
+    video.preload = "metadata";
+    video.src = src;
+    video.load();
+    video.dataset.loaded = "true";
+  }
+
+  function playVideo(video) {
+    loadVideo(video);
+
+    video.controls = true;
+
+    if (video.dataset.ready === 'true') {
+      video.play().catch(() => {});
+      return;
+    }
+
+    video.addEventListener(
+      "loadeddata",
+      () => {
+        if (video.currentTime === 0) {
+          video.currentTime = 0.01;
+        }
+
+        video.dataset.ready = 'true';
+        video.classList.add("is-ready");
+        video.play().catch(() => {});
+      },
+      { once: true }
+    );
+  }
+
+  document.querySelectorAll('.video-play-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const mediaWrap = button.closest('.project-media');
+      const video = mediaWrap ? mediaWrap.querySelector('.motion-video') : null;
+      if (!video) return;
+
+      playVideo(video);
+      button.hidden = true;
+      mediaWrap.classList.add('is-playing');
+    });
+  });
+
   if (!("IntersectionObserver" in window)) {
-    // Fallback: load all videos
+    // Fallback: load all videos except those with play buttons
     motionVideos.forEach(video => {
-      const src = video.dataset.src;
-      if (src) {
-        video.src = src;
-        video.load();
-      }
+      if (getPlayButton(video)) return;
+      loadVideo(video);
     });
     return;
   }
@@ -266,31 +321,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // ⛔ Skip hero video entirely  
         if (video.classList.contains("hero-video")) return;
+        // Videos with an overlay play button should not autoplay
+        if (getPlayButton(video)) return;
         
         if (entry.isIntersecting) {
           if (!video.dataset.loaded) {
-            const src = video.dataset.src;
-            if (src) {
-              video.preload = "metadata";
-
-              video.src = src;
-              video.load();
-              video.dataset.loaded = "true";
-
-              video.addEventListener(
-                "loadeddata",
-                () => {
-                  // Prevent blank frame on mobile devices
-                  if (video.currentTime === 0) {
-                    video.currentTime = 0.01;
-                  }
-
-                  video.classList.add("is-ready");
-                  video.play().catch(() => {});
-                },
-                { once: true }
-              );
-            }
+            playVideo(video);
           } else if (video.paused) {
             video.play().catch(() => {});
           }

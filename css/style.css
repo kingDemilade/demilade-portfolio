@@ -38,11 +38,13 @@ main {
   --bs-border-radius: 0rem !important; /* custom radius applied safely without editing Bootstrap */
 }
 
-/* Ensure poster frame and video share identical dimensions (prevents jump when video loads) */
+/* Ensure poster shows immediately by locking video height */
 .card video.card-img-top {
-    height: 250px;        /* match .card-img-top height so layout stays stable */
-    object-fit: contain;    /* keeps the same visual behavior as image thumbnails */
+    width: 100%;
+    height: auto;        /* match your .card-img-top height */
+    object-fit: contain;  /* or use 'cover' if you don’t want letterboxing */
     background: #000;
+    display: block;
 }
 
 .card:hover .card-img-top {
@@ -956,4 +958,53 @@ body.dark-mode .card .btn:focus {
   to {
     transform: translate(-50%, 0);
   }
+}
+
+.card {
+  position: relative;
+}
+
+/* Play button overlay */
+.video-play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: rgba(0,0,0,0.25);
+  cursor: pointer;
+
+  transition: background 0.3s ease;
+  z-index: 2;
+}
+
+/* Hover effect */
+.video-play-btn:hover {
+  background: rgba(0,0,0,0.4);
+}
+
+/* Play icon */
+.video-play-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Triangle icon */
+.video-play-icon::before {
+  content: "";
+  display: block;
+  margin-left: 3px;
+
+  width: 0;
+  height: 0;
+  border-left: 14px solid black;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
 }
