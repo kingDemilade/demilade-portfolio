@@ -75,6 +75,9 @@
   line-height: 1.3;
 }
 
+.hidden-text {
+  display: none;
+}
 
 /* ===== MOTION GALLERY GRID ===== */
 
