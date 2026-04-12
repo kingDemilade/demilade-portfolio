@@ -34,10 +34,10 @@
   justify-content: center;
   text-align: center;
   padding: 8rem 0 6rem;
-  background-color: #d7cfbf;
+  background-color: #ffffff;
   background-image: url("/projects/website-projects/lola-cooks/images/lola-cooks-pattern.png");
   background-repeat: repeat;
-  background-size: 300px;
+/*  background-size: 300px; */
   overflow: hidden;
 }
 
