@@ -1,6 +1,11 @@
 /* =========================
    Base layout helpers
 ========================= */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
 .container {
   width: min(1100px, 90%);
   margin: 0 auto;
@@ -46,8 +51,8 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.28) 0%,
-    rgba(0, 0, 0, 0.38) 100%
+    rgba(0, 0, 0, 0.18) 0%,
+    rgba(0, 0, 0, 0.28) 100%
   );
 }
 
