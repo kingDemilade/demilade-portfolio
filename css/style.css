@@ -10,6 +10,7 @@ body {
 }
 
 .logo-img {
+  content: url(/images/logo/logo-dc-light.svg);
   height: 40px;
   width: auto;
 }
@@ -166,7 +167,7 @@ body.dark-mode .nav-link {
 }
 
 body.dark-mode .logo-img {
-  color: #f0f0f0;
+  content: url('/images/logo/logo-dc-dark.svg');
 }
 
 /* Custom Tab Styling */
