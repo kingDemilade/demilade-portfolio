@@ -11,8 +11,9 @@ body {
 
 .logo-img {
   content: url(/images/logo/logo-dc-light.svg);
-  height: 40px;
-  width: auto;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 768px) {
