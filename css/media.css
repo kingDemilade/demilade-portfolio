@@ -245,6 +245,7 @@ img {
   /* Light mode */
   .mobile-logo.logo-light {
     display: block;
+    margin-bottom: 2.5rem;
   }
 
   /* Dark mode */
@@ -254,6 +255,7 @@ img {
 
   body.dark-mode .mobile-logo.logo-dark {
     display: block;
+    margin-bottom: 2.5rem;
   }
 
   .mobile-logo {
