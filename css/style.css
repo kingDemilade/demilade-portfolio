@@ -32,7 +32,7 @@ body {
 }
 
 .signature-hero-content {
-    min-height: 45vh;
+/*    min-height: 45vh; */
     z-index: 2;
 }
 
