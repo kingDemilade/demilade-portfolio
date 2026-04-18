@@ -799,11 +799,19 @@ body.dark-mode .navbar-toggler-icon {
 
 /* Dark mode */
 body.dark-mode .route-btn {
-  --btn-color: #f0f0f0;
+  color: #f0f0f0;
+  border-color: #f0f0f0;
+  background: transparent;
 }
 
+/* This controls the fill animation */
+body.dark-mode .route-btn::before {
+  background-color: #f0f0f0;
+}
+
+/* Hover = inverted */
 body.dark-mode .route-btn:hover {
-  color: #f0f0f0;
+  color: #0d0d0d;
 }
 
 /* ===== Project Status Badge ===== */
