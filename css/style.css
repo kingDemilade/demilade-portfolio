@@ -96,12 +96,6 @@ body.dark-mode .hero {
   height: auto;
 }
 
-@media (max-width: 768px) {
-  .logo-img {
-    height: 30px;
-  }
-}
-
 main {
   flex: 1; /* This pushes the footer down */
 }
@@ -964,29 +958,6 @@ body.dark-mode .card .btn:focus {
   border-color: #f0f0f0;
 }
 
-/* == Media Sizes == */
-
-@media (min-width:601px) {
-	i.material-icons {
-		padding:10px;
-		margin:5px;
-		font-size:2rem;
-	}
-}
-
-@media (min-width:993px) {
-	i.material-icons {
-		padding:20px;
-		margin:10px;
-		font-size:4rem;
-	}
-	i.material-icons:after {
-		border-width:3px;
-		top:-3px;
-		left:-3px;
-	}
-}
-
 /* ============================================================
    Footer Wave Background (Imported from experiments)
    Purpose: Decorative animated SVG wave for site footer
@@ -1040,13 +1011,6 @@ body.dark-mode .card .btn:focus {
   opacity: var(--opacity);
   animation: footerWave calc(var(--speed, 0) * 1s) infinite linear;
   background-repeat: repeat-x;
-}
-
-/* Mobile refinement */
-@media (max-width: 480px) {
-  .footer-waves .wave {
-    height: calc(var(--height, 0) * 0.75vh);
-  }
 }
 
 /* Unique keyframes to avoid collisions with other animations */

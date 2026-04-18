@@ -108,6 +108,16 @@ img {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  /* Logo (mobile) */
+  .logo-img {
+    height: 30px;
+  }
+
+  /* Footer waves (mobile refinement) */
+  .footer-waves .wave {
+    height: calc(var(--height, 0) * 0.75vh);
+  }
 }
 
 /* 576–767px: large phones / small tablets */
@@ -163,6 +173,13 @@ img {
   .hero-banner {
     padding: 6rem 3rem;
   }
+
+  /* Material Icons (tablet) */
+  i.material-icons {
+    padding: 10px;
+    margin: 5px;
+    font-size: 2rem;
+  }
 }
 
 
@@ -193,6 +210,19 @@ img {
 @media (min-width: 992px) {
   .navbar .theme-toggle {
     margin-left: 1rem;
+  }
+
+  /* Material Icons (desktop) */
+  i.material-icons {
+    padding: 20px;
+    margin: 10px;
+    font-size: 4rem;
+  }
+
+  i.material-icons:after {
+    border-width: 3px;
+    top: -3px;
+    left: -3px;
   }
 }
 
