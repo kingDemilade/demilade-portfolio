@@ -31,7 +31,8 @@ img {
   }
 
   /* If you use the hero-banner component, reduce padding/height */
-  .hero-banner {
+  .case-hero,
+  .banner-hero {
     height: auto;
     min-height: 20vh !important;
     padding: 3rem 1.25rem;

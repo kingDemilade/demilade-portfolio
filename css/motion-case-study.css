@@ -7,14 +7,14 @@
 
 /* ===== HERO BANNER VIDEO (PRIMARY) ===== */
 
-.hero-banner {
+.case-hero {
   position: relative;
   width: 100%;
   min-height: 58vh;           /* ensures video is visible */
   overflow: hidden;
 }
 
-.hero-banner::after {
+.case-hero::after {
   content: "";
   position: absolute;
   inset: 0;
