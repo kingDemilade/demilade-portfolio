@@ -28,7 +28,7 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  opacity: 0.35;
+  opacity: 0.5;
 }
 
 .signature-hero-content {
@@ -87,7 +87,7 @@ body {
 
 /* Dark mode tuning */
 body.dark-mode .hero-video {
-  opacity: 0.25;
+  opacity: 0.7;
 }
 
 body.dark-mode .hero {
