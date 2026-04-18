@@ -52,6 +52,15 @@ body {
   animation: heroFade 0.8s ease forwards;
 }
 
+/* Default (light mode) */
+.logo-dark {
+  display: none;
+}
+
+.logo-light {
+  display: block;
+}
+
 .hero-logo img {
   max-width: 420px;
   width: 100%;
@@ -92,6 +101,15 @@ body.dark-mode .hero-video {
 
 body.dark-mode .hero {
   background-color: #0d0d0d;
+}
+
+/* Dark mode for logo on Homepage */
+body.dark-mode .logo-light {
+  display: none;
+}
+
+body.dark-mode .logo-dark {
+  display: block;
 }
 
 .logo-img {
