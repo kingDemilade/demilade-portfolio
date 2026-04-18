@@ -32,6 +32,10 @@ body {
 background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.50));
 }
 
+.signature-hero-content {
+    min-height: 45vh;
+}
+
 /* Overlay content 
 .hero-content {
   position: relative;
