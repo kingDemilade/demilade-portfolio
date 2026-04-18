@@ -31,7 +31,8 @@ img {
   }
 
   /* If you use the hero-banner component, reduce padding/height */
-  .hero-banner {
+  .case-hero,
+  .banner-hero {
     height: auto;
     min-height: 20vh !important;
     padding: 3rem 1.25rem;
@@ -108,6 +109,16 @@ img {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  /* Logo (mobile) */
+  .logo-img {
+    height: 30px;
+  }
+
+  /* Footer waves (mobile refinement) */
+  .footer-waves .wave {
+    height: calc(var(--height, 0) * 0.75vh);
+  }
 }
 
 /* 576–767px: large phones / small tablets */
@@ -163,6 +174,13 @@ img {
   .hero-banner {
     padding: 6rem 3rem;
   }
+
+  /* Material Icons (tablet) */
+  i.material-icons {
+    padding: 10px;
+    margin: 5px;
+    font-size: 2rem;
+  }
 }
 
 
@@ -194,11 +212,54 @@ img {
   .navbar .theme-toggle {
     margin-left: 1rem;
   }
+
+  /* Material Icons (desktop) */
+  i.material-icons {
+    padding: 20px;
+    margin: 10px;
+    font-size: 4rem;
+  }
+
+  i.material-icons:after {
+    border-width: 3px;
+    top: -3px;
+    left: -3px;
+  }
 }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .route-btn::before {
     transition: none;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  /* Reset */
+  .desktop-logo {
+    display: none !important;
+  }
+
+  /* Light mode */
+  .mobile-logo.logo-light {
+    display: block;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Dark mode */
+  body.dark-mode .mobile-logo.logo-light {
+    display: none;
+  }
+
+  body.dark-mode .mobile-logo.logo-dark {
+    display: block;
+    margin-bottom: 2.5rem;
+  }
+
+  .mobile-logo {
+    max-width: 220px;
+    margin: 0 auto;
   }
 }

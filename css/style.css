@@ -9,6 +9,118 @@ body {
   flex-direction: column;
 }
 
+/* ===== Signature Hero Section ===== */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Background video */
+.signature-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.09;
+}
+
+.signature-hero-content {
+/*    min-height: 45vh; */
+    z-index: 2;
+}
+
+.signature-hero-tagline {
+  margin-bottom: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Overlay content 
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 1.5rem;
+}*/
+
+/* Hide everything by default */
+.hero-logo img {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+/* ===== DESKTOP (default) ===== */
+
+/* Light mode */
+.desktop-logo.logo-light {
+  display: block;
+}
+
+.hero-logo img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+}
+
+/* Headline */
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroFade 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* CTA */
+.hero .route-btn {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroFade 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* Subtle fade-in animation */
+@keyframes heroFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode tuning */
+body.dark-mode .hero-video {
+  opacity: 0.7;
+}
+
+body.dark-mode .hero {
+  background-color: #0d0d0d;
+}
+
+/* Dark mode for .desktop-logo.logo-light & .desktop-logo.logo-dark */
+body.dark-mode .desktop-logo.logo-light {
+  display: none;
+}
+
+body.dark-mode .desktop-logo.logo-dark {
+  display: block;
+}
+
+.logo-img {
+  content: url(/images/logo/logo-dc-light.svg);
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+}
+
 main {
   flex: 1; /* This pushes the footer down */
 }
@@ -154,6 +266,9 @@ body.dark-mode .nav-link {
     color: #f0f0f0;
 }
 
+body.dark-mode .logo-img {
+  content: url('/images/logo/logo-dc-dark.svg');
+}
 
 /* Custom Tab Styling */
 
@@ -678,17 +793,25 @@ body.dark-mode .navbar-toggler-icon {
 .route-btn:hover {
   transform: translateY(-1px);
   transition: transform 0.25s ease;
-  background-color: #f8f9fa;
+  background-color: #1a1a1a;
   color: #f8f9fa;
 }
 
 /* Dark mode */
 body.dark-mode .route-btn {
-  --btn-color: #f0f0f0;
+  color: #f0f0f0;
+  border-color: #f0f0f0;
+  background: transparent;
 }
 
+/* This controls the fill animation */
+body.dark-mode .route-btn::before {
+  background-color: #f0f0f0;
+}
+
+/* Hover = inverted */
 body.dark-mode .route-btn:hover {
-  color: #f0f0f0;
+  color: #0d0d0d;
 }
 
 /* ===== Project Status Badge ===== */
@@ -868,29 +991,6 @@ body.dark-mode .card .btn:focus {
   border-color: #f0f0f0;
 }
 
-/* == Media Sizes == */
-
-@media (min-width:601px) {
-	i.material-icons {
-		padding:10px;
-		margin:5px;
-		font-size:2rem;
-	}
-}
-
-@media (min-width:993px) {
-	i.material-icons {
-		padding:20px;
-		margin:10px;
-		font-size:4rem;
-	}
-	i.material-icons:after {
-		border-width:3px;
-		top:-3px;
-		left:-3px;
-	}
-}
-
 /* ============================================================
    Footer Wave Background (Imported from experiments)
    Purpose: Decorative animated SVG wave for site footer
@@ -944,13 +1044,6 @@ body.dark-mode .card .btn:focus {
   opacity: var(--opacity);
   animation: footerWave calc(var(--speed, 0) * 1s) infinite linear;
   background-repeat: repeat-x;
-}
-
-/* Mobile refinement */
-@media (max-width: 480px) {
-  .footer-waves .wave {
-    height: calc(var(--height, 0) * 0.75vh);
-  }
 }
 
 /* Unique keyframes to avoid collisions with other animations */
