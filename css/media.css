@@ -234,19 +234,30 @@ img {
   }
 }
 
-/* 📱 Mobile breakpoint */
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
+  /* Reset */
   .desktop-logo {
+    display: none !important;
+  }
+
+  /* Light mode */
+  .mobile-logo.logo-light {
+    display: block;
+  }
+
+  /* Dark mode */
+  body.dark-mode .mobile-logo.logo-light {
     display: none;
   }
 
-  .mobile-logo {
+  body.dark-mode .mobile-logo.logo-dark {
     display: block;
   }
 
   .mobile-logo {
-    max-width: 220px; /* adjust as needed */
+    max-width: 220px;
     margin: 0 auto;
   }
 }

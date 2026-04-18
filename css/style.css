@@ -44,34 +44,18 @@ body {
   padding: 0 1.5rem;
 }*/
 
-/* Logo inside hero */
-.hero-logo {
-  margin-bottom: 1.5rem;
-  opacity: 0;
-  transform: translateY(10px);
-  animation: heroFade 0.8s ease forwards;
-}
-
-/* Default (light mode) */
-/* Base */
-.logo {
+/* Hide everything by default */
+.hero-logo img {
+  display: none;
   width: 100%;
   height: auto;
 }
 
-/* Hide mobile by default */
-.mobile-logo {
-  display: none;
-}
+/* ===== DESKTOP (default) ===== */
 
-/* Show desktop by default */
-.desktop-logo {
+/* Light mode */
+.desktop-logo.logo-light {
   display: block;
-}
-
-/* Dark mode switching */
-.logo-dark {
-  display: none;
 }
 
 .hero-logo img {
@@ -116,12 +100,12 @@ body.dark-mode .hero {
   background-color: #0d0d0d;
 }
 
-/* Dark mode for logo on Homepage */
-body.dark-mode .logo-light {
+/* Dark mode for .desktop-logo.logo-light & .desktop-logo.logo-dark */
+body.dark-mode .desktop-logo.logo-light {
   display: none;
 }
 
-body.dark-mode .logo-dark {
+body.dark-mode .desktop-logo.logo-dark {
   display: block;
 }
 
