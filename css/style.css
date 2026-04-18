@@ -53,12 +53,25 @@ body {
 }
 
 /* Default (light mode) */
-.logo-dark {
+/* Base */
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+/* Hide mobile by default */
+.mobile-logo {
   display: none;
 }
 
-.logo-light {
+/* Show desktop by default */
+.desktop-logo {
   display: block;
+}
+
+/* Dark mode switching */
+.logo-dark {
+  display: none;
 }
 
 .hero-logo img {

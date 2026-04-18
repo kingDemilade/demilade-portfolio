@@ -233,3 +233,20 @@ img {
     transition: none;
   }
 }
+
+/* 📱 Mobile breakpoint */
+@media (max-width: 768px) {
+
+  .desktop-logo {
+    display: none;
+  }
+
+  .mobile-logo {
+    display: block;
+  }
+
+  .mobile-logo {
+    max-width: 220px; /* adjust as needed */
+    margin: 0 auto;
+  }
+}
