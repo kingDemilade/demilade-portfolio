@@ -36,6 +36,10 @@ body {
     z-index: 2;
 }
 
+.signature-hero-tagline {
+  margin-bottom: 2.5rem;
+}
+
 /* Overlay content 
 .hero-content {
   position: relative;
