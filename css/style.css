@@ -753,6 +753,7 @@ body.dark-mode .container .small.text-muted {
   margin: 1.5rem auto 0;
   padding-left: 1rem;
   border-left: 3px solid #212529;
+  margin-top: 2.5rem !important;
 }
 
 .disclaimer-block p {
