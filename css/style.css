@@ -33,15 +33,15 @@ body {
 
 .signature-hero-content {
 /*    min-height: 45vh; */
-  z-index: 2;
-  transform: translateY(10px);
-  animation: heroFade 0.8s ease forwards;
-  animation-delay: 0.4s;
+    z-index: 2;
 }
 
 .signature-hero-tagline {
   margin-bottom: 2.5rem;
   margin-top: 1.5rem;
+  transform: translateY(10px);
+  animation: heroFade 0.8s ease forwards;
+  animation-delay: 0.4s;
 }
 
 /* Overlay content 
