@@ -33,7 +33,10 @@ body {
 
 .signature-hero-content {
 /*    min-height: 45vh; */
-    z-index: 2;
+  z-index: 2;
+  transform: translateY(10px);
+  animation: heroFade 0.8s ease forwards;
+  animation-delay: 0.4s;
 }
 
 .signature-hero-tagline {
