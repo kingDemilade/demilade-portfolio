@@ -737,6 +737,40 @@ body.dark-mode .page-subtitle {
   color: #bfc3c7;
 }
 
+/* ===== Disclaimer Text (Dark Mode Fix) ===== */
+body.dark-mode .text-muted {
+  color: #c9ced3 !important; /* brighter muted text for readability */
+}
+
+/* Optional: slightly softer tone specifically for disclaimer blocks */
+body.dark-mode .container .small.text-muted {
+  color: #bfc3c7 !important;
+}
+
+/* ===== Disclaimer Block Component ===== */
+.disclaimer-block {
+  max-width: 720px;
+  margin: 1.5rem auto 0;
+  padding-left: 1rem;
+  border-left: 3px solid #212529;
+}
+
+.disclaimer-block p {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #6c757d;
+}
+
+/* Dark mode */
+body.dark-mode .disclaimer-block {
+  border-left: 3px solid #f0f0f0;
+}
+
+body.dark-mode .disclaimer-block p {
+  color: #bfc3c7;
+}
+
 /* Dark mode fix for PBC Day 2026 case study muted text */
 body.dark-mode .case-intro .text-muted {
   color: #c9ced3 !important;
