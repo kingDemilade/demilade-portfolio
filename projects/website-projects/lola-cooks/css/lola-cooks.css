@@ -36,11 +36,15 @@ body {
 }
 
 .hero-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
 .hero-logo-img {
-  width: 230px; /* adjust based on how tall you want it */
+  max-width: 200px; /* adjust to taste */
+/*  width: 230px;  adjust based on how tall you want it */
   height: auto;
   display: block;
 }
