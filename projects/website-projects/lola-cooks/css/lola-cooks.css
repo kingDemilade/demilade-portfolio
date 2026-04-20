@@ -29,6 +29,12 @@ body {
   color: #28abe2;
 }
 
+.logo-svg {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+
 /* =========================
    Hero section
 ========================= */
