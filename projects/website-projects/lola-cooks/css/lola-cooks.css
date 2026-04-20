@@ -35,6 +35,16 @@ body {
   display: block;
 }
 
+.hero-logo {
+  margin-bottom: 1rem;
+}
+
+.hero-logo-img {
+  width: 120px; /* adjust based on how tall you want it */
+  height: auto;
+  display: block;
+}
+
 /* =========================
    Hero section
 ========================= */
