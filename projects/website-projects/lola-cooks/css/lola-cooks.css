@@ -124,6 +124,7 @@ body {
 ========================= */
 .offers-section {
   background-color: #ffffff;
+  margin-bottom: 4.5rem;
 }
 
 .section-title {
@@ -189,7 +190,7 @@ body {
 .pricing-section {
   background-color: #f9f9f9;
   text-align: center;
-  padding: 5rem 0;
+  padding: 2.5rem;
 }
 
 .pricing-subtext {
