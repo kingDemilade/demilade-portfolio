@@ -20,6 +20,12 @@ body {
   overflow: hidden;
 }
 
+.hero-subtext {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+}
+
 /* Background video */
 .signature-hero-video {
   position: absolute;
@@ -103,6 +109,10 @@ body.dark-mode .hero-video {
 
 body.dark-mode .hero {
   background-color: #0d0d0d;
+}
+
+body.dark-mode .hero-subtext {
+  color: #bfbfbf;
 }
 
 /* Dark mode for .desktop-logo.logo-light & .desktop-logo.logo-dark */
