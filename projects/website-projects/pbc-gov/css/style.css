@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.alert-bar {
+  background: #f97316;
+  color: white;
+  text-align: center;
+  padding: 8px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f5f7fa;
+}
+
+.hero input {
+  width: 60%;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.quick-actions {
+  margin-top: 20px;
+}
+
+.quick-actions button {
+  margin: 5px;
+  padding: 10px 16px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+}
+
+.services, .news {
+  padding: 60px 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  padding: 30px;
+  background: white;
+  border: 1px solid #eee;
+  text-align: center;
+  border-radius: 8px;
+}
