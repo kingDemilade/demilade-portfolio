@@ -114,3 +114,28 @@ h2 {
   transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
+
+/* Mega Menu Styling */
+.dropdown-menu {
+  border-radius: 12px;
+}
+
+.dropdown-menu h6 {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dropdown-item {
+  padding: 6px 0;
+  color: #111827;
+  transition: 0.2s ease;
+}
+
+.dropdown-item:hover {
+  color: #2563eb;
+  background: transparent;
+  transform: translateX(4px);
+}
