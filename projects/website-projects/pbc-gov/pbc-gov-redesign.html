@@ -5,57 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PBC Redesign Prototype</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- ALERT BAR -->
-  <div class="alert-bar">
-    ⚠ Hurricane Preparedness Update: Stay informed.
+<div class="bg-warning text-white text-center p-2">
+  ⚠ Hurricane Preparedness Update
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom px-4">
+  <a class="navbar-brand fw-bold" href="#">PBC.gov</a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Departments</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Residents</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
+    </ul>
   </div>
+</nav>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">PBC.gov</div>
-    <nav>
-      <a href="#">Services</a>
-      <a href="#">Departments</a>
-      <a href="#">Residents</a>
-      <a href="#">Business</a>
-    </nav>
-  </header>
+<section class="text-center py-5 bg-light">
+  <h1 class="mb-3">How can we help you today?</h1>
+  <input class="form-control w-50 mx-auto mb-3" placeholder="Search for services..." />
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>How can we help you today?</h1>
-    <input type="text" placeholder="Search for services..." />
-    <div class="quick-actions">
-      <button>Pay Bill</button>
-      <button>Report Issue</button>
-      <button>Apply</button>
-      <button>Find Services</button>
-    </div>
-  </section>
+  <div>
+    <button class="btn btn-primary m-1">Pay Bill</button>
+    <button class="btn btn-primary m-1">Report Issue</button>
+    <button class="btn btn-primary m-1">Apply</button>
+    <button class="btn btn-primary m-1">Find Services</button>
+  </div>
+</section>
 
-  <!-- SERVICES GRID -->
-  <section class="services">
-    <h2>Popular Services</h2>
-    <div class="grid">
-      <div class="card">Garbage & Recycling</div>
-      <div class="card">Property Taxes</div>
-      <div class="card">Permits</div>
-      <div class="card">Parks & Rec</div>
-    </div>
-  </section>
+<section class="container py-5">
+  <h2>Popular Services</h2>
+  <div class="row mt-4">
+    <div class="col-md-3"><div class="card p-4 text-center">Garbage</div></div>
+    <div class="col-md-3"><div class="card p-4 text-center">Taxes</div></div>
+    <div class="col-md-3"><div class="card p-4 text-center">Permits</div></div>
+    <div class="col-md-3"><div class="card p-4 text-center">Parks</div></div>
+  </div>
+</section>
 
-  <!-- NEWS -->
-  <section class="news">
-    <h2>News & Updates</h2>
-    <div class="grid">
-      <div class="card">County Budget Approved</div>
-      <div class="card">Road Closures This Week</div>
-      <div class="card">Community Event</div>
-    </div>
-  </section>
+<section class="container py-5">
+  <h2>News & Updates</h2>
+  <div class="row mt-4">
+    <div class="col-md-4"><div class="card p-4">Budget Approved</div></div>
+    <div class="col-md-4"><div class="card p-4">Road Closures</div></div>
+    <div class="col-md-4"><div class="card p-4">Community Event</div></div>
+  </div>
+</section>
 
 </body>
 </html>
