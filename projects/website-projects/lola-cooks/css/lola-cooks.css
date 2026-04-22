@@ -68,7 +68,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #f7f3eb;
+  color: #1f1f1f;
 }
 
 .hero-section h2 {
@@ -83,7 +83,7 @@ body {
   margin: 0 auto 2rem;
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #f5f5f5;
+  color: #1f1f1f;
 }
 
 .hero-button {
