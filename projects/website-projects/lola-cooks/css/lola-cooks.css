@@ -6,6 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+p {
+  line-height: 1.7;
+}
+
 .container {
   width: min(1100px, 90%);
   margin: 0 auto;
@@ -17,6 +21,8 @@ body {
   left: 0;
   width: 100%;
   padding: 1rem 0;
+  padding-left: 5%;
+  padding-right: 5%;
   z-index: 1000;
 
   display: flex;
@@ -74,7 +80,7 @@ body {
   text-align: center;
   padding: 8rem 0 6rem;
   background-color: #ffffff;
-  background-image: url("/projects/website-projects/lola-cooks/images/lola-cooks-pattern.png");
+  background-image: url("../images/lola-cooks-pattern.png");
   background-repeat: repeat;
 /*  background-size: 300px; */
   overflow: hidden;
@@ -94,6 +100,9 @@ body {
   position: relative;
   z-index: 1;
   max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-eyebrow {
@@ -109,7 +118,7 @@ body {
   margin-bottom: 1.25rem;
   font-size: clamp(2.5rem, 6vw, 4.75rem);
   line-height: 1.05;
-  color: #ffffff;
+  color: #1f1f1f;
 }
 
 .hero-subtext {
@@ -157,18 +166,20 @@ body {
 ========================= */
 .offers-section {
   background-color: #ffffff;
+  padding: 5rem 0;
 }
 
 .section-title {
   text-align: center;
   margin-bottom: 3rem;
-  font-size: 2rem;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
 }
 
 .offers-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .offer-card {
@@ -184,6 +195,12 @@ body {
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
 }
 
+.offer-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+}
+
 .offer-image img {
   width: 100%;
   height: 220px;
@@ -191,12 +208,13 @@ body {
 }
 
 .offer-content {
-  padding: 1.5rem;
+  padding: 1.75rem 1.5rem 2rem;
 }
 
 .offer-content h3 {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .offer-content p {
@@ -239,7 +257,7 @@ body {
 
 .pricing-card {
   background: #ffffff;
-  padding: 2.5rem 2rem;
+  padding: 2.75rem 2.25rem;
   border-radius: 14px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -293,7 +311,7 @@ body {
 
 /* Highlight Premium Plan */
 .pricing-card:nth-child(2) {
-  border: 2px solid #1f1f1f;
+  border: 2px solid #28abe2;
 }
 
 /* Responsive */
@@ -338,7 +356,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #1f1f1f;
+  background-color: #28abe2;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -350,6 +368,7 @@ body {
 .step-item h3 {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .step-item p {
@@ -379,7 +398,7 @@ body {
    Story Section
 ========================= */
 .story-section {
-  background-color: #f5f3ef;
+  background-color: #f7f5f1;
   padding: 5rem 0;
 }
 
@@ -437,6 +456,7 @@ body {
   background: linear-gradient(180deg, #1f1f1f 0%, #2a2a2a 100%);
   color: #ffffff;
   text-align: center;
+  padding: 5rem 0;
 }
 
 .cta-content h2 {
@@ -506,7 +526,7 @@ body {
 .offer-image {
   display: flex;
   justify-content: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
 }
 
 /* Circle container */
@@ -539,4 +559,34 @@ body {
 .offer-card:hover .offer-image-circle {
   transform: scale(1.05);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .offer-image-circle {
+    width: 110px;
+    height: 110px;
+  }
+}
+/* =========================
+   Global Section Rhythm
+========================= */
+section {
+  padding: 5rem 0;
+}
+
+:root {
+  --hover-lift: -6px;
+}
+
+.offer-card:hover {
+  transform: translateY(var(--hover-lift));
+}
+
+.pricing-card:hover {
+  transform: translateY(var(--hover-lift));
+}
+
+/* Global smoothness */
+* {
+  transition: all 0.2s ease-in-out;
 }
