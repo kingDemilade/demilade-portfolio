@@ -18,6 +18,8 @@ body {
   width: 100%;
   padding: 1.5rem 0;
   z-index: 10;
+  display: flex;
+  align-items: center;
 }
 
 .site-logo {
@@ -26,6 +28,14 @@ body {
   font-weight: 700;
   letter-spacing: 0.04em;
   color: #ffffff;
+}
+
+/* Header SVG Logo Control */
+.site-logo svg,
+.site-logo .logo-svg {
+  width: clamp(90px, 8vw, 140px);
+  height: auto;
+  display: block;
 }
 
 /* =========================
