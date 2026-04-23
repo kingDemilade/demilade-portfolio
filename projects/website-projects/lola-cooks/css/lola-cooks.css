@@ -478,3 +478,26 @@ body {
   font-size: 0.9rem;
   color: #bbbbbb;
 }
+
+/* =========================
+   Hero SVG Logo Sizing
+========================= */
+.hero-logo-img {
+  width: clamp(160px, 12vw, 260px);
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .hero-logo-img {
+    width: clamp(140px, 18vw, 220px);
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-logo-img {
+    width: clamp(120px, 28vw, 180px);
+  }
+}
