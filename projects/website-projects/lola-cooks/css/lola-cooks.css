@@ -31,6 +31,10 @@
   background-color: var(--border);
 }
 
+.dark-mode .hero-section {
+  background-image: url("../images/hero/lola-cooks_banner_dark_2400x900.jpg");
+}
+
 .dark-mode .hero-overlay {
   background: linear-gradient(
     0deg,
