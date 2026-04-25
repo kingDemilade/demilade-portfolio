@@ -455,7 +455,7 @@ p {
    CTA Section (Enhanced)
 ========================= */
 .cta-section {
-  background: linear-gradient(180deg, #1f1f1f 0%, #2a2a2a 100%);
+  background: linear-gradient(180deg, #008dc8 0%, #29abe2 100%);
   color: #ffffff;
   text-align: center;
   padding: 5rem 0;
@@ -468,7 +468,7 @@ p {
 
 .cta-content p {
   margin-bottom: 1.5rem;
-  color: #dddddd;
+  color: #ffffff;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
@@ -498,7 +498,7 @@ p {
 
 .cta-note {
   font-size: 0.9rem;
-  color: #bbbbbb;
+  color: #ffffff;
 }
 
 /* =========================
