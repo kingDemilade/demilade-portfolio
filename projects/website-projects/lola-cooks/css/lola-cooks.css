@@ -639,7 +639,7 @@ p {
 
 @media (max-width: 576px) {
   .hero-logo-img {
-    width: clamp(120px, 28vw, 180px);
+    width: clamp(180px, 50vw, 240px);
   }
 }
 
