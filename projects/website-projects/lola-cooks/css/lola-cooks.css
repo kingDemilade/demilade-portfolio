@@ -714,10 +714,10 @@ section,
   transform: translateY(-6px) scale(1.01);
 }
 
-/* Global smoothness */
+/* Global smoothness 
 * {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+}*/
 
 
 /* =========================
