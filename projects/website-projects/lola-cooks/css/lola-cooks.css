@@ -338,13 +338,13 @@ p {
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #1f1f1f;
+  color: var(--accent);
 }
 
 .price span {
   font-size: 0.9rem;
   font-weight: normal;
-  color: #777;
+  color: var(--text-secondary);
 }
 
 .pricing-card ul {
@@ -356,7 +356,7 @@ p {
 .pricing-card li {
   margin-bottom: 0.6rem;
   font-size: 0.95rem;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 .pricing-note {
@@ -391,7 +391,7 @@ p {
    How It Works Section
 ========================= */
 .steps-section {
-  background-color: #ffffff;
+  background-color: var(--surface-alt);
   text-align: center;
   padding: 5rem 0;
 }
@@ -458,7 +458,7 @@ p {
    Story Section
 ========================= */
 .story-section {
-  background-color: #f7f5f1;
+  background-color: var(--surface);
   padding: 5rem 0;
 }
 
