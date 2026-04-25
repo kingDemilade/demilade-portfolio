@@ -67,6 +67,10 @@
   color: var(--accent);
 }
 
+.dark-mode .pricing-card {
+  background: var(--surface-alt);
+}
+
 /* =========================
    Base layout helpers
 ========================= */
