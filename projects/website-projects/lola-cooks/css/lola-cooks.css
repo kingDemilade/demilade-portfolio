@@ -90,6 +90,7 @@ p {
 /* Navigation */
 .site-nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
@@ -109,6 +110,8 @@ p {
 .site-logo svg,
 .site-logo .logo-svg {
   width: clamp(90px, 8vw, 140px);
+  max-width: 100%;
+  flex-shrink: 0;
   height: auto;
   display: block;
 }
@@ -739,16 +742,20 @@ section,
 
 @media (max-width: 768px) {
   .site-header {
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
   }
 
   .site-nav {
     gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   #theme-toggle {
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
+    flex-shrink: 0;
   }
 }
