@@ -707,11 +707,11 @@ section,
 }
 
 .offer-card:hover {
-  transform: translateY(var(--hover-lift));
+  transform: translateY(-6px) scale(1.01);
 }
 
 .pricing-card:hover {
-  transform: translateY(var(--hover-lift));
+  transform: translateY(-6px) scale(1.01);
 }
 
 /* Global smoothness */
