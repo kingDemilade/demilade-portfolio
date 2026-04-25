@@ -43,6 +43,14 @@
   );
 }
 
+.dark-mode .hero-eyebrow {
+  color: var(--accent);
+}
+
+.dark-mode .hero-subtext {
+  color: var(--text-primary);
+}
+
 .dark-mode .button-primary {
   background: linear-gradient(135deg, #4fc3f7, #0288d1);
 }
@@ -56,7 +64,7 @@
 }
 
 .dark-mode .steps-note {
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .dark-mode .steps-subtext {
