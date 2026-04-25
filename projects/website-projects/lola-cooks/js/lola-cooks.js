@@ -1,9 +1,20 @@
 const ctaButton = document.querySelector('.button-pop');
 
-window.addEventListener('scroll', () => {
-  const rect = ctaButton.getBoundingClientRect();
+if (ctaButton) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          ctaButton.classList.add('active');
+        } else {
+          ctaButton.classList.remove('active');
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
 
-  if (rect.top < window.innerHeight - 100) {
-    ctaButton.classList.add('active');
-  }
-});
+  observer.observe(ctaButton);
+}
