@@ -313,10 +313,6 @@ p {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.offer-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
-}
 
 .offer-image {
   display: flex;
@@ -720,7 +716,7 @@ section,
 
 /* Global smoothness */
 * {
-  transition: all 0.2s ease-in-out;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 
