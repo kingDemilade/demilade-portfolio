@@ -51,6 +51,10 @@
   color: var(--text-secondary);
 }
 
+.dark-mode .step-number {
+  color: var(--bg);
+}
+
 .dark-mode .story-highlights span {
   color: var(--accent);
 }
