@@ -84,6 +84,7 @@ p {
   background-repeat: repeat;
 /*  background-size: 300px; */
   overflow: hidden;
+  border-bottom: 5px solid #29abe2;
 }
 
 .hero-overlay {
