@@ -186,6 +186,7 @@ p {
 .offer-card {
   background-color: #ffffff;
   border-radius: 12px;
+  padding: 1.75rem 1.5rem;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -235,6 +236,7 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
 /* =========================
    Pricing Section (Polished)
 ========================= */
@@ -528,7 +530,7 @@ p {
 .offer-image {
   display: flex;
   justify-content: center;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
 }
 
 /* Circle container */
@@ -559,7 +561,7 @@ p {
 }
 
 .offer-card:hover .offer-image-circle {
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
