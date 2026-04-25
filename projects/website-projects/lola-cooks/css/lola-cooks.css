@@ -592,3 +592,91 @@ section {
 * {
   transition: all 0.2s ease-in-out;
 }
+
+
+/* =========================
+   Custom Button System (Non-Bootstrap Override)
+========================= */
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2.25rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #28abe2, #008dc8);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+
+  box-shadow: 0 10px 25px rgba(40, 171, 226, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.button-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 35px rgba(40, 171, 226, 0.35);
+}
+
+/* Arrow icon animation */
+.button-primary .arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.button-primary:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Press (click) effect */
+.button-primary:active {
+  transform: translateY(0px) scale(0.97);
+  box-shadow: 0 6px 15px rgba(40, 171, 226, 0.2);
+}
+
+/* Outline button */
+.button-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2.25rem;
+  border-radius: 999px;
+  border: 2px solid #28abe2;
+  color: #28abe2;
+  font-weight: 700;
+  background: transparent;
+
+  transition: all 0.25s ease;
+}
+
+.button-outline:hover {
+  background-color: #28abe2;
+  color: #ffffff;
+}
+
+.button-outline .arrow {
+  transition: transform 0.25s ease;
+}
+
+.button-outline:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Scroll-trigger-ready class (no JS yet, just prep) */
+.button-pop {
+  transform: scale(1);
+}
+
+.button-pop.active {
+  transform: scale(1.05);
+}
+
+@keyframes buttonPulse {
+  0% { box-shadow: 0 10px 25px rgba(40, 171, 226, 0.25); }
+  50% { box-shadow: 0 18px 35px rgba(40, 171, 226, 0.4); }
+  100% { box-shadow: 0 10px 25px rgba(40, 171, 226, 0.25); }
+}
+
+.button-primary.pulse {
+  animation: buttonPulse 2.5s infinite;
+}
