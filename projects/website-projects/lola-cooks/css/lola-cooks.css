@@ -26,6 +26,18 @@
   --card-bg: #1a1a1a;
 }
 
+.dark-mode .hero-overlay {
+  background: linear-gradient(
+    0deg,
+    rgba(18, 18, 18, 0.6) 0%,
+    rgba(18, 18, 18, 0.9) 100%
+  );
+}
+
+.dark-mode .button-primary {
+  background: linear-gradient(135deg, #4fc3f7, #0288d1);
+}
+
 /* =========================
    Base layout helpers
 ========================= */
@@ -34,6 +46,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--bg);
   color: var(--text-primary);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 p {
@@ -606,6 +619,13 @@ p {
 ========================= */
 section {
   padding: 5rem 0;
+}
+
+section,
+.offer-card,
+.pricing-card,
+.story-section {
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 :root {

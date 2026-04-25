@@ -1,3 +1,6 @@
+// =========================
+// CTA Button Observer
+// =========================
 const ctaButton = document.querySelector('.button-pop');
 
 if (ctaButton) {
@@ -19,31 +22,60 @@ if (ctaButton) {
   observer.observe(ctaButton);
 }
 
+// =========================
+// Theme Toggle System
+// =========================
 const toggle = document.getElementById('theme-toggle');
 
-toggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
-
-const toggle = document.getElementById('theme-toggle');
-
-toggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
+// Helper to update icon
+function updateThemeIcon() {
+  if (!toggle) return;
 
   if (document.body.classList.contains('dark-mode')) {
-    localStorage.setItem('theme', 'dark');
+    toggle.textContent = '☀️ Light Mode';
   } else {
-    localStorage.setItem('theme', 'light');
+    toggle.textContent = '🌙 Dark Mode';
+  }
+}
+
+if (toggle) {
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    const isDark = document.body.classList.contains('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+    updateThemeIcon();
+  });
+}
+
+// Load saved preference
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark-mode');
+}
+
+// Auto-detect system theme (only if no saved preference)
+if (!savedTheme) {
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (prefersDark) {
+    document.body.classList.add('dark-mode');
+  }
+}
+
+// Set initial icon state
+updateThemeIcon();
+
+// =========================
+// Optional: Listen for system theme changes
+// =========================
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+mediaQuery.addEventListener('change', (e) => {
+  if (!localStorage.getItem('theme')) {
+    document.body.classList.toggle('dark-mode', e.matches);
+    updateThemeIcon();
   }
 });
-
-// Load preference
-if (localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark-mode');
-}
-
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-if (!localStorage.getItem('theme') && prefersDark) {
-  document.body.classList.add('dark-mode');
-}
