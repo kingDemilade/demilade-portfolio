@@ -35,6 +35,11 @@
   background-image: url("../images/hero/lola-cooks_banner_dark_2400x900.jpg");
 }
 
+.dark-mode .hero-logo-img {
+  content: url("images/logo/tall_lola-cooks-dark-logo.svg");
+  opacity: 0.95; /* subtle tone shift */
+}
+
 .dark-mode .hero-overlay {
   background: linear-gradient(
     0deg,
@@ -138,6 +143,11 @@ p {
   font-weight: 700;
   letter-spacing: 0.04em;
   color: #1f1f1f;
+}
+
+.hero-logo-img {
+  content: url("images/logo/tall_lola-cooks-logo.svg");
+  transition: opacity 0.3s ease;
 }
 
 /* Navigation */
