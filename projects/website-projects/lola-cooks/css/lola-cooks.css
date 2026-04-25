@@ -27,6 +27,10 @@
   --card-bg: #1a1a1a;
 }
 
+.dark-mode .site-header {
+  background-color: var(--border);
+}
+
 .dark-mode .hero-overlay {
   background: linear-gradient(
     0deg,
