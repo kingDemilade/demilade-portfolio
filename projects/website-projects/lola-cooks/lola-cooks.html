@@ -15,9 +15,20 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="container">
-        <h1 class="site-logo">Lola Cooks</h1>
-      </div>
+      <div class="container header-inner">
+<h1 class="site-logo">
+  <img 
+    src="images/logo/horizontal_lola-cooks-logo.svg" 
+    alt="Lola Cooks Logo" 
+    class="site-logo-img"
+  />
+</h1>
+      <button id="theme-toggle" class="button-outline">
+    Toggle Mode
+  </button>  
+
+</div>
+
     </header>
 
     <main>
@@ -25,12 +36,17 @@
       <section id="hero" class="hero-section">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-          <p class="hero-eyebrow">Weekly Meal Prep Service</p>
-          <h2>Personalized Plans. Prepped to Perfection.</h2>
+          <div class="hero-logo">
+            <img src="images/logo/tall_lola-cooks-logo.svg" alt="Lola Cooks Logo" class="hero-logo-img" />
+          </div>
+        <p class="hero-eyebrow">Personalized Plans. Prepped to Perfection.</p>
           <p class="hero-subtext">
             Fresh, ready-to-eat meals tailored to your lifestyle and goals.
           </p>
-          <a class="hero-button" href="#meal-plans">View Meal Plans</a>
+          <a href="#meal-plans" class="button-primary pulse button-pop">
+            Start Your Plan
+          <span class="arrow">→</span>
+          </a>
         </div>
       </section>
 
@@ -43,7 +59,9 @@
             <!-- Card 1 -->
             <div class="offer-card">
               <div class="offer-image">
-                <img src="images/meal-prep-1.jpg" alt="Personalized meal prep containers" />
+                <div class="offer-image-circle">
+                  <img src="images/offers/meal-prep-01.jpg" alt="Personalized meal prep containers" />
+                </div>
               </div>
               <div class="offer-content">
                 <h3>Personalized Meal Plans</h3>
@@ -57,7 +75,9 @@
             <!-- Card 2 -->
             <div class="offer-card">
               <div class="offer-image">
-                <img src="images/meal-prep-2.jpg" alt="Weekly meal prep setup" />
+                <div class="offer-image-circle">
+                  <img src="images/offers/meal-prep-02.jpg" alt="Weekly meal prep setup" />
+                </div>
               </div>
               <div class="offer-content">
                 <h3>Weekly Meal Prep</h3>
@@ -71,7 +91,9 @@
             <!-- Card 3 -->
             <div class="offer-card">
               <div class="offer-image">
-                <img src="images/meal-prep-3.jpg" alt="Balanced macro meal" />
+                <div class="offer-image-circle">
+                  <img src="images/offers/meal-prep-03.jpg" alt="Balanced macro meal" />
+                </div>
               </div>
               <div class="offer-content">
                 <h3>Macro-Based Options</h3>
@@ -101,7 +123,7 @@
               <p class="price">$110 <span>(10 meals)</span></p>
               <ul>
                 <li>Standard serving size</li>
-                <li>No modifications (unless dietary restrictions)</li>
+                <li>No modifications <br>(unless dietary restrictions)</li>
                 <li>Weekly meal selection</li>
               </ul>
             </div>
@@ -132,7 +154,7 @@
 
           <div class="pricing-note">
             <p><strong>À La Carte:</strong> $15 per meal (based on weekly menu)</p>
-            <p>Order by Thursday at 7 PM for Sunday pickup/delivery.</p>
+            <p><strong>Order by Thursday at 7 PM</strong> for Sunday pickup/delivery.</p>
           </div>
         </div>
       </section>
@@ -181,14 +203,14 @@
       <section id="why-lola-cooks" class="story-section">
         <div class="container story-grid">
           <div class="story-image">
-            <img src="images/meal-prep-story.jpg" alt="Fresh prepared meal" />
+            <img src="images/story/story-image-section_01.jpg" alt="Fresh prepared meal" />
           </div>
 
           <div class="story-content">
             <h2>More Than Meal Prep — It’s a Better Way to Eat</h2>
 
             <p>
-              At Lola Cooks, every meal is prepared with intention. Whether you're
+              At LolaCooks, every meal is prepared with intention. Whether you're
               working toward a fitness goal or simply looking for a more convenient
               way to eat well, each plan is designed to fit your lifestyle.
             </p>
