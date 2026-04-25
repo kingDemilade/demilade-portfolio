@@ -43,6 +43,18 @@
   background-color: var(--surface-alt);
 }
 
+.dark-mode .pricing-subtext, .pricing-note, .steps-note {
+  color: var(--text-primary);
+}
+
+.dark-mode .step-item p {
+  color: var(--text-secondary);
+}
+
+.dark-mode .story-highlights span {
+  color: var(--accent);
+}
+
 /* =========================
    Base layout helpers
 ========================= */
