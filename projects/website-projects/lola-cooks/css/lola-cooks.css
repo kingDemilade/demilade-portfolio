@@ -19,6 +19,7 @@
 .dark-mode {
   --bg: #121212;
   --surface: #1e1e1e;
+  --surface-alt: #373737;
   --text-primary: #f5f5f5;
   --text-secondary: #cfcfcf;
   --accent: #4fc3f7; /* brighter for contrast */
@@ -36,6 +37,10 @@
 
 .dark-mode .button-primary {
   background: linear-gradient(135deg, #4fc3f7, #0288d1);
+}
+
+.dark-mode .offers-section, .steps-section {
+  background-color: var(--surface-alt);
 }
 
 /* =========================
