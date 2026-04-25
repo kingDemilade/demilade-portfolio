@@ -43,8 +43,12 @@
   background-color: var(--surface-alt);
 }
 
-.dark-mode .pricing-subtext, .pricing-note p, .steps-note p {
+.dark-mode .pricing-subtext, .pricing-note p {
   color: var(--text-primary);
+}
+
+.dark-mode .steps-note {
+  color: var(--text-secondary);
 }
 
 .dark-mode .steps-subtext {
