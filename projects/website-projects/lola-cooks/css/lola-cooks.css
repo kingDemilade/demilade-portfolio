@@ -602,8 +602,8 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem 2.25rem;
-  border-radius: 999px;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
   background: linear-gradient(135deg, #28abe2, #008dc8);
   color: #ffffff;
   font-weight: 700;
