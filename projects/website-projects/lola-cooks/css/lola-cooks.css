@@ -674,11 +674,11 @@ section {
 }
 
 @keyframes buttonPulse {
-  0% { box-shadow: 0 10px 25px rgba(40, 171, 226, 0.25); }
-  50% { box-shadow: 0 18px 35px rgba(40, 171, 226, 0.4); }
-  100% { box-shadow: 0 10px 25px rgba(40, 171, 226, 0.25); }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
 }
 
 .button-primary.pulse {
-  animation: buttonPulse 2.5s infinite;
+  animation: buttonPulse 1.8s ease-in-out infinite;
 }
