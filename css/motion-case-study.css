@@ -50,7 +50,7 @@
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem); /* scales from mobile to desktop */
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -117,4 +117,24 @@
 .motion-grid video:hover {
   transform: scale(0.99);
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* ===== RESPONSIVE TYPOGRAPHY ===== */
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem; /* mobile baseline */
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  .hero-content h1 {
+    font-size: 2.5rem; /* tablet */
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-content h1 {
+    font-size: 3rem; /* desktop */
+  }
 }
