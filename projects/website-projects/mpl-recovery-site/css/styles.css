@@ -10,12 +10,13 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
   color: var(--text-base);
   background-color: #fff;
   padding-top: 72px;
 }
+
 
 /* =========================
    VARIABLES (YOU'LL LOVE THIS)
@@ -120,15 +121,19 @@ button:focus-visible, .btn-primary:focus-visible, .btn-secondary:focus-visible {
    TYPOGRAPHY
 ========================= */
 h1, h2, h3, h4 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
   line-height: 1.2;
 }
+
+
 
 h1 {
   font-size: 3rem;
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 3.25rem;
 }
 
 h3 {
@@ -155,8 +160,12 @@ h3 {
   color: var(--text-inverse); /* darker text for contrast on cyan */
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
+  font-size: 1.25rem;;
   font-weight: 700;
   transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), box-shadow var(--dur-med) var(--ease-soft), transform var(--dur-fast) var(--ease-out);
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .btn-primary:hover {
@@ -173,6 +182,9 @@ h3 {
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
   transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .btn-secondary:hover {
@@ -206,7 +218,7 @@ h3 {
 }
 
 body.dark-mode .navbar {
-  background: rgba(67, 67, 67, 0.75);
+  background: rgba(20, 20, 20, 0.9);
   color: var(--white);
   border-bottom: 1px solid rgba(255,255,255,0.06);
   backdrop-filter: blur(10px);
@@ -220,7 +232,7 @@ body.dark-mode .navbar {
 }
 
 .navbar.scrolled .nav-links {
-  gap: 1.25rem;
+  gap: 2.25rem;
 }
 
 .navbar.scrolled .nav-links a {
@@ -252,8 +264,11 @@ body.dark-mode .navbar.scrolled {
 }
 
 .nav-links a {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
   position: relative;
   transition: transform var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+  text-transform: uppercase;
 }
 
 .nav-links a:hover {
@@ -290,7 +305,7 @@ body.dark-mode .nav-links a {
 }
 
 .logo img {
-  height: clamp(30px, 4vw, 44px);
+  height: clamp(40px, 6vw, 70px);
   width: auto;
   display: block;
   transition: transform var(--dur-fast) var(--ease-out);
@@ -354,11 +369,12 @@ body.dark-mode .nav-links a {
 
 /* Headline polish */
 .hero-text h1 {
-  font-size: 3.25rem;
+  font-size: 4rem;
   font-weight: 800;
-  letter-spacing: -1px;
+  letter-spacing: 2px;
   margin-bottom: 1rem;
   text-shadow: 0 6px 18px rgba(0, 0, 0, 0.8);
+  font-style: italic;
 }
 
 /* Highlight word */
@@ -413,6 +429,10 @@ body.dark-mode .nav-links a {
 }
 
 .feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   text-align: center;
   transition: transform var(--dur-med) var(--ease-out);
   will-change: transform;
@@ -428,12 +448,26 @@ body.dark-mode .nav-links a {
 
 .feature h3 {
   color: var(--text-base);
+  margin-bottom: 0.35rem;
+  line-height: 1.1;
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--black-2);
 }
 
 .feature i {
-  font-size: 2rem;
+  flex-shrink: 0;
+  font-size: 2.5rem;
   color: var(--accent);
-  margin-bottom: 0.75rem;
+  margin-top: 0.2rem;
   transition: transform var(--dur-fast) var(--ease-out), filter var(--dur-fast) var(--ease-out);
   text-shadow: 0 0 12px rgba(0, 174, 239, 0.35);
 }
@@ -483,14 +517,14 @@ body.dark-mode .features-grid > .feature:not(:nth-child(4n))::after {
 }
 
 /* =========================
-   PACKAGES
+   Services
 ========================= */
-.packages {
+.services {
   padding: 4rem 0;
   background: linear-gradient(180deg, #fafafa 0%, #f5faff 100%);
 }
 
-body.dark-mode .packages {
+body.dark-mode .services {
   background: linear-gradient(180deg, #0b0b0b 0%, #111827 100%);
 }
 
@@ -516,7 +550,7 @@ body.dark-mode .packages {
   background: linear-gradient(90deg, var(--accent), transparent);
 }
 
-.packages-grid {
+.services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -953,6 +987,18 @@ body:not(.dark-mode) .cta-split .booking::before {
 
 /* Mobile refinement */
 @media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .feature {
+    align-items: center;
+  }
+
+  .features-grid > .feature::after {
+    display: none;
+  }
   .cta-split .booking-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
