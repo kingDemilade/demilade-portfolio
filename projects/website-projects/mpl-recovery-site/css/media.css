@@ -54,15 +54,21 @@
    Logo
 ========================= */
 
+@media (max-width: 992px) {
+  .logo img {
+    height: clamp(52px, 8vw, 68px);
+  }
+}
+
 @media (max-width: 768px) {
   .logo img {
-    height: 34px;
+    height: clamp(48px, 10vw, 62px);
   }
 }
 
 @media (max-width: 480px) {
   .logo img {
-    height: 30px;
+    height: clamp(44px, 12vw, 56px);
   }
 }
 
