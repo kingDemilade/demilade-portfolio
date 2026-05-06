@@ -24,7 +24,7 @@
   }
 
   .features-grid,
-  .packages-grid,
+  .services-grid,
   .benefits-grid {
     grid-template-columns: 1fr;
   }
