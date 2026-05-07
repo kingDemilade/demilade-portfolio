@@ -75,24 +75,28 @@ const handleNavbarScroll = () => {
 
 window.addEventListener('scroll', handleNavbarScroll);
 
-const themeToggle = document.getElementById('theme-toggle');
+const themeToggles = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle');
 
-if (themeToggle) {
+if (themeToggles.length) {
   // Load saved theme
   const savedTheme = localStorage.getItem('theme');
+
   if (savedTheme === 'dark') {
     document.body.classList.add('dark-mode');
   }
 
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+  // Sync all theme toggle buttons
+  themeToggles.forEach(toggleBtn => {
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
 
-    // Save preference
-    if (document.body.classList.contains('dark-mode')) {
-      localStorage.setItem('theme', 'dark');
-    } else {
-      localStorage.setItem('theme', 'light');
-    }
+      // Save preference
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
   });
 }
 
