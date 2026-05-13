@@ -1791,12 +1791,18 @@ body.dark-mode .wellness-extras {
 }
 
 /* Flip overlay direction */
+
 .service-card:nth-child(even) .service-card-image::after {
   background: linear-gradient(
     to right,
     rgba(0,0,0,0.02),
     rgba(0,0,0,0.22)
   );
+}
+
+.service-card:nth-child(even) .service-badge {
+  right: auto;
+  left: 1.25rem;
 }
 
 /* =========================
