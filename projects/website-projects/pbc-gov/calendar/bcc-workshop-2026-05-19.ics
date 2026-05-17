@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Palm Beach County//Calendar Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bcc-workshop-2026-05-19@pbc.gov
+DTSTAMP:20260428T120000Z
+DTSTART:20260519T133000Z
+DTEND:20260519T210000Z
+SUMMARY:Board of County Commissioners Workshop Meeting
+LOCATION:Government Center - Jane M. Thompson Memorial Chambers - 6th Floor\, 301 N Olive\, West Palm Beach\, FL
+DESCRIPTION:Board of County Commissioners Workshop Meeting. View the full public calendar at https://pbc.gov/cal/event/fullcalendar?ViewType=P
+URL:https://pbc.gov/cal/event/fullcalendar?ViewType=P
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Board of County Commissioners</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+ <!-- Font Awesome Pro Kit -->
+  <script src="https://kit.fontawesome.com/f1fe21ebe4.js" crossorigin="anonymous"></script>
+
+  <!-- Your Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR (reuse from homepage) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom px-4">
+  <a class="navbar-brand d-flex align-items-center" href="pbc-gov-redesign.html">
+    <img src="images/pbc-logo-w-slogan.png" alt="Palm Beach County Logo" class="pbc-logo">
+  </a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="mainNav">
+    <ul class="navbar-nav ms-auto">
+
+      <!-- SERVICES MEGA MENU -->
+      <li class="nav-item dropdown position-static">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Services</a>
+        <div class="dropdown-menu w-100 mt-0 p-4 border-0 shadow">
+          <div class="row">
+            <div class="col-md-3">
+              <h6 class="fw-bold">Payments</h6>
+              <a class="dropdown-item" href="#">Property Taxes</a>
+              <a class="dropdown-item" href="#">Utility Bills</a>
+            </div>
+            <div class="col-md-3">
+              <h6 class="fw-bold">Permits</h6>
+              <a class="dropdown-item" href="#">Building Permits</a>
+              <a class="dropdown-item" href="#">Inspections</a>
+            </div>
+            <div class="col-md-3">
+              <h6 class="fw-bold">Public Safety</h6>
+              <a class="dropdown-item" href="#">Emergency Services</a>
+              <a class="dropdown-item" href="#">Report an Issue</a>
+            </div>
+            <div class="col-md-3">
+              <h6 class="fw-bold">Recreation</h6>
+              <a class="dropdown-item" href="#">Parks & Recreation</a>
+              <a class="dropdown-item" href="#">Community Centers</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- RESIDENTS -->
+      <li class="nav-item dropdown position-static">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Residents</a>
+        <div class="dropdown-menu w-100 mt-0 p-4 border-0 shadow">
+          <div class="row">
+            <div class="col-md-4">
+              <a class="dropdown-item" href="#">Housing Assistance</a>
+              <a class="dropdown-item" href="#">Transportation</a>
+            </div>
+            <div class="col-md-4">
+              <a class="dropdown-item" href="#">Health Services</a>
+              <a class="dropdown-item" href="#">Education</a>
+            </div>
+            <div class="col-md-4">
+              <a class="dropdown-item" href="#">Community Programs</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- COMMISSIONERS -->
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="bcc.html">Commissioners</a>
+      </li>
+
+      <!-- BUSINESS -->
+      <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
+
+      <!-- GOVERNMENT -->
+      <li class="nav-item"><a class="nav-link" href="#">Government</a></li>
+
+      <!-- DEPARTMENTS -->
+      <li class="nav-item"><a class="nav-link" href="departments.html">Departments</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="text-center py-5 bg-light bcc-hero">
+  <div class="container">
+    <h1 class="mb-3 bcc-title">Board of County Commissioners</h1>
+<!--    <p class="text-muted">Meet your commissioners, access meetings, and stay informed.</p> -->
+
+    <div class="mt-4">
+      <button class="btn btn-primary m-1 btn-pbc">Watch Meetings</button>
+      <button class="btn btn-outline-primary m-1 btn-pbc">View Agendas</button>
+      <button class="btn btn-outline-primary m-1 btn-pbc">Find My District</button>
+      <button class="btn btn-outline-primary m-1 btn-pbc">Contact</button>
+    </div>
+  </div>
+</section>
+
+<section class="container py-4 section-nav-section" aria-label="Board of County Commissioners navigation">
+  <div class="section-nav-grid">
+    <a href="bcc.html" class="section-nav-link">
+      <span class="section-nav-icon" aria-hidden="true">
+        <i class="fa-solid fa-house"></i>
+      </span>
+      <span>BCC Home</span>
+    </a>
+    <a href="bcc-staff.html" class="section-nav-link">
+      <span class="section-nav-icon" aria-hidden="true">
+        <i class="fa-solid fa-users"></i>
+      </span>
+      <span>BCC Staff</span>
+    </a>
+    <a href="bcc-meetings.html" class="section-nav-link">
+      <span class="section-nav-icon" aria-hidden="true">
+        <i class="fa-solid fa-list-timeline"></i>
+      </span>
+      <span>BCC Meeting Agendas</span>
+    </a>
+    <a href="#" class="section-nav-link">
+      <span class="section-nav-icon" aria-hidden="true">
+        <i class="fa-solid fa-file-circle-plus"></i>
+      </span>
+      <span>Briefs</span>
+    </a>
+    <a href="#" class="section-nav-link">
+      <span class="section-nav-icon" aria-hidden="true">
+        <i class="fa-solid fa-location-check"></i>
+      </span>
+      <span>Find Your District</span>
+    </a>
+    <a href="#" class="section-nav-link">
+      <span class="section-nav-icon" aria-hidden="true">
+  <i class="fa-solid fa-buildings"></i>
+      </span>
+      <span>District Offices</span>
+    </a>
+    <a href="bcc-meetings.html" class="section-nav-link">
+      <span class="section-nav-icon" aria-hidden="true">
+        <i class="fa-solid fa-video-plus"></i>
+      </span>
+      <span>BCC Meeting Videos</span>
+    </a>
+    <a href="meeting-calendars.html" class="section-nav-link">
+      <span class="section-nav-icon" aria-hidden="true">
+        <i class="fa-solid fa-calendar-circle-plus"></i>
+      </span>
+      <span>Meeting Calendars</span>
+    </a>
+  </div>
+</section>
+
+<section class="container py-5 bcc-group-section">
+  <div class="department-group-photo-frame bcc-group-photo-frame">
+    <img src="images/hero/sections/bcc-group-lineup.jpg" alt="Palm Beach County Board of County Commissioners" class="department-group-photo bcc-group-photo">
+  </div>
+
+  <div class="bcc-group-copy">
+    <p>
+      The Board of County Commissioners serves as the legislative and policy-setting body for county government; enacts countywide laws and authorizes programs and all expenditures of county funds. They also act as the Child Care Facilities Board, the Solid Waste Authority Governing Board, the Environmental Control Board and the Zoning Board.
+    </p>
+    <p>
+      Seven commissioners are elected from single-member districts to staggered four-year terms to represent the entire county. The Board of County Commissioners generally meets on the first and third Tuesday of each month for public hearings and regular agenda items.
+    </p>
+    <p>
+      During the first meeting of the month, with the exception of January and August, citizens may offer comments on any issue or topic during Matters by the Public. Workshops are usually held on the fourth Tuesday of the month. All meetings are carried live on PBC-TV Channel 20 on this Web site.
+    </p>
+  </div>
+</section>
+
+<!-- COMMISSIONERS GRID -->
+<section class="container py-5">
+  <h2 class="mb-4">Your Commissioners</h2>
+  <div class="row g-4 commissioner-grid">
+
+    <!-- ROW 1: Mayor & Vice Mayor -->
+    <div class="col-md-6">
+      <div class="card commissioner-card commissioner-card-featured p-4">
+        <div class="commissioner-img-wrap">
+          <img src="images/commissioners/d6.jpg" class="rounded-circle" width="120" height="120" alt="Mayor Sara Baxter">
+        </div>
+        <div class="commissioner-card-content">
+          <p class="commissioner-role">Mayor</p>
+          <div class="commissioner-heading">
+            <h5>Sara Baxter</h5>
+            <span class="commissioner-district">District 6</span>
+          </div>
+          <div class="commissioner-meta-list">
+            <p><span>Elected:</span> 11/2022</p>
+<!--        <p><span>Reelected:</span> 11/2024</p>-->
+            <p><span>Term ends:</span> 11/2026</p>
+            <p><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:SBaxter@pbc.gov">Email</a></p>
+            <p><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:561-355-2206">561-355-2206</a></p>
+            <p><i class="fa-solid fa-phone" aria-hidden="true"></i><span>Toll Free:</span><a href="tel:877-930-2206">877-930-2206</a></p>
+          </div>
+          <a href="#" class="btn btn-sm btn-pbc">View Profile</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card commissioner-card commissioner-card-featured p-4">
+        <div class="commissioner-img-wrap">
+          <img src="images/commissioners/d4.jpg" class="rounded-circle" width="120" height="120" alt="Vice Mayor Marci Woodward">
+        </div>
+        <div class="commissioner-card-content">
+          <p class="commissioner-role">Vice Mayor</p>
+          <div class="commissioner-heading">
+            <h5>Marci Woodward</h5>
+            <span class="commissioner-district">District 4</span>
+          </div>
+          <div class="commissioner-meta-list">
+            <p><span>Elected:</span> 11/2022</p>
+<!--        <p><span>Reelected:</span> 11/2024</p>-->
+            <p><span>Term ends:</span> 11/2026</p>
+            <p><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:MWoodward@pbc.gov">Email</a></p>
+            <p><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:561-355-2204">561-355-2204</a></p>
+            <p><i class="fa-solid fa-phone" aria-hidden="true"></i><span>South County:</span><a href="tel:561-276-1220">561-276-1220</a></p>
+            <p><i class="fa-solid fa-phone" aria-hidden="true"></i><span>Fax:</span><a href="tel:561-355-4422">561-355-4422</a></p>
+            <p><i class="fa-solid fa-phone" aria-hidden="true"></i><span>Toll Free:</span><a href="tel:877-930-2204">877-930-2204</a></p>
+          </div>
+          <a href="#" class="btn btn-sm btn-pbc">View Profile</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 2: Three Commissioners -->
+    <div class="col-md-4">
+      <div class="card commissioner-card text-center p-4">
+        <div class="commissioner-img-wrap mb-3">
+          <img src="images/commissioners/d1.jpg" class="rounded-circle" width="120" height="120" alt="Commissioner Maria G. Marino">
+        </div>
+        <div class="commissioner-heading">
+          <h5>Maria G. Marino</h5>
+          <span class="commissioner-district">District 1</span>
+        </div>
+        <div class="commissioner-meta-list">
+<!--      <p><span>Elected:</span> Add date</p> -->
+          <p><span>Reelected:</span> 11/2024</p>
+          <p><span>Term ends:</span> 11/2028</p>
+          <p><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:MMarino@pbc.gov">Email</a></p>
+          <p><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:561-355-2201">561-355-2201</a></p>
+            <p><i class="fa-solid fa-phone" aria-hidden="true"></i><span>Fax:</span><a href="tel:561-355-6094">561-355-6094</a></p>
+            <p><i class="fa-solid fa-phone" aria-hidden="true"></i><span>Toll Free:</span><a href="tel:877-930-2201">877-930-2201</a></p>
+        </div>
+        <a href="#" class="btn btn-sm btn-pbc">View Profile</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card commissioner-card text-center p-4">
+        <div class="commissioner-img-wrap mb-3">
+          <img src="images/commissioners/d2.jpg" class="rounded-circle" width="120" height="120" alt="Commissioner Gregg K. Weiss">
+        </div>
+        <div class="commissioner-heading">
+          <h5>Gregg K. Weiss</h5>
+          <span class="commissioner-district">District 2</span>
+        </div>
+        <div class="commissioner-meta-list">
+<!--      <p><span>Elected:</span> Add date</p> -->
+          <p><span>Reelected:</span> 11/2022</p>
+          <p><span>Term ends:</span> 11/2026</p>
+          <p><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:gweiss@pbc.gov">Email</a></p>
+          <p><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:561-355-2202">561-355-2202</a></p>
+            <p><i class="fa-solid fa-phone" aria-hidden="true"></i><span>Toll Free:</span><a href="tel:877-930-2202">877-930-2202</a></p>
+        </div>
+        <a href="#" class="btn btn-sm btn-pbc">View Profile</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card commissioner-card text-center p-4">
+        <div class="commissioner-img-wrap mb-3">
+          <img src="images/commissioners/d3.jpg" class="rounded-circle" width="120" height="120" alt="Commissioner Joel G. Flores">
+        </div>
+        <div class="commissioner-heading">
+          <h5>Joel G. Flores</h5>
+          <span class="commissioner-district">District 3</span>
+        </div>
+        <div class="commissioner-meta-list">
+          <p><span>Elected:</span> 11/2024</p>
+<!--      <p><span>Reelected:</span> 11/2024</p>-->
+          <p><span>Term ends:</span> 11/2028</p>
+          <p><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:JGFlores@pbc.gov">Email</a></p>
+          <p><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:561-355-2203">561-355-2203</a></p>
+            <p><i class="fa-solid fa-phone" aria-hidden="true"></i><span>Fax:</span><a href="tel:561-355-6344">561-355-6344</a></p>
+            <p><i class="fa-solid fa-phone" aria-hidden="true"></i><span>Toll Free:</span><a href="tel:877-930-2203">877-930-2203</a></p>
+        </div>
+        <a href="#" class="btn btn-sm btn-pbc">View Profile</a>
+      </div>
+    </div>
+
+    <!-- ROW 3: Two Commissioners -->
+    <div class="col-md-6">
+      <div class="card commissioner-card text-center p-4">
+        <div class="commissioner-img-wrap mb-3">
+          <img src="images/commissioners/d5.jpg" class="rounded-circle" width="120" height="120" alt="Commissioner Maria Sachs">
+        </div>
+        <div class="commissioner-heading">
+          <h5>Maria Sachs</h5>
+          <span class="commissioner-district">District 5</span>
+        </div>
+        <div class="commissioner-meta-list">
+<!--      <p><span>Elected:</span> Add date</p> -->
+          <p><span>Reelected:</span> 11/2024</p>
+          <p><span>Term ends:</span> 11/2028</p>
+          <p><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:MSachs@pbc.gov">Email</a></p>
+          <p><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:561-355-2205">561-355-2205</a></p>
+        </div>
+        <a href="#" class="btn btn-sm btn-pbc">View Profile</a>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card commissioner-card text-center p-4">
+        <div class="commissioner-img-wrap mb-3">
+          <img src="images/commissioners/d7.jpg" class="rounded-circle" width="120" height="120" alt="Commissioner Bobby Powell Jr.">
+        </div>
+        <div class="commissioner-heading">
+          <h5>Bobby Powell Jr.</h5>
+          <span class="commissioner-district">District 7</span>
+        </div>
+        <div class="commissioner-meta-list">
+          <p><span>Elected:</span> 11/2024</p> 
+<!--      <p><span>Reelected:</span> 11/2024</p>-->
+          <p><span>Term ends:</span> 11/2028</p>
+          <p><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:BPowell@pbc.gov">Email</a></p>
+          <p><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:561-355-2207">561-355-2207</a></p>
+        </div>
+        <a href="#" class="btn btn-sm btn-pbc">View Profile</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MEETINGS ON DEMAND -->
+<section class="container py-5">
+  <h2 class="mb-4">Meetings On Demand</h2>
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card video-card">
+        <div class="video-thumb">
+          <img src="images/videos/thumbnails/pbc-tv_channel-20.jpg" alt="Meeting">
+          <div class="video-overlay">
+            <span class="play-icon">▶</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h6 class="video-title">Board Meeting</h6>
+          <p class="text-muted">June 10, 2026</p>
+          <a href="#" class="btn btn-sm btn-primary btn-pbc">Watch</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card video-card">
+        <div class="video-thumb">
+          <img src="images/videos/thumbnails/pbc-tv_channel-20.jpg" alt="Meeting">
+          <div class="video-overlay">
+            <span class="play-icon">▶</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h6 class="video-title">Workshop Session</h6>
+          <p class="text-muted">June 5, 2026</p>
+          <a href="#" class="btn btn-sm btn-primary btn-pbc">Watch</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card video-card">
+        <div class="video-thumb">
+          <img src="images/videos/thumbnails/pbc-tv_channel-20.jpg" alt="Meeting">
+          <div class="video-overlay">
+            <span class="play-icon">▶</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <h6 class="video-title">Zoning Meeting</h6>
+          <p class="text-muted">May 28, 2026</p>
+          <a href="#" class="btn btn-sm btn-primary btn-pbc">Watch</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="text-center mt-4">
+    <a href="#" class="btn btn-outline-primary btn-pbc">View All Meetings</a>
+  </div>
+</section>
+
+<!-- DOCUMENTS -->
+<section class="container py-5">
+  <h2 class="mb-4">Agendas & Documents</h2>
+  <div class="row g-4 text-center">
+
+    <div class="col-md-4">
+      <div class="card p-4 h-100">
+        <div class="mb-3">
+          <span class="fs-1">📄</span>
+        </div>
+        <h6 class="mb-0">Agendas</h6>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-4 h-100">
+        <div class="mb-3">
+          <span class="fs-1">📝</span>
+        </div>
+        <h6 class="mb-0">Meeting Minutes</h6>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-4 h-100">
+        <div class="mb-3">
+          <span class="fs-1">📁</span>
+        </div>
+        <h6 class="mb-0">Resolutions</h6>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FIND YOUR COMMISSIONER -->
+<section class="bcc-find-hero text-center d-flex align-items-center">
+  <div class="container">
+    <h2 class="bcc-find-title mb-3">Your Neighborhood Dashboard</h2>
+<!--  <p class="bcc-find-sub mb-4">Enter your Palm Beach County address to quickly identify your district representative.</p> -->
+
+    <div class="mt-4">
+      <a href="https://pbc.gov/neighborhood/" target="_blank" class="btn btn-pbc">Just Tap In</a>
+    </div>
+  </div>
+</section>
+
+<!-- BCC HOME CTA -->
+<section class="text-center py-5 bg-light">
+  <h4>Explore Full Board Resources</h4>
+  <a href="#" class="btn btn-primary mt-2 btn-pbc">Go to BCC Home</a>
+</section>
+
+<footer class="site-footer" aria-labelledby="siteFooterHeading">
+  <div class="container">
+    <div class="site-footer-main">
+      <div class="site-footer-brand">
+        <img src="images/pbc-seal-only.png" alt="Palm Beach County Logo" class="site-footer-logo">
+        <h2 id="siteFooterHeading">Palm Beach County</h2>
+        <p>To drive a continuous improvement culture of excellence that achieves a measurably high level of public satisfaction.</p>
+        <a href="#" class="site-footer-read-more">Read More</a>
+      </div>
+
+      <nav class="site-footer-links" aria-label="Site directory">
+        <h3>Site Directory</h3>
+        <ul>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-house"></i></span><span>PBC.GOV</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-landmark"></i></span><span>Government</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-users"></i></span><span>Residents</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-briefcase"></i></span><span>Business</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span><span>Things To Do</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-laptop"></i></span><span>Online Services</span></a></li>
+          <li><a href="departments.html"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-building-columns"></i></span><span>Departments</span></a></li>
+          <li><a href="https://secure.pbc.gov/"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-id-badge"></i></span><span>Jobs</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span><span>Contact Us</span></a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer-links" aria-label="Useful links">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-handshake"></i></span><span>PBC Business Opportunities</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-hand-holding-heart"></i></span><span>Volunteer Opportunities</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-link"></i></span><span>Links</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span><span>Publications</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-bell"></i></span><span>Stay Connected!</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-circle-info"></i></span><span>Web Site Disclaimer</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-map-location-dot"></i></span><span>District Locator</span></a></li>
+          <li><a href="bcc-meetings.html"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-calendar-days"></i></span><span>BCC Meetings</span></a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="site-footer-bottom">
+      <div class="site-footer-connect">
+        <div class="site-footer-social" aria-label="Palm Beach County social media links">
+          <a href="https://www.linkedin.com" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://twitter.com" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="https://www.threads.net" aria-label="Threads"><i class="fa-brands fa-threads" aria-hidden="true"></i></a>
+          <a href="https://www.youtube.com" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="site-footer-bottom-links">
+        <a href="#">Accessibility Statement</a>
+        <a href="#">Home</a>
+        <a href="#">Links</a>
+        <a href="#">Jobs</a>
+        <a href="#">Contact Us</a>
+        <p class="site-footer-copyright">&copy; Copyright <span id="footerCurrentYear"></span> Palm Beach County, FL.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

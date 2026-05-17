@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Palm Beach County//Calendar Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:bcc-meeting-2026-05-05@pbc.gov
+DTSTAMP:20260428T120000Z
+DTSTART:20260505T133000Z
+DTEND:20260505T210000Z
+SUMMARY:Board of County Commissioners Meeting
+LOCATION:Government Center - Jane M. Thompson Memorial Chambers - 6th Floor\, 301 N Olive\, West Palm Beach\, FL
+DESCRIPTION:Matters by the public at 2:00 PM. View the full public calendar at https://pbc.gov/cal/event/fullcalendar?ViewType=P
+URL:https://pbc.gov/cal/event/fullcalendar?ViewType=P
+END:VEVENT
+END:VCALENDAR

@@ -3,21 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PBC Redesign Prototype</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Home | Redesign - PBC-GOV</title>
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome Pro Kit -->
+  <script src="https://kit.fontawesome.com/f1fe21ebe4.js" crossorigin="anonymous"></script>
+
+  <!-- Your Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<div class="bg-warning text-white text-center p-2">
-  ⚠ Hurricane Preparedness Update
+<div class="alert-bar text-center p-2" role="status">
+  <span class="alert-bar-icon" aria-hidden="true">
+    <i class="fa-solid fa-hurricane"></i>
+  </span>
+  <span>Hurricane Preparedness Update</span>
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom px-4">
-  <a class="navbar-brand fw-bold" href="#">PBC.gov</a>
+  <a class="navbar-brand d-flex align-items-center" href="#">
+    <img src="images/pbc-logo-w-slogan.png" alt="Palm Beach County Logo" class="pbc-logo">
+  </a>
 
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -26,7 +38,7 @@
 
       <!-- SERVICES MEGA MENU -->
       <li class="nav-item dropdown position-static">
-        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Services</a>
         <div class="dropdown-menu w-100 mt-0 p-4 border-0 shadow">
           <div class="row">
             <div class="col-md-3">
@@ -55,7 +67,7 @@
 
       <!-- RESIDENTS -->
       <li class="nav-item dropdown position-static">
-        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Residents</a>
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Residents</a>
         <div class="dropdown-menu w-100 mt-0 p-4 border-0 shadow">
           <div class="row">
             <div class="col-md-4">
@@ -79,14 +91,17 @@
       <!-- GOVERNMENT -->
       <li class="nav-item"><a class="nav-link" href="#">Government</a></li>
 
+      <!-- DEPARTMENTS -->
+      <li class="nav-item"><a class="nav-link" href="departments.html">Departments</a></li>
+
     </ul>
   </div>
 </nav>
 
-<section class="video-hero">
+<header class="video-hero">
 
   <video autoplay muted loop playsinline class="hero-video">
-    <source src="videos/pbc-day-2026-hero-banner.mp4" type="video/mp4">
+    <source src="videos/PBC-Overview-Web-01.mp4" type="video/mp4">
   </video>
 
   <div class="hero-overlay"></div>
@@ -97,33 +112,333 @@
     <input class="form-control mx-auto mb-3" placeholder="Search for services..." />
 
     <div>
-      <button class="btn btn-primary m-1">Pay Bill</button>
-      <button class="btn btn-primary m-1">Report Issue</button>
-      <button class="btn btn-primary m-1">Apply</button>
-      <button class="btn btn-primary m-1">Find Services</button>
+      <a href="bcc.html" target="_blank" rel="noopener" class="btn btn-pbc m-1">County Commissioners</a>
+      <button class="btn btn-pbc m-1">Report Issue</button>
+      <button class="btn btn-pbc m-1">Apply</button>
+      <button class="btn btn-pbc m-1">Find Services</button>
     </div>
   </div>
 
+</header>
+
+<section class="quick-links container py-5">
+  <h2 class="text-center">Top Services</h2>
+
+  <div class="service-resource-grid mt-4">
+
+    <div>
+      <a href="#" class="quick-link service-resource-link">
+        <span class="service-resource-icon" aria-hidden="true">
+          <i class="fa-solid fa-chart-pie-simple-circle-dollar"></i>
+        </span>
+        <span class="service-resource-copy">
+          <span class="service-resource-title">Budget FY 2027</span>
+<!--        <span class="service-resource-meta">County Budget</span> -->
+        </span>
+      </a>
+    </div>
+
+    <div>
+      <a href="#" class="quick-link service-resource-link">
+        <span class="service-resource-icon" aria-hidden="true">
+          <i class="fa-solid fa-percent"></i>
+        </span>
+        <span class="service-resource-copy">
+          <span class="service-resource-title">Pay Property Taxes</span>
+<!--       <span class="service-resource-meta">Tax Collector</span> -->
+        </span>
+      </a>
+    </div>
+
+    <div>
+      <a href="#" class="quick-link service-resource-link">
+        <span class="service-resource-icon" aria-hidden="true">
+          <i class="fa-solid fa-file-certificate"></i>
+        </span>
+        <span class="service-resource-copy">
+          <span class="service-resource-title">Building Permits</span>
+<!--        <span class="service-resource-meta">Planning, Zoning & Building</span> -->
+        </span>
+      </a>
+    </div>
+
+    <div>
+      <a href="#" class="quick-link service-resource-link">
+        <span class="service-resource-icon" aria-hidden="true">
+          <i class="fa-solid fa-road"></i>
+        </span>
+        <span class="service-resource-copy">
+          <span class="service-resource-title">Road & Traffic Updates</span>
+<!--          <span class="service-resource-meta">Engineering & Public Works</span> -->
+        </span>
+      </a>
+    </div>
+
+    <div>
+      <a href="#" class="quick-link service-resource-link">
+        <span class="service-resource-icon" aria-hidden="true">
+          <i class="fa-solid fa-light-emergency-on"></i>
+        </span>
+        <span class="service-resource-copy">
+          <span class="service-resource-title">Emergency Services</span>
+<!--          <span class="service-resource-meta">Public Safety</span> -->
+        </span>
+      </a>
+    </div>
+
+    <div>
+      <a href="#" class="quick-link service-resource-link">
+        <span class="service-resource-icon" aria-hidden="true">
+          <i class="fa-solid fa-bench-tree"></i>
+        </span>
+        <span class="service-resource-copy">
+          <span class="service-resource-title">Parks & Recreation</span>
+<!--          <span class="service-resource-meta">Parks & Recreation</span> -->
+        </span>
+      </a>
+    </div>
+
+    <div>
+      <a href="#" class="quick-link service-resource-link">
+        <span class="service-resource-icon" aria-hidden="true">
+          <i class="fa-solid fa-people-roof"></i>
+        </span>
+        <span class="service-resource-copy">
+          <span class="service-resource-title">Housing Assistance</span>
+<!--          <span class="service-resource-meta">Community Services</span> -->
+        </span>
+      </a>
+    </div>
+
+    <div>
+      <a href="#" class="quick-link service-resource-link">
+        <span class="service-resource-icon" aria-hidden="true">
+          <i class="fa-solid fa-bus"></i>
+        </span>
+        <span class="service-resource-copy">
+          <span class="service-resource-title">Public Transportation</span>
+<!--          <span class="service-resource-meta">Palm Tran</span> -->
+        </span>
+      </a>
+    </div>
+
+    <div>
+      <a href="#" class="quick-link service-resource-link">
+        <span class="service-resource-icon" aria-hidden="true">
+          <i class="fa-solid fa-book"></i>
+        </span>
+        <span class="service-resource-copy">
+          <span class="service-resource-title">Library System</span>
+<!--          <span class="service-resource-meta">Library System</span> -->
+        </span>
+      </a>
+    </div>
+
+    <div>
+      <a href="#" class="quick-link service-resource-link">
+        <span class="service-resource-icon" aria-hidden="true">
+          <i class="fa-solid fa-caduceus"></i>
+        </span>
+        <span class="service-resource-copy">
+          <span class="service-resource-title">Health Services</span>
+<!--          <span class="service-resource-meta">Health & Human Services</span> -->
+        </span>
+      </a>
+    </div>
+
+    <div>
+      <a href="calendar-of-events.html" class="quick-link service-resource-link">
+        <span class="service-resource-icon" aria-hidden="true">
+              <i class="fa-solid fa-calendar"></i>
+        </span>
+        <span class="service-resource-copy">
+          <span class="service-resource-title">Calendar of Events</span>
+<!--          <span class="service-resource-meta">County Calendar</span> -->
+        </span>
+      </a>
+    </div>
+
+    <div>
+      <a href="https://pbc.gov/Veterans/" class="quick-link service-resource-link">
+        <span class="service-resource-icon" aria-hidden="true">
+          <i class="fa-solid fa-shield"></i>
+        </span>
+        <span class="service-resource-copy">
+          <span class="service-resource-title">Veterans Services</span>
+<!--          <span class="service-resource-meta">Community Services</span> -->
+        </span>
+      </a>
+    </div>
+
+  </div>
 </section>
 
-<section class="container py-5">
+<!-- <section class="services container py-5">
   <h2>Popular Services</h2>
   <div class="row mt-4">
-    <div class="col-md-3"><div class="card p-4 text-center">Garbage</div></div>
-    <div class="col-md-3"><div class="card p-4 text-center">Taxes</div></div>
-    <div class="col-md-3"><div class="card p-4 text-center">Permits</div></div>
-    <div class="col-md-3"><div class="card p-4 text-center">Parks</div></div>
+    <div class="col-md-3"><div class="card service-card p-4 text-center">Garbage</div></div>
+    <div class="col-md-3"><div class="card service-card p-4 text-center">Taxes</div></div>
+    <div class="col-md-3"><div class="card service-card p-4 text-center">Permits</div></div>
+    <div class="col-md-3"><div class="card service-card p-4 text-center">Parks</div></div>
+  </div>
+</section> -->
+
+<section class="stats container py-5">
+  <h2>County Overview</h2>
+  <div class="row mt-4 text-center">
+    <div class="col-md-3 col-sm-6">
+      <div class="stat">
+        <h2 class="counter" data-target="1.5" data-suffix="M+" data-decimals="1">0</h2>
+        <p>Residents</p>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="stat">
+        <h2 class="counter" data-target="47">0</h2>
+        <p>Miles of Shoreline</p>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="stat">
+        <h2 class="counter" data-target="45.6">0</h2>
+        <p>Median Age</p>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="stat">
+        <h2 class="counter" data-target="633951">0</h2>
+        <p>Households</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="container py-5">
-  <h2>News & Updates</h2>
-  <div class="row mt-4">
-    <div class="col-md-4"><div class="card p-4">Budget Approved</div></div>
-    <div class="col-md-4"><div class="card p-4">Road Closures</div></div>
-    <div class="col-md-4"><div class="card p-4">Community Event</div></div>
+<section class="news container py-5">
+  <div class="news-carousel-header">
+    <h2>News & Updates</h2>
+  </div>
+
+  <div class="news-carousel-shell mt-4">
+    <button type="button" class="news-carousel-btn news-carousel-btn-prev" data-news-carousel-prev aria-label="Previous news item">
+      <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+    </button>
+
+    <div class="news-carousel-viewport" data-news-carousel>
+      <div class="news-carousel-track">
+
+    <article class="news-carousel-slide">
+      <div class="news-card">
+        <img src="images/news/Contractors-Stakeholder-Meeting.jpg" alt="Contractors Stakeholder Meeting">
+        <div class="news-overlay">
+          <div class="news-content">
+            <span class="news-category">County News</span>
+            <h5>PZB Hosts Local Contractors</h5>
+            <p class="news-desc">The Planning, Zoning and Building Department’s (PZB) Building Division recently hosted a contractor stakeholder meeting to.</p>
+            <a href="#" class="news-cta">Read More</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="news-carousel-slide">
+      <div class="news-card">
+        <img src="images/news/cold-weather-notice.jpg" alt="Downtown West Palm Beach with snow flurries.">
+        <div class="news-overlay">
+          <div class="news-content">
+            <span class="news-category">Alert</span>
+            <h5>Palm Beach County Opening Cold Weather Shelters</h5>
+            <p class="news-desc">The National Weather Service in Miami issued a cold weather advisory that impacts Palm Beach County. The cold weather advisory is in effect from 3 a.m. until 9 a.m. Tuesday February 24, 2026.</p>
+            <a href="#" class="news-cta">Read More</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="news-carousel-slide">
+      <div class="news-card">
+        <img src="images/news/Canyon-District-Phase-II-Ribbon-Cutting.jpg" alt="Canyon District Phase II Ribbon Cutting">
+        <div class="news-overlay">
+          <div class="news-content">
+            <span class="news-category">Community</span>
+            <h5>Grand Opening of Canyon District Park Phase II</h5>
+            <p class="news-desc">The Palm Beach County Parks and Recreation Department celebrated the grand opening and ribbon cutting of Canyon District Park Phase II.</p>
+            <a href="#" class="news-cta">Read More</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+      </div>
+    </div>
+
+    <button type="button" class="news-carousel-btn news-carousel-btn-next" data-news-carousel-next aria-label="Next news item">
+      <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+    </button>
   </div>
 </section>
+
+<footer class="site-footer" aria-labelledby="siteFooterHeading">
+  <div class="container">
+    <div class="site-footer-main">
+      <div class="site-footer-brand">
+        <img src="images/pbc-seal-only.png" alt="Palm Beach County Logo" class="site-footer-logo">
+        <h2 id="siteFooterHeading">Palm Beach County</h2>
+        <p>To drive a continuous improvement culture of excellence that achieves a measurably high level of public satisfaction.</p>
+        <a href="#" class="site-footer-read-more">Read More</a>
+      </div>
+
+      <nav class="site-footer-links" aria-label="Site directory">
+        <h3>Site Directory</h3>
+        <ul>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-house"></i></span><span>PBC.GOV</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-landmark"></i></span><span>Government</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-users"></i></span><span>Residents</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-briefcase"></i></span><span>Business</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span><span>Things To Do</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-laptop"></i></span><span>Online Services</span></a></li>
+          <li><a href="departments.html"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-building-columns"></i></span><span>Departments</span></a></li>
+          <li><a href="https://secure.pbc.gov/"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-id-badge"></i></span><span>Jobs</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span><span>Contact Us</span></a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer-links" aria-label="Useful links">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-handshake"></i></span><span>PBC Business Opportunities</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-hand-holding-heart"></i></span><span>Volunteer Opportunities</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-link"></i></span><span>Links</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span><span>Publications</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-bell"></i></span><span>Stay Connected!</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-circle-info"></i></span><span>Web Site Disclaimer</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-map-location-dot"></i></span><span>District Locator</span></a></li>
+          <li><a href="bcc-meetings.html"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-calendar-days"></i></span><span>BCC Meetings</span></a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="site-footer-bottom">
+      <div class="site-footer-connect">
+        <div class="site-footer-social" aria-label="Palm Beach County social media links">
+          <a href="https://www.linkedin.com" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://twitter.com" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="https://www.threads.net" aria-label="Threads"><i class="fa-brands fa-threads" aria-hidden="true"></i></a>
+          <a href="https://www.youtube.com" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="site-footer-bottom-links">
+        <a href="#">Accessibility Statement</a>
+        <a href="#">Home</a>
+        <a href="#">Links</a>
+        <a href="#">Jobs</a>
+        <a href="#">Contact Us</a>
+        <p class="site-footer-copyright">&copy; Copyright <span id="footerCurrentYear"></span> Palm Beach County, FL.</p>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <script src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
