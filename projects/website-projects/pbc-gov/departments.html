@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Departments | PBC.GOV</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome Pro Kit -->
+  <script src="https://kit.fontawesome.com/f1fe21ebe4.js" crossorigin="anonymous"></script>
+
+  <!-- Your Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom px-4">
+  <a class="navbar-brand d-flex align-items-center" href="pbc-gov-redesign.html">
+    <img src="images/pbc-logo-w-slogan.png" alt="Palm Beach County Logo" class="pbc-logo">
+  </a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="mainNav">
+    <ul class="navbar-nav ms-auto">
+
+      <li class="nav-item dropdown position-static">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Services</a>
+        <div class="dropdown-menu w-100 mt-0 p-4 border-0 shadow">
+          <div class="row">
+            <div class="col-md-3">
+              <h6 class="fw-bold">Payments</h6>
+              <a class="dropdown-item" href="#">Property Taxes</a>
+              <a class="dropdown-item" href="#">Utility Bills</a>
+            </div>
+            <div class="col-md-3">
+              <h6 class="fw-bold">Permits</h6>
+              <a class="dropdown-item" href="#">Building Permits</a>
+              <a class="dropdown-item" href="#">Inspections</a>
+            </div>
+            <div class="col-md-3">
+              <h6 class="fw-bold">Public Safety</h6>
+              <a class="dropdown-item" href="#">Emergency Services</a>
+              <a class="dropdown-item" href="#">Report an Issue</a>
+            </div>
+            <div class="col-md-3">
+              <h6 class="fw-bold">Recreation</h6>
+              <a class="dropdown-item" href="#">Parks &amp; Recreation</a>
+              <a class="dropdown-item" href="#">Community Centers</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown position-static">
+        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Residents</a>
+        <div class="dropdown-menu w-100 mt-0 p-4 border-0 shadow">
+          <div class="row">
+            <div class="col-md-4">
+              <a class="dropdown-item" href="#">Housing Assistance</a>
+              <a class="dropdown-item" href="#">Transportation</a>
+            </div>
+            <div class="col-md-4">
+              <a class="dropdown-item" href="#">Health Services</a>
+              <a class="dropdown-item" href="#">Education</a>
+            </div>
+            <div class="col-md-4">
+              <a class="dropdown-item" href="#">Community Programs</a>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item"><a class="nav-link" href="#">Business</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Government</a></li>
+      <li class="nav-item"><a class="nav-link active" aria-current="page" href="departments.html">Departments</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+<header class="departments-hero">
+  <div class="departments-hero-overlay"></div>
+  <div class="container departments-hero-content">
+    <h1>Departments</h1>
+  </div>
+</header>
+
+<main>
+  <section class="department-finder-section">
+    <div class="container">
+      <div class="department-finder-panel">
+        <div>
+          <p class="section-eyebrow">Find Fast</p>
+          <h2>Search departments and services</h2>
+        </div>
+
+        <div class="department-search-wrap">
+          <label class="visually-hidden" for="departmentSearch">Search departments or services</label>
+          <span class="department-search-icon" aria-hidden="true">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <input type="search" id="departmentSearch" class="form-control department-search-input" placeholder="Search departments, programs, or services..." data-department-search>
+        </div>
+
+        <div class="department-filter-bar" role="tablist" aria-label="Filter departments by service area">
+          <button type="button" class="department-filter-btn" data-department-filter="all" role="tab" aria-selected="false">All Departments</button>
+          <button type="button" class="department-filter-btn" data-department-filter="public-safety" role="tab" aria-selected="false">Public Safety</button>
+          <button type="button" class="department-filter-btn" data-department-filter="development" role="tab" aria-selected="false">Permits &amp; Development</button>
+          <button type="button" class="department-filter-btn" data-department-filter="transportation" role="tab" aria-selected="false">Transportation</button>
+          <button type="button" class="department-filter-btn" data-department-filter="community" role="tab" aria-selected="false">Health &amp; Human Services</button>
+          <button type="button" class="department-filter-btn" data-department-filter="culture" role="tab" aria-selected="false">Parks, Culture &amp; Libraries</button>
+          <button type="button" class="department-filter-btn" data-department-filter="operations" role="tab" aria-selected="false">Government Operations</button>
+          <button type="button" class="department-filter-btn" data-department-filter="agency" role="tab" aria-selected="false">Outside Agencies</button>
+          <button type="button" class="department-filter-btn department-filter-reset" data-department-reset>Reset</button>
+        </div>
+
+        <p class="department-results-status" id="departmentResultsStatus" aria-live="polite">Search or choose a category to browse departments.</p>
+      </div>
+    </div>
+  </section>
+<!--
+  <section class="container py-5" aria-labelledby="popularDepartmentPaths">
+    <div class="department-section-header">
+      <div>
+        <p class="section-eyebrow">Popular Paths</p>
+        <h2 id="popularDepartmentPaths">Start with what you need to do</h2>
+      </div>
+    </div>
+
+    <div class="department-feature-grid">
+      <article class="department-feature-card">
+        <span class="department-feature-icon" aria-hidden="true"><i class="fa-solid fa-file-certificate"></i></span>
+        <h3>Permits &amp; Inspections</h3>
+        <p>Building, contractor regulations, planning, zoning, and code compliance.</p>
+        <div class="department-card-links">
+          <a href="#">Planning, Zoning &amp; Building</a>
+          <a href="#">Building Division</a>
+          <a href="#">Code Compliance</a>
+        </div>
+      </article>
+
+      <article class="department-feature-card">
+        <span class="department-feature-icon" aria-hidden="true"><i class="fa-solid fa-people-roof"></i></span>
+        <h3>Resident Assistance</h3>
+        <p>Housing support, senior services, veteran services, and community programs.</p>
+        <div class="department-card-links">
+          <a href="#">Community Services</a>
+          <a href="#">Senior &amp; Veteran Services</a>
+          <a href="#">Human Services</a>
+        </div>
+      </article>
+
+      <article class="department-feature-card">
+        <span class="department-feature-icon" aria-hidden="true"><i class="fa-solid fa-road"></i></span>
+        <h3>Roads &amp; Mobility</h3>
+        <p>Traffic, roadway production, public works, Palm Tran, and regional transportation.</p>
+        <div class="department-card-links">
+          <a href="#">Engineering &amp; Public Works</a>
+          <a href="#">Palm Tran</a>
+          <a href="#">Traffic Division</a>
+        </div>
+      </article>
+
+      <article class="department-feature-card">
+        <span class="department-feature-icon" aria-hidden="true"><i class="fa-solid fa-shield-heart"></i></span>
+        <h3>Safety &amp; Emergency</h3>
+        <p>Fire Rescue, Emergency Management, Animal Care, Victim Services, and 9-1-1 programs.</p>
+        <div class="department-card-links">
+          <a href="#">Public Safety</a>
+          <a href="#">Fire Rescue</a>
+          <a href="#">Emergency Management</a>
+        </div>
+      </article>
+    </div>
+  </section>-->
+
+  <section class="department-directory-section py-5" id="departmentDirectory" aria-labelledby="departmentDirectoryHeading">
+    <div class="container">
+      <div class="department-section-header">
+        <div>
+          <p class="section-eyebrow">Directory</p>
+          <h2 id="departmentDirectoryHeading">Browse departments</h2>
+        </div>
+      </div>
+
+      <div class="department-start-state" data-department-start>
+        <div class="department-start-copy">
+          <span class="department-empty-icon" aria-hidden="true">
+            <i class="fa-solid fa-building-columns"></i>
+          </span>
+          <h3>Start with a search or category</h3>
+          <p>Department cards will load here when you search, choose a service area, or select All Departments.</p>
+        </div>
+        <div class="department-skeleton-grid" aria-hidden="true">
+          <span class="department-skeleton-card"></span>
+          <span class="department-skeleton-card"></span>
+          <span class="department-skeleton-card"></span>
+        </div>
+      </div>
+
+      <div class="department-directory-grid" data-department-list>
+        <article class="department-directory-card" data-department-card data-category="operations" data-search="administration county administrator operations leadership">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Government Operations</span>
+          </div>
+          <h3><a href="departments/administration.html">Administration</a></h3>
+          <p>County administration, executive leadership, and organization-wide priorities.</p>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="transportation" data-search="airports palm beach international airport aviation travel pbi">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Transportation</span>
+          </div>
+          <h3><a href="#">Airports Department</a></h3>
+          <p>County airports, aviation facilities, and airport-related public information.</p>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="community" data-search="community services housing veterans seniors human services behavioral health hiv head start financial assistance">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Health &amp; Human Services</span>
+          </div>
+          <h3><a href="#">Community Services</a></h3>
+          <p>Housing assistance, community action, human services, behavioral health, veterans, seniors, and HIV services.</p>
+          <div class="department-card-links">
+            <a href="#">Community Action Programs</a>
+            <a href="#">Human Services</a>
+            <a href="#">Senior &amp; Veteran Services</a>
+          </div>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="development" data-search="community revitalization neighborhood improvement redevelopment community development economic development housing">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Permits &amp; Development</span>
+          </div>
+          <h3><a href="#">Community Revitalization</a></h3>
+          <p>Neighborhood improvement, community revitalization, redevelopment support, and related county initiatives.</p>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="culture" data-search="cooperative extension agriculture horticulture family consumer sciences 4-h master gardeners mounts botanical garden">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Parks, Culture &amp; Libraries</span>
+          </div>
+          <h3><a href="#">Cooperative Extension Service</a></h3>
+          <p>Agriculture, family and consumer sciences, horticulture, 4-H youth programs, and gardening resources.</p>
+          <div class="department-card-links">
+            <a href="#">Agriculture</a>
+            <a href="#">4-H Youth Programs</a>
+            <a href="#">Horticulture Program</a>
+          </div>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="operations" data-search="county attorney legal counsel government law">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Government Operations</span>
+          </div>
+          <h3><a href="#">County Attorney</a></h3>
+          <p>Legal counsel and representation for county government.</p>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="operations" data-search="county commissioners mayor vice mayor district board bcc">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Government Operations</span>
+          </div>
+          <h3><a href="bcc.html">County Commissioners</a></h3>
+          <p>Board of County Commissioners information, districts, staff, agendas, and meeting resources.</p>
+          <div class="department-card-links">
+            <a href="bcc-staff.html">BCC Staff</a>
+            <a href="bcc-meetings.html">Meeting Agendas</a>
+          </div>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="public-safety" data-search="emergency management eoc preparedness disaster hurricane emergency medical services ems">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Public Safety</span>
+          </div>
+          <h3><a href="#">Emergency Management/EOC</a></h3>
+          <p>Emergency preparedness, disaster response coordination, and Emergency Operations Center information.</p>
+          <div class="department-card-links">
+            <a href="#">Emergency Medical Services</a>
+          </div>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="transportation" data-search="engineering public works roads traffic roadway bridge adopt-a-road land development streetscape">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Transportation</span>
+          </div>
+          <h3><a href="#">Engineering &amp; Public Works</a></h3>
+          <p>Roads, traffic, construction coordination, land development, bridges, and public works services.</p>
+          <div class="department-card-links">
+            <a href="#">Road &amp; Bridge</a>
+            <a href="#">Traffic Division</a>
+            <a href="#">Engineering Action Center</a>
+          </div>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="development" data-search="environmental resources management erm coastal resources natural areas mosquito control permitting lakes estuaries lagoons">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Permits &amp; Development</span>
+          </div>
+          <h3><a href="#">Environmental Resources Management</a></h3>
+          <p>Natural areas, coastal resources, mosquito control, environmental permitting, and restoration programs.</p>
+          <div class="department-card-links">
+            <a href="#">Natural Areas</a>
+            <a href="#">Mosquito Control</a>
+            <a href="#">Permitting and Regulation</a>
+          </div>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="operations" data-search="equal opportunity civil rights accessibility nondiscrimination ada">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Government Operations</span>
+          </div>
+          <h3><a href="#">Equal Opportunity</a></h3>
+          <p>Equal opportunity, nondiscrimination, accessibility, and civil rights support.</p>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="operations" data-search="facilities development operations capital improvements property real estate fleet art in public places">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Government Operations</span>
+          </div>
+          <h3><a href="#">Facilities Development &amp; Operations</a></h3>
+          <p>County facilities, capital improvements, property management, fleet, and built environment operations.</p>
+          <div class="department-card-links">
+            <a href="#">Capital Improvements</a>
+            <a href="#">Facilities Management</a>
+            <a href="#">Property &amp; Real Estate</a>
+          </div>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="operations" data-search="financial management budget contracts thrift store finance">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Government Operations</span>
+          </div>
+          <h3><a href="#">Financial Management &amp; Budget</a></h3>
+          <p>Budget, financial management, contracts, and fiscal administration.</p>
+          <div class="department-card-links">
+            <a href="#">Budget</a>
+            <a href="#">Contracts</a>
+            <a href="#">Financial Management</a>
+          </div>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="public-safety" data-search="fire rescue drowning prevention emergency fire rescue">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Public Safety</span>
+          </div>
+          <h3><a href="#">Fire Rescue</a></h3>
+          <p>Fire rescue services, emergency response, and drowning prevention resources.</p>
+          <div class="department-card-links">
+            <a href="#">Drowning Prevention Coalition</a>
+          </div>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="development" data-search="housing economic development small business community revitalization development business assistance">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Permits &amp; Development</span>
+          </div>
+          <h3><a href="#">Housing &amp; Economic Development</a></h3>
+          <p>Housing programs, economic development, community revitalization, and small business support.</p>
+          <div class="department-card-links">
+            <a href="#">Office of Small Business Development</a>
+            <a href="#">Community Revitalization</a>
+          </div>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="operations" data-search="human resources jobs employment benefits county employees careers">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Government Operations</span>
+          </div>
+          <h3><a href="#">Human Resources</a></h3>
+          <p>County employment, benefits, employee services, and workforce programs.</p>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="operations" data-search="intergovernmental affairs legislative affairs delegation lobbying regulations state federal">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Government Operations</span>
+          </div>
+          <h3><a href="#">Intergovernmental Affairs</a></h3>
+          <p>Legislative affairs, delegation coordination, and lobbying regulations.</p>
+          <div class="department-card-links">
+            <a href="#">Legislative Affairs</a>
+            <a href="#">Legislative Delegation</a>
+          </div>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="operations" data-search="ombudsman strategic planning public concerns problem resolution county strategy performance planning">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Government Operations</span>
+          </div>
+          <h3><a href="#">Ombudsman &amp; Strategic Planning</a></h3>
+          <p>Public concern resolution, countywide planning support, strategic initiatives, and performance-focused coordination.</p>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="culture" data-search="library books events literacy learning library system">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Parks, Culture &amp; Libraries</span>
+          </div>
+          <h3><a href="https://www.pbclibrary.org">Library</a></h3>
+          <p>Library locations, books, events, learning resources, and community programs.</p>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="public-safety" data-search="medical examiner death investigations forensic services">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Public Safety</span>
+          </div>
+          <h3><a href="#">Medical Examiner's Office</a></h3>
+          <p>Medical examiner services, forensic investigations, and related public records information.</p>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="operations" data-search="technology innovation information technology gis data digital countywide gis it partnering">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Government Operations</span>
+          </div>
+          <h3><a href="#">Office of Technology and Innovation</a></h3>
+          <p>Technology services, digital infrastructure, GIS, data, and innovation programs.</p>
+          <div class="department-card-links">
+            <a href="#">PBC Countywide GIS</a>
+            <a href="#">IT Partnering</a>
+          </div>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="transportation" data-search="palm tran bus public transportation transit paratransit">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Transportation</span>
+          </div>
+          <h3><a href="#">Palm Tran</a></h3>
+          <p>Bus service, transit information, paratransit, routes, schedules, and rider support.</p>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="culture" data-search="parks recreation beaches sports fields programs community centers">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Parks, Culture &amp; Libraries</span>
+          </div>
+          <h3><a href="#">Parks &amp; Recreation</a></h3>
+          <p>Parks, beaches, sports facilities, recreation programs, and community centers.</p>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="development" data-search="planning zoning building permits inspections code compliance contractor regulations administration">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Permits &amp; Development</span>
+          </div>
+          <h3><a href="#">Planning, Zoning &amp; Building</a></h3>
+          <p>Building permits, inspections, planning, zoning, code compliance, and contractor regulations.</p>
+          <div class="department-card-links">
+            <a href="#">Building</a>
+            <a href="#">Planning</a>
+            <a href="#">Zoning</a>
+          </div>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="operations" data-search="procurement purchasing vendors bids contracts business opportunities">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Government Operations</span>
+          </div>
+          <h3><a href="#">Procurement</a></h3>
+          <p>Vendor opportunities, purchasing, solicitations, and contract resources.</p>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="operations" data-search="public affairs communications media digital marketing graphics pbc tv news">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Government Operations</span>
+          </div>
+          <h3><a href="#">Public Affairs</a></h3>
+          <p>County news, media relations, digital communications, graphics, and PBC TV.</p>
+          <div class="department-card-links">
+            <a href="#">Digital Marketing and Communications</a>
+            <a href="#">PBC TV</a>
+          </div>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="public-safety" data-search="public safety 911 animal care control consumer affairs criminal justice victim services reentry human trafficking">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Public Safety</span>
+          </div>
+          <h3><a href="#">Public Safety</a></h3>
+          <p>9-1-1 programs, Animal Care and Control, Consumer Affairs, Criminal Justice, Justice Services, and Victim Services.</p>
+          <div class="department-card-links">
+            <a href="#">Animal Care &amp; Control</a>
+            <a href="#">Victim Services</a>
+            <a href="#">Consumer Affairs</a>
+          </div>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="operations" data-search="risk management insurance safety claims employee safety">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Government Operations</span>
+          </div>
+          <h3><a href="#">Risk Management</a></h3>
+          <p>County risk, claims, insurance, and safety programs.</p>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="development" data-search="water utilities water wastewater billing conservation service">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Permits &amp; Development</span>
+          </div>
+          <h3><a href="#">Water Utilities</a></h3>
+          <p>Water and wastewater service, billing, conservation, and utility customer support.</p>
+        </article>
+
+        <article class="department-directory-card" data-department-card data-category="community" data-search="youth services children families education counseling programs">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Health &amp; Human Services</span>
+          </div>
+          <h3><a href="#">Youth Services</a></h3>
+          <p>Youth and family programs, education support, counseling, and related services.</p>
+        </article>
+
+        <article class="department-directory-card department-directory-card-related" data-department-card data-category="agency" data-search="careersource palm beach county jobs workforce external agency">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Related Agency</span>
+            <span class="department-external-badge">Outside Agency</span>
+          </div>
+          <h3><a href="https://www.careersourcepbc.com">CareerSource Palm Beach County</a></h3>
+          <p>Workforce, employment, and career development services related to Palm Beach County.</p>
+        </article>
+
+        <article class="department-directory-card department-directory-card-related" data-department-card data-category="agency" data-search="commission ethics outside agency public integrity">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Related Agency</span>
+            <span class="department-external-badge">Outside Agency</span>
+          </div>
+          <h3><a href="https://www.palmbeachcountyethics.com">Commission on Ethics</a></h3>
+          <p>Ethics guidance, training, opinions, and public integrity resources.</p>
+        </article>
+
+        <article class="department-directory-card department-directory-card-related" data-department-card data-category="agency" data-search="solid waste authority recycling garbage disposal outside agency swa">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Related Agency</span>
+            <span class="department-external-badge">Outside Agency</span>
+          </div>
+          <h3><a href="https://www.swa.org">Solid Waste Authority</a></h3>
+          <p>Recycling, garbage disposal, solid waste services, and related facilities.</p>
+        </article>
+
+        <article class="department-directory-card department-directory-card-related" data-department-card data-category="agency" data-search="tourist development council convention center cultural council discover palm beaches film sports tourism outside agency">
+          <div class="department-card-topline">
+            <span class="department-category-badge">Related Agency</span>
+            <span class="department-external-badge">Outside Agency</span>
+          </div>
+          <h3><a href="#">Tourist Development Council</a></h3>
+          <p>Tourism, convention, cultural, film, and sports-related agencies connected to the county.</p>
+          <div class="department-card-links">
+            <a href="https://www.thepalmbeaches.com">Discover The Palm Beaches</a>
+            <a href="https://www.pbfilm.com">Film and TV Commission</a>
+            <a href="https://www.palmbeachsports.com">Sports Commission</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="department-empty-state" data-department-empty hidden>
+        <span class="department-empty-icon" aria-hidden="true">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+        <h3>No departments found</h3>
+        <p>Try a different keyword or choose All to reset the directory.</p>
+      </div>
+
+      <nav class="department-pager" data-department-pager aria-label="Department directory pagination" hidden></nav>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" aria-labelledby="siteFooterHeading">
+  <div class="container">
+    <div class="site-footer-main">
+      <div class="site-footer-brand">
+        <img src="images/pbc-seal-only.png" alt="Palm Beach County Logo" class="site-footer-logo">
+        <h2 id="siteFooterHeading">Palm Beach County</h2>
+        <p>To drive a continuous improvement culture of excellence that achieves a measurably high level of public satisfaction.</p>
+        <a href="#" class="site-footer-read-more">Read More</a>
+      </div>
+
+      <nav class="site-footer-links" aria-label="Site directory">
+        <h3>Site Directory</h3>
+        <ul>
+          <li><a href="pbc-gov-redesign.html"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-house"></i></span><span>PBC.GOV</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-landmark"></i></span><span>Government</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-users"></i></span><span>Residents</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-briefcase"></i></span><span>Business</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span><span>Things To Do</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-laptop"></i></span><span>Online Services</span></a></li>
+          <li><a href="departments.html"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-building-columns"></i></span><span>Departments</span></a></li>
+          <li><a href="https://secure.pbc.gov/"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-id-badge"></i></span><span>Jobs</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span><span>Contact Us</span></a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer-links" aria-label="Useful links">
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-handshake"></i></span><span>PBC Business Opportunities</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-hand-holding-heart"></i></span><span>Volunteer Opportunities</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-link"></i></span><span>Links</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span><span>Publications</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-bell"></i></span><span>Stay Connected!</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-circle-info"></i></span><span>Web Site Disclaimer</span></a></li>
+          <li><a href="#"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-map-location-dot"></i></span><span>District Locator</span></a></li>
+          <li><a href="bcc-meetings.html"><span class="site-footer-link-icon" aria-hidden="true"><i class="fa-solid fa-calendar-days"></i></span><span>BCC Meetings</span></a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="site-footer-bottom">
+      <div class="site-footer-connect">
+        <div class="site-footer-social" aria-label="Palm Beach County social media links">
+          <a href="https://www.linkedin.com" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="https://twitter.com" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="https://www.threads.net" aria-label="Threads"><i class="fa-brands fa-threads" aria-hidden="true"></i></a>
+          <a href="https://www.youtube.com" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="site-footer-bottom-links">
+        <a href="#">Accessibility Statement</a>
+        <a href="pbc-gov-redesign.html">Home</a>
+        <a href="#">Links</a>
+        <a href="#">Jobs</a>
+        <a href="#">Contact Us</a>
+        <p class="site-footer-copyright">&copy; Copyright <span id="footerCurrentYear"></span> Palm Beach County, FL.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/departments.js"></script>
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
