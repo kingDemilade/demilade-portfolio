@@ -1215,6 +1215,27 @@ body.dark-mode .card .btn:focus {
   margin-right: 0.35rem;
 }
 
+.popular-star {
+  display: inline-block;
+  animation: spinStar 5s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes spinStar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .popular-star {
+    animation: none;
+  }
+}
+
 .pricing-icon {
   width: 64px;
   height: 64px;
