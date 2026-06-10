@@ -1217,15 +1217,18 @@ body.dark-mode .card .btn:focus {
 
 .popular-star {
   display: inline-block;
-  animation: spinStar 5s linear infinite;
+  animation: spinStarPause 5s ease-in-out infinite;
   transform-origin: center;
 }
 
-@keyframes spinStar {
-  from {
+@keyframes spinStarPause {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  20% {
+    transform: rotate(360deg);
+  }
+  100% {
     transform: rotate(360deg);
   }
 }
