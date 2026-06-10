@@ -68,6 +68,94 @@
   </div>
 </nav>
 
+<main>
+  <section class="contact-section py-5">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <p class="section-eyebrow mb-2">Get In Touch</p>
+        <h1 class="section-title mb-3">Let's Build Something Great Together</h1>
+        <p class="lead mx-auto" style="max-width: 700px;">
+          Whether you're looking for a new website, motion graphics, branding support,
+          or a complete digital refresh, I'd love to hear more about your project.
+        </p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+          <form name="contact" method="POST" data-netlify="true" class="contact-form">
+            <input type="hidden" name="form-name" value="contact">
+
+            <div class="row g-4">
+
+              <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+
+              <div class="col-12">
+                <label for="business" class="form-label">Business / Organization</label>
+                <input type="text" class="form-control" id="business" name="business">
+              </div>
+
+              <div class="col-md-6">
+                <label for="service" class="form-label">Service Needed</label>
+                <select class="form-select" id="service" name="service">
+                  <option selected disabled>Select a service</option>
+                  <option>Website Design & Development</option>
+                  <option>Motion Graphics & Animation</option>
+                  <option>Graphic Design</option>
+                  <option>Creative Consultation</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label for="budget" class="form-label">Estimated Budget</label>
+                <select class="form-select" id="budget" name="budget">
+                  <option selected disabled>Select a budget</option>
+                  <option>Under $1,500</option>
+                  <option>$1,500 - $2,500</option>
+                  <option>$2,500 - $5,000</option>
+                  <option>$5,000+</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <label for="message" class="form-label">Tell Me About Your Project</label>
+                <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+              </div>
+
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-pbc px-5 py-3">
+                  Send Message
+                </button>
+              </div>
+
+            </div>
+          </form>
+
+          <div class="text-center mt-5">
+            <p class="mb-2"><strong>Response Time:</strong> 1–2 business days</p>
+            <p class="mb-0">
+              Not sure which package is right for you? Reach out and we'll find the best solution together.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
 <footer class="bg-dark text-white text-center py-4 mt-5 footer-waves">
   <div class="container">
     <p class="mb-0">&copy; <span id="year"></span> Demilade Creatives. All rights reserved.</p>
