@@ -1329,3 +1329,77 @@ body.dark-mode .card .btn:focus {
     min-height: auto;
   }
 }
+
+/* ===== Services Page: Website Packages Dark Mode ===== */
+body.dark-mode .services-packages-section {
+  background: #0b0b0b;
+  color: #f5f5f5;
+}
+
+body.dark-mode .section-eyebrow {
+  color: #e5c158;
+}
+
+body.dark-mode .section-title {
+  color: #ffffff;
+}
+
+body.dark-mode .section-divider {
+  background: #d4af37;
+}
+
+body.dark-mode .pricing-card {
+  background: #151515;
+  border-color: rgba(212, 175, 55, 0.22);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
+
+body.dark-mode .pricing-card:hover {
+  border-color: rgba(229, 193, 88, 0.6);
+}
+
+body.dark-mode .pricing-card-featured {
+  border-color: #d4af37;
+}
+
+body.dark-mode .popular-badge {
+  background: #d4af37;
+  color: #121212;
+}
+
+body.dark-mode .popular-badge i {
+  color: #121212;
+}
+
+body.dark-mode .pricing-icon {
+  background: rgba(212, 175, 55, 0.14);
+  color: #e5c158;
+}
+
+body.dark-mode .pricing-title,
+body.dark-mode .pricing-price,
+body.dark-mode .pricing-features i {
+  color: #e5c158;
+}
+
+body.dark-mode .pricing-description,
+body.dark-mode .pricing-note {
+  color: #d1d1d1;
+}
+
+body.dark-mode .pricing-features li {
+  color: #f5f5f5;
+}
+
+body.dark-mode .package-btn-outline {
+  color: #f5f5f5;
+  border-color: #e5c158;
+}
+
+body.dark-mode .package-btn-outline:hover,
+body.dark-mode .package-btn-outline:focus,
+body.dark-mode .package-btn-solid {
+  color: #121212;
+  background: #e5c158;
+  border-color: #e5c158;
+}
