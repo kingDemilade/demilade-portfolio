@@ -1560,3 +1560,61 @@ body.dark-mode .contact-section strong {
     padding: 1.5rem;
   }
 }
+
+/* ===== Thank You Page ===== */
+.thank-you-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  background: #f8f7f4;
+  color: #121212;
+}
+
+.thank-you-card {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background: #ffffff;
+  border: 1px solid rgba(18, 18, 18, 0.12);
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(18, 18, 18, 0.08);
+}
+
+.thank-you-icon {
+  width: 76px;
+  height: 76px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  background: #f3eee4;
+  color: #8a6218;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+.thank-you-message {
+  max-width: 560px;
+  color: #343434;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.thank-you-btn {
+  color: #121212;
+  background: #d4af37;
+  border: 2px solid #d4af37;
+  border-radius: 6px;
+  padding: 0.85rem 2rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.thank-you-btn:hover,
+.thank-you-btn:focus {
+  color: #ffffff;
+  background: #121212;
+  border-color: #121212;
+}
