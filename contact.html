@@ -84,7 +84,19 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
 
-          <form name="contact" method="POST" data-netlify="true" class="contact-form">
+          <form 
+            name="contact"
+            method="POST"
+            action="/thank-you.html"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            class="contact-form">
+            <p class="visually-hidden">
+                <label>
+                    Don't fill this out if you're human:
+                    <input name="bot-field">
+                </label>
+            </p>
             <input type="hidden" name="form-name" value="contact">
 
             <div class="row g-4">
@@ -106,7 +118,7 @@
 
               <div class="col-md-6">
                 <label for="service" class="form-label">Service Needed</label>
-                <select class="form-select" id="service" name="service">
+                <select class="form-select" id="service" name="service" required>
                   <option selected disabled>Select a service</option>
                   <option>Website Design & Development</option>
                   <option>Motion Graphics & Animation</option>
@@ -118,7 +130,7 @@
 
               <div class="col-md-6">
                 <label for="budget" class="form-label">Estimated Budget</label>
-                <select class="form-select" id="budget" name="budget">
+                <select class="form-select" id="budget" name="budget" required>
                   <option selected disabled>Select a budget</option>
                   <option>Under $1,500</option>
                   <option>$1,500 - $2,500</option>
