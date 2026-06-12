@@ -1268,8 +1268,8 @@ body.dark-mode .card .btn:focus {
 }
 
 .pricing-rule {
-  width: 48px;
-  height: 3px;
+/*  width: 48px; */
+  height: 1px;
   margin: 0.75rem 0 1.4rem;
   background: #b68c2a;
   border-radius: 999px;
@@ -1775,6 +1775,7 @@ body.dark-mode .contact-section strong {
   color: #6d4f11;
   font-size: 1.2rem;
   font-weight: 800;
+  text-align: center;
   letter-spacing: 0.04em;
   line-height: 1.3;
   text-transform: uppercase;
@@ -1783,6 +1784,7 @@ body.dark-mode .contact-section strong {
 .service-description {
   min-height: 96px;
   color: #343434;
+  text-align: center;
   font-size: 0.95rem;
   line-height: 1.5;
 }
