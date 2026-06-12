@@ -1298,11 +1298,21 @@ body.dark-mode .card .btn:focus {
 }
 
 .pricing-price {
-  margin-bottom: 0.15rem;
-  color: #8a6218;
-  font-size: clamp(1.65rem, 3vw, 2rem);
-  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin: 0 auto 0.5rem;
+  padding: 0.65rem 1rem;
+  color: #121212;
+  background: linear-gradient(135deg, #f4d878 0%, #d4af37 100%);
+  border: 1px solid rgba(138, 98, 24, 0.3);
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(182, 140, 42, 0.18);
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  font-weight: 900;
   line-height: 1.1;
+  text-align: center;
 }
 
 .pricing-note {
@@ -1505,9 +1515,15 @@ body.dark-mode .pricing-icon {
 }
 
 body.dark-mode .pricing-title,
-body.dark-mode .pricing-price,
 body.dark-mode .pricing-features i {
   color: #e5c158;
+}
+
+body.dark-mode .pricing-price {
+  color: #121212;
+  background: linear-gradient(135deg, #f6df8b 0%, #e5c158 100%);
+  border-color: rgba(229, 193, 88, 0.45);
+  box-shadow: 0 12px 30px rgba(229, 193, 88, 0.18);
 }
 
 body.dark-mode .pricing-description,
@@ -1841,11 +1857,22 @@ body.dark-mode .contact-section strong {
 }
 
 .service-starting-price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
   margin-top: auto;
   margin-bottom: 1rem;
-  color: #8a6218;
-  font-size: 1.25rem;
-  font-weight: 800;
+  padding: 0.55rem 0.95rem;
+  color: #121212;
+  background: linear-gradient(135deg, #f4d878 0%, #d4af37 100%);
+  border: 1px solid rgba(138, 98, 24, 0.3);
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(182, 140, 42, 0.16);
+  font-size: 1.05rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
 }
 
 body.dark-mode .creative-services-section {
@@ -1869,9 +1896,15 @@ body.dark-mode .service-icon {
 }
 
 body.dark-mode .service-title,
-body.dark-mode .service-starting-price,
 body.dark-mode .service-features i {
   color: #e5c158;
+}
+
+body.dark-mode .service-starting-price {
+  color: #121212;
+  background: linear-gradient(135deg, #f6df8b 0%, #e5c158 100%);
+  border-color: rgba(229, 193, 88, 0.45);
+  box-shadow: 0 12px 30px rgba(229, 193, 88, 0.18);
 }
 
 body.dark-mode .service-features li {
