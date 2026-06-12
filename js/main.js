@@ -343,3 +343,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
   motionVideos.forEach(video => observer.observe(video));
 });
+
+// =========================
+// Services Page: Website Package Tabs
+// =========================
+document.addEventListener('DOMContentLoaded', () => {
+  const packageTabs = document.querySelectorAll('[data-package-tab]');
+  const packagePanels = document.querySelectorAll('[data-package-panel]');
+
+  if (!packageTabs.length || !packagePanels.length) return;
+
+  function activatePackage(selectedPackage) {
+    packageTabs.forEach((tab) => {
+      const isActive = tab.dataset.packageTab === selectedPackage;
+      tab.classList.toggle('is-active', isActive);
+      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+
+    packagePanels.forEach((panel) => {
+      const isActive = panel.dataset.packagePanel === selectedPackage;
+      panel.classList.toggle('is-active', isActive);
+      panel.hidden = !isActive;
+    });
+  }
+
+  packageTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      activatePackage(tab.dataset.packageTab);
+    });
+  });
+});
