@@ -1343,6 +1343,7 @@ body.dark-mode .card .btn:focus {
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .pricing-features {
