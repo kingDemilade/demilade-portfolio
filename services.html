@@ -62,7 +62,7 @@
           <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
 <!--        <li class="nav-item"><a class="nav-link" href="/projects.html">Projects</a></li>-->
         <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact.html">Start a Project</a></li>
       </ul>
     </div>
   </div>
@@ -77,27 +77,64 @@
         <div class="section-divider mx-auto" aria-hidden="true"></div>
       </div>
 
-      <div class="row g-4 align-items-stretch">
-        <div class="col-12 col-lg-4">
+      <div class="package-tabs" role="tablist" aria-label="Website package options">
+        <button class="package-tab is-active" type="button" role="tab" id="tab-launch" aria-controls="package-launch" aria-selected="true" data-package-tab="launch">
+          Launch
+        </button>
+        <button class="package-tab" type="button" role="tab" id="tab-starter" aria-controls="package-starter" aria-selected="false" data-package-tab="starter">
+          Starter
+        </button>
+        <button class="package-tab" type="button" role="tab" id="tab-professional" aria-controls="package-professional" aria-selected="false" data-package-tab="professional">
+          Professional
+        </button>
+        <button class="package-tab" type="button" role="tab" id="tab-premium" aria-controls="package-premium" aria-selected="false" data-package-tab="premium">
+          Premium
+        </button>
+      </div>
+
+      <div class="package-tab-panels">
+        <div class="package-panel is-active" id="package-launch" role="tabpanel" aria-labelledby="tab-launch" data-package-panel="launch">
+          <article class="pricing-card h-100">
+            <div class="pricing-icon" aria-hidden="true">
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
+            <h2 class="pricing-title">Launch</h2>
+            <p class="pricing-description">A simple one-page website for startups, side hustles, &amp; small businesses that need a clean online presence.</p>
+            <p class="pricing-price">$750 - $1,000</p>
+            <!-- <p class="pricing-note">One-time project</p> -->
+
+            <ul class="pricing-features list-unstyled mb-4">
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>One-page website</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Contact form setup</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Mobile-friendly design</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Basic SEO setup</span></li>
+            </ul>
+
+            <a href="/contact.html" class="btn package-btn package-btn-outline">Get Started</a>
+          </article>
+        </div>
+
+        <div class="package-panel" id="package-starter" role="tabpanel" aria-labelledby="tab-starter" data-package-panel="starter" hidden>
           <article class="pricing-card h-100">
             <div class="pricing-icon" aria-hidden="true">
               <i class="fa-solid fa-rocket"></i>
             </div>
             <h2 class="pricing-title">Starter</h2>
-            <p class="pricing-description">Perfect for small businesses and startups getting online.</p>
-            <div class="pricing-rule" aria-hidden="true"></div>
+            <p class="pricing-description">A professional online presence for small businesses that need credibility, clarity, &amp; an easy way for customers to reach out.</p>
             <p class="pricing-price">$1,500 - $2,000</p>
-            <p class="pricing-note">One-time project</p>
+            <!-- <p class="pricing-note">One-time project</p> -->
 
             <ul class="pricing-features list-unstyled mb-4">
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Custom website design</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Custom website design tailored to your business</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Up to 5 pages</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Responsive design across devices</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Mobile-friendly design across devices</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Contact form setup</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Social media integration</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Social media links &amp; basic integration</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Google Maps integration</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Basic on-page SEO setup</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Domain and hosting setup assistance</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Website launch assistance</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>30 days of post-launch support</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Website training video</span></li>
             </ul>
 
@@ -105,7 +142,7 @@
           </article>
         </div>
 
-        <div class="col-12 col-lg-4">
+        <div class="package-panel" id="package-professional" role="tabpanel" aria-labelledby="tab-professional" data-package-panel="professional" hidden>
           <article class="pricing-card pricing-card-featured h-100">
             <div class="popular-badge">
               <i class="fa-solid fa-star popular-star" aria-hidden="true"></i>
@@ -115,19 +152,22 @@
               <i class="fa-solid fa-chart-line"></i>
             </div>
             <h2 class="pricing-title">Professional</h2>
-            <p class="pricing-description">Ideal for growing businesses ready to stand out.</p>
-            <div class="pricing-rule" aria-hidden="true"></div>
+            <p class="pricing-description">Designed for growing businesses that want more than a website — they want a marketing tool that helps turn visitors into leads.</p>
             <p class="pricing-price">$3,000 - $5,000</p>
-            <p class="pricing-note">One-time project</p>
+            <!-- <p class="pricing-note">One-time project</p> -->
 
             <ul class="pricing-features list-unstyled mb-4">
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Everything in Starter, plus:</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Custom UX/UI design</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Light motion effects and page animations</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Custom graphics and icons</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Creative strategy session</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Conversion-focused page layouts</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Custom UX/UI design for a more polished user experience</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Light motion effects &amp; page animations</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Custom graphics &amp; icons</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Blog or news section setup</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Enhanced on-page SEO setup</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Lead generation forms</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Lead generation forms designed to capture inquiries</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Basic accessibility review</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Performance optimization</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Google Analytics integration</span></li>
             </ul>
 
@@ -135,28 +175,203 @@
           </article>
         </div>
 
-        <div class="col-12 col-lg-4">
+        <div class="package-panel" id="package-premium" role="tabpanel" aria-labelledby="tab-premium" data-package-panel="premium" hidden>
           <article class="pricing-card h-100">
             <div class="pricing-icon" aria-hidden="true">
               <i class="fa-regular fa-gem"></i>
             </div>
             <h2 class="pricing-title">Premium</h2>
-            <p class="pricing-description">For established brands that want a premium experience.</p>
-            <div class="pricing-rule" aria-hidden="true"></div>
-            <p class="pricing-price">Custom Quote</p>
-            <p class="pricing-note">One-time project</p>
+            <p class="pricing-description">For established brands that need a custom digital experience with elevated visuals, storytelling, &amp; creative direction.</p>
+            <p class="pricing-price">Starting at $7,500</p>
+            <p class="pricing-note">Custom project quote</p>
 
             <ul class="pricing-features list-unstyled mb-4">
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Everything in Professional, plus:</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Custom motion graphics add-ons</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Enhanced visual storytelling</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Brand direction support</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Copy and content organization</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Expanded page layouts and user flows</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Custom motion graphics &amp; visual add-ons</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Enhanced visual storytelling for stronger brand presentation</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Brand direction support for web visuals &amp; messaging</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Copy &amp; content organization</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Expanded page layouts &amp; user flows</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Priority creative consultation</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Expanded creative planning for larger launches or campaigns</span></li>
             </ul>
 
             <a href="/contact.html" class="btn package-btn package-btn-outline">Get Started</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="package-comparison mt-5">
+        <div class="text-center mb-4">
+          <p class="section-eyebrow mb-2">Compare package highlights</p>
+          <h2 class="section-title h3 mb-3">What’s Included</h2>
+          <div class="section-divider mx-auto" aria-hidden="true"></div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table package-comparison-table align-middle">
+            <thead>
+              <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">Launch</th>
+                <th scope="col">Starter</th>
+                <th scope="col">Professional</th>
+                <th scope="col">Premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Best For</th>
+                <td>New businesses</td>
+                <td>Simple business presence</td>
+                <td>Lead-focused business site</td>
+                <td>Custom brand experience</td>
+              </tr>
+              <tr>
+                <th scope="row">Pages</th>
+                <td>1 page</td>
+                <td>Up to 5</td>
+                <td>Expanded page layouts</td>
+                <td>Custom scope</td>
+              </tr>
+              <tr>
+                <th scope="row">Custom Design</th>
+                <td><i class="fa-solid fa-check" aria-label="Included"></i></td>
+                <td><i class="fa-solid fa-check" aria-label="Included"></i></td>
+                <td><i class="fa-solid fa-check" aria-label="Included"></i></td>
+                <td><i class="fa-solid fa-check" aria-label="Included"></i></td>
+              </tr>
+              <tr>
+                <th scope="row">UX/UI Strategy</th>
+                <td>—</td>
+                <td>Basic</td>
+                <td><i class="fa-solid fa-check" aria-label="Included"></i></td>
+                <td><i class="fa-solid fa-check" aria-label="Included"></i></td>
+              </tr>
+              <tr>
+                <th scope="row">Motion Effects</th>
+                <td>—</td>
+                <td>—</td>
+                <td>Light effects</td>
+                <td>Custom add-ons</td>
+              </tr>
+              <tr>
+                <th scope="row">Blog or News Setup</th>
+                <td>—</td>
+                <td>—</td>
+                <td><i class="fa-solid fa-check" aria-label="Included"></i></td>
+                <td><i class="fa-solid fa-check" aria-label="Included"></i></td>
+              </tr>
+              <tr>
+                <th scope="row">SEO Setup</th>
+                <td>Basic</td>
+                <td>Basic</td>
+                <td>Enhanced</td>
+                <td>Enhanced</td>
+              </tr>
+              <tr>
+                <th scope="row">Analytics</th>
+                <td>—</td>
+                <td>—</td>
+                <td><i class="fa-solid fa-check" aria-label="Included"></i></td>
+                <td><i class="fa-solid fa-check" aria-label="Included"></i></td>
+              </tr>
+              <tr>
+                <th scope="row">Creative Direction</th>
+                <td>—</td>
+                <td>—</td>
+                <td>Light support</td>
+                <td>Priority support</td>
+              </tr>
+              <tr>
+                <th scope="row">Post-Launch Support</th>
+                <td>—</td>
+                <td>30 days</td>
+                <td>30 days</td>
+                <td>Custom</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="creative-services-section py-5" aria-labelledby="creative-services-title">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="section-eyebrow mb-2">Additional Creative Services</p>
+        <h2 id="creative-services-title" class="section-title mb-3">Creative Support Beyond Websites</h2>
+        <p class="creative-services-intro mx-auto">
+          From motion graphics to print-ready design, Demilade Creatives offers flexible creative services to help your brand show up with clarity, consistency, and polish.
+        </p>
+        <div class="section-divider mx-auto mt-3" aria-hidden="true"></div>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <div class="col-12 col-lg-4">
+          <article class="service-card h-100">
+            <div class="service-icon" aria-hidden="true">
+              <i class="fa-solid fa-clapperboard"></i>
+            </div>
+            <h3 class="service-title">Motion Graphics</h3>
+            <p class="service-description">
+              Branded motion graphics and short-form animations designed to bring your message, campaign, or digital content to life.
+            </p>
+            <p class="service-starting-price">Starting at $750</p>
+
+            <ul class="service-features list-unstyled mb-4">
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Logo animation</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Social media motion graphics</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Event or campaign animations</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Short promotional videos</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Animated graphics for websites</span></li>
+            </ul>
+            <a href="/contact.html" class="btn package-btn package-btn-outline">Start a Project</a>
+          </article>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <article class="service-card h-100">
+            <div class="service-icon" aria-hidden="true">
+              <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <h3 class="service-title">Graphic Design</h3>
+            <p class="service-description">
+              Clean, professional design support for digital and print materials that help your brand look consistent across every touchpoint.
+            </p>
+            <p class="service-starting-price">Starting at $300</p>
+
+            <ul class="service-features list-unstyled mb-4">
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Flyers and posters</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Social media graphics</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Business cards &amp; basic stationery</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Brochures &amp; digital layouts</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Brand support &amp; visual direction</span></li>
+            </ul>
+            <a href="/contact.html" class="btn package-btn package-btn-outline">Start a Project</a>
+          </article>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <article class="service-card h-100">
+            <div class="service-icon" aria-hidden="true">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h3 class="service-title">Creative Consultation</h3>
+            <p class="service-description">
+              Focused creative guidance to organize your ideas, improve your visuals, and plan your next digital move.
+            </p>
+            <p class="service-starting-price">Starting at $150</p>
+
+            <ul class="service-features list-unstyled mb-4">
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Website audit and feedback</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Brand direction review</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Visual strategy session</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Portfolio or project presentation review</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Campaign &amp; content idea development</span></li>
+            </ul>
+            <a href="/contact.html" class="btn package-btn package-btn-outline">Start a Project</a>
           </article>
         </div>
       </div>
