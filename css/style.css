@@ -1317,13 +1317,6 @@ body.dark-mode .card .btn:focus {
   line-height: 1.45;
 }
 
-.pricing-rule {
-/*  width: 48px; */
-  height: 1px;
-  margin: 1.25rem 0;
-  background: #b68c2a;
-  border-radius: 999px;
-}
 
 .pricing-price {
   display: inline-flex;
