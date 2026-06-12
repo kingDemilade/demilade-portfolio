@@ -3,42 +3,45 @@ window.addEventListener('DOMContentLoaded', () => {
   const toggle = document.getElementById('menu-toggle');
   const nav = document.getElementById('nav-links');
 
-  if (toggle && nav) {
-    // Accessibility: track expanded state
-    toggle.setAttribute('aria-expanded', 'false');
-
-    const openMenu = () => {
-      nav.classList.add('active');
-      toggle.classList.add('active');
-      toggle.setAttribute('aria-expanded', 'true');
-      document.body.classList.add('menu-open');
-    };
-
-    const closeMenu = () => {
-      nav.classList.remove('active');
-      toggle.classList.remove('active');
-      toggle.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('menu-open');
-    };
-
-    const toggleMenu = () => {
-      const isOpen = nav.classList.contains('active');
-      if (isOpen) closeMenu(); else openMenu();
-    };
-
-    // Click hamburger
-    toggle.addEventListener('click', toggleMenu);
-
-    // Close when clicking a nav link (mobile UX)
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
-
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeMenu();
-    });
+  if (!toggle || !nav) {
+    console.warn('Navbar elements not found. Check IDs: #menu-toggle and #nav-links');
+    return;
   }
+
+  // Accessibility: track expanded state
+  toggle.setAttribute('aria-expanded', 'false');
+
+  const openMenu = () => {
+    nav.classList.add('active');
+    toggle.classList.add('active');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('menu-open');
+  };
+
+  const closeMenu = () => {
+    nav.classList.remove('active');
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
+  };
+
+  const toggleMenu = () => {
+    const isOpen = nav.classList.contains('active');
+    if (isOpen) closeMenu(); else openMenu();
+  };
+
+  // Click hamburger
+  toggle.addEventListener('click', toggleMenu);
+
+  // Close when clicking a nav link (mobile UX)
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
 
 // Scroll reveal
 const reveals = document.querySelectorAll('.reveal');
@@ -186,33 +189,5 @@ const renderBookingConfirmation = () => {
 };
 
 renderBookingConfirmation();
-
-// =========================
-// Services Package Tabs
-// =========================
-const packageTabs = document.querySelectorAll('[data-package-tab]');
-const packagePanels = document.querySelectorAll('[data-package-panel]');
-
-if (packageTabs.length && packagePanels.length) {
-  const activatePackage = (selectedPackage) => {
-    packageTabs.forEach((tab) => {
-      const isActive = tab.dataset.packageTab === selectedPackage;
-      tab.classList.toggle('is-active', isActive);
-      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-
-    packagePanels.forEach((panel) => {
-      const isActive = panel.dataset.packagePanel === selectedPackage;
-      panel.classList.toggle('is-active', isActive);
-      panel.hidden = !isActive;
-    });
-  };
-
-  packageTabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      activatePackage(tab.dataset.packageTab);
-    });
-  });
-}
 
 });
