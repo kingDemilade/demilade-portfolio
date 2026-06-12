@@ -47,6 +47,15 @@ body {
   margin-top: 1.5rem;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
 /* Overlay content 
 .hero-content {
   position: relative;
@@ -803,7 +812,11 @@ body.dark-mode .navbar-toggler-icon {
 
 .route-btn {
   position: relative;
-  padding: 1rem 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 240px;
+  padding: 1rem 2.5rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -841,6 +854,8 @@ body.dark-mode .navbar-toggler-icon {
   color: #f8f9fa;
 }
 
+
+
 /* Dark mode */
 body.dark-mode .route-btn {
   color: #f0f0f0;
@@ -856,6 +871,18 @@ body.dark-mode .route-btn::before {
 /* Hover = inverted */
 body.dark-mode .route-btn:hover {
   color: #0d0d0d;
+}
+
+@media (max-width: 575.98px) {
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .hero-actions .route-btn {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 /* ===== Project Status Badge ===== */
