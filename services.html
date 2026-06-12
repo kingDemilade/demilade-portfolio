@@ -77,8 +77,23 @@
         <div class="section-divider mx-auto" aria-hidden="true"></div>
       </div>
 
-      <div class="row g-4 align-items-stretch">
-        <div class="col-12 col-lg-3">
+      <div class="package-tabs" role="tablist" aria-label="Website package options">
+        <button class="package-tab is-active" type="button" role="tab" id="tab-launch" aria-controls="package-launch" aria-selected="true" data-package-tab="launch">
+          Launch
+        </button>
+        <button class="package-tab" type="button" role="tab" id="tab-starter" aria-controls="package-starter" aria-selected="false" data-package-tab="starter">
+          Starter
+        </button>
+        <button class="package-tab" type="button" role="tab" id="tab-professional" aria-controls="package-professional" aria-selected="false" data-package-tab="professional">
+          Professional
+        </button>
+        <button class="package-tab" type="button" role="tab" id="tab-premium" aria-controls="package-premium" aria-selected="false" data-package-tab="premium">
+          Premium
+        </button>
+      </div>
+
+      <div class="package-tab-panels">
+        <div class="package-panel is-active" id="package-launch" role="tabpanel" aria-labelledby="tab-launch" data-package-panel="launch">
           <article class="pricing-card h-100">
             <div class="pricing-icon" aria-hidden="true">
               <i class="fa-solid fa-paper-plane"></i>
@@ -99,7 +114,8 @@
             <a href="/contact.html" class="btn package-btn package-btn-outline">Get Started</a>
           </article>
         </div>
-        <div class="col-12 col-lg-3">
+
+        <div class="package-panel" id="package-starter" role="tabpanel" aria-labelledby="tab-starter" data-package-panel="starter" hidden>
           <article class="pricing-card h-100">
             <div class="pricing-icon" aria-hidden="true">
               <i class="fa-solid fa-rocket"></i>
@@ -128,7 +144,7 @@
           </article>
         </div>
 
-        <div class="col-12 col-lg-3">
+        <div class="package-panel" id="package-professional" role="tabpanel" aria-labelledby="tab-professional" data-package-panel="professional" hidden>
           <article class="pricing-card pricing-card-featured h-100">
             <div class="popular-badge">
               <i class="fa-solid fa-star popular-star" aria-hidden="true"></i>
@@ -162,7 +178,7 @@
           </article>
         </div>
 
-        <div class="col-12 col-lg-3">
+        <div class="package-panel" id="package-premium" role="tabpanel" aria-labelledby="tab-premium" data-package-panel="premium" hidden>
           <article class="pricing-card h-100">
             <div class="pricing-icon" aria-hidden="true">
               <i class="fa-regular fa-gem"></i>

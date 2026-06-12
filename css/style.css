@@ -1380,6 +1380,96 @@ body.dark-mode .card .btn:focus {
   border-color: #121212;
 }
 
+/* Website package tabs */
+.package-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  max-width: 920px;
+  margin: 0 auto 2rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(18, 18, 18, 0.12);
+  border-radius: 999px;
+  box-shadow: 0 16px 40px rgba(18, 18, 18, 0.08);
+}
+
+.package-tab {
+  min-height: 52px;
+  padding: 0.75rem 1rem;
+  color: #121212;
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.package-tab:hover,
+.package-tab:focus {
+  color: #121212;
+  background: rgba(212, 175, 55, 0.22);
+  outline: none;
+}
+
+.package-tab:focus-visible {
+  outline: 3px solid rgba(138, 98, 24, 0.45);
+  outline-offset: 3px;
+}
+
+.package-tab.is-active {
+  color: #121212;
+  background: linear-gradient(135deg, #f4d878 0%, #d4af37 100%);
+  box-shadow: 0 10px 24px rgba(182, 140, 42, 0.2);
+  transform: translateY(-1px);
+}
+
+.package-tab-panels {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.package-panel {
+  animation: packageFade 0.28s ease both;
+}
+
+.package-panel .pricing-card {
+  min-height: 100%;
+}
+
+.package-panel .pricing-features {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes packageFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .package-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .package-tabs {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Package comparison table */
 .package-comparison {
   padding: 2rem;
@@ -1547,6 +1637,32 @@ body.dark-mode .package-btn-solid {
   color: #121212;
   background: #e5c158;
   border-color: #e5c158;
+}
+
+body.dark-mode .package-tabs {
+  background: rgba(21, 21, 21, 0.86);
+  border-color: rgba(212, 175, 55, 0.22);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
+
+body.dark-mode .package-tab {
+  color: #f5f5f5;
+}
+
+body.dark-mode .package-tab:hover,
+body.dark-mode .package-tab:focus {
+  color: #121212;
+  background: #e5c158;
+}
+
+body.dark-mode .package-tab:focus-visible {
+  outline-color: rgba(229, 193, 88, 0.65);
+}
+
+body.dark-mode .package-tab.is-active {
+  color: #121212;
+  background: linear-gradient(135deg, #f6df8b 0%, #e5c158 100%);
+  box-shadow: 0 12px 30px rgba(229, 193, 88, 0.18);
 }
 
 body.dark-mode .package-comparison {
