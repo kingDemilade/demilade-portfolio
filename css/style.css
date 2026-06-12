@@ -1358,6 +1358,7 @@ body.dark-mode .card .btn:focus {
 }
 
 .package-comparison-table {
+  min-width: 900px;
   margin-bottom: 0;
   color: #121212;
   overflow: hidden;
