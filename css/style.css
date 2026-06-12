@@ -1148,8 +1148,28 @@ body.dark-mode .card .btn:focus {
 
 /* ===== Services Page: Website Packages ===== */
 .services-packages-section {
-  background: #f8f7f4;
+  position: relative;
+  background:
+    radial-gradient(circle at top left, rgba(212, 175, 55, 0.16), transparent 34%),
+    linear-gradient(180deg, #f8f7f4 0%, #ffffff 100%);
   color: #121212;
+  border-bottom: 1px solid rgba(182, 140, 42, 0.18);
+}
+
+.services-packages-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(18, 18, 18, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 18, 18, 0.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  pointer-events: none;
+}
+
+.services-packages-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .section-eyebrow {
@@ -1431,8 +1451,17 @@ body.dark-mode .card .btn:focus {
 
 /* ===== Services Page: Website Packages Dark Mode ===== */
 body.dark-mode .services-packages-section {
-  background: #0b0b0b;
+  background:
+    radial-gradient(circle at top left, rgba(212, 175, 55, 0.12), transparent 34%),
+    linear-gradient(180deg, #0b0b0b 0%, #111111 100%);
   color: #f5f5f5;
+  border-bottom-color: rgba(212, 175, 55, 0.2);
+}
+
+body.dark-mode .services-packages-section::before {
+  background-image:
+    linear-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
 }
 
 body.dark-mode .section-eyebrow {
