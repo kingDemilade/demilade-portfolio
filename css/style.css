@@ -2055,3 +2055,34 @@ body.dark-mode .service-starting-price {
 body.dark-mode .service-features li {
   color: #f5f5f5;
 }
+
+/* Mobile Package Comparison: Sticky Feature Column */
+@media (max-width: 767.98px) {
+  .package-comparison .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .package-comparison-table {
+    min-width: 760px;
+  }
+
+  .package-comparison-table th:first-child,
+  .package-comparison-table td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: #ffffff;
+    box-shadow: 8px 0 18px rgba(18, 18, 18, 0.08);
+  }
+
+  .package-comparison-table thead th:first-child {
+    z-index: 3;
+  }
+
+  body.dark-mode .package-comparison-table th:first-child,
+  body.dark-mode .package-comparison-table td:first-child {
+    background: #151515;
+    box-shadow: 8px 0 18px rgba(0, 0, 0, 0.35);
+  }
+}
