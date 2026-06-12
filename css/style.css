@@ -1256,6 +1256,7 @@ body.dark-mode .card .btn:focus {
   color: #6d4f11;
   font-size: 1.2rem;
   font-weight: 800;
+  text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -1263,6 +1264,7 @@ body.dark-mode .card .btn:focus {
 .pricing-description {
   min-height: 48px;
   color: #343434;
+  text-align: center;
   font-size: 0.95rem;
   line-height: 1.45;
 }
