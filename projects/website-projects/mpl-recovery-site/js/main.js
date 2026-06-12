@@ -3,45 +3,42 @@ window.addEventListener('DOMContentLoaded', () => {
   const toggle = document.getElementById('menu-toggle');
   const nav = document.getElementById('nav-links');
 
-  if (!toggle || !nav) {
-    console.warn('Navbar elements not found. Check IDs: #menu-toggle and #nav-links');
-    return;
-  }
-
-  // Accessibility: track expanded state
-  toggle.setAttribute('aria-expanded', 'false');
-
-  const openMenu = () => {
-    nav.classList.add('active');
-    toggle.classList.add('active');
-    toggle.setAttribute('aria-expanded', 'true');
-    document.body.classList.add('menu-open');
-  };
-
-  const closeMenu = () => {
-    nav.classList.remove('active');
-    toggle.classList.remove('active');
+  if (toggle && nav) {
+    // Accessibility: track expanded state
     toggle.setAttribute('aria-expanded', 'false');
-    document.body.classList.remove('menu-open');
-  };
 
-  const toggleMenu = () => {
-    const isOpen = nav.classList.contains('active');
-    if (isOpen) closeMenu(); else openMenu();
-  };
+    const openMenu = () => {
+      nav.classList.add('active');
+      toggle.classList.add('active');
+      toggle.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('menu-open');
+    };
 
-  // Click hamburger
-  toggle.addEventListener('click', toggleMenu);
+    const closeMenu = () => {
+      nav.classList.remove('active');
+      toggle.classList.remove('active');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    };
 
-  // Close when clicking a nav link (mobile UX)
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
+    const toggleMenu = () => {
+      const isOpen = nav.classList.contains('active');
+      if (isOpen) closeMenu(); else openMenu();
+    };
 
-  // Close on Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeMenu();
-  });
+    // Click hamburger
+    toggle.addEventListener('click', toggleMenu);
+
+    // Close when clicking a nav link (mobile UX)
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+  }
 
 // Scroll reveal
 const reveals = document.querySelectorAll('.reveal');
