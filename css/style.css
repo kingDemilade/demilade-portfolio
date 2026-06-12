@@ -1215,8 +1215,8 @@ body.dark-mode .card .btn:focus {
 }
 
 .section-divider {
-  width: 64px;
-  height: 3px;
+  width: 300px;
+  height: 1px;
   background: #b68c2a;
   border-radius: 999px;
 }
@@ -1973,10 +1973,19 @@ body.dark-mode .contact-section strong {
 
 .service-description {
   min-height: 96px;
+  margin-bottom: 0;
   color: #343434;
   text-align: center;
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+.service-rule {
+  width: 100%;
+  height: 1px;
+  margin: 1.25rem 0 1rem;
+  background: #b68c2a;
+  border-radius: 999px;
 }
 
 .service-features {
@@ -2004,8 +2013,7 @@ body.dark-mode .contact-section strong {
   align-items: center;
   justify-content: center;
   align-self: center;
-  margin-top: auto;
-  margin-bottom: 1rem;
+  margin: 0 auto 1.5rem;
   padding: 0.55rem 0.95rem;
   color: #121212;
   background: linear-gradient(135deg, #f4d878 0%, #d4af37 100%);
@@ -2016,6 +2024,10 @@ body.dark-mode .contact-section strong {
   font-weight: 900;
   line-height: 1.1;
   text-align: center;
+}
+
+body.dark-mode .service-rule {
+  background: #d4af37;
 }
 
 body.dark-mode .creative-services-section {
