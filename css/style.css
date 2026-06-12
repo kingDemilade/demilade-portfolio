@@ -1245,7 +1245,7 @@ body.dark-mode .card .btn:focus {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.25rem;
+  margin: 0 auto 1.25rem;
   background: #f3eee4;
   color: #8a6218;
   border-radius: 14px;
@@ -1766,7 +1766,7 @@ body.dark-mode .contact-section strong {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.25rem;
+  margin: 0 auto 1.25rem;
   background: #f3eee4;
   color: #8a6218;
   border-radius: 14px;
