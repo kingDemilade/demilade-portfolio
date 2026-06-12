@@ -1980,13 +1980,6 @@ body.dark-mode .contact-section strong {
   line-height: 1.5;
 }
 
-.service-rule {
-  width: 100%;
-  height: 1px;
-  margin: 1.25rem 0 1rem;
-  background: #b68c2a;
-  border-radius: 999px;
-}
 
 .service-features {
   display: grid;
@@ -2026,9 +2019,6 @@ body.dark-mode .contact-section strong {
   text-align: center;
 }
 
-body.dark-mode .service-rule {
-  background: #d4af37;
-}
 
 body.dark-mode .creative-services-section {
   background: #0b0b0b;
