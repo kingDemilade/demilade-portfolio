@@ -1,0 +1,188 @@
+
+
+/* ==========================
+   LARGE TABLETS
+========================== */
+@media (max-width: 1024px) {
+  .hero-section,
+  .video-section,
+  .split-layout,
+  .booking-layout,
+  .featured-resource-card,
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-content,
+  .video-content,
+  .split-content,
+  .booking-info,
+  .featured-resource-content,
+  .contact-info {
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .three-column-grid,
+  .services-list,
+  .services-detail-grid,
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .four-column-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking-card {
+    position: static;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+}
+
+/* ==========================
+   TABLETS
+========================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .nav-menu {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .nav-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .image-placeholder {
+    min-height: 400px;
+  }
+
+  .about-image-placeholder {
+    min-height: 350px;
+  }
+
+  .three-column-grid,
+  .services-list,
+  .services-detail-grid,
+  .article-grid,
+  .four-column-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-resource-card,
+  .booking-card,
+  .contact-form,
+  .newsletter-card {
+    padding: 2rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input,
+  .newsletter-form .btn {
+    max-width: none;
+    width: 100%;
+  }
+
+  .cta-content {
+    padding: 3rem 2rem;
+  }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .section-padding {
+    padding: 4rem 1.25rem;
+  }
+
+  .navbar {
+    padding: 1rem 1.25rem;
+  }
+
+  .hero-section {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn,
+  .nav-cta,
+  .services-preview .btn-outline {
+    width: 100%;
+  }
+
+  .image-placeholder {
+    min-height: 300px;
+  }
+
+  .page-hero {
+    text-align: left;
+  }
+
+  .about-image-placeholder {
+    min-height: 280px;
+  }
+
+  .featured-resource-card,
+  .booking-card,
+  .contact-form,
+  .newsletter-card,
+  .cta-content {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .service-detail-card,
+  .info-card,
+  .resource-card,
+  .step-card,
+  .service-item,
+  .article-card,
+  .resource-topic-card,
+  .faq-item,
+  .contact-detail-card,
+  .booking-highlight-item,
+  .value-item {
+    padding: 1.5rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
