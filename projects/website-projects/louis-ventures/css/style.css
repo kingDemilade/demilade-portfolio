@@ -164,6 +164,16 @@ p {
   color: var(--color-primary);
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobile-nav-cta {
+  display: none;
+}
+
 .nav-cta {
   background: var(--color-primary);
   color: #fff;
