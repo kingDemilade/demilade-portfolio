@@ -34,3 +34,19 @@ navToggle?.addEventListener('click', () => {
 
   navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 });
+
+const scrollTopButton = document.querySelector('.scroll-top');
+
+window.addEventListener('scroll', () => {
+  if (!scrollTopButton) return;
+
+  const shouldShowButton = window.scrollY > 400;
+  scrollTopButton.classList.toggle('show', shouldShowButton);
+});
+
+scrollTopButton?.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
