@@ -25,3 +25,12 @@ themeToggle?.addEventListener('click', () => {
   localStorage.setItem('rlPathwaysTheme', nextTheme);
   applyTheme(nextTheme);
 });
+
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+navToggle?.addEventListener('click', () => {
+  const isOpen = navMenu?.classList.toggle('active');
+
+  navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+});
