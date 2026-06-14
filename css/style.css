@@ -1454,6 +1454,22 @@ body.dark-mode .card .btn:focus {
   transform: translateY(-1px);
 }
 
+.package-tab[data-package-tab="all"]:not(.is-active),
+.package-tab[data-service-tab="all"]:not(.is-active),
+.package-tab[data-bundle-tab="all"]:not(.is-active) {
+  animation: viewAllPrompt 3.2s ease-in-out infinite;
+}
+
+@keyframes viewAllPrompt {
+  0%,
+  100% {
+    box-shadow: inset 0 0 0 0 rgba(212, 175, 55, 0);
+  }
+  50% {
+    box-shadow: inset 0 0 0 2px rgba(212, 175, 55, 0.42), 0 8px 20px rgba(182, 140, 42, 0.12);
+  }
+}
+
 .choice-skeleton {
   max-width: 760px;
   margin: 0 auto 2rem;
@@ -1543,6 +1559,10 @@ body.dark-mode .card .btn:focus {
   .package-tabs {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     border-radius: 18px;
+  }
+
+  .package-tabs-five .package-tab[data-package-tab="all"] {
+    grid-column: 1 / -1;
   }
 
   .package-panels-grid.is-view-all {
@@ -2288,6 +2308,9 @@ body.dark-mode .scroll-top:focus {
 
 @media (prefers-reduced-motion: reduce) {
   .comparison-toggle,
+  .package-tab[data-package-tab="all"],
+  .package-tab[data-service-tab="all"],
+  .package-tab[data-bundle-tab="all"],
   .scroll-top .scroll-arrow {
     animation: none;
   }
