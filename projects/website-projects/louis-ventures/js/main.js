@@ -1,6 +1,6 @@
 const themeToggle = document.querySelector('.theme-toggle');
 const themeIcon = themeToggle?.querySelector('i');
-const savedTheme = localStorage.getItem('rlPathwaysTheme');
+const savedTheme = localStorage.getItem('louisVenturesTheme');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 function applyTheme(theme) {
@@ -22,7 +22,7 @@ themeToggle?.addEventListener('click', () => {
   const currentTheme = document.documentElement.getAttribute('data-theme');
   const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-  localStorage.setItem('rlPathwaysTheme', nextTheme);
+  localStorage.setItem('louisVenturesTheme', nextTheme);
   applyTheme(nextTheme);
 });
 
