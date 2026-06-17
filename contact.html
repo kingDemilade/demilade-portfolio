@@ -98,6 +98,7 @@
                 </label>
             </p>
             <input type="hidden" name="form-name" value="contact">
+            <input type="hidden" id="package-interest" name="package_interest">
 
             <div class="row g-4">
 
@@ -124,8 +125,16 @@
                   <option>Motion Graphics & Animation</option>
                   <option>Graphic Design</option>
                   <option>Creative Consultation</option>
+                  <option>Service Bundle / Creative Package</option>
                   <option>Other</option>
                 </select>
+              </div>
+
+              <div class="col-12" data-package-interest-wrap hidden>
+                <div class="contact-selection-note">
+                  <span class="contact-selection-label">Project Interest</span>
+                  <span data-package-interest-label></span>
+                </div>
               </div>
 
               <div class="col-md-6">
