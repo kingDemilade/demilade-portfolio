@@ -345,298 +345,40 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // =========================
-// Services Page: Website Package Tabs
+// Contact Page: Service Prefill
 // =========================
 document.addEventListener('DOMContentLoaded', () => {
-  const packageTabs = document.querySelectorAll('[data-package-tab]');
-  const packagePanels = document.querySelectorAll('[data-package-panel]');
-  const packageGrid = document.querySelector('[data-package-grid]');
-  const packageSkeleton = document.querySelector('[data-package-skeleton]');
-  const packageViewAllTab = document.querySelector('[data-package-tab="all"]');
+  const serviceSelect = document.querySelector('#service');
+  const packageInput = document.querySelector('#package-interest');
+  const packageWrap = document.querySelector('[data-package-interest-wrap]');
+  const packageLabel = document.querySelector('[data-package-interest-label]');
 
-  if (!packageTabs.length || !packagePanels.length) return;
+  if (!serviceSelect && !packageInput) return;
 
-  function updatePackageViewAllLabel(isReset) {
-    if (packageViewAllTab) {
-      packageViewAllTab.textContent = isReset ? 'Reset' : 'View All';
-    }
+  const params = new URLSearchParams(window.location.search);
+  const selectedService = params.get('service');
+  const selectedPackage = params.get('package');
+  const serviceMap = {
+    website: 'Website Design & Development',
+    motion: 'Motion Graphics & Animation',
+    design: 'Graphic Design',
+    consultation: 'Creative Consultation',
+    bundle: 'Service Bundle / Creative Package',
+    other: 'Other'
+  };
+
+  if (serviceSelect && selectedService && serviceMap[selectedService]) {
+    serviceSelect.value = serviceMap[selectedService];
   }
 
-  function activatePackage(selectedPackage) {
-    const isViewAll = selectedPackage === 'all';
-
-    if (packageGrid) {
-      packageGrid.classList.toggle('is-view-all', isViewAll);
-    }
-
-    if (packageSkeleton) {
-      packageSkeleton.hidden = true;
-    }
-
-    packageTabs.forEach((tab) => {
-      const isActive = tab.dataset.packageTab === selectedPackage;
-      tab.classList.toggle('is-active', isActive);
-      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-
-    packagePanels.forEach((panel) => {
-      const isActive = isViewAll || panel.dataset.packagePanel === selectedPackage;
-      panel.classList.toggle('is-active', isActive);
-      panel.hidden = !isActive;
-    });
-
-    updatePackageViewAllLabel(isViewAll);
-
-    window.setPackageComparisonExpanded?.(true);
+  if (packageInput && selectedPackage) {
+    packageInput.value = selectedPackage;
   }
 
-  function resetPackageTabs() {
-    if (packageGrid) {
-      packageGrid.classList.remove('is-view-all');
-    }
-
-    if (packageSkeleton) {
-      packageSkeleton.hidden = false;
-    }
-
-    packageTabs.forEach((tab) => {
-      tab.classList.remove('is-active');
-      tab.setAttribute('aria-selected', 'false');
-    });
-
-    packagePanels.forEach((panel) => {
-      panel.classList.remove('is-active');
-      panel.hidden = true;
-    });
-
-    updatePackageViewAllLabel(false);
-    window.setPackageComparisonExpanded?.(false);
+  if (packageWrap && packageLabel && selectedPackage) {
+    packageLabel.textContent = selectedPackage;
+    packageWrap.hidden = false;
   }
-
-  packageTabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      if (tab.dataset.packageTab === 'all' && tab.classList.contains('is-active')) {
-        resetPackageTabs();
-        return;
-      }
-
-      activatePackage(tab.dataset.packageTab);
-    });
-  });
-});
-
-// =========================
-// Services Page: Creative Service Filter Tabs
-// =========================
-document.addEventListener('DOMContentLoaded', () => {
-  const serviceTabs = document.querySelectorAll('[data-service-tab]');
-  const serviceCards = document.querySelectorAll('[data-service-card]');
-  const serviceGrid = document.querySelector('[data-service-grid]');
-  const serviceSkeleton = document.querySelector('[data-service-skeleton]');
-  const serviceViewAllTab = document.querySelector('[data-service-tab="all"]');
-
-  if (!serviceTabs.length || !serviceCards.length) return;
-
-  function updateServiceViewAllLabel(isReset) {
-    if (serviceViewAllTab) {
-      serviceViewAllTab.textContent = isReset ? 'Reset' : 'View All';
-    }
-  }
-
-  function activateServiceTab(selectedService) {
-    const isViewAll = selectedService === 'all';
-
-    if (serviceGrid) {
-      serviceGrid.classList.toggle('is-filtered', !isViewAll);
-    }
-
-    if (serviceSkeleton) {
-      serviceSkeleton.hidden = true;
-    }
-
-    serviceTabs.forEach((tab) => {
-      const isActive = tab.dataset.serviceTab === selectedService;
-      tab.classList.toggle('is-active', isActive);
-      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-
-    serviceCards.forEach((card) => {
-      const shouldShow = isViewAll || card.dataset.serviceCard === selectedService;
-      card.hidden = !shouldShow;
-    });
-
-    updateServiceViewAllLabel(isViewAll);
-  }
-
-  function resetServiceTabs() {
-    if (serviceGrid) {
-      serviceGrid.classList.remove('is-filtered');
-    }
-
-    if (serviceSkeleton) {
-      serviceSkeleton.hidden = false;
-    }
-
-    serviceTabs.forEach((tab) => {
-      tab.classList.remove('is-active');
-      tab.setAttribute('aria-selected', 'false');
-    });
-
-    serviceCards.forEach((card) => {
-      card.hidden = true;
-    });
-
-    updateServiceViewAllLabel(false);
-  }
-
-  serviceTabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      if (tab.dataset.serviceTab === 'all' && tab.classList.contains('is-active')) {
-        resetServiceTabs();
-        return;
-      }
-
-      activateServiceTab(tab.dataset.serviceTab);
-    });
-  });
-});
-
-// =========================
-// Services Page: Combined Package Filter Tabs
-// =========================
-document.addEventListener('DOMContentLoaded', () => {
-  const bundleTabs = document.querySelectorAll('[data-bundle-tab]');
-  const bundleCards = document.querySelectorAll('[data-bundle-card]');
-  const bundleGrid = document.querySelector('[data-bundle-grid]');
-  const bundleSkeleton = document.querySelector('[data-bundle-skeleton]');
-  const bundleViewAllTab = document.querySelector('[data-bundle-tab="all"]');
-
-  if (!bundleTabs.length || !bundleCards.length) return;
-
-  function updateBundleViewAllLabel(isReset) {
-    if (bundleViewAllTab) {
-      bundleViewAllTab.textContent = isReset ? 'Reset' : 'View All';
-    }
-  }
-
-  function activateBundleTab(selectedBundle) {
-    const isViewAll = selectedBundle === 'all';
-
-    if (bundleGrid) {
-      bundleGrid.classList.toggle('is-filtered', !isViewAll);
-    }
-
-    if (bundleSkeleton) {
-      bundleSkeleton.hidden = true;
-    }
-
-    bundleTabs.forEach((tab) => {
-      const isActive = tab.dataset.bundleTab === selectedBundle;
-      tab.classList.toggle('is-active', isActive);
-      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-
-    bundleCards.forEach((card) => {
-      const shouldShow = isViewAll || card.dataset.bundleCard === selectedBundle;
-      card.hidden = !shouldShow;
-    });
-
-    updateBundleViewAllLabel(isViewAll);
-  }
-
-  function resetBundleTabs() {
-    if (bundleGrid) {
-      bundleGrid.classList.remove('is-filtered');
-    }
-
-    if (bundleSkeleton) {
-      bundleSkeleton.hidden = false;
-    }
-
-    bundleTabs.forEach((tab) => {
-      tab.classList.remove('is-active');
-      tab.setAttribute('aria-selected', 'false');
-    });
-
-    bundleCards.forEach((card) => {
-      card.hidden = true;
-    });
-
-    updateBundleViewAllLabel(false);
-  }
-
-  bundleTabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      if (tab.dataset.bundleTab === 'all' && tab.classList.contains('is-active')) {
-        resetBundleTabs();
-        return;
-      }
-
-      activateBundleTab(tab.dataset.bundleTab);
-    });
-  });
-});
-
-// =========================
-// Services Page: Package Comparison Toggle
-// =========================
-document.addEventListener('DOMContentLoaded', () => {
-  const comparisonToggle = document.querySelector('[data-comparison-toggle]');
-  const comparisonContent = document.querySelector('[data-comparison-content]');
-
-  if (!comparisonToggle || !comparisonContent) return;
-
-  const toggleLabel = comparisonToggle.querySelector('span');
-
-  function setPackageComparisonExpanded(shouldExpand, options = {}) {
-    const shouldShowToggle = options.showToggle ?? true;
-    comparisonToggle.setAttribute('aria-expanded', shouldExpand ? 'true' : 'false');
-    comparisonToggle.classList.toggle('is-collapsed', !shouldExpand);
-    comparisonToggle.hidden = !shouldShowToggle;
-    comparisonContent.hidden = !shouldExpand;
-
-    if (toggleLabel) {
-      toggleLabel.textContent = shouldExpand ? 'Hide Comparison' : 'Show Comparison';
-    }
-  }
-
-  window.setPackageComparisonExpanded = setPackageComparisonExpanded;
-
-  setPackageComparisonExpanded(false);
-
-  comparisonToggle.addEventListener('click', () => {
-    const isExpanded = comparisonToggle.getAttribute('aria-expanded') === 'true';
-    setPackageComparisonExpanded(!isExpanded, { showToggle: true });
-  });
-});
-
-// =========================
-// Services Page: Add-On Services Toggle
-// =========================
-document.addEventListener('DOMContentLoaded', () => {
-  const addOnToggle = document.querySelector('[data-add-on-toggle]');
-  const addOnContent = document.querySelector('[data-add-on-content]');
-
-  if (!addOnToggle || !addOnContent) return;
-
-  const toggleLabel = addOnToggle.querySelector('span');
-
-  function setAddOnsExpanded(shouldExpand) {
-    addOnToggle.setAttribute('aria-expanded', shouldExpand ? 'true' : 'false');
-    addOnToggle.classList.toggle('is-collapsed', !shouldExpand);
-    addOnContent.hidden = !shouldExpand;
-
-    if (toggleLabel) {
-      toggleLabel.textContent = shouldExpand ? 'Hide Add-Ons' : 'Show Add-Ons';
-    }
-  }
-
-  setAddOnsExpanded(false);
-
-  addOnToggle.addEventListener('click', () => {
-    const isExpanded = addOnToggle.getAttribute('aria-expanded') === 'true';
-    setAddOnsExpanded(!isExpanded);
-  });
 });
 
 // =========================

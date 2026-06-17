@@ -1336,6 +1336,27 @@ body.dark-mode .card .btn:focus {
   text-align: center;
 }
 
+.service-fit-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-height: 42px;
+  margin: 1rem auto 1.25rem;
+  padding: 0.55rem 0.95rem;
+  color: #121212;
+  background: linear-gradient(135deg, #f4d878 0%, #d4af37 100%);
+  border: 1px solid rgba(138, 98, 24, 0.3);
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(182, 140, 42, 0.16);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .pricing-note {
   margin-bottom: 1.5rem;
   color: #343434;
@@ -1778,6 +1799,13 @@ body.dark-mode .pricing-price {
   box-shadow: 0 12px 30px rgba(229, 193, 88, 0.18);
 }
 
+body.dark-mode .service-fit-badge {
+  color: #121212;
+  background: linear-gradient(135deg, #f6df8b 0%, #e5c158 100%);
+  border-color: rgba(229, 193, 88, 0.45);
+  box-shadow: 0 12px 30px rgba(229, 193, 88, 0.18);
+}
+
 body.dark-mode .pricing-description,
 body.dark-mode .pricing-note {
   color: #d1d1d1;
@@ -1945,6 +1973,27 @@ body.dark-mode .package-comparison-table tbody tr:nth-child(even) td {
   box-shadow: 0 0 0 0.2rem rgba(182, 140, 42, 0.22);
 }
 
+.contact-selection-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1rem;
+  color: #343434;
+  background: #f8f7f4;
+  border: 1px solid rgba(138, 98, 24, 0.24);
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.contact-selection-label {
+  color: #6d4f11;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .contact-form .btn-pbc {
   color: #121212;
   background: #d4af37;
@@ -2004,6 +2053,16 @@ body.dark-mode .contact-form .form-control:focus,
 body.dark-mode .contact-form .form-select:focus {
   border-color: #e5c158;
   box-shadow: 0 0 0 0.2rem rgba(229, 193, 88, 0.22);
+}
+
+body.dark-mode .contact-selection-note {
+  color: #f5f5f5;
+  background: #101010;
+  border-color: rgba(212, 175, 55, 0.28);
+}
+
+body.dark-mode .contact-selection-label {
+  color: #e5c158;
 }
 
 body.dark-mode .contact-form .btn-pbc {
