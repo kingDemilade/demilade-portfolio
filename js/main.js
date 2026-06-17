@@ -382,6 +382,116 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // =========================
+// Services Page: Service Tabs
+// =========================
+document.addEventListener('DOMContentLoaded', () => {
+  function setupServiceTabs(config) {
+    const tabs = document.querySelectorAll(config.tabSelector);
+    const cards = document.querySelectorAll(config.cardSelector);
+    const grid = document.querySelector(config.gridSelector);
+    const skeleton = document.querySelector(config.skeletonSelector);
+    const viewAllTab = document.querySelector(config.viewAllSelector);
+
+    if (!tabs.length || !cards.length) return;
+
+    function updateViewAllLabel(isReset) {
+      if (viewAllTab) {
+        viewAllTab.textContent = isReset ? 'Reset' : 'View All';
+      }
+    }
+
+    function setActiveTab(selectedValue) {
+      const isViewAll = selectedValue === 'all';
+
+      if (grid) {
+        grid.classList.toggle('is-filtered', !isViewAll);
+      }
+
+      if (skeleton) {
+        skeleton.hidden = true;
+      }
+
+      tabs.forEach((tab) => {
+        const isActive = tab.dataset[config.tabDataset] === selectedValue;
+        tab.classList.toggle('is-active', isActive);
+        tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+
+      cards.forEach((card) => {
+        const shouldShow = isViewAll || card.dataset[config.cardDataset] === selectedValue;
+        card.hidden = !shouldShow;
+      });
+
+      updateViewAllLabel(isViewAll);
+    }
+
+    function resetTabs() {
+      if (grid) {
+        grid.classList.remove('is-filtered');
+      }
+
+      if (skeleton) {
+        skeleton.hidden = false;
+      }
+
+      tabs.forEach((tab) => {
+        tab.classList.remove('is-active');
+        tab.setAttribute('aria-selected', 'false');
+      });
+
+      cards.forEach((card) => {
+        card.hidden = true;
+      });
+
+      updateViewAllLabel(false);
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const selectedValue = tab.dataset[config.tabDataset];
+
+        if (selectedValue === 'all' && tab.classList.contains('is-active')) {
+          resetTabs();
+          return;
+        }
+
+        setActiveTab(selectedValue);
+      });
+    });
+  }
+
+  setupServiceTabs({
+    tabSelector: '[data-package-tab]',
+    cardSelector: '[data-package-panel]',
+    gridSelector: '[data-package-grid]',
+    skeletonSelector: '[data-package-skeleton]',
+    viewAllSelector: '[data-package-tab="all"]',
+    tabDataset: 'packageTab',
+    cardDataset: 'packagePanel'
+  });
+
+  setupServiceTabs({
+    tabSelector: '[data-service-tab]',
+    cardSelector: '[data-service-card]',
+    gridSelector: '[data-service-grid]',
+    skeletonSelector: '[data-service-skeleton]',
+    viewAllSelector: '[data-service-tab="all"]',
+    tabDataset: 'serviceTab',
+    cardDataset: 'serviceCard'
+  });
+
+  setupServiceTabs({
+    tabSelector: '[data-bundle-tab]',
+    cardSelector: '[data-bundle-card]',
+    gridSelector: '[data-bundle-grid]',
+    skeletonSelector: '[data-bundle-skeleton]',
+    viewAllSelector: '[data-bundle-tab="all"]',
+    tabDataset: 'bundleTab',
+    cardDataset: 'bundleCard'
+  });
+});
+
+// =========================
 // Global Scroll To Top
 // =========================
 document.addEventListener('DOMContentLoaded', () => {
