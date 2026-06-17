@@ -80,8 +80,31 @@
         <div class="section-divider mx-auto" aria-hidden="true"></div>
       </div>
 
-      <div class="row g-4 align-items-stretch">
-        <div class="col-12 col-lg-4">
+      <div class="package-tabs" role="tablist" aria-label="Website service options">
+        <button class="package-tab" type="button" role="tab" aria-selected="false" data-package-tab="starter">
+          Starter
+        </button>
+        <button class="package-tab" type="button" role="tab" aria-selected="false" data-package-tab="business">
+          Business
+        </button>
+        <button class="package-tab" type="button" role="tab" aria-selected="false" data-package-tab="custom">
+          Custom
+        </button>
+        <button class="package-tab" type="button" role="tab" aria-selected="false" data-package-tab="all">
+          View All
+        </button>
+      </div>
+
+      <div class="choice-skeleton" data-package-skeleton>
+        <div class="choice-skeleton-icon" aria-hidden="true">
+          <i class="fa-solid fa-compass"></i>
+        </div>
+        <h2 class="choice-skeleton-title">Choose Your Website Path</h2>
+        <p class="choice-skeleton-copy">Select the website path that sounds closest to your next move, or view every option at once.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch website-packages-grid" data-package-grid>
+        <div class="col-12 col-lg-4" data-package-panel="starter" hidden>
           <article class="pricing-card h-100">
             <div class="pricing-icon" aria-hidden="true">
               <i class="fa-solid fa-paper-plane"></i>
@@ -94,15 +117,15 @@
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>One-page website</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Mobile-friendly design</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Contact form</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Basic SEO</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Social media links</span></li>
+            <!--  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Basic SEO</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Social media links</span></li>-->
             </ul>
 
             <a href="/contact.html?service=website&package=Starter%20Website" class="btn package-btn package-btn-outline">Start This Project</a>
           </article>
         </div>
 
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4" data-package-panel="business" hidden>
           <article class="pricing-card h-100">
             <div class="pricing-icon" aria-hidden="true">
               <i class="fa-solid fa-rocket"></i>
@@ -115,16 +138,16 @@
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Up to 5 pages</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Mobile-friendly design</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Contact form</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Basic SEO</span></li>
+            <!--  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Basic SEO</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Google Maps integration</span></li>
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Social media integration</span></li>
+              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Social media integration</span></li>-->
             </ul>
 
             <a href="/contact.html?service=website&package=Business%20Website" class="btn package-btn package-btn-solid">Start This Project</a>
           </article>
         </div>
 
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4" data-package-panel="custom" hidden>
           <article class="pricing-card h-100">
             <div class="pricing-icon" aria-hidden="true">
               <i class="fa-regular fa-gem"></i>
@@ -134,7 +157,7 @@
             <p class="pricing-description">For projects requiring additional pages, custom layouts, motion design, advanced content structures, or specialized functionality.</p>
 
             <ul class="pricing-features list-unstyled mb-4">
-              <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Blog setup or larger content structures</span></li>
+        <!--  <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Blog setup or larger content structures</span></li> -->
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Motion graphics integration</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Advanced layouts</span></li>
               <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span>Special functionality planning</span></li>
@@ -158,8 +181,31 @@
         <div class="section-divider mx-auto mt-3" aria-hidden="true"></div>
       </div>
 
-      <div class="row g-4 align-items-stretch creative-services-grid">
-        <div class="col-12 col-lg-4">
+      <div class="package-tabs creative-service-tabs" role="tablist" aria-label="Additional creative service options">
+        <button class="package-tab" type="button" role="tab" aria-selected="false" data-service-tab="motion">
+          Motion
+        </button>
+        <button class="package-tab" type="button" role="tab" aria-selected="false" data-service-tab="design">
+          Design
+        </button>
+        <button class="package-tab" type="button" role="tab" aria-selected="false" data-service-tab="consultation">
+          Consultation
+        </button>
+        <button class="package-tab" type="button" role="tab" aria-selected="false" data-service-tab="all">
+          View All
+        </button>
+      </div>
+
+      <div class="choice-skeleton" data-service-skeleton>
+        <div class="choice-skeleton-icon" aria-hidden="true">
+          <i class="fa-solid fa-route"></i>
+        </div>
+        <h2 class="choice-skeleton-title">Pick a Creative Route</h2>
+        <p class="choice-skeleton-copy">Choose motion, design, or consultation support, or view every creative service together.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch creative-services-grid" data-service-grid>
+        <div class="col-12 col-lg-4" data-service-card="motion" hidden>
           <article class="service-card h-100">
             <div class="service-icon" aria-hidden="true">
               <i class="fa-solid fa-clapperboard"></i>
@@ -180,7 +226,7 @@
           </article>
         </div>
 
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4" data-service-card="design" hidden>
           <article class="service-card h-100">
             <div class="service-icon" aria-hidden="true">
               <i class="fa-solid fa-pen-nib"></i>
@@ -202,7 +248,7 @@
           </article>
         </div>
 
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4" data-service-card="consultation" hidden>
           <article class="service-card h-100">
             <div class="service-icon" aria-hidden="true">
               <i class="fa-solid fa-lightbulb"></i>
@@ -238,8 +284,31 @@
           </p>
         </div>
 
-        <div class="row g-4 align-items-stretch bundle-services-grid">
-          <div class="col-12 col-lg-4">
+        <div class="package-tabs bundle-service-tabs" role="tablist" aria-label="Combined service package options">
+          <button class="package-tab" type="button" role="tab" aria-selected="false" data-bundle-tab="launch">
+            Launch
+          </button>
+          <button class="package-tab" type="button" role="tab" aria-selected="false" data-bundle-tab="growth">
+            Growth
+          </button>
+          <button class="package-tab" type="button" role="tab" aria-selected="false" data-bundle-tab="custom">
+            Custom
+          </button>
+          <button class="package-tab" type="button" role="tab" aria-selected="false" data-bundle-tab="all">
+            View All
+          </button>
+        </div>
+
+        <div class="choice-skeleton" data-bundle-skeleton>
+          <div class="choice-skeleton-icon" aria-hidden="true">
+            <i class="fa-solid fa-map"></i>
+          </div>
+          <h2 class="choice-skeleton-title">Choose a Bundle Path</h2>
+          <p class="choice-skeleton-copy">Select the bundle that best fits your launch style, or view every combined package.</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch bundle-services-grid" data-bundle-grid>
+          <div class="col-12 col-lg-4" data-bundle-card="launch" hidden>
             <article class="bundle-card h-100">
               <div class="service-icon" aria-hidden="true">
                 <i class="fa-solid fa-bullhorn"></i>
@@ -256,7 +325,7 @@
             </article>
           </div>
 
-          <div class="col-12 col-lg-4">
+          <div class="col-12 col-lg-4" data-bundle-card="growth" hidden>
             <article class="bundle-card bundle-card-featured h-100">
               <div class="popular-badge">
                 <i class="fa-solid fa-star popular-star" aria-hidden="true"></i>
@@ -278,7 +347,7 @@
             </article>
           </div>
 
-          <div class="col-12 col-lg-4">
+          <div class="col-12 col-lg-4" data-bundle-card="custom" hidden>
             <article class="bundle-card h-100">
               <div class="service-icon" aria-hidden="true">
                 <i class="fa-solid fa-wand-magic-sparkles"></i>

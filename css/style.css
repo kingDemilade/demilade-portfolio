@@ -2163,6 +2163,15 @@ body.dark-mode .contact-section strong {
   max-width: 760px;
 }
 
+.website-packages-grid.is-filtered {
+  justify-content: center;
+}
+
+.website-packages-grid.is-filtered > [data-package-panel]:not([hidden]) {
+  flex: 0 0 100%;
+  max-width: 760px;
+}
+
 .creative-services-grid.is-filtered {
   justify-content: center;
 }
