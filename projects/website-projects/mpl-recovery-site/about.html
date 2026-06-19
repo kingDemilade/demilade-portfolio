@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Book | MPL Recovery</title>
+  <title>About | MPL Recovery</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -30,7 +30,7 @@
         <!-- Nav Links -->
         <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.html" class="active">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="#">Videos</a></li>
           <li><a href="testimonials.html">Testimonials</a></li>
@@ -104,65 +104,102 @@
   </header>
 
   <!-- ================= HERO ================= -->
-<section class="interior-hero booking-hero">
+  <section class="interior-hero about-hero image-slot" data-image-slot="Upload: images/hero/about-hero.jpg">
+    <img class="slot-image" src="images/hero/about-hero.jpg" alt="" onload="this.closest('.image-slot').classList.add('has-image')" onerror="this.hidden=true">
     <div class="interior-hero-overlay"></div>
     <div class="container interior-hero-content">
 
       <div class="interior-hero-text">
-        <h1>Book Your Session</h1>
-        <p>Fast, reliable care for athletes—on-site and on demand.</p>
+        <h1>
+          About <span>MPL Recovery</span>
+        </h1>
 
-        <div class="interior-hero-subtext">
-          <p><i class="fa-solid fa-clock"></i> Takes less than 2 minutes to book</p>
-        </div>
+        <p>
+          We're more than a service. We're your partner in athlete health and performance.
+        </p>
       </div>
 
     </div>
   </section>
 
-  <!-- ================= BOOKING ================= -->
-  <section class="booking-page">
-    <div class="container">
+  <!-- ================= ABOUT PAGE ================= -->
+  <main class="about-page">
 
-      <!-- Booking Embed -->
-      <div class="booking-embed">
-        <iframe 
-          src="https://calendly.com/YOUR-LINK"
-          width="100%"
-          height="750"
-          frameborder="0">
-        </iframe>
+    <section class="about-story section-padding">
+      <div class="container">
+        <div class="about-section-header reveal">
+          <h2>Our Story</h2>
+          <p>
+            MPL Recovery was founded with a simple mission: to bring elite-level medical care,
+            injury prevention, and recovery solutions directly to athletes wherever they compete.
+            Every rep, every game, and every recovery moment matters.
+          </p>
+        </div>
+
+        <div class="about-values-grid reveal reveal-delay-1">
+          <article class="about-value">
+            <i class="fa-solid fa-shield-heart"></i>
+            <h3>Expert Care</h3>
+            <p>Licensed professionals with sports medicine expertise.</p>
+          </article>
+
+          <article class="about-value">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>On-Site Convenience</h3>
+            <p>We come to you: tournaments, events, and training facilities.</p>
+          </article>
+
+          <article class="about-value">
+            <i class="fa-solid fa-person-running"></i>
+            <h3>Whole Athlete</h3>
+            <p>We focus on prevention, performance, and long-term health.</p>
+          </article>
+        </div>
+
+        <div class="founder-card reveal reveal-delay-2">
+          <div class="founder-image image-slot" data-image-slot="Upload: images/about/founder.jpg">
+            <img class="slot-image" src="images/about/founder.jpg" alt="Keshawn Louis, founder of MPL Recovery" onload="this.closest('.image-slot').classList.add('has-image')" onerror="this.hidden=true">
+            <div class="image-placeholder">
+              <i class="fa-solid fa-image"></i>
+              <span>Founder Photo</span>
+              <small>images/about/founder.jpg</small>
+            </div>
+          </div>
+
+          <div class="founder-content">
+            <p class="eyebrow">Meet The Founder</p>
+            <h2>Makeshia Lucien, PT, DPT</h2>
+            <p class="founder-title">Doctor of Physical Therapy</p>
+            <p>
+              As a physical therapist and former athlete, I understand the grind, the injuries,
+              and the passion it takes to compete at a high level. My goal is to help athletes
+              stay healthy, perform their best, and enjoy the game for years to come.
+            </p>
+          </div>
+        </div>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-
-  <!-- ================= WHAT HAPPENS NEXT ================= -->
-  <section class="booking-steps">
-    <div class="container">
-
-      <h2>What Happens Next?</h2>
-
-      <div class="steps-grid">
-        <div>
-          <span>01</span>
-          <p>Book your session</p>
-        </div>
-
-        <div>
-          <span>02</span>
-          <p>We confirm your details</p>
-        </div>
-
-        <div>
-          <span>03</span>
-          <p>We arrive on-site ready</p>
-        </div>
+    <section class="about-mission">
+      <div class="container mission-content reveal">
+        <h2>Our Mission</h2>
+        <p>
+          To deliver high-quality, accessible, and proactive care that helps athletes recover,
+          perform, and repeat.
+        </p>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <section class="about-cta image-slot" data-image-slot="Upload: images/about/about-cta.jpg">
+      <img class="slot-image" src="images/about/about-cta.jpg" alt="" onload="this.closest('.image-slot').classList.add('has-image')" onerror="this.hidden=true">
+      <div class="container about-cta-content reveal">
+        <h2>Let's Work Together</h2>
+        <p>Bring MPL Recovery to your next event or training session.</p>
+        <a href="book.html" class="btn-primary">Book Now</a>
+      </div>
+    </section>
+
+  </main>
 
   <!-- ================= FOOTER ================= -->
   <footer>

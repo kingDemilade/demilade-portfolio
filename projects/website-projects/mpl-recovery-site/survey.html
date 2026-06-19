@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Book | MPL Recovery</title>
+  <title>Share Your Experience | MPL Recovery</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -104,65 +104,111 @@
   </header>
 
   <!-- ================= HERO ================= -->
-<section class="interior-hero booking-hero">
+  <section class="interior-hero survey-hero">
     <div class="interior-hero-overlay"></div>
     <div class="container interior-hero-content">
 
       <div class="interior-hero-text">
-        <h1>Book Your Session</h1>
-        <p>Fast, reliable care for athletes—on-site and on demand.</p>
+        <h1>
+          Share Your <span>Experience</span>
+        </h1>
 
-        <div class="interior-hero-subtext">
-          <p><i class="fa-solid fa-clock"></i> Takes less than 2 minutes to book</p>
-        </div>
+        <p>
+          Tell us how MPL Recovery supported your athlete, team, or event.
+        </p>
       </div>
 
     </div>
   </section>
 
-  <!-- ================= BOOKING ================= -->
-  <section class="booking-page">
-    <div class="container">
+  <!-- ================= SURVEY PAGE ================= -->
+  <main class="survey-page">
+    <section class="survey-section section-padding">
+      <div class="container survey-layout">
 
-      <!-- Booking Embed -->
-      <div class="booking-embed">
-        <iframe 
-          src="https://calendly.com/YOUR-LINK"
-          width="100%"
-          height="750"
-          frameborder="0">
-        </iframe>
+        <div class="survey-intro reveal">
+          <p class="eyebrow">Customer Survey</p>
+          <h2>Help Tell The Story</h2>
+          <p>
+            Approved testimonials can appear on the Testimonials page. We review submissions
+            before publishing so the page stays polished and trustworthy.
+          </p>
+        </div>
+
+        <form class="survey-form reveal reveal-delay-1" id="testimonial-survey-form">
+          <input type="hidden" name="approved" value="no">
+
+          <div class="form-grid">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required>
+            </label>
+
+            <label>
+              Your Role
+              <select name="role" required>
+                <option value="">Select one</option>
+                <option value="Athlete">Athlete</option>
+                <option value="Coach">Coach</option>
+                <option value="Parent">Parent</option>
+                <option value="Director">Director</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-grid">
+            <label>
+              Display Title
+              <input type="text" name="title" placeholder="High School Athlete, Soccer Mom, Coach, etc.">
+            </label>
+
+            <label>
+              Service Used
+              <select name="service">
+                <option value="">Select one</option>
+                <option value="Sports Emergency">Sports Emergency</option>
+                <option value="Performance & Injury Prevention">Performance & Injury Prevention</option>
+                <option value="Recovery & Regeneration">Recovery & Regeneration</option>
+                <option value="Event Coverage">Event Coverage</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            Rating
+            <select name="rating" required>
+              <option value="">Select rating</option>
+              <option value="5">5 - Excellent</option>
+              <option value="4">4 - Great</option>
+              <option value="3">3 - Good</option>
+              <option value="2">2 - Fair</option>
+              <option value="1">1 - Needs Improvement</option>
+            </select>
+          </label>
+
+          <label>
+            Testimonial
+            <textarea name="testimonial" rows="6" placeholder="What was your experience like?" required></textarea>
+          </label>
+
+          <label>
+            Photo URL, optional
+            <input type="url" name="photo" placeholder="https://example.com/photo.jpg">
+          </label>
+
+          <label class="permission-check">
+            <input type="checkbox" name="permission" value="yes" required>
+            MPL Recovery may display my testimonial on the website after review.
+          </label>
+
+          <button type="submit" class="btn-primary">Submit Feedback</button>
+          <p class="survey-status" id="survey-status" aria-live="polite"></p>
+        </form>
+
       </div>
-
-    </div>
-  </section>
-
-
-  <!-- ================= WHAT HAPPENS NEXT ================= -->
-  <section class="booking-steps">
-    <div class="container">
-
-      <h2>What Happens Next?</h2>
-
-      <div class="steps-grid">
-        <div>
-          <span>01</span>
-          <p>Book your session</p>
-        </div>
-
-        <div>
-          <span>02</span>
-          <p>We confirm your details</p>
-        </div>
-
-        <div>
-          <span>03</span>
-          <p>We arrive on-site ready</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- ================= FOOTER ================= -->
   <footer>
@@ -172,7 +218,9 @@
   </footer>
 
   <!-- JS -->
+  <script src="js/testimonials-config.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/survey.js" defer></script>
 
 </body>
 </html>

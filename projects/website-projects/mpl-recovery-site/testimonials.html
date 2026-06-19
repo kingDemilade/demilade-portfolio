@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Book | MPL Recovery</title>
+  <title>Testimonials | MPL Recovery</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -33,7 +33,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="#">Videos</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="testimonials.html" class="active">Testimonials</a></li>
           <li><a href="book.html" class="btn-secondary">Book Now</a></li>
         </ul>
 
@@ -104,65 +104,59 @@
   </header>
 
   <!-- ================= HERO ================= -->
-<section class="interior-hero booking-hero">
+  <section class="interior-hero testimonials-hero image-slot" data-image-slot="Upload: images/hero/testimonials-hero.jpg">
+    <img class="slot-image" src="images/hero/testimonials-hero.jpg" alt="" onload="this.closest('.image-slot').classList.add('has-image')" onerror="this.hidden=true">
     <div class="interior-hero-overlay"></div>
     <div class="container interior-hero-content">
 
       <div class="interior-hero-text">
-        <h1>Book Your Session</h1>
-        <p>Fast, reliable care for athletes—on-site and on demand.</p>
+        <h1>
+          <span>Testimonials</span>
+        </h1>
 
-        <div class="interior-hero-subtext">
-          <p><i class="fa-solid fa-clock"></i> Takes less than 2 minutes to book</p>
-        </div>
+        <p>
+          Real experiences from athletes, coaches, parents, and event leaders.
+        </p>
       </div>
 
     </div>
   </section>
 
-  <!-- ================= BOOKING ================= -->
-  <section class="booking-page">
-    <div class="container">
+  <!-- ================= TESTIMONIALS PAGE ================= -->
+  <main class="testimonials-page">
+    <section class="testimonials-section section-padding">
+      <div class="container">
 
-      <!-- Booking Embed -->
-      <div class="booking-embed">
-        <iframe 
-          src="https://calendly.com/YOUR-LINK"
-          width="100%"
-          height="750"
-          frameborder="0">
-        </iframe>
+        <div class="testimonial-actions reveal">
+          <div class="testimonial-filter">
+            <button class="active" type="button" data-testimonial-filter="all">All Stories</button>
+            <button type="button" data-testimonial-filter="athlete">Athletes</button>
+            <button type="button" data-testimonial-filter="coach">Coaches</button>
+            <button type="button" data-testimonial-filter="parent">Parents</button>
+            <button type="button" data-testimonial-filter="director">Directors</button>
+          </div>
+
+          <a href="survey.html" class="btn-primary testimonial-share-btn">Share Your Experience</a>
+        </div>
+
+        <div class="testimonial-list" id="testimonial-list">
+        </div>
+
       </div>
+    </section>
 
-    </div>
-  </section>
-
-
-  <!-- ================= WHAT HAPPENS NEXT ================= -->
-  <section class="booking-steps">
-    <div class="container">
-
-      <h2>What Happens Next?</h2>
-
-      <div class="steps-grid">
-        <div>
-          <span>01</span>
-          <p>Book your session</p>
-        </div>
-
-        <div>
-          <span>02</span>
-          <p>We confirm your details</p>
-        </div>
-
-        <div>
-          <span>03</span>
-          <p>We arrive on-site ready</p>
+    <section class="testimonials-cta image-slot" data-image-slot="Upload: images/testimonials/testimonials-cta.jpg">
+      <img class="slot-image" src="images/testimonials/testimonials-cta.jpg" alt="" onload="this.closest('.image-slot').classList.add('has-image')" onerror="this.hidden=true">
+      <div class="container testimonials-cta-content reveal">
+        <h2>Ready To Work Together?</h2>
+        <p>Let's bring elite care to your next event.</p>
+        <div class="testimonial-cta-buttons">
+          <a href="book.html" class="btn-primary">Book Now</a>
+          <a href="survey.html" class="btn-secondary">Leave A Review</a>
         </div>
       </div>
-
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- ================= FOOTER ================= -->
   <footer>
@@ -172,7 +166,9 @@
   </footer>
 
   <!-- JS -->
+  <script src="js/testimonials-config.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/testimonials.js" defer></script>
 
 </body>
 </html>
