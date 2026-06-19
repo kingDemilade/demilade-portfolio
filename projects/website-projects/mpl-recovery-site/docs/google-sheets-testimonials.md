@@ -100,6 +100,27 @@ https://docs.google.com/spreadsheets/d/SHEET_ID_IS_HERE/edit
 
 If Apps Script still will not open, it may be blocked by the Google Workspace/admin settings for that account. Use a personal Google account or ask the Workspace admin to enable Apps Script.
 
+### If Submissions Do Not Appear In The Sheet
+
+If testing the web app returns:
+
+```text
+Script function not found: doPost
+```
+
+then the deployed Apps Script version does not contain the `doPost(e)` function yet. Fix it like this:
+
+1. Open Apps Script.
+2. Confirm the script file contains `function doPost(e) { ... }` exactly.
+3. Click the save icon or press `Command + S`.
+4. Go to `Deploy > Manage deployments`.
+5. Click the pencil/edit icon on the current web app deployment.
+6. Under `Version`, choose `New version`.
+7. Click `Deploy`.
+8. Keep using the same web app URL unless Google gives you a new `/exec` URL.
+
+After redeploying, submit the survey again and check the Sheet for a new row.
+
 ```js
 const SHEET_NAME = 'Testimonials';
 
