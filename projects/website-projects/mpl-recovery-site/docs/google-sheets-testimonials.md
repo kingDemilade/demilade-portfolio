@@ -112,17 +112,30 @@ then the deployed Apps Script version does not contain the `doPost(e)` function 
 
 1. Open Apps Script.
 2. Confirm the script file contains `function doPost(e) { ... }` exactly.
-3. Click the save icon or press `Command + S`.
-4. Go to `Deploy > Manage deployments`.
-5. Click the pencil/edit icon on the current web app deployment.
-6. Under `Version`, choose `New version`.
-7. Click `Deploy`.
-8. Keep using the same web app URL unless Google gives you a new `/exec` URL.
+3. Add the `doGet()` diagnostic function from the script below.
+4. Click the save icon or press `Command + S`.
+5. Go to `Deploy > Manage deployments`.
+6. Click the pencil/edit icon on the current web app deployment.
+7. Under `Version`, choose `New version`.
+8. Click `Deploy`.
+9. Copy the latest `/exec` web app URL and paste it into `googleAppsScriptUrl` in `js/testimonials-config.js`.
 
-After redeploying, submit the survey again and check the Sheet for a new row.
+After redeploying, open the `/exec` URL directly in a browser. If it is working, it should say:
+
+```text
+MPL testimonials web app is live.
+```
+
+Then submit the survey again and check the Sheet for a new row.
 
 ```js
 const SHEET_NAME = 'Testimonials';
+
+function doGet() {
+  return ContentService
+    .createTextOutput('MPL testimonials web app is live.')
+    .setMimeType(ContentService.MimeType.TEXT);
+}
 
 function doPost(e) {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_NAME);
