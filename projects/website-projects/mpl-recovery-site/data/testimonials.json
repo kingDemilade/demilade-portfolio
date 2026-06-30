@@ -1,0 +1,42 @@
+[
+  {
+    "approved": "yes",
+    "name": "Jaylen M.",
+    "role": "Athlete",
+    "title": "High School Athlete",
+    "rating": "5",
+    "service": "Recovery & Regeneration",
+    "testimonial": "MPL Recovery helped me get back to 100% and stay on the field. The recovery sessions are a game changer.",
+    "photo": "images/testimonials/athlete-jaylen.jpg"
+  },
+  {
+    "approved": "yes",
+    "name": "Coach D.",
+    "role": "Coach",
+    "title": "Travel Basketball Coach",
+    "rating": "5",
+    "service": "Event Coverage",
+    "testimonial": "Having MPL Recovery at our tournaments gives our athletes and parents so much confidence. Top-tier service.",
+    "photo": "images/testimonials/coach-d.jpg"
+  },
+  {
+    "approved": "yes",
+    "name": "Sarah T.",
+    "role": "Parent",
+    "title": "Soccer Mom",
+    "rating": "5",
+    "service": "On-Site Care",
+    "testimonial": "I love knowing my daughter has access to the best care possible right there at the event.",
+    "photo": "images/testimonials/parent-sarah.jpg"
+  },
+  {
+    "approved": "yes",
+    "name": "Tournament Director",
+    "role": "Director",
+    "title": "Elite Sports Events",
+    "rating": "5",
+    "service": "Sports Emergency",
+    "testimonial": "Professional, reliable, and a huge value add to our events. We'll continue working with MPL Recovery.",
+    "photo": "images/testimonials/director.jpg"
+  }
+]

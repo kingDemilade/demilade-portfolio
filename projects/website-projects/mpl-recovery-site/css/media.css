@@ -189,6 +189,22 @@
   .wellness-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .about-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .founder-card {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-image {
+    min-height: 380px;
+  }
+
+  .testimonial-card {
+    grid-template-columns: minmax(190px, 0.45fr) 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -240,6 +256,109 @@
   .services-cta-content {
     padding: 2rem;
     text-align: center;
+  }
+
+  .about-section-header {
+    text-align: center;
+  }
+
+  .about-values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .about-value {
+    min-height: auto;
+    text-align: center;
+  }
+
+  .about-value i {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .founder-content {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .founder-image {
+    min-height: 340px;
+  }
+
+  .image-slot::before {
+    left: 1rem;
+    right: 1rem;
+    text-align: center;
+  }
+
+  .about-cta {
+    min-height: 330px;
+    text-align: center;
+  }
+
+  .about-cta-content {
+    max-width: 100%;
+  }
+
+  .testimonial-filter {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-share-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .testimonial-card {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-photo {
+    min-height: 300px;
+  }
+
+  .testimonial-quote {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .testimonials-cta {
+    min-height: 320px;
+    text-align: center;
+  }
+
+  .testimonials-cta-content {
+    max-width: 100%;
+  }
+
+  .testimonial-cta-buttons {
+    justify-content: center;
+  }
+
+  .survey-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .survey-intro {
+    position: static;
+    text-align: center;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-filter {
+    grid-template-columns: 1fr;
   }
 }
 

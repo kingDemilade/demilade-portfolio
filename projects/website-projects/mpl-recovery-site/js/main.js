@@ -43,11 +43,9 @@ window.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeMenu();
   });
 
-// Scroll reveal
-const reveals = document.querySelectorAll('.reveal');
-
 const revealOnScroll = () => {
   const triggerBottom = window.innerHeight * 0.85;
+  const reveals = document.querySelectorAll('.reveal');
 
   reveals.forEach(el => {
     const top = el.getBoundingClientRect().top;
@@ -59,6 +57,10 @@ const revealOnScroll = () => {
 };
 
 window.addEventListener('scroll', revealOnScroll);
+window.MPLReveal = {
+  refresh: revealOnScroll
+};
+revealOnScroll();
 
 // Sticky navbar scroll effect
 const navbar = document.querySelector('.navbar');
