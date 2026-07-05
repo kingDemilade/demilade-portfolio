@@ -125,3 +125,36 @@ if (menuToggle && primaryNav) {
     if (event.matches) setMenuState(false);
   });
 }
+
+// =========================
+// Scroll to Top
+// =========================
+const scrollTopButton = document.querySelector('.scroll-top');
+
+if (scrollTopButton) {
+  let scrollUpdatePending = false;
+
+  const updateScrollTopButton = () => {
+    const shouldShow = window.scrollY > 500;
+    scrollTopButton.classList.toggle('is-visible', shouldShow);
+    scrollUpdatePending = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!scrollUpdatePending) {
+      window.requestAnimationFrame(updateScrollTopButton);
+      scrollUpdatePending = true;
+    }
+  }, { passive: true });
+
+  scrollTopButton.addEventListener('click', () => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({
+      top: 0,
+      behavior: prefersReducedMotion ? 'auto' : 'smooth',
+    });
+    scrollTopButton.blur();
+  });
+
+  updateScrollTopButton();
+}

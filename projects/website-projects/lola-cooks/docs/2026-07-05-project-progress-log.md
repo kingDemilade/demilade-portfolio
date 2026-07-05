@@ -201,6 +201,21 @@ The mobile navigation now:
 - Reduced-motion behavior for animated cards and buttons
 - Semantic page sections, headings, navigation, articles, and blockquotes
 
+## Scroll-to-Top Control
+
+A shared scroll-to-top button was added to the live homepage and services page.
+
+The control:
+
+- Uses an upward Font Awesome chevron
+- Appears after the visitor scrolls 500 pixels
+- Returns the visitor smoothly to the top
+- Uses an immediate jump when reduced motion is preferred
+- Includes an accessible label and keyboard focus state
+- Is hidden from pointer and keyboard interaction when it is not visible
+
+The archived v1 page was intentionally left unchanged so it remains an accurate snapshot of the earlier site.
+
 ## Verification Performed
 
 - Checked HTML page structure and internal links.

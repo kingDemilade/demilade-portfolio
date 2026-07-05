@@ -1624,6 +1624,61 @@ section,
   animation: buttonPulse 1.8s ease-in-out infinite;
 }
 
+/* Scroll-to-top control */
+.scroll-top {
+  position: fixed;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  z-index: 900;
+  display: grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  padding: 0;
+  place-items: center;
+  border: 2px solid var(--card-bg);
+  border-radius: 50%;
+  color: var(--text-on-accent);
+  background: var(--accent);
+  box-shadow: 0 8px 22px var(--shadow-strong);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.75rem) scale(0.9);
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.scroll-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  box-shadow: 0 12px 28px var(--shadow-strong);
+  transform: translateY(-3px) scale(1.04);
+}
+
+.scroll-top:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 38%, transparent);
+  outline-offset: 3px;
+}
+
+.scroll-top:active {
+  transform: translateY(0) scale(0.96);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-top {
+    transition: none;
+  }
+}
+
 @media (max-width: 768px) {
   .site-header {
     flex-direction: column;
