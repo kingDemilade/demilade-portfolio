@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lola Cooks | Personalized Plans. Prepped to Perfection.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="/projects/website-projects/lola-cooks/css/lola-cooks.css" />
 
   <!-- favicon link -->
@@ -17,15 +27,40 @@
     <header class="site-header">
       <div class="container header-inner">
 <h1 class="site-logo">
-  <img 
-    src="images/logo/horizontal_lola-cooks-logo.svg" 
-    alt="Lola Cooks Logo" 
-    class="site-logo-img"
-  />
+  <a href="lola-cooks.html" aria-label="LolaCooks home">
+    <img src="images/logo/horizontal_lola-cooks-logo.svg" alt="LolaCooks" class="site-logo-img" />
+  </a>
 </h1>
-      <button id="theme-toggle" class="button-outline">
-    Toggle Mode
-  </button>  
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="services.html">Compare Options</a>
+      </nav>
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Switch to dark mode"
+        title="Serve dark mode"
+      >
+        <span class="theme-toggle__plate" aria-hidden="true">
+          <i class="fa-solid fa-sun theme-toggle__sun"></i>
+          <i class="fa-solid fa-moon theme-toggle__moon"></i>
+        </span>
+        <span class="visually-hidden theme-toggle__label">Switch to dark mode</span>
+      </button>
+      <button
+        id="menu-toggle"
+        class="menu-toggle"
+        type="button"
+        aria-controls="primary-nav"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
+        <i class="fa-solid fa-bars menu-toggle__open" aria-hidden="true"></i>
+        <i class="fa-solid fa-xmark menu-toggle__close" aria-hidden="true"></i>
+        <span class="visually-hidden menu-toggle__label">Open navigation menu</span>
+      </button>
 
 </div>
 
@@ -40,20 +75,24 @@
             <img src="images/logo/tall_lola-cooks-logo.svg" alt="Lola Cooks Logo" class="hero-logo-img" />
           </div>
         <p class="hero-eyebrow">Personalized Plans. Prepped to Perfection.</p>
+          <h2>Your goals. Your meals. Your level of support.</h2>
           <p class="hero-subtext">
-            Fresh, ready-to-eat meals tailored to your lifestyle and goals.
+            From weekly meal prep to one-on-one nutrition coaching, LolaCooks
+            helps make consistency feel possible.
           </p>
-          <a href="#meal-plans" class="button-primary pulse button-pop">
-            Start Your Plan
+          <a href="#services" class="button-primary pulse button-pop">
+            Choose Your Support
           <span class="arrow">→</span>
           </a>
         </div>
       </section>
 
       <!-- What She Offers -->
-      <section id="offers" class="offers-section">
+      <section id="services" class="offers-section">
         <div class="container">
-          <h2 class="section-title">Designed for Your Lifestyle</h2>
+          <p class="section-kicker">Three ways to work with Lola</p>
+          <h2 class="section-title">Support that meets you where you are</h2>
+          <p class="section-intro">Start with the meals, build healthier habits, or bring both together.</p>
 
           <div class="offers-grid">
             <!-- Card 1 -->
@@ -64,11 +103,13 @@
                 </div>
               </div>
               <div class="offer-content">
-                <h3>Personalized Meal Plans</h3>
+                <p class="card-kicker">Tier 1</p>
+                <h3>Meal Prep Only</h3>
                 <p>
-                  Meals tailored to your goals whether you're cutting,
-                  maintaining, or building.
+                  Choose 8, 10, or 12 macro-friendly, balanced meals from the
+                  weekly menu.
                 </p>
+                <a class="text-link" href="services.html#meal-prep">Explore meal prep <span aria-hidden="true">→</span></a>
               </div>
             </div>
 
@@ -80,11 +121,13 @@
                 </div>
               </div>
               <div class="offer-content">
-                <h3>Weekly Meal Prep</h3>
+                <p class="card-kicker">Tier 2</p>
+                <h3>Nutrition Coaching</h3>
                 <p>
-                  Fresh meals prepared weekly so you can stay consistent
-                  without the stress of cooking.
+                  One-on-one guidance for meal planning, macros, portions, and
+                  the habits behind consistent eating.
                 </p>
+                <a class="text-link" href="services.html#coaching">Explore coaching <span aria-hidden="true">→</span></a>
               </div>
             </div>
 
@@ -96,66 +139,28 @@
                 </div>
               </div>
               <div class="offer-content">
-                <h3>Macro-Based Options</h3>
+                <p class="card-kicker">Tier 3 · Signature</p>
+                <h3>Coaching + Prepared Meals</h3>
                 <p>
-                  Designed with balance in mind to support your fitness
-                  and nutrition goals.
+                  Personal targets, weekly check-ins, and 8–12 prepared meals
+                  working together in one complete program.
                 </p>
+                <a class="text-link" href="services.html#signature-program">Explore the program <span aria-hidden="true">→</span></a>
               </div>
             </div>
+          </div>
+          <div class="section-action">
+            <a class="button-secondary" href="services.html">Compare All Services <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </section>
 
-      <!-- Meal Plans -->
-      <section id="meal-plans" class="pricing-section">
-        <div class="container">
-          <h2 class="section-title">Meal Plans & Pricing</h2>
-          <p class="pricing-subtext">
-            Flexible options designed to fit your lifestyle and goals.
-          </p>
-
-          <div class="pricing-grid">
-            <!-- Basic -->
-            <div class="pricing-card">
-              <h3>Basic</h3>
-              <p class="price">$60 <span>(5 meals)</span></p>
-              <p class="price">$110 <span>(10 meals)</span></p>
-              <ul>
-                <li>Standard serving size</li>
-                <li>No modifications <br>(unless dietary restrictions)</li>
-                <li>Weekly meal selection</li>
-              </ul>
-            </div>
-
-            <!-- Premium -->
-            <div class="pricing-card">
-              <h3>Premium</h3>
-              <p class="price">$75 <span>(5 meals)</span></p>
-              <p class="price">$140 <span>(10 meals)</span></p>
-              <ul>
-                <li>Larger portions</li>
-                <li>Higher protein focus</li>
-                <li>Weekly meal selection</li>
-              </ul>
-            </div>
-
-            <!-- Custom -->
-            <div class="pricing-card">
-              <h3>Custom</h3>
-              <p class="price">$15 <span>per meal</span></p>
-              <ul>
-                <li>Deficit / Maintenance / Surplus</li>
-                <li>Macro tracking</li>
-                <li>Personalized meal planning</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="pricing-note">
-            <p><strong>À La Carte:</strong> $15 per meal (based on weekly menu)</p>
-            <p><strong>Order by Thursday at 7 PM</strong> for Sunday pickup/delivery.</p>
-          </div>
+      <section class="signature-section" aria-label="LolaCooks difference">
+        <div class="container signature-inner">
+          <p class="section-kicker">The LolaCooks difference</p>
+          <blockquote>“I won’t just tell you what to eat—I can make it for you.”</blockquote>
+          <p>Practical guidance and prepared meals, built to support the same goal.</p>
+          <a class="text-link" href="services.html#signature-program">See the signature program <span aria-hidden="true">→</span></a>
         </div>
       </section>
 
@@ -163,39 +168,39 @@
       <section id="how-it-works" class="steps-section">
         <div class="container">
           <h2 class="section-title">How It Works</h2>
-          <p class="steps-subtext">Simple steps to get your meals each week.</p>
+          <p class="steps-subtext">A simple path from choosing support to building consistency.</p>
 
           <div class="steps-grid">
             <!-- Step 1 -->
             <div class="step-item">
               <div class="step-number">1</div>
-              <h3>Choose Your Plan</h3>
-              <p>Select from Basic, Premium, or a Custom plan tailored to your needs.</p>
+              <h3>Choose Your Support</h3>
+              <p>Select meal prep, nutrition coaching, or the complete signature program.</p>
             </div>
 
             <!-- Step 2 -->
             <div class="step-item">
               <div class="step-number">2</div>
-              <h3>Order by Thursday</h3>
-              <p>Submit your order by Thursday at 7 PM for the upcoming week.</p>
+              <h3>Share Your Goals</h3>
+              <p>Tell Lola about your routine, preferences, and what you want to accomplish.</p>
             </div>
 
             <!-- Step 3 -->
             <div class="step-item">
               <div class="step-number">3</div>
-              <h3>Meals Are Prepared</h3>
-              <p>Your meals are freshly prepared and portioned with care.</p>
+              <h3>Get Your Plan</h3>
+              <p>Receive prepared meals, personalized guidance, or both—depending on your tier.</p>
             </div>
 
             <!-- Step 4 -->
             <div class="step-item">
               <div class="step-number">4</div>
-              <h3>Pickup or Delivery</h3>
-              <p>Receive your meals Sunday by 6 PM. Delivery available for $5.</p>
+              <h3>Adjust Each Week</h3>
+              <p>Stay consistent with weekly menus, check-ins, and adjustments as needed.</p>
             </div>
           </div>
 
-          <p class="steps-note">Meals can be refrigerated or frozen for extended freshness.</p>
+          <p class="steps-note">Meal orders are due Thursday night for the upcoming week.</p>
         </div>
       </section>
 
@@ -207,27 +212,26 @@
           </div>
 
           <div class="story-content">
-            <h2>More Than Meal Prep — It’s a Better Way to Eat</h2>
+            <h2>More than meal prep—it’s support that fits real life</h2>
 
             <p>
-              At LolaCooks, every meal is prepared with intention. Whether you're
-              working toward a fitness goal or simply looking for a more convenient
-              way to eat well, each plan is designed to fit your lifestyle.
+              LolaCooks brings balanced food and realistic nutrition guidance into
+              the same conversation. Choose the level of support that fits your life now.
             </p>
 
             <p>
-              No shortcuts. No guesswork. Just fresh, balanced meals made to help
-              you stay consistent throughout your week.
+              Whether you need the meals, the plan, or someone to help you connect
+              the two, every option is designed around sustainable consistency.
             </p>
 
             <p>
-              Because eating better shouldn’t feel complicated.
+              Because eating better shouldn’t feel like another full-time job.
             </p>
 
             <div class="story-highlights">
-              <span>Fresh, quality ingredients</span>
-              <span>Consistent portions you can rely on</span>
-              <span>Built around your goals and routine</span>
+              <span>Macro-friendly prepared meals</span>
+              <span>One-on-one habit support</span>
+              <span>Weekly guidance that adapts with you</span>
             </div>
           </div>
         </div>
@@ -236,23 +240,17 @@
       <!-- Final CTA -->
       <section id="cta" class="cta-section">
         <div class="container cta-content">
-          <h2>Ready to get started?</h2>
+          <h2>Ready to find your fit?</h2>
           <p>
-            Send us a message on Instagram to place your order or ask any
-            questions.
+            Compare each level of support, then message Lola when you’re ready.
           </p>
-
-          <a
-            class="cta-button"
-            href="https://instagram.com/lolacookss"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            DM on Instagram
-          </a>
+          <div class="cta-actions">
+            <a class="cta-button" href="services.html">Explore Services</a>
+            <a class="cta-link" href="https://instagram.com/lolacookss" target="_blank" rel="noopener noreferrer">DM @lolacookss</a>
+          </div>
 
           <p class="cta-handle">@lolacookss</p>
-          <p class="cta-note">Quick responses. Orders confirmed weekly.</p>
+          <p class="cta-note">Current pricing and availability are confirmed directly with Lola.</p>
         </div>
       </section>
     </main>

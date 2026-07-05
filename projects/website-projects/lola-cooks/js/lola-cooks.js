@@ -31,11 +31,16 @@ const toggle = document.getElementById('theme-toggle');
 function updateThemeIcon() {
   if (!toggle) return;
 
-  if (document.body.classList.contains('dark-mode')) {
-    toggle.textContent = '☀️ Light Mode';
-  } else {
-    toggle.textContent = '🌙 Dark Mode';
-  }
+  const isDark = document.body.classList.contains('dark-mode');
+  const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+  const tooltip = isDark ? 'Serve light mode' : 'Serve dark mode';
+
+  toggle.setAttribute('aria-label', label);
+  toggle.setAttribute('title', tooltip);
+  toggle.setAttribute('aria-pressed', String(isDark));
+
+  const hiddenLabel = toggle.querySelector('.theme-toggle__label');
+  if (hiddenLabel) hiddenLabel.textContent = label;
 }
 
 if (toggle) {
@@ -79,3 +84,44 @@ mediaQuery.addEventListener('change', (e) => {
     updateThemeIcon();
   }
 });
+
+// =========================
+// Mobile Navigation
+// =========================
+const menuToggle = document.getElementById('menu-toggle');
+const primaryNav = document.getElementById('primary-nav');
+
+function setMenuState(isOpen, returnFocus = false) {
+  if (!menuToggle || !primaryNav) return;
+
+  const label = isOpen ? 'Close navigation menu' : 'Open navigation menu';
+  primaryNav.classList.toggle('is-open', isOpen);
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.setAttribute('aria-label', label);
+
+  const hiddenLabel = menuToggle.querySelector('.menu-toggle__label');
+  if (hiddenLabel) hiddenLabel.textContent = label;
+  if (returnFocus) menuToggle.focus();
+}
+
+if (menuToggle && primaryNav) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+    setMenuState(!isOpen);
+  });
+
+  primaryNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenuState(false));
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+      setMenuState(false, true);
+    }
+  });
+
+  const desktopNavQuery = window.matchMedia('(min-width: 769px)');
+  desktopNavQuery.addEventListener('change', (event) => {
+    if (event.matches) setMenuState(false);
+  });
+}
