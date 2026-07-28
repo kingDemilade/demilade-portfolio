@@ -1,0 +1,200 @@
+{
+  "id": "archived-matilda-tournament",
+  "title": "Literary Madness",
+  "label": "Archived Tournament",
+  "year": null,
+  "yearStatus": "unverified",
+  "status": "complete",
+  "championId": "matilda",
+  "leagues": [
+    {
+      "id": "heroes",
+      "name": "Heroes League",
+      "championId": "matilda"
+    },
+    {
+      "id": "villains",
+      "name": "Villains League",
+      "championId": "dolores-umbridge"
+    }
+  ],
+  "contestants": [
+    {
+      "id": "lisbeth-salander",
+      "name": "Lisbeth Salander",
+      "leagueId": "heroes",
+      "source": "Millennium series",
+      "sourceStatus": "verify",
+      "archivedBooksiteGroup": "EB850"
+    },
+    {
+      "id": "matilda",
+      "name": "Matilda",
+      "leagueId": "heroes",
+      "source": "Matilda",
+      "sourceStatus": "verify",
+      "archivedBooksiteGroup": "EB849"
+    },
+    {
+      "id": "arya-stark",
+      "name": "Arya Stark",
+      "leagueId": "heroes",
+      "source": "A Song of Ice and Fire",
+      "sourceStatus": "verify",
+      "archivedBooksiteGroup": "EB857"
+    },
+    {
+      "id": "captain-marvel",
+      "name": "Captain Marvel",
+      "leagueId": "heroes",
+      "source": "Marvel Comics",
+      "sourceStatus": "ambiguous-incarnation",
+      "archivedBooksiteGroup": "EB858"
+    },
+    {
+      "id": "gandalf",
+      "name": "Gandalf",
+      "leagueId": "heroes",
+      "source": "The Hobbit and The Lord of the Rings",
+      "sourceStatus": "verify",
+      "archivedBooksiteGroup": "EB848"
+    },
+    {
+      "id": "sherlock-holmes",
+      "name": "Sherlock Holmes",
+      "leagueId": "heroes",
+      "source": "Sherlock Holmes stories and novels",
+      "sourceStatus": "verify",
+      "archivedBooksiteGroup": "EB851"
+    },
+    {
+      "id": "robin-hood",
+      "name": "Robin Hood",
+      "leagueId": "heroes",
+      "source": "Robin Hood legends",
+      "sourceStatus": "traditional",
+      "archivedBooksiteGroup": "EB859"
+    },
+    {
+      "id": "black-panther",
+      "name": "Black Panther",
+      "leagueId": "heroes",
+      "source": "Marvel Comics",
+      "sourceStatus": "verify",
+      "archivedBooksiteGroup": "EB847"
+    },
+    {
+      "id": "hannibal-lecter",
+      "name": "Hannibal Lecter",
+      "archivedName": "Hannibal Lector",
+      "leagueId": "villains",
+      "source": "Hannibal Lecter novels",
+      "sourceStatus": "verify",
+      "archivedBooksiteGroup": "EB852"
+    },
+    {
+      "id": "count-olaf",
+      "name": "Count Olaf",
+      "leagueId": "villains",
+      "source": "A Series of Unfortunate Events",
+      "sourceStatus": "verify",
+      "archivedBooksiteGroup": "EB853"
+    },
+    {
+      "id": "dolores-umbridge",
+      "name": "Dolores Umbridge",
+      "leagueId": "villains",
+      "source": "Harry Potter series",
+      "sourceStatus": "verify",
+      "archivedBooksiteGroup": "EB860"
+    },
+    {
+      "id": "he-who-shall-not-be-named",
+      "name": "He Who Shall Not Be Named",
+      "presumedIdentity": "Lord Voldemort",
+      "leagueId": "villains",
+      "source": "Harry Potter series",
+      "sourceStatus": "identity-unverified",
+      "archivedBooksiteGroup": "EB861"
+    },
+    {
+      "id": "darth-vader",
+      "name": "Darth Vader",
+      "leagueId": "villains",
+      "source": "Star Wars",
+      "sourceStatus": "verify",
+      "archivedBooksiteGroup": "EB845",
+      "archivedLinkStatus": "malformed"
+    },
+    {
+      "id": "mrs-hannigan",
+      "name": "Mrs. Hannigan",
+      "commonName": "Miss Hannigan",
+      "leagueId": "villains",
+      "source": "Annie",
+      "sourceStatus": "name-unverified",
+      "archivedBooksiteGroup": "EB855"
+    },
+    {
+      "id": "thanos",
+      "name": "Thanos",
+      "leagueId": "villains",
+      "source": "Marvel Comics",
+      "sourceStatus": "verify",
+      "archivedBooksiteGroup": "EB846"
+    },
+    {
+      "id": "maleficent",
+      "name": "Maleficent",
+      "leagueId": "villains",
+      "source": "Sleeping Beauty tradition and Disney adaptation",
+      "sourceStatus": "exact-source-unverified",
+      "archivedBooksiteGroup": "EB854"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "opening",
+      "name": "Opening Round",
+      "order": 1
+    },
+    {
+      "id": "league-semifinal",
+      "name": "League Semifinals",
+      "order": 2
+    },
+    {
+      "id": "league-final",
+      "name": "League Finals",
+      "order": 3
+    },
+    {
+      "id": "championship",
+      "name": "Championship",
+      "order": 4
+    }
+  ],
+  "matchups": [
+    { "id": "h1", "leagueId": "heroes", "roundId": "opening", "contestantIds": ["lisbeth-salander", "matilda"], "winnerId": "matilda" },
+    { "id": "h2", "leagueId": "heroes", "roundId": "opening", "contestantIds": ["arya-stark", "captain-marvel"], "winnerId": "arya-stark" },
+    { "id": "h3", "leagueId": "heroes", "roundId": "opening", "contestantIds": ["gandalf", "sherlock-holmes"], "winnerId": "gandalf" },
+    { "id": "h4", "leagueId": "heroes", "roundId": "opening", "contestantIds": ["robin-hood", "black-panther"], "winnerId": "black-panther" },
+    { "id": "v1", "leagueId": "villains", "roundId": "opening", "contestantIds": ["hannibal-lecter", "count-olaf"], "winnerId": "count-olaf" },
+    { "id": "v2", "leagueId": "villains", "roundId": "opening", "contestantIds": ["dolores-umbridge", "he-who-shall-not-be-named"], "winnerId": "dolores-umbridge" },
+    { "id": "v3", "leagueId": "villains", "roundId": "opening", "contestantIds": ["darth-vader", "mrs-hannigan"], "winnerId": "darth-vader" },
+    { "id": "v4", "leagueId": "villains", "roundId": "opening", "contestantIds": ["thanos", "maleficent"], "winnerId": "maleficent" },
+    { "id": "h5", "leagueId": "heroes", "roundId": "league-semifinal", "contestantIds": ["matilda", "arya-stark"], "sourceMatchupIds": ["h1", "h2"], "winnerId": "matilda" },
+    { "id": "h6", "leagueId": "heroes", "roundId": "league-semifinal", "contestantIds": ["gandalf", "black-panther"], "sourceMatchupIds": ["h3", "h4"], "winnerId": "black-panther" },
+    { "id": "v5", "leagueId": "villains", "roundId": "league-semifinal", "contestantIds": ["count-olaf", "dolores-umbridge"], "sourceMatchupIds": ["v1", "v2"], "winnerId": "dolores-umbridge" },
+    { "id": "v6", "leagueId": "villains", "roundId": "league-semifinal", "contestantIds": ["darth-vader", "maleficent"], "sourceMatchupIds": ["v3", "v4"], "winnerId": "maleficent" },
+    { "id": "h7", "leagueId": "heroes", "roundId": "league-final", "contestantIds": ["matilda", "black-panther"], "sourceMatchupIds": ["h5", "h6"], "winnerId": "matilda" },
+    { "id": "v7", "leagueId": "villains", "roundId": "league-final", "contestantIds": ["dolores-umbridge", "maleficent"], "sourceMatchupIds": ["v5", "v6"], "winnerId": "dolores-umbridge" },
+    { "id": "c1", "leagueId": null, "roundId": "championship", "contestantIds": ["matilda", "dolores-umbridge"], "sourceMatchupIds": ["h7", "v7"], "winnerId": "matilda" }
+  ],
+  "provenance": {
+    "resultSource": "reference-site/images/bracket.jpg",
+    "linkSource": "reference-site/index.html",
+    "voteTotalsAvailable": false,
+    "historicalLinksVerified": false
+  }
+}

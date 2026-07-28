@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore an archived Literary Madness tournament between iconic fictional heroes and villains.">
+  <title>Literary Madness — Archived Tournament</title>
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="site-name" href="#top" aria-label="Literary Madness home">Literary <span class="villain-initial">M</span>adness</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="nav-toggle__line" aria-hidden="true"></span>
+      <span class="nav-toggle__line" aria-hidden="true"></span>
+      <span class="nav-toggle__line" aria-hidden="true"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+    <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+      <ul>
+        <li><span class="archive-status">Archived Tournament</span></li>
+        <li><a href="#matchups">Matchups</a></li>
+        <li><a href="#bracket">Bracket</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top" aria-labelledby="page-title">
+      <p class="eyebrow">Heroes League versus Villains League</p>
+      <h1 id="page-title">Who will be the greatest literary figure of all time?</h1>
+      <p>Sixteen fictional figures entered a tournament of literary heroes and villains. Follow every matchup from the opening round to the final battle.</p>
+      <p>
+        <a href="#bracket">Explore the bracket</a>
+        <a href="#matchups">Meet the contestants</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="summary-title">
+      <h2 id="summary-title">Tournament at a glance</h2>
+      <dl class="tournament-facts">
+        <div><dt>Status</dt><dd>Complete</dd></div>
+        <div><dt>Contestants</dt><dd>16</dd></div>
+        <div><dt>Leagues</dt><dd>2</dd></div>
+        <div><dt>Rounds</dt><dd>4</dd></div>
+        <div><dt>Champion</dt><dd>Matilda</dd></div>
+      </dl>
+      <p class="archive-note"><strong>Archive note:</strong> The surviving files establish the contestants and results, but not the exact tournament year or vote totals.</p>
+    </section>
+
+    <section class="league-showcase" aria-labelledby="leagues-title">
+      <h2 id="leagues-title">Two leagues. One champion.</h2>
+      <div class="league-champion-tabs" role="tablist" aria-label="Choose a league champion">
+        <button id="heroes-champion-tab" type="button" role="tab" aria-selected="false" aria-controls="heroes-champion-panel" data-league="heroes">Heroes League Champion</button>
+        <button id="villains-champion-tab" type="button" role="tab" aria-selected="false" aria-controls="villains-champion-panel" data-league="villains">Villains League Champion</button>
+      </div>
+      <p class="league-champion-empty" role="status">Select a league champion to reveal the winner card.</p>
+      <div class="league-grid">
+        <article class="league-card heroes" id="heroes-champion-panel" role="tabpanel" aria-labelledby="heroes-champion-tab">
+          <figure class="league-card__portrait">
+            <img src="assets/images/contestants/matilda-test.png" width="1600" height="2000" alt="Illustration of Matilda reading a large open book" loading="lazy" decoding="async">
+          </figure>
+          <p class="league-card__badge">
+            <span class="league-card__badge-star" aria-hidden="true">★</span>
+            <span><strong>Heroes League</strong><small>Champion</small></span>
+          </p>
+          <h3 class="league-card__name">Matilda</h3>
+        </article>
+        <article class="league-card villains" id="villains-champion-panel" role="tabpanel" aria-labelledby="villains-champion-tab">
+          <figure class="league-card__portrait">
+            <img src="assets/images/contestants/dolores-umbridge-test.png" width="1600" height="2000" alt="Illustration of Dolores Umbridge seated in her office" loading="lazy" decoding="async">
+          </figure>
+          <p class="league-card__badge">
+            <span class="league-card__badge-star" aria-hidden="true">★</span>
+            <span><strong>Villains League</strong><small>Champion</small></span>
+          </p>
+          <h3 class="league-card__name">Dolores Umbridge</h3>
+        </article>
+      </div>
+    </section>
+
+    <section id="matchups" aria-labelledby="matchups-title">
+      <h2 id="matchups-title">Tournament matchups</h2>
+      <p>Each face-off pairs the contestants like a tournament poster. Winner ribbons repeat the result so advancement does not depend on color alone.</p>
+
+      <section id="heroes-matchups" aria-labelledby="heroes-title">
+        <h3 id="heroes-title">Heroes League</h3>
+
+        <div class="matchup-tabs" role="tablist" aria-label="Heroes League matchup rounds">
+          <button id="heroes-opening-tab" type="button" role="tab" aria-selected="true" aria-controls="heroes-opening-panel">Opening round</button>
+          <button id="heroes-semifinals-tab" type="button" role="tab" aria-selected="false" aria-controls="heroes-semifinals-panel">Semifinals</button>
+          <button id="heroes-final-tab" type="button" role="tab" aria-selected="false" aria-controls="heroes-final-panel">Heroes League final</button>
+        </div>
+
+        <section class="matchup-panel" id="heroes-opening-panel" role="tabpanel" tabindex="0" aria-labelledby="heroes-opening-tab">
+          <h4 id="heroes-opening-title">Opening round</h4>
+          <ol class="matchup-list">
+            <li>
+              <article class="matchup">
+                <div class="matchup-faceoff" aria-label="Lisbeth Salander versus Matilda. Winner: Matilda.">
+                  <figure class="matchup-contestant">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">LS</span>
+                    <figcaption>Lisbeth Salander</figcaption>
+                  </figure>
+                  <span class="matchup-vs" aria-hidden="true">vs</span>
+                  <figure class="matchup-contestant matchup-contestant--winner">
+                    <span class="matchup-portrait"><img src="assets/images/contestants/matilda-test.png" width="1600" height="2000" alt="" loading="lazy" decoding="async"></span>
+                    <figcaption>Matilda</figcaption>
+                  </figure>
+                </div>
+                <p class="matchup-winner"><strong>Winner:</strong> Matilda</p>
+              </article>
+            </li>
+            <li>
+              <article class="matchup">
+                <div class="matchup-faceoff" aria-label="Arya Stark versus Captain Marvel. Winner: Arya Stark.">
+                  <figure class="matchup-contestant matchup-contestant--winner">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">AS</span>
+                    <figcaption>Arya Stark</figcaption>
+                  </figure>
+                  <span class="matchup-vs" aria-hidden="true">vs</span>
+                  <figure class="matchup-contestant">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">CM</span>
+                    <figcaption>Captain Marvel</figcaption>
+                  </figure>
+                </div>
+                <p class="matchup-winner"><strong>Winner:</strong> Arya Stark</p>
+              </article>
+            </li>
+            <li>
+              <article class="matchup">
+                <div class="matchup-faceoff" aria-label="Gandalf versus Sherlock Holmes. Winner: Gandalf.">
+                  <figure class="matchup-contestant matchup-contestant--winner">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">G</span>
+                    <figcaption>Gandalf</figcaption>
+                  </figure>
+                  <span class="matchup-vs" aria-hidden="true">vs</span>
+                  <figure class="matchup-contestant">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">SH</span>
+                    <figcaption>Sherlock Holmes</figcaption>
+                  </figure>
+                </div>
+                <p class="matchup-winner"><strong>Winner:</strong> Gandalf</p>
+              </article>
+            </li>
+            <li>
+              <article class="matchup">
+                <div class="matchup-faceoff" aria-label="Robin Hood versus Black Panther. Winner: Black Panther.">
+                  <figure class="matchup-contestant">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">RH</span>
+                    <figcaption>Robin Hood</figcaption>
+                  </figure>
+                  <span class="matchup-vs" aria-hidden="true">vs</span>
+                  <figure class="matchup-contestant matchup-contestant--winner">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">BP</span>
+                    <figcaption>Black Panther</figcaption>
+                  </figure>
+                </div>
+                <p class="matchup-winner"><strong>Winner:</strong> Black Panther</p>
+              </article>
+            </li>
+          </ol>
+        </section>
+
+        <section class="matchup-panel" id="heroes-semifinals-panel" role="tabpanel" tabindex="0" aria-labelledby="heroes-semifinals-tab">
+          <h4 id="heroes-semifinals-title">League semifinals</h4>
+          <ol class="matchup-list">
+            <li>
+              <article class="matchup">
+                <div class="matchup-faceoff" aria-label="Matilda versus Arya Stark. Winner: Matilda.">
+                  <figure class="matchup-contestant matchup-contestant--winner">
+                    <span class="matchup-portrait"><img src="assets/images/contestants/matilda-test.png" width="1600" height="2000" alt="" loading="lazy" decoding="async"></span>
+                    <figcaption>Matilda</figcaption>
+                  </figure>
+                  <span class="matchup-vs" aria-hidden="true">vs</span>
+                  <figure class="matchup-contestant">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">AS</span>
+                    <figcaption>Arya Stark</figcaption>
+                  </figure>
+                </div>
+                <p class="matchup-winner"><strong>Winner:</strong> Matilda</p>
+              </article>
+            </li>
+            <li>
+              <article class="matchup">
+                <div class="matchup-faceoff" aria-label="Gandalf versus Black Panther. Winner: Black Panther.">
+                  <figure class="matchup-contestant">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">G</span>
+                    <figcaption>Gandalf</figcaption>
+                  </figure>
+                  <span class="matchup-vs" aria-hidden="true">vs</span>
+                  <figure class="matchup-contestant matchup-contestant--winner">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">BP</span>
+                    <figcaption>Black Panther</figcaption>
+                  </figure>
+                </div>
+                <p class="matchup-winner"><strong>Winner:</strong> Black Panther</p>
+              </article>
+            </li>
+          </ol>
+        </section>
+
+        <section class="matchup-panel" id="heroes-final-panel" role="tabpanel" tabindex="0" aria-labelledby="heroes-final-tab">
+          <h4 id="heroes-final-title">Heroes League final</h4>
+          <ol class="matchup-list">
+            <li>
+              <article class="matchup matchup--final">
+                <div class="matchup-faceoff" aria-label="Matilda versus Black Panther. Heroes League champion: Matilda.">
+                  <figure class="matchup-contestant matchup-contestant--winner">
+                    <span class="matchup-portrait"><img src="assets/images/contestants/matilda-test.png" width="1600" height="2000" alt="" loading="lazy" decoding="async"></span>
+                    <figcaption>Matilda</figcaption>
+                  </figure>
+                  <span class="matchup-vs" aria-hidden="true">vs</span>
+                  <figure class="matchup-contestant">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">BP</span>
+                    <figcaption>Black Panther</figcaption>
+                  </figure>
+                </div>
+                <p class="matchup-winner"><strong>Heroes League champion:</strong> Matilda</p>
+              </article>
+            </li>
+          </ol>
+        </section>
+      </section>
+
+      <section id="villains-matchups" aria-labelledby="villains-title">
+        <h3 id="villains-title">Villains League</h3>
+
+        <div class="matchup-tabs" role="tablist" aria-label="Villains League matchup rounds">
+          <button id="villains-opening-tab" type="button" role="tab" aria-selected="true" aria-controls="villains-opening-panel">Opening round</button>
+          <button id="villains-semifinals-tab" type="button" role="tab" aria-selected="false" aria-controls="villains-semifinals-panel">Semifinals</button>
+          <button id="villains-final-tab" type="button" role="tab" aria-selected="false" aria-controls="villains-final-panel">Villains League final</button>
+        </div>
+
+        <section class="matchup-panel" id="villains-opening-panel" role="tabpanel" tabindex="0" aria-labelledby="villains-opening-tab">
+          <h4 id="villains-opening-title">Opening round</h4>
+          <ol class="matchup-list">
+            <li>
+              <article class="matchup">
+                <div class="matchup-faceoff" aria-label="Hannibal Lecter versus Count Olaf. Winner: Count Olaf.">
+                  <figure class="matchup-contestant">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">HL</span>
+                    <figcaption>Hannibal Lecter</figcaption>
+                  </figure>
+                  <span class="matchup-vs" aria-hidden="true">vs</span>
+                  <figure class="matchup-contestant matchup-contestant--winner">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">CO</span>
+                    <figcaption>Count Olaf</figcaption>
+                  </figure>
+                </div>
+                <p class="matchup-winner"><strong>Winner:</strong> Count Olaf</p>
+              </article>
+            </li>
+            <li>
+              <article class="matchup">
+                <div class="matchup-faceoff" aria-label="Dolores Umbridge versus He Who Shall Not Be Named. Winner: Dolores Umbridge.">
+                  <figure class="matchup-contestant matchup-contestant--winner">
+                    <span class="matchup-portrait"><img src="assets/images/contestants/dolores-umbridge-test.png" width="1600" height="2000" alt="" loading="lazy" decoding="async"></span>
+                    <figcaption>Dolores Umbridge</figcaption>
+                  </figure>
+                  <span class="matchup-vs" aria-hidden="true">vs</span>
+                  <figure class="matchup-contestant">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">HW</span>
+                    <figcaption>He Who Shall Not Be Named</figcaption>
+                  </figure>
+                </div>
+                <p class="matchup-winner"><strong>Winner:</strong> Dolores Umbridge</p>
+              </article>
+            </li>
+            <li>
+              <article class="matchup">
+                <div class="matchup-faceoff" aria-label="Darth Vader versus Mrs. Hannigan. Winner: Darth Vader.">
+                  <figure class="matchup-contestant matchup-contestant--winner">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">DV</span>
+                    <figcaption>Darth Vader</figcaption>
+                  </figure>
+                  <span class="matchup-vs" aria-hidden="true">vs</span>
+                  <figure class="matchup-contestant">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">MH</span>
+                    <figcaption>Mrs. Hannigan</figcaption>
+                  </figure>
+                </div>
+                <p class="matchup-winner"><strong>Winner:</strong> Darth Vader</p>
+              </article>
+            </li>
+            <li>
+              <article class="matchup">
+                <div class="matchup-faceoff" aria-label="Thanos versus Maleficent. Winner: Maleficent.">
+                  <figure class="matchup-contestant">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">T</span>
+                    <figcaption>Thanos</figcaption>
+                  </figure>
+                  <span class="matchup-vs" aria-hidden="true">vs</span>
+                  <figure class="matchup-contestant matchup-contestant--winner">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">M</span>
+                    <figcaption>Maleficent</figcaption>
+                  </figure>
+                </div>
+                <p class="matchup-winner"><strong>Winner:</strong> Maleficent</p>
+              </article>
+            </li>
+          </ol>
+        </section>
+
+        <section class="matchup-panel" id="villains-semifinals-panel" role="tabpanel" tabindex="0" aria-labelledby="villains-semifinals-tab">
+          <h4 id="villains-semifinals-title">League semifinals</h4>
+          <ol class="matchup-list">
+            <li>
+              <article class="matchup">
+                <div class="matchup-faceoff" aria-label="Count Olaf versus Dolores Umbridge. Winner: Dolores Umbridge.">
+                  <figure class="matchup-contestant">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">CO</span>
+                    <figcaption>Count Olaf</figcaption>
+                  </figure>
+                  <span class="matchup-vs" aria-hidden="true">vs</span>
+                  <figure class="matchup-contestant matchup-contestant--winner">
+                    <span class="matchup-portrait"><img src="assets/images/contestants/dolores-umbridge-test.png" width="1600" height="2000" alt="" loading="lazy" decoding="async"></span>
+                    <figcaption>Dolores Umbridge</figcaption>
+                  </figure>
+                </div>
+                <p class="matchup-winner"><strong>Winner:</strong> Dolores Umbridge</p>
+              </article>
+            </li>
+            <li>
+              <article class="matchup">
+                <div class="matchup-faceoff" aria-label="Darth Vader versus Maleficent. Winner: Maleficent.">
+                  <figure class="matchup-contestant">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">DV</span>
+                    <figcaption>Darth Vader</figcaption>
+                  </figure>
+                  <span class="matchup-vs" aria-hidden="true">vs</span>
+                  <figure class="matchup-contestant matchup-contestant--winner">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">M</span>
+                    <figcaption>Maleficent</figcaption>
+                  </figure>
+                </div>
+                <p class="matchup-winner"><strong>Winner:</strong> Maleficent</p>
+              </article>
+            </li>
+          </ol>
+        </section>
+
+        <section class="matchup-panel" id="villains-final-panel" role="tabpanel" tabindex="0" aria-labelledby="villains-final-tab">
+          <h4 id="villains-final-title">Villains League final</h4>
+          <ol class="matchup-list">
+            <li>
+              <article class="matchup matchup--final">
+                <div class="matchup-faceoff" aria-label="Dolores Umbridge versus Maleficent. Villains League champion: Dolores Umbridge.">
+                  <figure class="matchup-contestant matchup-contestant--winner">
+                    <span class="matchup-portrait"><img src="assets/images/contestants/dolores-umbridge-test.png" width="1600" height="2000" alt="" loading="lazy" decoding="async"></span>
+                    <figcaption>Dolores Umbridge</figcaption>
+                  </figure>
+                  <span class="matchup-vs" aria-hidden="true">vs</span>
+                  <figure class="matchup-contestant">
+                    <span class="matchup-portrait matchup-portrait--placeholder" aria-hidden="true">M</span>
+                    <figcaption>Maleficent</figcaption>
+                  </figure>
+                </div>
+                <p class="matchup-winner"><strong>Villains League champion:</strong> Dolores Umbridge</p>
+              </article>
+            </li>
+          </ol>
+        </section>
+      </section>
+    </section>
+
+    <section id="bracket" aria-labelledby="bracket-title">
+      <h2 id="bracket-title">Full bracket</h2>
+      <p>Trace every victory from the opening round to the final showdown.</p>
+      <p class="mobile-bracket-hint">Swipe across the bracket to follow the tournament from the opening rounds to the champion.</p>
+
+      <div class="visual-bracket combined-bracket" id="visual-bracket" aria-hidden="true">
+        <h3 class="combined-bracket__title">Road to the Final</h3>
+
+        <section class="league-bracket heroes-bracket">
+          <header class="bracket-league-heading">
+            <h3><span>Heroes</span> <span>League</span></h3>
+          </header>
+
+          <div class="bracket-round opening-round">
+            <h4>Opening round</h4>
+            <div class="bracket-match">
+              <span>Lisbeth Salander</span>
+              <strong>Matilda</strong>
+            </div>
+            <div class="bracket-match">
+              <strong>Arya Stark</strong>
+              <span>Captain Marvel</span>
+            </div>
+            <div class="bracket-match">
+              <strong>Gandalf</strong>
+              <span>Sherlock Holmes</span>
+            </div>
+            <div class="bracket-match">
+              <span>Robin Hood</span>
+              <strong>Black Panther</strong>
+            </div>
+          </div>
+
+          <div class="bracket-round semifinal-round">
+            <h4>Semifinals</h4>
+            <div class="bracket-match">
+              <strong>Matilda</strong>
+              <span>Arya Stark</span>
+            </div>
+            <div class="bracket-match">
+              <span>Gandalf</span>
+              <strong>Black Panther</strong>
+            </div>
+          </div>
+
+          <div class="bracket-round league-final-round">
+            <h4>League final</h4>
+            <div class="bracket-match">
+              <strong>Matilda</strong>
+              <span>Black Panther</span>
+            </div>
+          </div>
+
+          <div class="league-winner">
+            <span class="league-winner__meta">
+              <span>Heroes League champion</span>
+            </span>
+            <strong>Matilda</strong>
+          </div>
+        </section>
+
+        <div class="championship-clash">
+          <p>Championship · Matchup C1</p>
+          <div class="championship-contenders">
+            <span class="championship-finalist hero-finalist">
+              <span class="bracket-avatar bracket-avatar--image" aria-hidden="true"><img src="assets/images/contestants/matilda-test.png" width="1600" height="2000" alt=""></span>
+              <span>Matilda</span>
+            </span>
+            <span class="versus">VS</span>
+            <span class="championship-finalist villain-finalist">
+              <span class="bracket-avatar bracket-avatar--image" aria-hidden="true"><img src="assets/images/contestants/dolores-umbridge-test.png" width="1600" height="2000" alt=""></span>
+              <span>Dolores Umbridge</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="championship-result">
+          <span class="bracket-avatar bracket-avatar--image" aria-hidden="true"><img src="assets/images/contestants/matilda-test.png" width="1600" height="2000" alt=""></span>
+          <span class="championship-result__label">Winner</span>
+          <strong>Matilda</strong>
+        </div>
+
+        <section class="league-bracket villains-bracket">
+          <header class="bracket-league-heading">
+            <h3><span>Villains</span> <span>League</span></h3>
+          </header>
+
+          <div class="bracket-round opening-round">
+            <h4>Opening round</h4>
+            <div class="bracket-match">
+              <span>Hannibal Lecter</span>
+              <strong>Count Olaf</strong>
+            </div>
+            <div class="bracket-match">
+              <strong>Dolores Umbridge</strong>
+              <span>He Who Shall Not Be Named</span>
+            </div>
+            <div class="bracket-match">
+              <strong>Darth Vader</strong>
+              <span>Mrs. Hannigan</span>
+            </div>
+            <div class="bracket-match">
+              <span>Thanos</span>
+              <strong>Maleficent</strong>
+            </div>
+          </div>
+
+          <div class="bracket-round semifinal-round">
+            <h4>Semifinals</h4>
+            <div class="bracket-match">
+              <span>Count Olaf</span>
+              <strong>Dolores Umbridge</strong>
+            </div>
+            <div class="bracket-match">
+              <span>Darth Vader</span>
+              <strong>Maleficent</strong>
+            </div>
+          </div>
+
+          <div class="bracket-round league-final-round">
+            <h4>League final</h4>
+            <div class="bracket-match">
+              <strong>Dolores Umbridge</strong>
+              <span>Maleficent</span>
+            </div>
+          </div>
+
+          <div class="league-winner">
+            <span class="league-winner__meta">
+              <span>Villains League champion</span>
+            </span>
+            <strong>Dolores Umbridge</strong>
+          </div>
+        </section>
+      </div>
+
+      <section class="accessible-bracket" aria-labelledby="accessible-bracket-title">
+        <h3 id="accessible-bracket-title">Bracket results by round</h3>
+        <p>This ordered summary provides the same tournament results shown in the visual bracket.</p>
+        <div class="bracket-summary">
+        <section aria-labelledby="heroes-path-title">
+          <h3 id="heroes-path-title">Heroes path</h3>
+          <ol>
+            <li><strong>Opening winners:</strong> Matilda, Arya Stark, Gandalf, and Black Panther</li>
+            <li><strong>Semifinal winners:</strong> Matilda and Black Panther</li>
+            <li><strong>League champion:</strong> Matilda</li>
+          </ol>
+        </section>
+        <section aria-labelledby="villains-path-title">
+          <h3 id="villains-path-title">Villains path</h3>
+          <ol>
+            <li><strong>Opening winners:</strong> Count Olaf, Dolores Umbridge, Darth Vader, and Maleficent</li>
+            <li><strong>Semifinal winners:</strong> Dolores Umbridge and Maleficent</li>
+            <li><strong>League champion:</strong> Dolores Umbridge</li>
+          </ol>
+        </section>
+        <section aria-labelledby="championship-path-title">
+          <h3 id="championship-path-title">Championship</h3>
+          <p>Matchup C1</p>
+          <p>Matilda defeated Dolores Umbridge to become the Literary Madness champion.</p>
+        </section>
+        </div>
+      </section>
+    </section>
+
+    <section id="champion" aria-labelledby="champion-title">
+      <p>Literary Madness champion</p>
+      <h2 id="champion-title">Matilda</h2>
+      <p>Matilda advanced past Lisbeth Salander, Arya Stark, Black Panther, and Dolores Umbridge.</p>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About this redesign</h2>
+      <p>Literary Madness was inherited as a website redesign challenge in 2019. This new version reconstructs the surviving tournament and explores how the original image-based experience could become responsive, accessible, and maintainable.</p>
+      <p>The original campaign concept and artwork are preserved as reference material. This prototype does not claim current library affiliation, active voting, verified vote totals, or a confirmed tournament year.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Portfolio redesign based on an inherited archival website.</p>
+  </footer>
+
+  <button class="scroll-top" type="button" aria-label="Scroll to the top" title="Back to top">
+    <span class="scroll-top__orbit" aria-hidden="true"></span>
+    <span class="scroll-top__icon" aria-hidden="true">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24">
+        <path d="m5 14 7-7 7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+      </svg>
+    </span>
+  </button>
+</body>
+</html>
