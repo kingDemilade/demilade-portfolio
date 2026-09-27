@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Share private feedback about your experience working with Demilade Creatives.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Share Your Experience | Demilade Creatives</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<body class="feedback-page">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="/index.html">
+      <img src="/images/logo/demilade-creatives-logo.svg" alt="Demilade Creatives" class="logo-img">
+    </a>
+
+    <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="icon-dark" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.4,19c-2,2.4-4.9,3.9-8.2,3.9-5.9,0-10.7-4.8-10.7-10.7,0-5,3.4-9.1,8-10.3-1.6,1.9-2.5,4.3-2.5,6.9,0,5.9,4.8,10.6,10.8,10.6s1.8-.1,2.7-.3Z"/></svg>
+      </span>
+      <span class="icon-light" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.2,12c0,2.9-2.3,5.2-5.2,5.2s-5.2-2.3-5.2-5.2,2.3-5.2,5.2-5.2,5.2,2.3,5.2,5.2ZM13,4V1.3c0-.6-.5-1-1-1s-1,.5-1,1v2.6c0,.6.5,1,1,1s1-.5,1-1ZM13,22.7v-2.6c0-.6-.5-1-1-1s-1,.5-1,1v2.6c0,.6.5,1,1,1s.5-.5.5-1ZM5,12c0-.6-.5-1-1-1H1.3c-.6,0-1,.5-1,1s.5,1,1,1h2.6c.6,0,1-.5,1-1ZM23.7,12c0-.6-.5-1-1-1h-2.6c-.6,0-1,.5-1,1s.5,1,1,1h2.6c.6,0,1-.5,1-1Z"/></svg>
+      </span>
+    </button>
+
+    <a class="feedback-home-link" href="/index.html">Return Home</a>
+  </div>
+</nav>
+
+<main>
+  <header class="feedback-hero">
+    <div class="container feedback-hero-inner">
+      <div class="feedback-hero-copy">
+        <p class="section-eyebrow mb-3">Client Reflection</p>
+        <h1>Thank you for<br><span>creating with me.</span></h1>
+        <p class="feedback-intro">Your perspective helps me continue refining the Demilade Creatives experience. I would love to hear what stood out, what made a difference, and anything I can carry into future collaborations.</p>
+      </div>
+      <aside class="feedback-time-card" aria-label="Form details">
+        <span class="feedback-time-number">03</span>
+        <span class="feedback-time-label">minutes</span>
+        <p>Thoughtful, honest feedback is welcome. You decide what stays private.</p>
+      </aside>
+    </div>
+  </header>
+
+  <section class="feedback-form-section" aria-labelledby="reflection-form-title">
+    <div class="container">
+      <div class="feedback-project-context" data-project-context hidden>
+        <span>Reflecting on</span>
+        <strong data-project-name></strong>
+      </div>
+
+      <form
+        class="feedback-form"
+        id="client-reflection-form"
+        name="client-reflection"
+        method="POST"
+        action="/experience-thank-you.html"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        novalidate>
+        <input type="hidden" name="form-name" value="client-reflection">
+        <input type="hidden" name="project" id="feedback-project">
+        <p class="visually-hidden">
+          <label>Do not fill this out if you are human: <input name="bot-field"></label>
+        </p>
+
+        <div class="feedback-form-heading">
+          <p class="feedback-step">01 <span>About the collaboration</span></p>
+          <h2 id="reflection-form-title">Let’s begin with the project.</h2>
+        </div>
+
+        <div class="feedback-fields-grid">
+          <div class="feedback-field">
+            <label for="feedback-name">Your name <span aria-hidden="true">*</span></label>
+            <input id="feedback-name" name="name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="feedback-field">
+            <label for="feedback-organization">Business or organization</label>
+            <input id="feedback-organization" name="organization" type="text" autocomplete="organization">
+            <small>Leave blank if this project was personal.</small>
+          </div>
+
+          <div class="feedback-field">
+            <label for="feedback-email">Email address <span aria-hidden="true">*</span></label>
+            <input id="feedback-email" name="email" type="email" autocomplete="email" required>
+            <small>Used only if I need to follow up. It will not be displayed publicly.</small>
+          </div>
+
+          <div class="feedback-field">
+            <label for="feedback-service">What did we create together? <span aria-hidden="true">*</span></label>
+            <select id="feedback-service" name="service" required>
+              <option value="">Select a service</option>
+              <option>Website Design &amp; Development</option>
+              <option>Motion Graphics &amp; Animation</option>
+              <option>Graphic Design</option>
+              <option>Creative Consultation</option>
+              <option>Website + Creative Support</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="feedback-section-divider" aria-hidden="true"></div>
+
+        <div class="feedback-form-heading">
+          <p class="feedback-step">02 <span>Your experience</span></p>
+          <h2>Tell me what the experience felt like.</h2>
+        </div>
+
+        <fieldset class="feedback-fieldset feedback-rating">
+          <legend>How would you describe your overall experience? <span aria-hidden="true">*</span></legend>
+          <div class="feedback-choice-grid feedback-rating-grid">
+            <label><input type="radio" name="rating" value="Exceptional" required><span>Exceptional</span></label>
+            <label><input type="radio" name="rating" value="Great"><span>Great</span></label>
+            <label><input type="radio" name="rating" value="Good"><span>Good</span></label>
+            <label><input type="radio" name="rating" value="Fair"><span>Fair</span></label>
+            <label><input type="radio" name="rating" value="Needs improvement"><span>Needs improvement</span></label>
+          </div>
+        </fieldset>
+
+        <div class="feedback-field feedback-field-wide">
+          <label for="feedback-challenge">What goal or challenge brought you to Demilade Creatives? <span aria-hidden="true">*</span></label>
+          <textarea id="feedback-challenge" name="challenge" rows="5" required></textarea>
+          <small>A sentence or two is perfect.</small>
+        </div>
+
+        <div class="feedback-field feedback-field-wide">
+          <label for="feedback-outcome">What changed, improved, or stood out most during our work together? <span aria-hidden="true">*</span></label>
+          <textarea id="feedback-outcome" name="outcome" rows="6" required></textarea>
+          <small>You might think about the process, communication, final result, or how the work supported your goals.</small>
+        </div>
+
+        <div class="feedback-field feedback-field-wide feedback-private-field">
+          <div class="feedback-private-label">
+            <label for="feedback-improvement">What could have made the experience even better?</label>
+            <span>Always private</span>
+          </div>
+          <textarea id="feedback-improvement" name="private_improvement" rows="4"></textarea>
+          <small>This response will never be used as a testimonial.</small>
+        </div>
+
+        <div class="feedback-field feedback-field-wide">
+          <label for="feedback-recommendation">Would you recommend Demilade Creatives? Why or why not?</label>
+          <textarea id="feedback-recommendation" name="recommendation" rows="4"></textarea>
+          <small>Honest feedback is welcome.</small>
+        </div>
+
+        <div class="feedback-section-divider" aria-hidden="true"></div>
+
+        <div class="feedback-form-heading">
+          <p class="feedback-step">03 <span>Sharing your words</span></p>
+          <h2>You are always in control of what is shared.</h2>
+          <p>Your feedback is valuable whether it stays between us or is shared. Your private improvement note will never be published.</p>
+        </div>
+
+        <fieldset class="feedback-fieldset">
+          <legend>May Demilade Creatives share your feedback? <span aria-hidden="true">*</span></legend>
+          <div class="feedback-choice-list">
+            <label><input type="radio" name="publication_permission" value="Name and organization" required><span>Yes, with my name and business or organization</span></label>
+            <label><input type="radio" name="publication_permission" value="First name only"><span>Yes, but identify me by first name only</span></label>
+            <label><input type="radio" name="publication_permission" value="Anonymous"><span>Yes, but keep me anonymous</span></label>
+            <label><input type="radio" name="publication_permission" value="Private"><span>No, keep all of my feedback private</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="feedback-fieldset feedback-channel-fieldset" data-channel-fieldset hidden>
+          <legend>Where may approved feedback be used? <span aria-hidden="true">*</span></legend>
+          <div class="feedback-channel-header">
+            <p>Select one or more.</p>
+            <button type="button" class="feedback-select-all" data-select-all>Select all</button>
+          </div>
+          <div class="feedback-choice-grid feedback-channel-grid">
+            <label><input type="checkbox" name="approved_channels" value="Website"><span>Website</span></label>
+            <label><input type="checkbox" name="approved_channels" value="Social media"><span>Social media</span></label>
+            <label><input type="checkbox" name="approved_channels" value="Proposals and promotional materials"><span>Proposals &amp; promotional materials</span></label>
+          </div>
+          <p class="feedback-field-error" data-channel-error role="alert" hidden>Please select at least one place where your feedback may be used.</p>
+        </fieldset>
+
+        <fieldset class="feedback-fieldset">
+          <legend>May I contact you about a longer client story?</legend>
+          <div class="feedback-choice-grid feedback-followup-grid">
+            <label><input type="radio" name="case_study_interest" value="Yes"><span>Yes, I’m open to a follow-up</span></label>
+            <label><input type="radio" name="case_study_interest" value="Not at this time"><span>Not at this time</span></label>
+          </div>
+        </fieldset>
+
+        <div class="feedback-consent-note">
+          <p>Demilade Creatives may lightly edit approved feedback for length or clarity without changing its meaning. You may request an update or removal at any time by emailing <a href="mailto:demilade.creatives@gmail.com">demilade.creatives@gmail.com</a>.</p>
+        </div>
+
+        <div class="feedback-submit-wrap">
+          <button class="feedback-submit" type="submit">Share My Experience <span aria-hidden="true">↗</span></button>
+          <p><span aria-hidden="true">*</span> Required fields</p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-dark text-white text-center py-4 footer-waves">
+  <div class="container"><p class="mb-0">&copy; <span id="year"></span> Demilade Creatives. All rights reserved.</p></div>
+  <div class="wave"></div><div class="wave"></div><div class="wave"></div>
+</footer>
+
+<button class="scroll-top" type="button" aria-label="Scroll to top" data-scroll-top><span class="scroll-arrow" aria-hidden="true">↑</span></button>
+<script src="js/main.js"></script>
+<script src="js/client-reflection.js"></script>
+</body>
+</html>
